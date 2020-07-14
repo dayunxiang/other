@@ -1,0 +1,39 @@
+/*#layout, #footer, #splitBar, #splitBarProxy, #alertBackground, #dialogBackground, #background, #dialogBackground,
+.comboxop, .shadow,.dialog,.shadow, .panelBar,.dialogContent,.formBar, .panelBar,.layoutBox,.unitBox{ display:none;}
+
+#dialogBackground,#layout, #footer, #splitBar, #splitBarProxy, #alertBackground, #dialogBackground, #background, .shadow_h,.shadow_c_c,#dialogProxy,
+.comboxop, .shadow,.dialog,.formBar, .panelBar,.dialogContent, .layoutBox, .unitBox,.shadow_c,.shadow_h,.shadow_f,.shadow_c_l,.shadow_c_r,.layoutH{ display:none;}
+
+#printBox{display:block;}
+.dialogContent .layoutBox .unitBox,.dialog.resizable_c_l{ display:none;}
+.bgiframe{ display:none;}
+.shadow{display:none;}
+.dialog.resizable_c_l{ display:none;}
+.dialog.resizable_h_l{ display:none;}
+.dialog.resizable_h_r{ display:none;}
+.dialog.resizable_h_c{ display:none;}
+.dialog.resizable_c_l{ display:none;}
+
+.dialog.resizable_c_l{ display:none;}
+.dialog.resizable_c_r{ display:none;}
+.dialog.resizable_f_l{ display:none;}
+.dialog.resizable_f_r{ display:none;}
+.dialog.resizable_f_c{ display:none;}
+
+
+/* 
+table.list {border-collapse:collapse;table-layout:fixed}
+table.list thead tr {background-color: #F0EFF0;}
+table.list th {padding:1px 2px; line-height:21px; border: solid 1px #D0D0D0; font-weight:bolder; }
+table.list td {padding:1px 2px; line-height:21px; border:solid 1px #D0D0D0;overflow: hidden;}
+
+
+
+.grid table {border-collapse:collapse; table-layout:fixed;}
+.grid table th {padding:1px 2px; line-height:21px; border: solid 1px #D0D0D0; font-weight:bolder;}
+.grid table td {padding:1px 2px; line-height:21px; border: solid 1px #D0D0D0; line-height: 21px; overflow:hidden;}
+.grid .gridTbody td div { display: block; height: 21px; line-height: 21px; overflow: hidden;}
+.grid .left { text-align:left;}
+.grid .right { text-align:right;}
+.grid .center { text-align:center;}*/
+html{display:none}

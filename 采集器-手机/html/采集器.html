@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="google" value="notranslate">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>采集器</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../scss/allPage.css" rel="stylesheet">
+        <script src="../script/base.js"></script>
+    </head>
+    <body class="page-collector">
+        <!-- 地图容器 开始 -->
+        <div id="mainMap" class="main-map-wrap"></div>
+        <!-- 地图容器 结束 -->
+
+        <!-- 顶部搜索框 开始 -->
+        <div class="search-wrap">
+            <i class="iconfont btn-bluetooth">&#xe741;</i>
+            <!-- 通过 添加类名 connect 来标识蓝牙连接成功 -->
+            <!-- <i class="iconfont btn-bluetooth connect">&#xe741;</i> -->
+            <input type="text" placeholder="搜管点/查管线/找地点">
+            <i class="iconfont btn-search">&#xe64d;</i>
+        </div>
+        <!-- 顶部搜索框 结束 -->
+
+        <!-- 底部工程操作区 开始 -->
+        <div class="edit-project">
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe605;</i>
+                <span>新建工程</span>
+            </a>
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe632;</i>
+                <span>历史工程</span>
+            </a>
+        </div>
+        <!-- 底部工程操作区 结束 -->
+
+        <!-- 左上角工具 开始-->
+        <div class="tool-wrap tube-point">
+            <label class="switch-item">
+                <input type="checkbox">
+                <span class="inner-text">今日</span>
+            </label>
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe60a;</i>
+            </a>
+        </div>
+        <!-- 左上角工具 结束 -->
+
+        <!-- 左下角工具 开始-->
+        <div class="tool-wrap view">
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe776;</i>
+            </a>
+
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe684;</i>
+            </a>
+
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe665;</i>
+            </a>
+        </div>
+        <!-- 左下角工具 结束 -->
+
+        <!-- 右上角工具 开始 -->
+        <div class="tool-wrap edit">
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe699;</i>
+            </a>
+
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe613;</i>
+            </a>
+
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe60e;</i>
+            </a>
+
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe601;</i>
+            </a>
+        </div>
+        <!-- 右上角工具 结束 -->
+
+        <!-- 浮层组件1 开始-->
+        <!-- 使用时，请把 style 样式删除，这里仅做模拟效果而已-->
+        <div style="position: absolute; left: 80px; top: 240px;" class="layer-confirm-item">
+            <span class="text">移到此位置？</span>
+            <a class="btn-sure" href="javascript:;">
+                <i class="iconfont">&#xe60d;</i>
+                <span>确定</span>
+            </a>
+        </div>
+        <!-- 浮层组件1 结束 -->
+
+        <!-- 管点采集 开始-->
+        <template id="tube-point-collector">
+            <div class="tube-point-collector">
+                <header>
+                    <p class="title">管点采集</p>
+                    <div class="">
+                        <a class="edit-item" href="javascript:;">
+                            <i class="iconfont">&#xe606;</i>
+                            <span>编辑属性</span>
+                        </a>
+                        <a class="edit-item" href="javascript:;">
+                            <i class="iconfont">&#xe600;</i>
+                            <span>修改位置</span>
+                        </a>
+                    </div>
+                </header>
+
+                <div class="title-wrap">
+                    <span class="attr">管点号:</span>
+                    <span class="value">FGH12345</span>
+                </div>
+
+                <dl class="list">
+                    <dt>特征点</dt>
+                    <dd>
+                        <a class="item" href="javascript:;">进水口</a>
+                        <a class="item" href="javascript:;">管点</a>
+                        <a class="item" href="javascript:;">预留口</a>
+                        <a class="item select" href="javascript:;">出水口</a>
+                        <a class="item" href="javascript:;">变径</a>
+                        <a class="item" href="javascript:;">三通</a>
+                        <a class="item select" href="javascript:;">进水口</a>
+                        <a class="item" href="javascript:;">管点</a>
+                        <a class="item select" href="javascript:;">预留口</a>
+                        <a class="item" href="javascript:;">出水口</a>
+                        <a class="item" href="javascript:;">变径</a>
+                        <a class="item" href="javascript:;">三通</a>
+                    </dd>
+                </dl>
+
+                <dl class="list">
+                    <dt>附属物</dt>
+                    <dd>
+                        <a class="item" href="javascript:;">消防栓</a>
+                        <a class="item select" href="javascript:;">三通</a>
+                        <a class="item" href="javascript:;">阀门井</a>
+                        <a class="item" href="javascript:;">压力表</a>
+                        <a class="item" href="javascript:;">三通</a>
+                        <a class="item select" href="javascript:;">消防栓</a>
+                        <a class="item" href="javascript:;">三通</a>
+                        <a class="item" href="javascript:;">阀门井</a>
+                        <a class="item select" href="javascript:;">压力表</a>
+                        <a class="item" href="javascript:;">三通</a>
+                        <a class="item" href="javascript:;">消防栓</a>
+                        <a class="item" href="javascript:;">三通</a>
+                        <a class="item" href="javascript:;">消防栓</a>
+                        <a class="item select" href="javascript:;">三通</a>
+                        <a class="item" href="javascript:;">阀门井</a>
+                        <a class="item" href="javascript:;">压力表</a>
+                        <a class="item" href="javascript:;">三通</a>
+                        <a class="item select" href="javascript:;">消防栓</a>
+                        <a class="item" href="javascript:;">三通</a>
+                        <a class="item" href="javascript:;">阀门井</a>
+                        <a class="item select" href="javascript:;">压力表</a>
+                        <a class="item" href="javascript:;">三通</a>
+                        <a class="item" href="javascript:;">消防栓</a>
+                        <a class="item" href="javascript:;">三通</a>
+                    </dd>
+                </dl>
+
+                <div class="btn-wrap">
+                    <a class="btn-save" href="javascript:;">保存</a>
+                </div>
+            </div>
+        </template>
+        <!-- 管点采集 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-2.1.4/jquery.js"></script>
+        <script src="../widget/layer-2.0/layer.js"></script>
+        <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=c7b659647fff9caa665b49bbe95bbf33"></script>
+        <script src="../script/public.js"></script>
+        <script>
+            $(function() {
+                // 模拟地图效果 仅做测试效果
+                var map = new AMap.Map('mainMap');
+
+                //消息提示  文档地址： http://layer.layui.com/mobile
+                layer.open({
+                    content: '请先连接RTK设备！',
+                    skin: 'msg',
+                    // time: 3 不配置这个字段 就永远显示
+                });
+
+                //管点采集提示
+                layer.open({
+                    type: 1,
+                    anim: 'up',
+                    shade: true, //遮罩 是否显示
+                    content: $('#tube-point-collector').html(),
+                    skin: 'footer tube-point-collector',
+                });
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>考勤情况</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../widget/searchableSelect/jquery.searchableSelect.css" rel="stylesheet">
+        <link href="../css/allPage.min.css" rel="stylesheet">
+    </head>
+
+    <body class="page-check-work-info">
+        <div class="project-wrap">
+            <dl class="project-item">
+                <dt class="title-item">
+                    <p class="title-text">考勤数据导入</p>
+
+                    <div class="tool-wrap">
+                        <button id="toggleSearch">展开/折叠搜索</button>
+                        <button>导入考勤数据</button>
+                    </div>
+                </dt>
+
+                <dd class="form-list horizontal">
+                    <div class="form-item">
+                        <div class="attr">
+                            <p class="attr-text">文件名称：</p>
+                        </div>
+
+                        <div class="content">
+                            <div class="input-item">
+                                <input type="text" placeholder="请输入会议主题">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="attr">
+                            <p class="attr-text">所属公司：</p>
+                        </div>
+
+                        <div class="content">
+                            <div class="input-item">
+                                <input type="text" placeholder="请输入会议主题">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="attr">
+                            <p class="attr-text">开始时间：</p>
+                        </div>
+
+                        <div class="content">
+                            <div class="input-item">
+                                <input id="test1" type="text" placeholder="搜索用户">
+                            </div>
+                            <i>&#xe612;</i>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="attr">
+                            <p class="attr-text">结束时间：</p>
+                        </div>
+
+                        <div class="content">
+                            <div class="input-item">
+                                <input type="text" placeholder="搜索用户">
+                            </div>
+                            <i>&#xe612;</i>
+                        </div>
+                    </div>
+
+                    <div class="tool-wrap">
+                        <button>查询</button>
+                        <button>重置</button>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+
+        <div class="search-result">
+            <table id="liuCheng" class="p-tab-theme-1">
+                <thead>
+                    <tr>
+                        <th>工号</th>
+                        <th>姓名</th>
+                        <th>所属公司</th>
+                        <th>部门</th>
+                        <th>日期</th>
+                        <th>结果</th>
+                        <th>签到时间</th>
+                        <th>补卡申请单</th>
+                        <th>请假申请单</th>
+                        <th>请假类别</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>前端吴彦祖</td>
+                        <td>智恒科技</td>
+                        <td>前端部</td>
+                        <td>2020-02-28 13:23:54</td>
+
+
+                        <td>
+                            <span class="state-finish">正常</span>
+                            <span class="state-end">离职</span>
+                            <span class="state-ing">迟到</span>
+                        </td>
+
+                        <td>2020-02-28 13:23:54</td>
+                        <td>
+                            <p class="liucheng-name">请假申请包含调休</p>
+                        </td>
+                        <td>
+                            <p class="liucheng-name">请假申请包含调休</p>
+                        </td>
+
+                        <td>
+                            <button class="btn-look">查看</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <script src="../widget/searchableSelect/jquery.searchableSelect.js"></script>
+
+        <link rel="stylesheet" href="../widget/layui-v2.5.6/layui/css/layui.css" media="all">
+        <script src="../widget/layui-v2.5.6/layui/layui.js"></script>
+
+        <link href="../widget/datatables-1.10.13/css/jquery.dataTables.default.css" rel="stylesheet">
+        <script src="../widget/datatables-1.10.13/js/jquery.dataTables.js"></script>
+        <script>
+            $(function() {
+                // 表格插件
+                $.extend($.fn.dataTable.defaults, {
+                    searching: false,
+                    ordering: false,
+                    'dom': 'rtilp',
+                    'language': {
+                        "url": "../widget/datatables-1.10.13/js/Chinese.json"
+                    }
+                });
+                $('#liuCheng').DataTable();
+
+                $('#toggleSearch').toggle(function() {
+                    $('.form-list').slideUp();
+                }, function() {
+                    $('.form-list').slideDown();
+                });
+
+                layui.use('laydate', function () {
+                    var laydate = layui.laydate;
+
+                    //执行一个laydate实例
+                    laydate.render({
+                        elem: '#test1', //指定元素
+                        type: 'month',
+                        format: 'yyyy-MM'
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

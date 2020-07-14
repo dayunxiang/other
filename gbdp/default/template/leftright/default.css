@@ -1,0 +1,79 @@
+body {
+	font-size:12px;
+	color:#333;
+	background:#ffff;
+	height:auto;
+	font-family:"Microsoft Yahei","Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB",STHeiti !important;
+}
+select,input,button,button img {
+	vertical-align:middle;
+}
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,form,p,dl,dt,dd,table,th,td,img,blockquote,legend,fieldset {
+	margin:0;
+	padding:0;
+	border:0
+}
+.main {
+	margin:0;
+	min-width:20px;
+}
+.main .container {
+	white-space:nowrap;
+	margin-top:25px;
+	width:auto;
+}
+.main .container .p-left {
+	float:left;
+	clear:none;
+	padding-left:15px;
+}
+.main .right-bottom {
+	margin-top:10px;
+}
+.main .container .p-right {
+	float:left;
+	clear:none;
+	padding:0 15px;
+}
+.list-top-title {
+	width:100%;
+}
+.list-top-title.top-title {
+	width:100%;
+}
+.list-top-title .top-title .title-container {
+	border:1px solid #d0d0d0;
+	border-top:none;
+	overflow:hidden;
+	_zoom:1;
+	padding:15px;
+}
+.main2 {
+	width:600px;
+	margin-left:10px;
+	float:left;
+}
+h5 {
+	background:url("images/δ����-1.png") no-repeat;
+}
+h5 {
+	border:1px solid #dcdcdc;
+	height:30px;
+	overflow:hidden;
+	line-height:30px;
+	font-size:12px;
+	background-position:0 -135px;
+	background-repeat:repeat-x;
+	margin:0px 0;
+	padding-left:10px;
+	position:relative;
+}
+h5 .more {
+	position:absolute;
+	top:0;
+	right:10px;
+	color:#0966be;
+	font-weight:normal;
+	font-family:"����";
+	letter-spacing:0px;
+}

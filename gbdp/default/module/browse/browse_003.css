@@ -1,0 +1,220 @@
+/************************************
+*p-browse008 style:default css 
+*writor:SD
+*upload-time:2012-10-23
+*edit-time:2012-10-23
+************************************/
+
+.browse body {
+    color: #545454;
+}
+
+
+/*组*/
+
+
+/*.ul-group{ border:1px solid  #fff;}*/
+
+.browse .ul-title {
+    border-bottom: 0px dotted #CCC;
+}
+
+.browse .ul-mform {
+    border-top-color: #E8EBE3;
+    border-left-color: #E8EBE3;
+    border-right-color: white;
+}
+
+.browse .ul-cld {
+    border-top: 1px dashed #e6e6e6;
+}
+
+.browse .ul-bottom-bt {
+    border-top: 1px dotted #CCC;
+}
+
+
+/*区域 #E0E0E0*/
+
+.browse li.li-area {
+    background-color: transparent!important;
+    overflow: hidden;
+    clear: none;
+    float: left;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #E5E5E5;
+    border-bottom-color: #E5E5E5;
+    height:auto!important;
+}
+
+.browse .group-title {
+    color: #333;
+}
+
+.browse label.area-title {
+    color: #6bb8f1;
+    background-color: #fff;
+    border-right-color: #fff;
+    font-size: 13px;
+}
+
+.browse .field-content {
+    color: #333;
+    background-color: transparent!important;
+}
+
+.browse label.desc,
+legend.desc {
+    color: #222;
+}
+
+
+/*child*/
+
+.browse .lf-head {}
+
+.browse .ul-listtitle {
+    background-color: #f7f7f7;
+    border-top-color: #e8ebe3;
+    border-left-color: #e8ebe3;
+    border-right-color: #ffffff;
+}
+
+.browse .li-head-item {
+    background-color: transparent!important;
+    border-right-color: #e8ebe3;
+    border-bottom-color: #e8ebe3;
+    border-left-color: white;
+    border-top-color: white;
+}
+
+.browse .head-label {
+    color: #333;
+}
+
+.browse .lf-body {}
+
+.browse .ul-listfield {
+    border-left-color: #e8ebe3;
+    border-right-color: #fff;
+    background-color: #fff;
+}
+
+.browse .li-listfield {
+    background-color: transparent!important;
+    border-right-color: #e8ebe3;
+    border-bottom-color: #e8ebe3;
+    border-left-color: white;
+    border-top-color: white;
+}
+
+.browse .list-field {
+    background-color: transparent!important;
+}
+
+
+/*table*/
+
+.browse .ul-content {
+    color: #454545;
+}
+
+.browse .ul-table {
+    background-color: #f5f5f5;
+}
+
+.browse .li-table {
+    background-color: #fff;
+}
+
+.browse .browse-li-label {
+    background-color: #f8f8f8;
+}
+
+
+/*table
+.browse .ul-content{ border-left:2px solid #f5f5f5;border-right:2px solid #f5f5f5;}
+*/
+
+.browse .afTitle {
+    color: #000;
+}
+
+.browse .afTable {
+    border: solid #f7f6f6;
+}
+
+
+/*表格*/
+
+.browse .afTable .HeadTr {}
+
+
+/*表格标题tr行*/
+
+.browse .afTable .HeadTd {
+    background: #a3a3a3;
+    color: #fff;
+}
+
+
+/*表格标题td单元格*/
+
+.browse .afTable .BodyOddTd,
+.browse .afTable .BodyEvenTd {
+    border: solid #f7f6f6;
+}
+
+
+/*表格数据体的偶数行td单元格*/
+
+.browse .ul-browse {
+    border-top-color: #E8EBE3;
+    border-left-color: #E8EBE3;
+    border-right-color: white;
+}
+
+.listarea {
+    display: table!important;
+    box-sizing: border-box!important;
+    border: 1px solid #dbdbdb!important;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.listarea .ui-sortable {
+    border: 0px solid #dbdbdb!important;
+    border-top: 1px solid #dbdbdb!important;
+}
+
+.listarea .ui-sortable>li {
+    display: table-cell!important;
+    box-sizing: border-box!important;
+    float: none!important;
+    text-align: center!important;
+    padding: 10px 5px!important;
+    margin: 0!important;
+    border: 0px solid #dbdbdb!important;
+    height: auto!important;
+    white-space: normal!important;
+    height: auto!important;
+    word-break: break-all!important;
+}
+
+.listarea .ui-sortable>li+li {
+    border-left: 1px solid #dbdbdb!important;
+}
+
+.listarea .ui-sortable>li .list-field,
+.listarea .ui-sortable>li .head-label {
+    text-align: center!important;
+    padding: 0!important;
+    margin: 0!important;
+    height: auto!important;
+    width: auto!important;
+    float: none!important;
+    max-height:240px!important;
+    overflow:hidden!important;
+}
+

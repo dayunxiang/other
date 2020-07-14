@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+    <html class="old" lang="zh-cmn-Hans">
+<![endif]-->
+
+<!--[if IE 8]>
+    <html class="ie ie-8" lang="zh-cmn-Hans">
+<![endif]-->
+
+<!--[if IE 9]>
+    <html class="ie ie-9" lang="zh-cmn-Hans">
+<![endif]-->
+
+<!--[if !IE]><!-->
+    <html lang="zh-cmn-Hans">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>二级设备实时监控（地图）</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+        <link href="../css/public.css" rel="stylesheet">
+        <link href="../css/page.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- 标题字段部分 开始 -->
+        <div class="tit-map clearfix">
+            <div class="fl">
+                <div class="time-wrap">
+                    <time>更新时间：15:48</time>
+                    <a class="btn-refresh" href="javascript:;">
+                        <i class="iconfont">&#xe632;</i>刷新
+                    </a>
+                </div>
+                <div class="location">
+                    <span class="name">
+                        <i class="iconfont">&#xe62d;</i>
+                        快速定位
+                    </span>
+                    <a class="btn-switch active" href="javascript:;">
+                        福州市
+                        <i class="iconfont">&#xe619;</i>
+                    </a>
+                    <div class="select-wrap">
+                        <address>福州市</address>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr class="disabled" title="全称提示">中华人民共和国中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr title="全称提示">中华人</abbr>
+                                <abbr title="全称提示">中华人</abbr>
+                                <abbr title="全称提示">中华人</abbr>
+                                <abbr title="全称提示">中华人</abbr>
+                                <abbr title="全称提示">中华人</abbr>
+                                <abbr title="全称提示">中华人</abbr>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="fr">
+                <div class="search-wrap">
+                    <input type="text" placeholder="设备名称">
+                    <a class="iconfont btn-search" href="javascript:;">&#xe613;</a>
+                </div>
+                <ul class="select-list clearfix">
+                    <li>
+                        <label>
+                            <input type="checkbox" checked >
+                            告警
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" checked >
+                            未告警
+                        </label>
+                    </li>
+                </ul>
+                <a class="btn-toggle" href="javascript:;">
+                    <i class="iconfont">&#xe636;</i>
+                    切换到列表
+                </a>
+            </div>
+        </div>
+        <!-- 标题字段部分 结束 -->
+
+        <!-- 地图部分 开始 -->
+        <div class="map-wrap ejsb-map-wrap">
+            <!-- 地图容器 开始 -->
+            <div id="demo-map-id">
+                <!-- id="demo-map-id" 是直接放放地图插件用的容器 ID到时候你自己取，我这边是随便写的 -->
+            </div>
+            <!-- 地图容器 结束 -->
+
+            <!-- 告警伸缩部分 开始 -->
+            <div class="aside">
+                <a class="btn-switch-open" href="javascript:;">
+                    <i class="iconfont">&#xe611;</i>
+                    今日告警
+                </a>
+                <div class="warning-wrap">
+                    <div class="nav-wrap clearfix">
+                        <a class="nav-item real-time" href="javascript:;">
+                            实时告警
+                        </a>
+                        <a class="nav-item history" href="#">
+                            历史
+                        </a>
+                        <a class="iconfont btn-switch-fold" href="javascript:;">&#xe610;</a>
+                    </div>
+
+                    <div class="tit-wrap">
+                        更新于<time>15:48</time>当前共 <strong>3</strong> 个监控点告警
+                        <a class="btn-more" href="javascript:;">查看全部</a>
+                    </div>
+                    <ul class="warning-list">
+                        <li>
+                            <div class="row">
+                                <i class="iconfont warning">&#xe631;</i>
+                                <address>
+                                    朝阳1#
+                                </address>
+                                <div class="state">
+                                    <time>报警时间：23:34</time>
+                                </div>
+                            </div>
+                            <div class="row up">
+                                <time>23:14</time>
+                                <span>流量：145m³/h</span>
+                                <span class="value">30%</span>
+                                <span class="tag"><i>↑</i>警</span>
+                            </div>
+                            <div class="row down">
+                                <time>23:14</time>
+                                <span>压力：145Pa</span>
+                                <span class="value">30%</span>
+                                <span class="tag"><i>↓</i>警</span>
+                            </div>
+                            <div class="ico-list">
+                                <a class="iconfont" href="javascript:;">&#xe639;</a>
+                                <a class="iconfont" href="javascript:;">&#xe603;</a>
+                                <a class="iconfont" href="javascript:;">&#xe62f;</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <i class="iconfont warning">&#xe631;</i>
+                                <address>
+                                    朝阳1#
+                                </address>
+                                <div class="state">
+                                    <time>报警时间：23:34</time>
+                                </div>
+                            </div>
+                            <div class="row down"">
+                                <time>23:14</time>
+                                <span>流量：145m³/h</span>
+                                <span class="value">30%</span>
+                                <span class="tag"><i>↓</i>警</span>
+                            </div>
+                            <div class="row up"">
+                                <time>23:14</time>
+                                <span>压力：145Pa</span>
+                                <span class="value">30%</span>
+                                <span class="tag"><i>↑</i>警</span>
+                            </div>
+                            <div class="ico-list">
+                                <a class="iconfont" href="javascript:;">&#xe639;</a>
+                                <a class="iconfont" href="javascript:;">&#xe603;</a>
+                                <a class="iconfont" href="javascript:;">&#xe62f;</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 告警伸缩部分 结束 -->
+
+            <!-- 弹窗可能调用的元素 开始 -->
+            <div class="这个层级是不要的，仅仅是做demo演示，" style="position:absolute;top:20px;left:20px;">
+                <!--
+                     下面【class="device-item right-arrow"】可以包在一个div里面使用（宽度随父级宽度）
+                     又或者是单独直接使用（宽度用style直接写即可），
+                -->
+
+                <!-- 注意哦，大弹窗切换小弹窗， 只要动态添加删除 small 这个类就行了，其他的不用管，都用样式控制好了 -->
+                <div class="device-item right-arrow">
+
+                    <div class="tit-wrap">
+                        朝阳1#
+                        <i class="warning">
+                            <small>!</small>
+                        </i>
+                    </div>
+                    <div class="banner clearfix">
+                        <time>23:34</time>
+                        <div class="ico-list">
+                            <a class="iconfont" href="#">&#xe639;</a>
+                            <a class="iconfont" href="#">&#xe62f;</a>
+                        </div>
+                    </div>
+                    <div class="info clearfix">
+                        <ul class="item">
+                            <li class="tit">
+                                压力（Pa）
+                            </li>
+                            <li class="up">
+                                实时：<b>999.99</b>  <em>99.99%</em>
+                                <strong>
+                                    <i>↑</i>警
+                                </strong>
+                            </li>
+                            <li>
+                                最高：1.5
+                            </li>
+                            <li>
+                                最低：0.8
+                            </li>
+                        </ul>
+                        <ul class="item">
+                            <li class="tit">
+                                流量（m<sup>3</sup>/h）
+                            </li>
+                            <li class="down">
+                                瞬时：<b>20</b>  <em>5%</em>
+                                <strong>
+                                    <i>↓</i>警
+                                </strong>
+                            </li>
+                            <li>
+                                累计：3838438 m³
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 小个弹窗 -->
+                    <div class="small-info">
+                        <span class="item warning"><b>1.0</b> Pa</span>
+                        <span class="item"><b>20</b> m³/h</span>
+                    </div>
+                    <div class="telescopic">
+                        <a class="iconfont btn-switch" href="javascript:;"></a>
+                    </div>
+                </div>
+
+                <div class="device-item left-arrow">
+
+                    <div class="tit-wrap">
+                        朝阳1#
+                        <i class="warning">
+                            <small>!</small>
+                        </i>
+                    </div>
+                    <div class="banner clearfix">
+                        <time>23:34</time>
+                        <div class="ico-list">
+                            <a class="iconfont" href="#">&#xe639;</a>
+                            <a class="iconfont" href="#">&#xe62f;</a>
+                        </div>
+                    </div>
+                    <div class="info clearfix">
+                        <ul class="item">
+                            <li class="tit">
+                                压力（Pa）
+                            </li>
+                            <li class="up">
+                                实时：<b>1.0</b>  <em>5%</em>
+                                <strong>
+                                    <i>↑</i>警
+                                </strong>
+                            </li>
+                            <li>
+                                最高：1.5
+                            </li>
+                            <li>
+                                最低：0.8
+                            </li>
+                        </ul>
+                        <ul class="item">
+                            <li class="tit">
+                                流量（m<sup>3</sup>/h）
+                            </li>
+                            <li class="down">
+                                瞬时：<b>20</b>  <em>5%</em>
+                                <strong>
+                                    <i>↓</i>警
+                                </strong>
+                            </li>
+                            <li>
+                                累计：3838438 m³
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 小个弹窗 -->
+                    <div class="small-info">
+                        <span class="item warning"><b>1.0</b> Pa</span>
+                        <span class="item"><b>20</b> m³/h</span>
+                    </div>
+                    <div class="telescopic">
+                        <a class="iconfont btn-switch" href="javascript:;"></a>
+                    </div>
+                </div>
+
+                <div class="device-item small right-arrow">
+
+                    <div class="tit-wrap">
+                        朝阳1#
+                        <i class="warning">
+                            <small>!</small>
+                        </i>
+                    </div>
+                    <div class="banner clearfix">
+                        <time>23:34</time>
+                        <div class="ico-list">
+                            <a class="iconfont" href="#">&#xe639;</a>
+                            <a class="iconfont" href="#">&#xe62f;</a>
+                        </div>
+                    </div>
+                    <div class="info clearfix">
+                        <ul class="item">
+                            <li class="tit">
+                                压力（Pa）
+                            </li>
+                            <li class="up">
+                                实时：<b>1.0</b>  <em>5%</em>
+                                <strong>
+                                    <i>↑</i>警
+                                </strong>
+                            </li>
+                            <li>
+                                最高：1.5
+                            </li>
+                            <li>
+                                最低：0.8
+                            </li>
+                        </ul>
+                        <ul class="item">
+                            <li class="tit">
+                                流量（m<sup>3</sup>/h）
+                            </li>
+                            <li class="down">
+                                瞬时：<b>20</b>  <em>5%</em>
+                                <strong>
+                                    <i>↓</i>警
+                                </strong>
+                            </li>
+                            <li>
+                                累计：3838438 m³
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 小个弹窗 -->
+                    <div class="small-info">
+                        <span class="item warning"><b>999.20</b>Mpa</span>
+                        <span class="item"><b>999.99</b>m³/h</span>
+                    </div>
+                    <div class="telescopic">
+                        <a class="iconfont btn-switch" href="javascript:;"></a>
+                    </div>
+                </div>
+
+                <i class="p-ico jian-kong"></i>
+                <i class="p-ico jian-kong-error"></i>
+            </div>
+            <!-- 弹窗可能调用的元素 结束 -->
+        </div>
+        <!-- 地图部分 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-1.8.3/jquery.min.js"></script>
+        <script src="../widget/placeholder-2.3.1/jquery.placeholder.min.js"></script>
+        <script src="../widget/jquery.nicescroll_3.6.8/jquery.nicescroll.min.js"></script>
+        <script src="../js/public.js"></script>
+        <script>
+            $(function(){
+                /* 快速定位滚动条 开始 ****************/
+                $('.location .select-wrap').niceScroll({
+                    cursorcolor: "#ccc",
+                    mousescrollstep: 40,
+                    oneaxismousemode: "auto"
+                });
+                $('.location').on('mouseover',function() {
+                    $(".select-wrap").getNiceScroll().resize();
+                });
+                $(".btn-switch").on("mouseover", function() {
+                    $(".select-wrap").show();
+                    $("body").on("mouseover", function(e) {
+                        var tar = $(e.target);
+                        if(tar.closest(".select-wrap").length == 0 && tar.closest(".btn-switch").length == 0 && tar.closest(".nicescroll-rails").length == 0 ) {
+                            $(".select-wrap").hide();
+                            $("body").off("mouseover");
+                        };
+                    });
+                });
+                /**************** 快速定位滚动条 结束 */
+
+
+                /* 地图部分高度撑满屏幕剩余高度 开始 ****************/
+                var nZbMapWrapHeight = $(window).height() -
+                                       parseInt( $('body').css('padding-top') ) -
+                                       parseInt( $('body').css('padding-bottom') ) -
+                                       $('.tit-map').outerHeight( true );
+                $('.map-wrap').outerHeight( nZbMapWrapHeight );
+
+                window.onresize = throttle( function(){
+                    var nZbMapWrapHeight = $(window).height() -
+                                           parseInt( $('body').css('padding-top') ) -
+                                           parseInt( $('body').css('padding-bottom') ) -
+                                           $('.tit-map').outerHeight( true );
+                    $('.map-wrap').outerHeight( nZbMapWrapHeight );
+                });
+                /**************** 地图部分高度撑满屏幕剩余高度 结束 */
+
+
+                /* DMA概况伸展收缩 开始 ****************/
+                $('.ejsb-map-wrap .aside').on('click','.btn-switch-open',function(){
+                    $(this).hide();
+                    $('.ejsb-map-wrap .aside .warning-wrap').show();
+                });
+                $('.ejsb-map-wrap .aside').on('click','.btn-switch-fold',function(){
+                    $('.ejsb-map-wrap .aside .warning-wrap').hide();
+                    $('.ejsb-map-wrap .aside .btn-switch-open').show();
+                });
+                $('.ejsb-map-wrap .aside .warning-list').niceScroll({
+                    cursorcolor: "#ccc",
+                    mousescrollstep: 40,
+                    oneaxismousemode: "auto"
+                });
+                $('.ejsb-map-wrap .aside').on('click',function() {
+                    $('.ejsb-map-wrap .aside .con-wrap').getNiceScroll().resize();
+                });
+                /**************** DMA概况伸展收缩 结束 */
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

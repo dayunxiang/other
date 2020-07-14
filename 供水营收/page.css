@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* 重置样式 开始 */
+*,
+*:before,
+*:after{-ms-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+html,
+body{min-height:100%;}
+html
+{
+    height:100%;
+    font:14px/1.5 "Microsoft YaHei",sans-serif;
+    -ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;
+    overflow-x:hidden;
+}
+body{position:relative;margin:0;color:#333;}
+.clearfix:after{display:block;height:0;clear:both;visibility:hidden;font-size:0;content:"";}
+.clearfix{zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+*{margin:0;padding:0;list-style:none;text-decoration:none;color:inherit;}
+/* 重置样式 结束 */
+.w1200{position:relative;width:1200px;margin:0 auto;}
+.icon{display:inline-block;vertical-align:middle;width:20px;height:20px;background:url("./images/icon.png") no-repeat 0 0;}
+.icon.user{background-position:0 0;}
+.icon.lock{background-position:-20px 0;}
+.icon.num{background-position:-40px 0;}
+/* 分割线 */
+.login-page .head{padding: 20px 100px;}
+.login-page .tit-wrap dt,
+.login-page .tit-wrap dd{display:inline-block;vertical-align:middle;line-height:1;}
+.login-page .tit-wrap dt{font-size:24px;color:#252525;}
+.login-page .tit-wrap dd{margin-left:15px;padding-left:15px;border-left:2px solid #ccc;font-size:20px;color:#666;}
+/* 分割线 */
+.login-page .body {position: absolute;left: 0;right: 0;top: 64px;bottom: 41px; background: url('./images/login-bc.jpg') no-repeat center center;}
+.login-page .body > div.w1200 {position: absolute;left: 0;right: 0;top: 64px;bottom: 41px;}
+.login-page .foot {position: absolute;left: 0;right: 0; bottom: 0; padding: 10px 0;}
+.login-page .foot .copyright{text-align:center;color:#4c4c4c;}
+/* 分割线 */
+.login-page .login-wrap{position: absolute; right: 0; top: 33.33%; margin-top: -153px; width:280px;height:306px;background:#fff\9;background:rgba(255,255,255,0.75);}
+.login-page .login-wrap .tit-wrap{padding:10px 20px;border-bottom:1px solid #fff;font-size:16px;color:#333;font-weight:bold;}
+.login-page .login-wrap .row{position:relative;margin:15px 30px 0;}
+.login-page .login-wrap .row .icon{position:absolute;left:8px;top:7px;}
+.login-page .login-wrap .row .text-input{margin:0 auto;display:block;padding:0 10px 0 35px;width:100%;height:34px;line-height:32px; border:1px solid #ccc;border-radius:4px;font-size:16px;color:#333;}
+.login-page .login-wrap .row.code .text-input{display:inline-block;width:120px;}
+.login-page .login-wrap .row.code img{float:right;width:91px;height:34px;cursor:pointer;}
+.login-page .login-wrap .row.state input{width:16px;height:16px;vertical-align:middle;}
+.login-page .login-wrap .row.state a{color:#0099e6;}
+.login-page .login-wrap .btn-login{display:block;height:41px;line-height:41px;border-radius:4px; font-size:16px;color:#fff;text-align:center;font-weight:bold;background:#ff9900;}

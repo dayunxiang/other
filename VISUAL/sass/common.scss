@@ -1,0 +1,823 @@
+@charset "utf-8";
+@import './mixin.scss';
+
+// 色调、 图片路径
+$mainColor: #99ffff;
+$baseImgPath: '../images/base/';
+$iconImgPath: '../images/icon/';
+$indexImgPath: '../images/index/';
+$widgetImgPath: '../widget/';
+
+// chorm滚动条样式
+::-webkit-scrollbar {
+  width: 5px;height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+  border-radius: 12px;
+  background-color: #336799;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: #0b8ba4;
+}
+
+html{
+  // 根据项目实际需求定制默认字体颜色
+  color: $mainColor;
+
+  // 根据项目实际需求，限制页面大小，防止页面排版变形
+  body{
+    min-width:1920px;
+    max-width:1920px;
+    margin:0 auto;
+  }
+
+  // 隐藏元素
+  .hidden{
+    display:none;
+  }
+
+  // 手势标识不可点击
+  .disabled{
+    cursor:not-allowed !important;
+  }
+}
+
+// 图标
+.p-icon-1{
+  width: 64px; height:64px;
+  background: url(#{$iconImgPath}icon-1.png);
+
+  &.data{
+    background-position: 0 0;
+  }
+  &.add{
+    background-position: 0 -64px;
+  }
+  &.store{
+    background-position: 0 -128px;
+  }
+  &.time{
+    background-position: 0 -192px;
+  }
+  &.on-line{
+    background-position: 0 -256px;
+  }
+}
+.p-icon-2{
+  width: 56px; height:56px;
+  background: url(#{$iconImgPath}icon-2.png);
+
+  &.gln{
+    background-position: 0 0;
+  }
+  &.gxf{
+    background-position: 0 -56px;
+  }
+  &.gsb{
+    background-position: 0 -112px;
+  }
+  &.grz{
+    background-position: 0 -168px;
+  }
+  &.glh{
+    background-position: 0 -224px;
+  }
+  &.zx{
+    background-position: 0 -280px;
+  }
+  &.jt{
+    background-position: 0 -336px;
+  }
+  &.data{
+    background-position: 0 -392px;
+  }
+  &.add{
+    background-position: 0 -448px;
+  }
+  &.store{
+    background-position: 0 -504px;
+  }
+  &.time{
+    background-position: 0 -560px;
+  }
+  &.tg{
+    background-position: 0 -616px;
+  }
+  &.jf{
+    background-position: 0 -672px;
+  }
+  &.jg{
+    background-position: 0 -728px;
+  }
+}
+.p-icon-3{
+  display:inline-block;
+  vertical-align:middle;
+  width:20px;height:20px;
+  background:url(#{$iconImgPath}icon-3.png) no-repeat 0 0;
+
+  &.user{background-position:0 0;}
+  &.lock{background-position:-20px 0;}
+  &.num{background-position:-40px 0;}
+}
+
+// 推拉门
+.p-bc-wrap-1{
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+
+  .top{
+    position: relative;
+    padding-left: 50px;
+    padding-right: 68px;
+    height: 20px;
+
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+    }
+    &:before{
+      left:0;
+      width: 50px;
+      background: url(#{$baseImgPath}left-top.png) left top no-repeat;
+    }
+    &:after{
+      right: 0;
+      width: 68px;
+      background: url(#{$baseImgPath}right-top.png) left top no-repeat;
+    }
+
+    .inner{
+      height: 100%;
+      background: url(#{$baseImgPath}top-center.png) left top repeat-x;
+    }
+  }
+  .bottom{
+    position: absolute;
+    left: 0;right: 0;bottom:0;
+    padding: 0 20px;
+    height: 18px;
+
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;bottom: 0;
+    }
+    &:before{
+      left: 0;
+      width: 20px;
+      background: url(#{$baseImgPath}left-bottom.png) left top no-repeat;
+    }
+    &:after{
+      right: 0;
+      width: 20px;
+      background: url(#{$baseImgPath}right-bottom.png) left top no-repeat;
+    }
+
+    .inner{
+      height: 100%;
+      background: url(#{$baseImgPath}bottom-center.png) left top repeat-x;
+    }
+  }
+  .left{
+    position: absolute;
+    left: 0;top: 0;bottom: 0;
+    padding-top: 20px;
+    padding-bottom:18px;
+    width: 20px;
+
+    .inner{
+      height: 100%;
+      background: url(#{$baseImgPath}left-center.png) left top repeat-y;
+    }
+  }
+  .right{
+    position: absolute;
+    right: 0;top: 0;bottom: 0;
+    padding-top: 20px;
+    padding-bottom:18px;
+    width: 20px;
+
+    .inner{
+      height: 100%;
+      background: url(#{$baseImgPath}right-center.png) left top repeat-y;
+    }
+  }
+  .center{
+    position: absolute;
+    left: 20px;right: 20px;top: 20px;bottom: 18px;
+    background: url(#{$baseImgPath}center.png) repeat;
+  }
+}
+
+// 选项卡
+.p-tab-card{
+  position:relative;
+
+  .nav-wrap{
+    @include clearFix;
+  }
+  .tab-nav{
+    float:left;
+
+    &:first-child{
+      margin-left:0 !important;
+    }
+  }
+  .tab-con{
+    position: absolute;
+    opacity: 0;
+    pointer-events:none;
+
+    &.active{
+      position:relative;
+      display:block;
+      opacity: 1;
+      pointer-events:auto;
+    }
+  }
+}
+
+// 展示数量
+.p-num-item{
+  position: relative;
+  padding: 9px 15px 9px 65px;
+
+  .p-icon-1,
+  .p-icon-2{
+    position: absolute;
+    left: 8px;
+  }
+  .p-icon-1{
+    top: 9px;
+  }
+  .p-icon-2{
+    top: 13px;
+  }
+  strong{
+    margin-right: 5px;
+    font-size: 26px;
+    color: #fff;
+  }
+  p{
+    z-index: 1;
+    position: relative;
+  }
+  .title{
+    font-size: 16px;
+  }
+}
+
+// 地图上的指针 和 圆点
+.p-map-tip{
+  position: relative;
+  display: inline-block;
+  padding: 1px 10px;
+  border: 2px solid #7ccccd;
+  border-radius: 6px;
+  color: #fff;
+  background: #1e7aa8;
+  cursor: pointer;
+
+  &:before{
+    content: '';
+    position: absolute;
+    left: 50%; bottom: -18px;
+    margin-left: -5px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: #d94d4c;
+    box-shadow: 0 0 5px 3px #68aab8;
+  }
+  &:after{
+    @include arrow(5px);
+    @include arrow-b(15px, #99ffff);
+
+    left: 50%;bottom: -20px;
+    margin-left: -5px;
+  }
+  &.no-point{
+    &:before,
+    &:after{
+      display: none;
+    }
+  }
+}
+
+// 提示框
+.p-tips-item{
+  padding: 8px;
+  border: 1px solid #0b8ba4;
+  background: rgba(16, 28, 52, 0.9);
+
+  dt{
+    margin-bottom: 5px;
+    padding-left: 10px;
+    line-height: 1;
+    border-left: 5px solid #5387b9;
+    color: #fff;
+    font-size: 16px;
+  }
+  dd{
+    color: #aecff8;
+  }
+}
+
+// 地图上的浮层 小区营销
+.p-map-float-layer-1{
+  z-index: 50;
+  position: relative;
+  padding: 10px;
+  height: 310px;
+  min-width: 500px;
+  max-width: 600px;
+  border: 1px solid #5387b9;
+  box-shadow: inset 0 0 5px 5px #12465a;
+  background: rgba(16,28,52,1) url(#{$indexImgPath}village.png) 5px 53px no-repeat;
+  background-size: 375px 240px;
+
+  &:before,
+  &:after{
+    @include arrow($borderWidth: 8px);
+
+    left: 50%;
+    margin-left: -8px;
+  }
+  &:before{
+    @include arrow-t($borderBottomWidth: 8px, $borderBottomColor: #5387b9);
+
+    top: -16px;
+  }
+  &:after{
+    @include arrow-t($borderBottomWidth: 8px, $borderBottomColor: #101c35);
+
+    top: -14px;
+  }
+  .btn-close{
+    position: absolute;
+    top: -1px; right: -1px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #5387b9;
+    background: url(#{$iconImgPath}close.png) 3px 3px no-repeat;
+  }
+  .img-wrap{
+    position: relative;
+    float: left;
+    width: 60%; height: 100%;
+
+    .tit-wrap{
+      padding-left: 10px;
+
+      p{
+        padding-left: 8px;
+        border-left: 5px solid transparent;
+        line-height: 1;
+      }
+      .title{
+        padding-left: 8px;
+        border-left-color: #5386bb;
+        font-size: 16px;
+        color: #fff;
+      }
+      .sub-title{
+        margin-top: 10px;
+        color: #aecff8;
+      }
+    }
+  }
+  .echarts-list{
+    height: 100%;
+    overflow: hidden;
+
+    .echarts-wrap{
+      height: 50%;
+    }
+  }
+}
+
+// 地图上的浮层
+.p-map-float-layer-2{
+  z-index: 50;
+  position: absolute;
+  border: 1px solid #0b8ba4;
+  color: #fff;
+  background: #000c26;
+
+  &:before,
+  &:after{
+    @include arrow($borderWidth: 15px);
+    top: 50%;
+    margin-top: -15px;
+  }
+  &:before{
+    @include arrow-r($borderLeftWidth: 15px, $borderLeftColor: #0b8ba4);
+    right: -30px;
+  }
+  &:after{
+    @include arrow-r($borderLeftWidth: 15px, $borderLeftColor: #000c26);
+    right: -28px;
+  }
+  .tit-block{
+    position: relative;
+    padding: 3px 10px;
+    width: 220px;
+    background: rgba(118, 230, 255, 0.15);
+
+    span{
+      @include textEllipsis;
+      max-width: 12em;
+    }
+    .btn-close{
+      position: absolute;
+      right: 10px; top: 10px;
+      width: 12px; height: 12px;
+      background: url(#{$iconImgPath}close.png) 0 0 no-repeat !important;
+    }
+  }
+  dl{
+    padding: 0 10px;
+    line-height: 2;
+  }
+  .up{
+    color: #cccc00;
+  }
+  .down{
+    color: #00cc00;
+  }
+  .tool-wrap{
+    @include clearFix;
+
+    position: relative;
+    padding: 2px 5px;
+    border-top: 1px solid rgba(118, 230, 255, 0.15);
+
+    .btn-info{
+      float: right;
+      right: 3px;
+      padding-right: 15px;
+      color: $mainColor;
+      background: url(#{$iconImgPath}province.png) right -60px no-repeat;
+    }
+  }
+}
+
+// 图表标题
+.p-title-echart{
+  @include textEllipsis;
+
+  padding-left: 10px;
+  line-height: 1;
+  font-size: 16px;
+  color: #fff;
+  border-left: 5px solid #5387b9;
+
+  .sub-title{
+    color: #aecff8;
+  }
+}
+
+// 同比 环比
+.p-modular-item{
+  display: inline-block;
+  position: relative;
+  width: 180px;
+  border: 1px solid #5387b9;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition:all 0.2s;
+  box-shadow: 0 0 5px 2px #0c5e29;
+
+  &.curr,
+  &:hover{
+    border-color: #d94d4c;
+  }
+  &.other{
+    margin-left: 40px;
+  }
+  .tit{
+    padding: 3px 0;
+    background: #1f3348;
+
+    span{
+      vertical-align: middle;
+    }
+    .name{
+      @include textEllipsis;
+      max-width: 120px;
+    }
+  }
+  .info{
+    padding: 10px 0;
+    background: #12283e;
+
+    dt,
+    dd{
+      display: inline-block;
+    }
+    dt{
+      color: #fff;
+    }
+    .up{
+      color: #fd0018;
+    }
+    .down{
+      color: #91de49;
+    }
+  }
+}
+
+// 树插件样式
+.ztree{
+  *{
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+  }
+  li{
+    a{
+      color: #fff;
+
+      &:hover{
+        color: $mainColor;
+      }
+      &.curSelectedNode{
+        background-color: transparent;
+        color: $mainColor;
+        border: none;
+      }
+    }
+    .button{
+      &.province_ico_close,
+      &.province_ico_open{
+        background: url(#{$iconImgPath}province.png) 0 0 no-repeat;
+      }
+      &.city_ico_close,
+      &.city_ico_open{
+        background: url(#{$iconImgPath}province.png) 0 -16px no-repeat;
+      }
+      &.home_ico_docu{
+        background: url(#{$iconImgPath}province.png) 0 -32px no-repeat;
+      }
+    }
+  }
+  &.skin-1{
+    li{
+      a{
+        height: 23px !important;
+      }
+    }
+    .ico_docu{
+      display: none;
+    }
+    .ico_open,
+    .ico_close{
+      display: none;
+    }
+    .roots_open,
+    .center_open,
+    .bottom_open{
+      background: url(#{$iconImgPath}province.png) 0 -48px no-repeat !important;
+      width: 16px !important; height: 16px !important;
+    }
+    .roots_close,
+    .center_close,
+    .bottom_close{
+      background: url(#{$iconImgPath}province.png) 0 -64px no-repeat !important;
+      width: 16px !important; height: 16px !important;
+    }
+    .line,
+    .center_docu,
+    .bottom_docu{
+      background: none !important;
+    }
+    .center_docu,
+    .bottom_docu{
+      width: 5px !important;
+    }
+  }
+}
+
+// 数字滑动效果
+.swiper-number{
+  font-size: 0 !important;
+  border: 1px solid #5da9b6;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 2px #5da9b6;
+
+  i{
+    width: 19px; height: 50px;
+    background: url(#{$widgetImgPath}/digitalScroll/images/number-2.png) no-repeat;
+    background-position: 0 0;
+  }
+}
+
+// 进度图表
+.p-echart-progress{
+  position: relative;
+  display: inline-block;
+  width: 195px; height: 135px;
+  background: url(#{$iconImgPath}/echart-progress-back.png) no-repeat;
+
+  i{
+    position: absolute;
+    height: 100%;
+    left: 0; right:0; bottom: 0;
+    background: url(#{$iconImgPath}/echart-progress-front.png) 0 100% repeat-y;
+  }
+}
+
+// 表格
+.p-table-1{
+  width: 100%;
+  border: 1px solid #047e8f;
+  background: #1f3347;
+
+  th,
+  td{
+    padding: 5px;
+    text-align: center;
+  }
+  tbody{
+    color: #fff;
+
+    .up{
+      color: #d94d4c;
+    }
+    .down{
+      color: #91de49;
+    }
+    tr:nth-child(odd){
+      background: #000c24;
+    }
+  }
+}
+
+// 播放时间轴
+.p-play-progress{
+  z-index: 10;
+  position: absolute;
+  bottom: 20px; left: 50%;
+  margin-left: -333px;
+  padding: 25px 20px 0 55px;
+  min-width: 50px;
+  height: 60px;
+  color: #fff;
+  font-size: 12px;
+
+  .btn-play{
+    position: absolute;
+    left: 15px;top: 12px;
+    width: 36px; height: 36px;
+    background: url(#{$iconImgPath}play.png) 0 -36px no-repeat;
+
+    &:hover{
+      background-position: 0 0;
+    }
+    &.stop{
+      background-position: 0 -108px;
+
+      &:hover{
+        background-position: 0 -72px;
+      }
+    }
+  }
+  ul{
+    @include clearFix;
+
+  }
+  li{
+    position: relative;
+    float: left;
+    padding: 0 5px;
+
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      background: #898f9b;
+    }
+    &:before{
+      left: 9px; top: -5px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+    }
+    &:after{
+      left: -9px; right:9px; top: -2px;
+      height: 1px;
+    }
+    &:first-child{
+      &:after{
+        left: 9px;
+      }
+    }
+    &:last-child{
+      &:after{
+        right: 9px;
+      }
+    }
+    &.play{
+      &:before,
+      &:after{
+        background: #d94d4c;
+      }
+    }
+  }
+}
+
+// 弹窗
+.layui-layer-shade{
+  opacity: 1 !important;
+  background: rgba(0,0,0,0.6) !important;
+}
+.layui-layer.dark{
+  width:1654px !important;
+  box-shadow: none;
+  background: transparent;
+
+  .layui-layer-setwin{
+    top: -15px;
+  }
+  .layui-layer-close{
+    width:12px;height:12px;
+    background: url(#{$iconImgPath}close.png) no-repeat;
+  }
+  .layui-layer-title{
+    z-index: 1;
+    position: absolute;
+    left: 0;top:10px;right:0;
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    border-bottom: none;
+    background: transparent;
+  }
+  .layui-layer-content{
+    padding: 60px 40px 40px;
+    height: 850px !important;
+    background: url(#{$baseImgPath}popup-bc.png) left top no-repeat;
+    overflow: visible;
+  }
+
+  // 弹窗里面的选项卡
+  .p-tab-card{
+    height: 100%;
+
+    .nav-wrap{
+      position: absolute;
+      left: -40px;top: -96px;
+    }
+    .tab-nav{
+      margin-left: 1px;
+      width: 108px;height: 38px;
+      line-height: 38px;
+      text-align:center;
+      background: url(#{$iconImgPath}tab-btn.png) left top no-repeat;
+
+      &.active{
+        color: #fff;
+        background: url(#{$iconImgPath}tab-btn-active.png) left top no-repeat;
+      }
+
+      span{
+        @include textEllipsis;
+
+        max-width: 7em;
+      }
+    }
+    .con-wrap{
+      height: 100%;
+    }
+    .tab-con{
+      height: 100%;
+      overflow: auto;
+
+      &.swiper-container{
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+// 转圈
+@keyframes turnAround {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}

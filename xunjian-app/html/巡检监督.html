@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="google" value="notranslate">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>模板标题</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/allPage.min.css" rel="stylesheet">
+    </head>
+    <body class="page-4">
+        <div id="mainMap" class="map"></div>
+
+        <div class="aside">
+            <dl class="task-item">
+                <dt>
+                    <p class="task-tit">XJ-官网巡检-2020-02-11</p>
+
+                    <button class="tool">
+                        <i>&#xe603;</i>
+                        <p>全部点位</p>
+                    </button>
+                </dt>
+
+                <dd>
+                    <div class="attr">检查点：</div>
+
+                    <div class="content">
+                        <progress value="22" max="100"></progress>
+
+                        <div class="task-state">
+                            <em>25</em> / <em>100</em>
+                        </div>
+                    </div>
+                </dd>
+
+                <dd>
+                    <div class="attr">事件数：</div>
+
+                    <div class="content">
+                        <p class="event-num">共2个</p>
+
+                        <i class="arrow">&#xe73b; </i>
+                    </div>
+                </dd>
+            </dl>
+
+            <div class="tools">
+                <button>开始巡检</button>
+                <button class="theme-warning">巡检结束</button>
+            </div>
+        </div>
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-2.1.4/jquery.js"></script>
+        <script src="../script/base.js"></script>
+        <script src="../widget/layer-2.0/layer.js"></script>
+        <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=c7b659647fff9caa665b49bbe95bbf33"></script>
+        <script>
+            $(function() {
+                // 模拟地图效果 仅做测试效果
+                var map = new AMap.Map('mainMap');
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

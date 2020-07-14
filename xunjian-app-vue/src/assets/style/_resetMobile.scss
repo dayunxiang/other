@@ -1,0 +1,112 @@
+@charset "utf-8";
+@import './commonReset';
+
+// 根元素
+html {
+    font-size: 50px;
+}
+
+body {
+    max-width: 7.5rem;
+    font-size: .28rem;
+}
+
+// 上标、下标
+sub,
+sup {
+    line-height: 1;
+    font-size: .24rem;
+}
+
+// 公用底部
+.p-footer-navs {
+    z-index: 5;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 7.5rem;
+    background: #f8f8f9;
+    box-shadow: 0 0.05rem 0.15rem 0 rgba(27, 27, 78, 0.1);
+
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0; right: 0; top: 0;
+        height: 1px;
+        transform: scaleY(0.5);
+        background: #eee;
+    }
+    .nav-item {
+        position: relative;
+        padding: .2rem 0;
+        width: 0;
+        flex-grow: 1;
+        text-align: center;
+        transition: all .3s;
+        user-select: none;
+
+        &:active {
+            background: #f3f3f3;
+        }
+        .icon {
+            @include iconfont;
+            font-size: .4rem;
+        }
+        .number {
+            position: absolute;
+            right: .3rem; top: .2rem;
+            padding: 0 .1rem;
+            color: #fff;
+            font-size: .2rem;
+            border-radius: 100px;
+            background: #ff6300;
+        }
+        .text {
+            margin-top: .05rem;
+            color: #666;
+        }
+    }
+}
+// 无数据缺省
+.p-no-data {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+
+    .default-image {
+        display: block;
+        margin: 0 auto;
+        width: 2.8rem;
+    }
+    .tips {
+        margin-top: .5rem;
+        font-size: .24rem;
+        color: #999;
+        text-align: center;
+    }
+}
+// 图片上传
+.p-images-upload {
+    @include images-video-upload;
+}
+.p-video-upload {
+    @include images-video-upload;
+}
+// 音频插件
+.audiojs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: .1rem;
+
+    .play-pause {
+        padding-top: 6px;
+        width: 35px;
+    }
+    .scrubber {
+        width: 0;
+        flex-grow: 1;
+    }
+}

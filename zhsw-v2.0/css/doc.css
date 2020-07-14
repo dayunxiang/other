@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* 分割线 */
+.page-doc{padding:20px; background:#f8f8f8 url("../images/point.png");}
+.page-doc .syntaxhighlighter{padding:1px;}/* 解决在谷歌浏览器会出现滚动条 */
+.page-doc a[rel=lightbox],
+.page-doc a[data-lightbox]{display:inline-block;}
+/* 分割线 */
+.page-doc .main-wrap{min-width:1200px;border: 1px solid #e5e5e5;background:#fff;box-shadow:10px 10px 15px #e1e1e1;}
+/* 分割线 */
+.page-doc .doc-item{margin-top:15px; padding:25px 30px;background:#fff;}
+.page-doc .doc-item:first-child{margin-top:0;}
+.page-doc .doc-item h2{padding-bottom:10px;border-bottom:1px solid #5fB878;font-size:20px;color:#5fB878;font-weight:bold;}
+.page-doc .doc-item > .title .tips{margin-top:20px;padding:15px;line-height:1.8;border-left:5px solid #5fB878;font-size:16px;color:#000;}
+.page-doc .doc-item > .content{margin-top:20px;}
+/* 分割线 */
+.page-doc .tab-card .tab-nav{float:left;padding:5px 25px;color:#5fB878;}
+.page-doc .tab-card .tab-nav.active{border-bottom:3px solid #5fB878;font-weight: bold;}
+.page-doc .tab-card .tab-nav.disable{cursor:not-allowed;}
+/* 分割线 */
+.page-doc .tab-card .con-wrap{margin-top:20px;}
+.page-doc .tab-card .tab-con{position:relative;display:none;}
+.page-doc .tab-card .tab-con.active{display:block;}
+.page-doc .doc-item .tab-con.black{padding:15px;background:#000;}
+
+
+
+
+

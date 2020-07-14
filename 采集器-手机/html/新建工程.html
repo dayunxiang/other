@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="google" value="notranslate">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>新建工程</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../scss/allPage.css" rel="stylesheet">
+        <script src="../script/base.js"></script>
+    </head>
+    <body class="page-new-project">
+        <ul class="new-project-info">
+            <li>
+                <div class="attr">
+                    <span>工程名称 :</span>
+                </div>
+                <div class="content">
+                    <div class="input-item">
+                        <input type="text" placeholder="请输入工程名称">
+                        <a class="iconfont btn-search" href="javascript:;">&#xe64d;</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="attr">
+                    <span>联系方式 :</span>
+                </div>
+                <div class="content">
+                    <input id="telephoneNumber" type="text" maxlength="13" pattern="[0-9]*" placeholder="请输入您的手机号码">
+                </div>
+            </li>
+            <li>
+                <div class="attr">
+                    <span>工程描述 :</span>
+                </div>
+                <div class="content">
+                    <textarea rows="3" placeholder="请输入工程描述"></textarea>
+                </div>
+            </li>
+        </ul>
+
+        <div class="submit-wrap">
+            <button class="btn-submit">提交</button>
+        </div>
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-2.1.4/jquery.js"></script>
+        <script src="../widget/layer-2.0/layer.js"></script>
+        <script src="../script/public.js"></script>
+        <script>
+            $(function() {
+                $('#telephoneNumber').on('input', function(event) {
+                    var allSpaceReg = /\s+/g; // 所有空格
+                    var bothEndSpaceReg = /(^\s*)|(\s*$)/g; // 两端空格
+                    var cutTelephoneReg = /(^\d{3}|\d{4}\B)/g; // 手机号码进行切割 344形式
+                    var value = $(this).val();
+                    var tempValue1 = value.replace(bothEndSpaceReg, '');
+                    var tempValue2 = value.replace(allSpaceReg, '').replace(cutTelephoneReg, '$1 ');
+                    var handleValue = value.length < 4 ? tempValue1 : tempValue2;
+
+                    $(this).val(handleValue);
+                });
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

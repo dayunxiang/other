@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+    <html class="fuck-you" lang="zh-CN">
+<![endif]-->
+
+<!--[if IE 8]>
+    <html class="ie ie-8" lang="zh-CN">
+<![endif]-->
+
+<!--[if IE 9]>
+    <html class="ie ie-9" lang="zh-CN">
+<![endif]-->
+
+<!--[if !IE]><!-->
+    <html lang="zh-CN">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>首页</title>
+        <link href="../css/reset-pc.css" rel="stylesheet">
+        <link href="../css/animate.css" rel="stylesheet">
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../widget/swiper-3.4.2/css/swiper.css" rel="stylesheet">
+        <link href="../css/page.css" rel="stylesheet">
+    </head>
+    <body class="page-index">
+        <a class="p-btn-close iconfont icon-dc" href="javascript:;" onclick="window.close();"></a>
+        <!-- 主体框架背景 开始 -->
+        <div class="p-frame-bc">
+            <div class="head">
+                <div class="left">
+                    <div class="inner">
+                        <div class="fix"></div>
+                        <div class="repeat"></div>
+                    </div>
+                </div>
+                <div class="center"></div>
+                <div class="right">
+                    <div class="inner">
+                        <div class="repeat"></div>
+                        <div class="fix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="left-bc">
+                    <div class="top"></div>
+                    <div class="middle">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="right-bc">
+                    <div class="top"></div>
+                    <div class="middle">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+            <div class="foot">
+                <div class="left"></div>
+                <div class="center">
+                    <div class="inner"></div>
+                </div>
+                <div class="right"></div>
+            </div>
+        </div>
+        <!-- 主体框架背景 结束 -->
+
+        <!-- 首页主体块 开始 -->
+        <div class="content">
+            <div class="left-arc">
+                <a class="btn prev" href="javascript:;"></a>
+            </div>
+            <div class="right-arc">
+                <a class="btn next" href="javascript:;"></a>
+            </div>
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper list-wrap">
+                    <!-- <a class="swiper-slide p-list-item small" href="">
+                        <i style="background:url('../images/base/btn.png');" class="img"></i>
+                        <img src="../../menus/1-智博人生/icon.png">
+                        <p class="item-tit">0000000</p>
+                    </a>
+                    <a class="swiper-slide p-list-item small" href="">
+                        <i class="iconfont icon-ditu"></i>
+                        <img src="./menus/1-智博人生/icon.png">
+                        <p class="item-tit">1111111111111</p>
+                    </a>
+                    <a class="swiper-slide p-list-item small" href="">
+                        <i class="iconfont icon-ditu"></i>
+                        <img src="./menus/1-智博人生/icon.png">
+                        <p class="item-tit">2222222</p>
+                    </a>
+                    <a class="swiper-slide p-list-item small" href="">
+                        <i class="iconfont icon-ditu"></i>
+                        <img src="./menus/1-智博人生/icon.png">
+                        <p class="item-tit">333333333</p>
+                    </a> -->
+                </div>
+            </div>
+            <a class="btn-look-all" href="./all-list.html">查看全部</a>
+        </div>
+        <!-- 首页主体块 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <script src="../widget/swiper-3.4.2/js/swiper.js"></script>
+        <script src="../js/page.js"></script>
+        <script src="../../data.js"></script>
+        <script>
+            $(function(){
+
+                var i    = 0 ;
+                var node = '';
+
+                for( var i = 0; i < res_data.menus.length; i++ )
+                {
+                    // 图片图标
+                    if(res_data.menus[i].iconType == 1)
+                    {
+                        node += '<a class="swiper-slide p-list-item small" href="./choice-file.html?index=' + i +' ">' +
+                                    '<i style="background-image:url(' + '../../' + res_data.menus[i].icon +');" class="img"></i>' +
+                                    // '<img src="../../' + res_data.menus[i].icon + '">' +
+                                    '<p class="item-tit">'+res_data.menus[i].text+'</p>' +
+                                '</a>';
+                    }
+                    // 字体图标
+                    else if(res_data.menus[i].iconType == 2 && res_data.menus[i].icon != '')
+                    {
+                        node += '<a class="swiper-slide p-list-item small" href="./choice-file.html?index=' + i +' ">' +
+                                    '<i class="iconfont ' + res_data.menus[i].icon + '"></i>' +
+                                    '<p class="item-tit">'+res_data.menus[i].text+'</p>' +
+                                '</a>';
+                    }
+                    // 使用默认图标 字体图标
+                    else
+                    {
+                        node += '<a class="swiper-slide p-list-item small" href="./choice-file.html?index=' + i +' ">' +
+                                    '<i class="iconfont icon-ditu"></i>' +
+                                    '<p class="item-tit">'+res_data.menus[i].text+'</p>' +
+                                '</a>';
+                    }
+                }
+                $(".swiper-wrapper.list-wrap").append(node);
+
+                // 轮播
+                var mySwiper = new Swiper('.swiper-container',{
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    speed:1500,
+                    slideActiveClass : 'big zoomIn animated',
+                    autoplay : 4000,
+                    loop : true,
+                    prevButton:'.btn.next',
+                    nextButton:'.btn.prev',
+                    autoplayDisableOnInteraction:false,
+                    onInit: function(swiper){
+                    }
+                });
+
+                // 鼠标经过不轮播，鼠标离开才轮播
+                $('.swiper-slide').mouseover(function(){
+                    mySwiper.stopAutoplay();
+                }).mouseout(function(){
+                    mySwiper.startAutoplay();
+                });
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

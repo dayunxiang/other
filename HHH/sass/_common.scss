@@ -1,0 +1,16 @@
+@import './_mixin';
+
+// 页面基础公共样式
+html {
+  color:#333;
+
+  .hidden {
+    display: none !important;
+  }
+  .disabled {
+    cursor: not-allowed !important;
+  }
+  .iconfont {
+    @include iconfont;
+  }
+}

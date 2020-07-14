@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.compass {
+    z-index: 100;
+    position: absolute;
+    bottom: 40px; right: 40px;
+    width: 52px; height: 54px;
+    background: url("./compass.png") 0% 0% / 266px no-repeat;
+    cursor: pointer;
+}
+.compass .left,
+.compass .center,
+.compass .right {
+    opacity: 1;
+    z-index: 1;
+    position: absolute;
+    outline: none;border: none;
+    cursor: pointer;
+}
+.compass .left {
+    left: 2px; top: 5px;
+    width: 15px; height: 42px;
+    background: url("./compass.png") -75px -5px / 266px no-repeat;
+
+}
+.compass .center {
+    left: 19px; top: 4px;
+    width: 14px; height: 44px;
+    background: url("./compass.png") -56px -4px / 266px no-repeat;
+    transition: all .3s;
+}
+.compass .left:hover {
+    background-position: -89px -5px;
+}
+.compass .right {
+    right: 2px; top: 5px;
+    width: 15px; height: 42px;
+    background: url("./compass.png") -75px -5px / 266px no-repeat;
+    transform: scaleX(-1);
+}
+.compass .right:hover {
+    background-position: -89px -5px;
+}
+.compass.step0 .center{
+    transform: rotate(0deg);
+}
+.compass.step1 .center{
+    transform: rotate(-90deg);
+}
+.compass.step2 .center{
+    transform: rotate(-180deg);
+}
+.compass.step3 .center{
+    transform: rotate(-270deg);
+}
+.compass.step4 .center{
+    transform: rotate(-360deg);
+}

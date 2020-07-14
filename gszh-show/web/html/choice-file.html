@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+    <html class="fuck-you" lang="zh-CN">
+<![endif]-->
+
+<!--[if IE 8]>
+    <html class="ie ie-8" lang="zh-CN">
+<![endif]-->
+
+<!--[if IE 9]>
+    <html class="ie ie-9" lang="zh-CN">
+<![endif]-->
+
+<!--[if !IE]><!-->
+    <html lang="zh-CN">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>多文件选择</title>
+        <link href="../css/reset-pc.css" rel="stylesheet">
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/page.css" rel="stylesheet">
+    </head>
+    <body class="page-choice-file">
+        <a class="p-btn-close iconfont icon-dc" href="javascript:;" onclick="window.close();"></a>
+        <!-- 主体框架背景 开始 -->
+        <div class="p-frame-bc">
+            <div class="head">
+                <div class="left">
+                    <div class="inner">
+                        <div class="fix"></div>
+                        <div class="repeat"></div>
+                    </div>
+                </div>
+                <div class="center"></div>
+                <div class="right">
+                    <div class="inner">
+                        <div class="repeat"></div>
+                        <div class="fix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="left-bc">
+                    <div class="top"></div>
+                    <div class="middle">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="right-bc">
+                    <div class="top"></div>
+                    <div class="middle">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+            <div class="foot">
+                <div class="left"></div>
+                <div class="center">
+                    <div class="inner"></div>
+                </div>
+                <div class="right"></div>
+            </div>
+        </div>
+        <!-- 主体框架背景 结束 -->
+
+        <!-- 主体内容块 开始 -->
+        <div class="content">
+            <div class="preview-item">
+                <!-- <i class="iconfont icon-ditu"></i> -->
+                <!-- <img src="../../menus/1-智博人生/icon.png"> -->
+                <!-- <span class="name">假装好多字假装好多字假装好多字假装好多字假装好多字</span> -->
+            </div>
+
+            <ul class="file-list clearfix">
+                <!-- <li>
+                    <a class="file-item" href="../html/picture-video.html?index=0" onclick="window.open('index.html','_blank','channelmode=1,fullscreen=1');">
+                        <i class="iconfont icon-word"></i>
+                        <span class="file-name">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</span>
+                    </a>
+                </li> -->
+            </ul>
+
+            <div class="p-paging">
+                <a class="p-ico-arrow prev disabled" href="javascript:;"></a>
+                <a class="p-ico-arrow back" onclick="window.history.go(-1);" href="javascript:;"></a>
+                <a class="p-ico-arrow home" href="./index.html"></a>
+                <a class="p-ico-arrow next disabled" href="javascript:;"></a>
+            </div>
+        </div>
+        <!-- 主体内容块 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <script src="../js/page.js"></script>
+        <script src="../../data.js"></script>
+        <script>
+            $(function(){
+
+                var showWho       = getParams().index;  //第几个模块
+                var node          = '';       //存放html节点
+                var nowPage       = 0;         //当前第几页标识
+                var temp_res_data = [];  //用于接收分页返回后 的数组
+                var i             = 0 ;
+                var picIndex      = 0; //用于标识当前图片是第几张
+                var videoIndex    = 0; //用于标识当前视频是第几个
+
+                // 左侧大视图
+                // 图片图标
+                if(res_data.menus[showWho].iconType == 1)
+                {
+                    node =  '<i style="background-image:url(' + '../../' + res_data.menus[showWho].icon +');" class="img"></i>' +
+                            '<span class="name">'+res_data.menus[showWho].text+'</span>';
+                }
+                // 字体图标
+                else if(res_data.menus[showWho].iconType == 2 && res_data.menus[showWho].icon != '')
+                {
+                    node = '<i class="iconfont ' + res_data.menus[showWho].icon + '"></i>' +
+                            '<span class="name">'+res_data.menus[showWho].text+'</span>';
+                }
+                // 使用默认图标 字体图标
+                else
+                {
+                    node = '<i class="iconfont icon-ditu"></i>' +
+                            '<span class="name">'+res_data.menus[showWho].text+'</span>';
+                }
+                $(".preview-item").append(node);
+
+
+                // 渲染页面
+                function renderPage(data,startIndex,endIndex)
+                {
+                    // data 为数组数据格式，代表数据源
+                    // startIndex 循环体的起始下标
+                    // endIndex 循环体的结束下标
+
+                    var node = '';
+                    var nodeType1 = '';  // 视频 节点
+                    var nodeType2 = '';  // 图片 节点
+                    var nodeType3 = '';  // ppt 节点
+                    var nodeType4 = '';  // 网站链接 节点
+                    var nodeType5 = '';  // 其他格式 节点
+
+
+                    // 右侧文件列表
+                    for(i = startIndex; i < endIndex; i++)
+                    {
+                        // 资源类型标识: (1-视频,2-图片,3-ppt，4-网站链接 ,5-其他格式文件)
+                        switch (data[i].type)
+                        {
+                            case 1:
+                                icon = 'icon-sp';
+                                nodeType1 += '<li>' +
+                                                '<a class="file-item" href="../html/picture-video.html?index=' + showWho + '&videoIndex=' + videoIndex + '&type=1' + '" >' +
+                                                    '<i class="iconfont ' + icon + '"></i>' +
+                                                    '<span class="file-name">'+ data[i].text +'</span>' +
+                                                '</a>' +
+                                            '</li>';
+                                videoIndex++;
+                                break;
+                            case 2:
+                                icon = 'icon-pic';
+                                nodeType2 += '<li>' +
+                                                '<a class="file-item" href="../html/picture-video.html?index=' + showWho + '&picIndex=' + picIndex + '&type=2' + '" >' +
+                                                    '<i class="iconfont ' + icon + '"></i>' +
+                                                    '<span class="file-name">'+ data[i].text +'</span>' +
+                                                '</a>' +
+                                            '</li>';
+                                picIndex++;
+                                break;
+                            case 3:
+                                icon = 'icon-ppt';
+                                nodeType3 += '<li>' +
+                                                '<a class="file-item" href="'+ '../../' + data[i].uri +'" >' +
+                                                    '<i class="iconfont ' + icon + '"></i>' +
+                                                    '<span class="file-name">'+ data[i].text +'</span>' +
+                                                '</a>' +
+                                            '</li>';
+                                break;
+                            case 4:
+                                icon = 'icon-URL';
+                                nodeType4 += '<li>' +
+                                                '<a class="file-item" href="' + data[i].uri +'" target="_blank" >' +
+                                                    '<i class="iconfont ' + icon + '"></i>' +
+                                                    '<span class="file-name">'+ data[i].text +'</span>' +
+                                                '</a>' +
+                                            '</li>';
+                                break;
+                            case 5:
+                                icon = 'icon-gswz';
+                                nodeType5 += '<li>' +
+                                                '<a class="file-item" href="'+ '../../' + data[i].uri +'" >' +
+                                                    '<i class="iconfont ' + icon + '"></i>' +
+                                                    '<span class="file-name">'+ data[i].text +'</span>' +
+                                                '</a>' +
+                                            '</li>';
+                                break;
+                        }
+                    }
+                    node = nodeType1 + nodeType2 + nodeType3 + nodeType4 + nodeType5;
+                    $(".file-list").html('').append(node);
+                }
+
+                // 第一页数据（数据不为空）
+                if( res_data.menus[showWho].resource.length != 0 )
+                {
+                    temp_res_data = paging(res_data.menus[showWho].resource, 30, ++nowPage);
+                    renderPage(temp_res_data,0,temp_res_data.length);
+                }
+
+                // 如果数据超过一页
+                if(res_data.menus[showWho].resource.length > 30)
+                {
+                    // 下一页按钮标识可用
+                    $(".p-paging .next").removeClass('disabled');
+
+                    // 下一页按钮点击事件
+                    $('.p-paging .next').on('click',function(){
+                        // 上一页按钮标识可用
+                        $(".p-paging .prev").removeClass('disabled');
+
+                        // 当前已经是最后一页的时候
+                        if(nowPage + 1 ==  Math.ceil(res_data.menus[showWho].resource.length / 30))
+                        {
+                            $(".p-paging .next").addClass('disabled');
+                        }
+
+                        // 当超过最后一页的时候
+                        if(nowPage + 1 >  Math.ceil(res_data.menus[showWho].resource.length / 30))
+                        {
+                            return false;
+                        }
+
+                        ++nowPage;
+
+                        temp_res_data = paging(res_data.menus[showWho].resource, 30, nowPage);
+                        renderPage(temp_res_data,0,temp_res_data.length);
+                    });
+
+                    // 上一页按钮点击事件
+                    $('.p-paging .prev').on('click',function(){
+                        // 下一页按钮标识可用
+                        $(".p-paging .next").removeClass('disabled');
+
+                        // 当前已经是第一页的时候
+                        if(nowPage - 1 == 1)
+                        {
+                            $(".p-paging .prev").addClass('disabled');
+                        }
+
+                        // 当前已经是第一页的时候
+                        if(nowPage - 1 < 1)
+                        {
+                            return false;
+                        }
+
+                        --nowPage;
+
+                        temp_res_data = paging(res_data.menus[showWho].resource, 30, nowPage);
+                        renderPage(temp_res_data,0,temp_res_data.length);
+                    });
+                }
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

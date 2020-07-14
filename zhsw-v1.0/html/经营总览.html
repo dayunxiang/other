@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>经营总览</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+        <link href="../css/public.css" rel="stylesheet">
+        <link href="../css/page.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- 滑块部分 开始 -->
+        <div class="t-tit-box clearfix">
+            <div class="t-swiper-wrap hover clearfix">
+                <a class="iconfont prev" href="javascript:;">&#xe62b;</a>
+                <div class="ul-wrap">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="javascript:;">刘亦菲0</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li class="curr">
+                            <a href="javascript:;">刘亦菲1</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲2</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲3</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲4</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲5</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲6</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲7</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲8</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲9</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲10</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲11</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲12</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲13</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲14</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲15</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                    </ul>
+                </div>
+                <a class="iconfont next" href="javascript:;">&#xe629;</a>
+            </div>
+            <a class="check end" href="javascript:;">
+                <i class="iconfont">&#xe620;</i>
+                利园姐
+            </a>
+            <a class="check start" href="javascript:;">
+                <i class="iconfont">&#xe60f;</i>
+                利园姐
+            </a>
+            <div class="fr">
+                <a class="btn-blue-normal" href="javascript:;">我要派单</a>
+            </div>
+        </div>
+        <!-- 滑块部分 结束 -->
+
+        <!-- KPI指标 和 供水概况 开始 -->
+        <div class="kpi-chart-info tab-card">
+            <div class="nav-wrap clearfix">
+                <a class="tab-nav active" href="javascript:;">关键KPI指标</a>
+                <a class="tab-nav" href="javascript:;">供水概况</a>
+            </div>
+            <div class="con-wrap">
+                <div class="tab-con active two-column clearfix">
+                    <ul class="fixed-width right clearfix">
+                        <li>
+                            <a class="layout-item-2" href="#">
+                                <div class="tit">
+                                    [月]制水成本：<strong>99.7</strong>%
+                                </div>
+                                <div class="tit">
+                                    <span>同：<b class="tb">53.2% ↑</b></span>,
+                                    <span>环：<b class="hb">2.39% ↓</b></span>
+                                </div>
+                                <div id="demoOne" class="echart-wrap"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="layout-item-2" href="#">
+                                <div class="tit">
+                                    [月]制水成本：<strong>--</strong>
+                                </div>
+                                <div class="tit">
+                                    <span>同：<b class="tb">--</b></span>,
+                                    <span>环：<b class="hb">--</b></span>
+                                </div>
+                                <div class="echart-wrap">
+                                    <i class="iconfont">&#xe634;</i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="layout-item-2" href="#">
+                                <div class="tit">
+                                    [月]制水成本：<strong>99.7</strong>%
+                                </div>
+                                <div class="tit">
+                                    <span>同：<b class="tb">53.2% ↑</b></span>,
+                                    <span>环：<b class="hb">2.39% ↓</b></span>
+                                </div>
+                                <div class="echart-wrap">
+                                    <!-- 百度图表直接放在这个地方 -->
+                                    <!-- 直接给 clas="echart-wrap"一个ID即可，样式表已经给了固定高度值 -->
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="layout-item-2" href="#">
+                                <div class="tit">
+                                    [月]制水成本：<strong>99.7</strong>%
+                                </div>
+                                <div class="tit">
+                                    <span>同：<b class="tb">53.2% ↑</b></span>,
+                                    <span>环：<b class="hb">2.39% ↓</b></span>
+                                </div>
+                                <div class="echart-wrap">
+                                    <!-- 百度图表直接放在这个地方 -->
+                                    <!-- 直接给 clas="echart-wrap"一个ID即可，样式表已经给了固定高度值 -->
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="layout-item-2" href="#">
+                                <div class="tit">
+                                    [月]制水成本：<strong>99.7</strong>%
+                                </div>
+                                <div class="tit">
+                                    <span>同：<b class="tb">53.2% ↑</b></span>,
+                                    <span>环：<b class="hb">2.39% ↓</b></span>
+                                </div>
+                                <div class="echart-wrap">
+                                    <!-- 百度图表直接放在这个地方 -->
+                                    <!-- 直接给 clas="echart-wrap"一个ID即可，样式表已经给了固定高度值 -->
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="layout-item-2" href="#">
+                                <div class="tit">
+                                    [月]制水成本：<strong>99.7</strong>%
+                                </div>
+                                <div class="tit">
+                                    <span>同：<b class="tb">53.2% ↑</b></span>,
+                                    <span>环：<b class="hb">2.39% ↓</b></span>
+                                </div>
+                                <div class="echart-wrap">
+                                    <!-- 百度图表直接放在这个地方 -->
+                                    <!-- 直接给 clas="echart-wrap"一个ID即可，样式表已经给了固定高度值 -->
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="auto-width">
+                        <div class="aside-info">
+                            <div class="tit">
+                                产销差率：<strong>10</strong> %
+                                （同：<b class="tb">5% ↑</b>，环：<b class="hb">2% ↓</b>）
+                            </div>
+                            <div class="tit">
+                                供水量：<strong>500</strong> <em>万吨</em>，售水量：<strong>500</strong> <em>万吨</em>
+                            </div>
+                        </div>
+                        <div class="no-data">
+                            <i class="iconfont">&#xe634;</i>
+                        </div>
+                        <!-- <div class="echart-wrap">
+                            百度图表直接放在这个地方
+                            直接给 clas="echart-wrap"一个ID即可，样式表已经给了固定高度值
+                        </div> -->
+                    </div>
+                </div>
+                <div class="tab-con two-column clearfix">
+                    <ul class="fixed-width right clearfix">
+                        <li>
+                            <div class="layout-item-3">
+                                <p class="tit">供水区域总面积：</p>
+                                <p class="value">100</p>
+                                <p class="unit">万立方米</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="layout-item-3">
+                                <p class="tit">供水区域总面积：</p>
+                                <p class="value">100</p>
+                                <p class="unit">万立方米</p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="layout-item-4">
+                                <dt>DMA分区</dt>
+                                <dd>一级分区：<b>X</b>个</dd>
+                                <dd>二级分区：<b>X</b>个</dd>
+                                <dd>管网流量监控点：<b>X</b>个</dd>
+                                <dd>远传抄收水量占总供水量： <b>X</b>%</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="layout-item-3">
+                                <p class="tit">供水区域总面积：</p>
+                                <p class="value">100</p>
+                                <p class="unit">万立方米</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="layout-item-3">
+                                <p class="tit">供水区域总面积：</p>
+                                <p class="value">100</p>
+                                <p class="unit">万立方米</p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="layout-item-4">
+                                <dt>总表户表</dt>
+                                <dd>小区总表：<b>X</b>个</dd>
+                                <dd>远传户表：<b>X</b>个</dd>
+                                <dd>总分表已远传抄收小区：<b>X</b>个</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <div class="auto-width map-wrap" style="background:url('../images/public/nanchang.png') center center no-repeat;">
+                        <!-- 百度地图直接放在这个地方 -->
+                        <!-- 直接给 clas="map-wrap"一个ID即可，样式表已经给了固定高度值 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- KPI指标 和 供水概况 结束 -->
+
+        <!-- 自定义KPI指标 开始 -->
+        <div class="custom-kpi-zb">
+            <div class="tit-wrap clearfix">
+                <p class="tit fl">自定义KPI指标</p>
+                <a class="btn-custom fr" href="javascript:;">
+                    <i class="iconfont">&#xe609;</i>
+                    自定义
+                </a>
+            </div>
+            <ul class="kpi-list clearfix">
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="layout-item-1" href="#">
+                        <p class="tit"> <em>[月]</em>供水量：100万吨</p>
+                        <p class="info-list">
+                            <span>同：<b class="tb">48.38% ↑</b></span>,
+                            <span>环：<b class="hb">48.38% ↑</b></span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 自定义KPI指标 结束 -->
+
+        <!-- 遮罩层 开始 -->
+        <div class="pop-mask hide"></div>
+        <!-- 遮罩层 结束 -->
+
+        <!-- KPI指标自定义弹窗 开始 -->
+        <div class="pop-kpi-custom hide">
+            <div class="pp-title">
+                <p>KPI指标自定义</p>
+                <i class="btn-close iconfont">&#xe60c;</i>
+            </div>
+            <div  class="pp-contain">
+                <div class="tit-wrap">
+                    <p class="tit"></p>
+                </div>
+                <ul class="custom-list">
+                    <li>
+                        <span class="name">财务:</span>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="name">供水:</span>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="name">设备:</span>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="name">客户:</span>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="name">财务:</span>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="name">供水:</span>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="name">设备:</span>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="name">客户:</span>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <abbr title="指标名称">小小俊小小俊小小俊小小俊</abbr>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="pp-edit">
+                <a class="btn-ok" href="javascript:;">确定</a>
+            </div>
+        </div>
+        <!-- KPI指标自定义弹窗 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-1.8.3/jquery.min.js"></script>
+        <script src="../widget/placeholder-2.3.1/jquery.placeholder.min.js"></script>
+        <script src="../widget/jquery.nicescroll_3.6.8/jquery.nicescroll.min.js"></script>
+        <script src="../js/public.js"></script>
+        <link href="../widget/datetimepicker/jquery.datetimepicker.min.css" rel="stylesheet">
+        <script src="../widget/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+        <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+        <script>
+            /* Echarts公共路径配置 开始 ****************/
+            require.config({
+                paths: {
+                    echarts: 'http://echarts.baidu.com/build/dist'
+                }
+            });
+            /**************** Echarts公共路径配置 结束 */
+
+            $(function(){
+                /* 使用Echarts模块加载 开始 ****************/
+                require(
+                    [
+                        'echarts',
+                        'echarts/chart/pie'//,
+                        // 'echarts/chart/map'
+                    ],
+                    //加载完毕回调
+                    initCharts
+                );
+                /**************** 使用Echarts模块加载 结束 */
+
+                /* Echarts初始化函数 开始 ****************/
+                function initCharts()
+                {
+                    /* 第1个图表构造 开始 ****************/
+                    var echartOne = require('echarts').init(document.getElementById('demoOne'));
+                    echartOne.showLoading({
+                        text : '数据读取中...',
+                        effect:'bubble',
+                        textStyle:{fontSize:16}
+                    });
+
+                    //设置数据
+                    var optionDemoOne = {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{b} : {c} ({d}%)"
+                        },
+                        calculable: false,
+                        series: [{
+                            name: '访问来源',
+                            type: 'pie',
+                            radius: ['20%', '70%'],
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: true,
+                                        formatter: "{d}%"
+                                    },
+                                    labelLine: {
+                                        show: true
+
+                                    }
+                                },
+                                emphasis: {
+                                    label: {
+                                        show: false
+
+                                    }
+                                }
+                            },
+                            data: [{
+                                value: 335,
+                                name: '字段1'
+                            }, {
+                                value: 310,
+                                name: '字段2'
+                            }, {
+                                value: 234,
+                                name: '字段3'
+                            }, {
+                                value: 135,
+                                name: '字段4'
+                            }, {
+                                value: 1548,
+                                name: '字段5'
+                            }]
+                        }]
+                    };
+                    /**************** 第1个图表构造 结束 */
+
+                    /* 模拟数据载入时间 开始 ****************/
+                    setTimeout(function (){
+                        echartOne.hideLoading();
+                        echartOne.setOption(optionDemoOne);
+                    },2200);
+                    /**************** 模拟数据载入时间 结束 */
+                }
+                /**************** Echarts初始化函数 结束 */
+            });
+        </script>
+        <script>
+            $(function(){
+                /* 滑块轮播 开始 ****************/
+                swiper(0.75);
+                window.onresize = throttle( function(){
+                    window.location.reload();
+                    swiper(0.75);
+                });
+                /**************** 滑块轮播 结束 */
+
+
+                /* KPI指标 和 供水概况 选项卡 开始 ****************/
+                $('.kpi-chart-info').tab();
+                /**************** KPI指标 和 供水概况 选项卡 结束 */
+
+
+                /* 自定义KPI指标弹窗 开始 ****************/
+                $('.custom-kpi-zb').on('click','.btn-custom',function(){
+                    $('.pop-kpi-custom').pop();
+                });
+                /**************** 自定义KPI指标弹窗 结束 */
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

@@ -1,0 +1,80 @@
+@charset "utf-8";
+/**
+* Email:674059309@qq.com
+* www.qiaodaima.me
+*/
+
+
+/* 全局样式 开始 */
+html .disabled{cursor:not-allowed !important;}
+.page-zhnh{text-align:left;overflow:auto;background:#fff;}
+.page-zhnh a:hover{text-decoration:none;}
+/* 全局样式 结束 */
+
+
+/* 公共排版 开始 */
+.page-zhnh .ico{display:inline-block;vertical-align:middle;width:20px;height:20px;background:url("../images/base/zhnh-ico.png") no-repeat;}
+.page-zhnh .ico.znh{background-position:0px 0;}
+.page-zhnh .ico.dnh{background-position:0px -20px;}
+.page-zhnh .ico.snh{background-position:0px -40px;}
+.page-zhnh .ico.qnh{background-position:0px -60px;}
+.page-zhnh .ico.prev{background-position:0px -80px;}
+.page-zhnh .ico.next{background-position:0px -100px;}
+.page-zhnh .ico.edit{background-position:0px -120px;}
+.page-zhnh .ico.arrow-r{background-position:0px -140px;}
+/* 分割线 */
+.echart-item-1{position:relative;display:inline-block;min-width:220px;border:1px solid #ddd;box-shadow:5px 5px 10px #eaeaea;}
+.echart-item-1        .item-tit{position:relative;padding:5px 8px 5px 15px;color:#fff;}
+.echart-item-1.orange .item-tit{background:#f29108;}
+.echart-item-1.green  .item-tit{background:#6abf43;}
+.echart-item-1.blue   .item-tit{background:#00aced;}
+.echart-item-1.purple .item-tit{background:#b365c9;}
+/* 分割线 */
+.echart-item-1 .item-tit .text > *{vertical-align:middle;}
+.echart-item-1 .item-tit .text b{line-height:1; font-size:24px;}
+.echart-item-1 .item-tit .ico{position:absolute;top:7px;right:8px;}
+.echart-item-1 .echart-wrap{height:200px;}
+/* 分割线 */
+.echart-item-2{position:relative;display:inline-block;min-width:220px;border:1px solid #ddd;}
+.echart-item-2 .item-tit{position:relative;padding:5px 15px 5px 5px;background:#dfe8f6;}
+.echart-item-2 .item-tit p > *{vertical-align:middle;}
+.echart-item-2 .item-tit > .ico{position:absolute;top:5px;right:5px;}
+.echart-item-2 .echart-wrap{height:320px;}
+/* 公共排版 结束 */
+
+
+
+/* 综合能耗页面 开始 */
+.page-zhnh{padding:15px;}
+.page-zhnh .view-type-box{position:relative;margin-bottom:20px;margin-left:-15px;padding-right:30px;}
+.page-zhnh .view-type-box .fix-width{position:absolute;right:0;top:0;bottom:0;padding:0 4.5px;width:21px;line-height:2.5;color:#fff;text-align:center;background:#03419a;cursor:pointer;z-index:10;}
+.page-zhnh .view-type-box .item-wrap{float:left;width:50%;padding-left:15px;}
+.page-zhnh .view-type-box .item{position:relative;padding:10px 25px 10px 50px;border:1px solid #ddd;}
+.page-zhnh .view-type-box .item-tit{position:absolute;left:0;top:0;bottom:0;padding:0 5px;width:25px;line-height:2.5;font-weight:bold;color:#15428b;background:#dfe8f6;}
+/* 分割线 */
+.page-zhnh .bxslider-wrapper{height:72px;overflow:hidden;}
+.page-zhnh .lider-item{position:relative;float:left;width:200px;height:100%;}
+.page-zhnh .lider-item img{display:block;width:100%;height:100%;}
+.page-zhnh .lider-item .title{position: absolute;bottom:0;left:0;right:0;padding:2px 5px; color:#fff;text-align:center;font-size:12px;background:rgba(0,0,0,0.5);}
+.page-zhnh .lx-controls-direction .lx-prev,
+.page-zhnh .lx-controls-direction .lx-next{display:inline-block;vertical-align:middle;margin-top:-10px;width:20px;height:20px;background:url("../images/base/zhnh-ico.png") no-repeat;}
+.page-zhnh .lx-controls-direction .lx-prev.disabled,
+.page-zhnh .lx-controls-direction .lx-next.disabled{display:block !important;}
+.page-zhnh .lx-controls-direction .lx-prev{left:-22px;margin-left:0;background-position:0px -80px;}
+.page-zhnh .lx-controls-direction .lx-next{right:-22px;margin-right:0;background-position:0px -100px;}
+/* 分割线 */
+.page-zhnh .item-list{margin:-12px 0 20px -12px;}
+.page-zhnh .item-list li{float:left;padding:12px 0 0 12px;width:25%;}
+.page-zhnh .item-list .echart-item-1{display:block;}
+/* 分割线 */
+.page-zhnh .modulear-box{overflow:hidden;}
+.page-zhnh .modulear-box .echart-item-2.small{float:left;margin-right:10px;width:260px;}
+.page-zhnh .modulear-box .echart-item-2.big{display:block;overflow:hidden;}
+.page-zhnh .modulear-box .echart-item-2.small .echart-wrap{height:345px;}
+.page-zhnh .modulear-box .echart-item-2.big   .echart-wrap{height:auto;}
+.page-zhnh .modulear-box .echart-item-2.big   .tab-con{height:293px;}
+/* 分割线 */
+.page-zhnh .tab-nav{margin-top:25px;text-align:center;}
+.page-zhnh .tab-nav-item{margin:0 2px;padding:5px 10px;font-size:16px;}
+.page-zhnh .tab-nav-item.active{border-bottom:1px solid #f60;text-decoration:none;}
+/* 综合能耗页面 结束 */

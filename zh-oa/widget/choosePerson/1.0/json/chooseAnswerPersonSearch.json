@@ -1,0 +1,29 @@
+﻿[
+    {
+        "PHONE": "15715901795",
+        "PHOTOURI": "http://f1.yihuimg.com/TFS/upfile/doctor/118/EE52142177FE4B659CB939F4A42E168A150227025642356.jpg",
+        "CNAME": "张爱玲",
+        "SEX": 2,
+        "ORGNAME": "健康之路-测试三组",
+        "JOBNUMBER": "0591656",
+        "USERID": "BD16FC45CEBA4E71999AB26489DB4659"
+    },
+    {
+        "PHONE": "15659432880",
+        "PHOTOURI": null,
+        "CNAME": "张宝玲",
+        "SEX": 2,
+        "ORGNAME": "健康之路-小薇问药",
+        "JOBNUMBER": "5910171",
+        "USERID": "3810EB859AF34585B61DA8333011F73A"
+    },
+    {
+        "PHONE": "18987958650",
+        "PHOTOURI": "http://f1.yihuimg.com/TFS/upfile/doctor/118/E7C59D62EE9A491E84FD7F45949BD74C150215063109911.jpg",
+        "CNAME": "张勃伟",
+        "SEX": 1,
+        "ORGNAME": "健康之路-云南",
+        "JOBNUMBER": "0871012",
+        "USERID": "E7C59D62EE9A491E84FD7F45949BD74C"
+    }
+]

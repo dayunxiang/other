@@ -1,0 +1,22 @@
+// 字体图标
+@mixin iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px; font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // 修改阿里图标样式
+  line-height: 1;
+  vertical-align: middle;
+  font-size: inherit;
+  font-style: normal;
+  color: inherit;
+}
+
+// 多行溢出省略号
+@mixin multipleRowsEllipsis($row: 1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+  overflow: hidden;
+}

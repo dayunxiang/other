@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="google" value="notranslate">
+    <title>首页</title>
+    <link href="../widget/swiper2.7.6/css/idangerous.swiper.css" rel="stylesheet">
+    <link href="../widget/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+    <link href="../css/allPage.css" rel="stylesheet">
+  </head>
+  <body class="frame">
+    <!-- 首页容器 开始 -->
+    <div class="page-index">
+      <h1>旗山云水务大数据中心</h1>
+
+      <!-- 左侧概览 开始 -->
+      <div class="view-left">
+        <div class="item">
+          <div class="p-num-item">
+            <i class="p-icon-1 data"></i>
+            <p class="title">累计数据量11亿+</p>
+            <p class="value">
+              <strong class="swiper-number"></strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="p-num-item">
+            <i class="p-icon-1 add"></i>
+            <p class="title">日新增数据量200万+</p>
+            <p class="value">
+              <strong>12,456,70</strong> 条
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="echarts-wrap"></div>
+          <i class="p-icon-1 store"></i>
+        </div>
+
+        <div class="item">
+          <div class="p-num-item">
+            <i class="p-icon-1 time"></i>
+            <p class="title">最长托管时间11年</p>
+            <p class="value">
+              <strong>4,015</strong>天
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="echarts-wrap"></div>
+          <i class="p-icon-1 on-line"></i>
+        </div>
+      </div>
+      <!-- 左侧概览 结束 -->
+
+      <!-- 右侧概览 开始 -->
+      <div class="view-right">
+        <div class="item echarts-wrap">百度图表</div>
+        <div class="item echarts-wrap">百度图表</div>
+        <div class="item echarts-wrap">百度图表</div>
+        <div class="item echarts-wrap xqyx">
+          <p>小区营销</p>
+          <img src="../images/index/xqyx.png">
+        </div>
+        <div class="item echarts-wrap">百度图表</div>
+      </div>
+      <!-- 右侧概览 结束 -->
+
+      <div id="main" class="main-echart"></div>
+      <div class="echart-singapore"></div>
+
+      <!-- 地图侧边侧边浮层 开始 -->
+      <div style="position: absolute;right: 500px;bottom: 200px;" class="main-echart-aside">
+        <table class="p-table-1">
+          <thead>
+            <tr>
+              <th width="40px">序号</th>
+              <th>水司名称</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                <span>健康之路</span>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <span>健康之路</span>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <span>健康之路</span>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <span>健康之路</span>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <span>健康之路</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 地图侧边侧边浮层 结束 -->
+
+      <!-- 底部列表 开始 -->
+      <div class="list-assets">
+        <dl>
+          <dd>88888</dd>
+          <dt>最高容纳服务器数（台）</dt>
+        </dl>
+        <dl>
+          <dd>88888</dd>
+          <dt>机房面积（m2）</dt>
+        </dl>
+        <dl>
+          <dd>88888</dd>
+          <dt>机柜数量（台）</dt>
+        </dl>
+        <dl>
+          <dd>88888</dd>
+          <dt>目前服务器数（台）</dt>
+        </dl>
+      </div>
+      <!-- 底部列表 结束 -->
+    </div>
+    <!-- 首页容器 结束 -->
+
+    <!-- 测试按钮 开始 -->
+    <div style="position: absolute; top: 20px; left: 20px; z-index: 50;">
+      <i class="p-cities province"></i>
+      <i class="p-cities city"></i>
+      <i class="p-cities home"></i>
+      <button id="popup1" style="padding:5px;color: red;">弹窗1</button>
+      <button id="popup2" style="padding:5px;color: red;">弹窗2</button>
+      <button id="popup3" style="padding:5px;color: red;">弹窗3</button>
+      <button id="popup4" style="padding:5px;color: red;">弹窗4</button>
+      <button id="popup5" style="padding:5px;color: red;">弹窗5</button>
+    </div>
+    <!-- 测试按钮 结束 -->
+
+    <template id="popupTabCard-1">
+      <div class="p-tab-card">
+        <div class="nav-wrap">
+          <a class="tab-nav csdc active" href="javascript:;">
+            <span>城市洞察</span>
+          </a>
+          <a class="tab-nav swfn" href="javascript:;">
+            <span>水务赋能</span>
+          </a>
+          <a class="tab-nav dwjn" href="javascript:;">
+            <span>单位节能</span>
+          </a>
+          <a class="tab-nav xqyx" href="javascript:;">
+            <span>小区营销</span>
+          </a>
+          <a class="tab-nav jtfw" href="javascript:;">
+            <span>家庭服务</span>
+          </a>
+        </div>
+        <div class="con-wrap">
+          <!-- 城市洞察 开始 -->
+          <div class="tab-con swiper-container csdc active">
+            <div class="swiper-wrapper">
+              <!-- 模块1 开始 -->
+              <div class="swiper-slide module-1">
+                <!-- 左侧区域 开始 -->
+                <div class="aside-left">
+                  <a class="btn drop-down" href="javascript:;">
+                    <div class="p-bc-wrap-1">
+                      <div class="top">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="bottom">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="left">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="right">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="center"></div>
+                    </div>
+                    <span>城市忙碌指数排名</span>
+                  </a>
+
+                  <dl class="p-tips-item">
+                    <dt>异常点说明</dt>
+                    <dd>
+                      当前共有100个用水点发生异常警告，
+                      可辅助发现传销、反恐、制毒等犯罪地点、减少城市安全隐患
+                    </dd>
+                  </dl>
+
+                  <div class="echarts-wrap">
+                    <p class="p-title-echart">
+                      城市异常用水点数 Top10
+                      <!-- 这边本来应该要有一个副标题，这个副标题请用图表去构造 -->
+                    </p>
+                    <div class="inner-echart-wrap">百度图表</div>
+                  </div>
+                </div>
+                <!-- 左侧区域 结束 -->
+
+                <!-- 右侧区域 开始 -->
+                <div class="aside-right">
+                  <a class="btn drop-down" href="javascript:;">
+                    <div class="p-bc-wrap-1">
+                      <div class="top">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="bottom">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="left">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="right">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="center"></div>
+                    </div>
+                    <span>城市忙碌指数排名</span>
+                  </a>
+                  <div class="echarts-list">
+                    <div class="item-block">
+                      <p class="p-title-echart">
+                        X城市分时段用水量
+                        <span class="sub-title">（X城市最近24小时用水量）</span>
+                      </p>
+                      <div class="echarts-wrap">百度图表</div>
+                    </div>
+                    <div class="item-block">
+                      <p class="p-title-echart">
+                        X城市用水性质用水量
+                        <span class="sub-title">（X城市X性质的用水量最多）</span>
+                      </p>
+                      <div class="echarts-wrap">百度图表</div>
+                    </div>
+                    <div class="item-block">
+                      <p class="p-title-echart">
+                        X城市区域用水量
+                        <span class="sub-title">（X城市E区域用水量最多）</span>
+                      </p>
+                      <div class="echarts-wrap">百度图表</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 右侧区域结束 -->
+
+                <!-- 地图容器 开始 -->
+                <div class="map-wrap"></div>
+                <!-- 地图容器 结束 -->
+
+                <!-- 时间轴 开始 -->
+                <div class="p-play-progress">
+                  <div class="p-bc-wrap-1">
+                    <div class="top">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="bottom">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="left">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="right">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="center"></div>
+                  </div>
+
+                  <!-- 停止播放的时候 记得添加类名stop -->
+                  <a class="btn-play stop" href="javascript:;"></a>
+                  <ul>
+                    <li class="play">01</li>
+                    <li class="play">02</li>
+                    <li class="play">03</li>
+                    <li class="play">04</li>
+                    <li class="play">05</li>
+                    <li class="play">06</li>
+                    <li>07</li>
+                    <li>08</li>
+                    <li>09</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                  </ul>
+                </div>
+                <!-- 时间轴 结束 -->
+              </div>
+              <!-- 模块1 结束 -->
+            </div>
+          </div>
+          <!-- 城市洞察 结束 -->
+
+          <!-- 水务赋能 开始 -->
+          <div class="tab-con swiper-container swfn">
+            <div class="swiper-wrapper">
+              <!-- 模块1 开始 -->
+              <div class="swiper-slide module-1">
+                <div class="itme-block">
+                  <p class="p-title-echart">一级管网DMA分区最小夜间流量累计环比值排名</p>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+                <div class="itme-block">
+                  <p class="p-title-echart">二级管网DMA分区最近7天最小夜间流量累计环比值</p>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+                <div class="itme-block">
+                  <div class="p-bc-wrap-1">
+                    <div class="top">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="bottom">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="left">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="right">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="center"></div>
+                  </div>
+                  <p class="p-title-echart">三级小区DMA最近7天最小夜间流量累计环比值top10</p>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+                <div class="itme-block">
+                  <div class="p-bc-wrap-1">
+                    <div class="top">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="bottom">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="left">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="right">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="center"></div>
+                  </div>
+                  <p class="p-title-echart">XX小区DMA最小夜间流量异常分析</p>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+              </div>
+              <!-- 模块1 结束 -->
+
+              <!-- 模块2 开始 -->
+              <div class="swiper-slide module-2">
+                <div class="itme-block">
+                  <div class="btn-toggle">
+                    <a class="btn active" href="javascript:;">小马拉大车</a>
+                    <a class="btn" href="javascript:;">大马拉小车</a>
+                  </div>
+                  <p class="p-title-echart">
+                    配表异常
+                    <span class="sub-title">（配表正常，58%以上的时间用水量小于分界流量）</span>
+                  </p>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+                <div class="itme-block second">
+                  <p class="p-title-echart">
+                    安装反向，流量走零
+                  </p>
+                  <div class="echarts-wrap">百度图表</div>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+                <div class="itme-block">
+                  <div class="p-bc-wrap-1">
+                    <div class="top">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="bottom">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="left">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="right">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="center"></div>
+                  </div>
+                  <p class="p-title-echart">
+                    企业官网漏损
+                    <span class="sub-title">（配表正常，非居民用水，夜间时段持续走水，最小夜间流量与正常值相比>=20%）</span>
+                  </p>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+                <div class="itme-block">
+                  <div class="p-bc-wrap-1">
+                    <div class="top">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="bottom">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="left">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="right">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="center"></div>
+                  </div>
+                  <p class="p-title-echart">
+                    居民偷盗水
+                    <span class="sub-title">（配表 常，最小夜间流量与正常值相比低于20%，产品差高于20）</span>
+                  </p>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+              </div>
+              <!-- 模块2 结束 -->
+
+              <!-- 模块3 开始 -->
+              <div class="swiper-slide module-3">
+                <div class="aside-left">
+                  <p class="p-title-echart">产销差率下钻分析</p>
+
+                  <ul class="module-list">
+                    <li>
+                      <div class="p-modular-item">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="down">94%↓</dd>
+                        </dl>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="p-modular-item curr">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="up">31%↑</dd>
+                        </dl>
+                      </div>
+
+                      <div class="p-modular-item other">
+                        <div class="tit">
+                          <span class="name" title="全称">其它片区</span>
+                          <span class="value">:20%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>......</dt>
+                          <dd class="up"></dd>
+                        </dl>
+                      </div>
+                    </li>
+                    <li class="info-wrap-father">
+                      <div class="p-modular-item">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="up">31%↑</dd>
+                        </dl>
+                      </div>
+
+                      <div class="p-modular-item other active">
+                        <div class="tit">
+                          <span class="name" title="全称">其它片区</span>
+                          <span class="value">:20%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>......</dt>
+                          <dd class="up"></dd>
+                        </dl>
+                        <!--
+                          弹窗的显示、隐藏通过给【p-modular-item】元素添加、删除类名【active】来控制
+                         -->
+                        <div class="float-layer">
+                          <table class="p-table-1">
+                            <thead>
+                              <tr>
+                                <th width="40px;">序号</th>
+                                <th>片区名称</th>
+                                <th width="80px">产销差率</th>
+                                <th width="80px">环比</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>
+                                  <span class="name">某某小区名称某某小区名称某某小区名称</span>
+                                </td>
+                                <td>35%</td>
+                                <td class="up">5%↑</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>
+                                  <span class="name">某某小区名称某某小区名称某某小区名称</span>
+                                </td>
+                                <td>35%</td>
+                                <td class="down">5%↓</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="info-wrap">
+                      <div class="p-modular-item">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="up">31%↑</dd>
+                        </dl>
+                      </div>
+                      <div class="p-modular-item">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="up">31%↑</dd>
+                        </dl>
+                      </div>
+                      <div class="p-modular-item">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="up">31%↑</dd>
+                        </dl>
+                      </div>
+                      <div class="p-modular-item">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="up">31%↑</dd>
+                        </dl>
+                      </div>
+                      <div class="p-modular-item">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="up">31%↑</dd>
+                        </dl>
+                      </div>
+                      <div class="p-modular-item">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="up">31%↑</dd>
+                        </dl>
+                      </div>
+                      <div class="p-modular-item">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="up">31%↑</dd>
+                        </dl>
+                      </div>
+                      <div class="p-modular-item">
+                        <div class="tit">
+                          <span class="name" title="全称">产销差率产销差率产销差率产销差率产销差率</span>
+                          <span class="value">:X%</span>
+                        </div>
+                        <dl class="info">
+                          <dt>环比:</dt>
+                          <dd class="up">31%↑</dd>
+                        </dl>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="aside-right">
+                  <div class="row first">
+                    <div class="echarts-wrap">
+                      <p class="p-title-echart">产销差率Top5小区</p>
+                      <div class="inner-echart-wrap">百度图表</div>
+                    </div>
+                    <div class="echarts-wrap">
+                      <p class="p-title-echart">Top5小区产销差率变化分析</p>
+                      <div class="inner-echart-wrap">百度图表</div>
+                    </div>
+                  </div>
+                  <div class="row second">
+                    <div class="echarts-wrap">
+                      <p class="p-title-echart">
+                        产销差率25%
+                        <span class="sub-title">（供水量：1000000m3，售水量：750000m3）</span>
+                      </p>
+                      <div class="inner-echart-wrap">百度图表</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 模块3 结束 -->
+            </div>
+          </div>
+          <!-- 水务赋能 结束 -->
+
+          <!-- 单位节能 开始 -->
+          <div class="tab-con swiper-container dwjn">
+            <div class="swiper-wrapper">
+              <!-- 模块1 开始 -->
+              <div class="swiper-slide module-1">
+                <div class="left-content">
+                  <div class="itme-block">
+                    <div class="p-bc-wrap-1">
+                      <div class="top">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="bottom">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="left">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="right">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="center"></div>
+                    </div>
+                    <div class="echarts-wrap">
+                      <p class="p-title-echart">用水大户数量</p>
+                      <div class="inner-echart-wrap">百度图表</div>
+                    </div>
+                  </div>
+                  <div class="itme-block">
+                    <div class="p-bc-wrap-1">
+                      <div class="top">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="bottom">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="left">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="right">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="center"></div>
+                    </div>
+                    <div class="echarts-wrap">
+                      <p class="p-title-echart">用水大户占比</p>
+                      <div class="inner-echart-wrap">百度图表</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="right-content echarts-wrap">
+                  <p class="p-title-echart">用水大户用水量占比</p>
+                  <div class="inner-echart-wrap">百度图表</div>
+                </div>
+              </div>
+              <!-- 模块1 结束 -->
+
+              <!-- 模块2 开始 -->
+              <div class="swiper-slide module-2">
+                <div class="left-side">
+                  <p class="module-echart-title">XX高校节能分析</p>
+                  <div class="echarts-wrap">
+                    <p class="p-title-echart">整体能耗</p>
+                    <div class="inner-echart-wrap">百度图表</div>
+                  </div>
+                  <div class="echarts-wrap">
+                    <p class="p-title-echart">节能效果</p>
+                    <div class="inner-echart-wrap">百度图表</div>
+                  </div>
+                </div>
+                <div class="right-side">
+                  <div class="row first">
+                    <p class="module-echart-title">XX高效用电分析</p>
+                    <div class="echarts-wrap">
+                      <p class="p-title-echart">用电楼栋排名</p>
+                    <div class="inner-echart-wrap">百度图表</div>
+                    </div>
+                    <div class="echarts-wrap">
+                      <p class="p-title-echart">用电分项计量</p>
+                    <div class="inner-echart-wrap">百度图表</div>
+                    </div>
+                  </div>
+                  <div class="row second">
+                    <p class="module-echart-title">XX高效用水分析</p>
+                    <div class="echarts-wrap">
+                      <p class="p-title-echart">用水产销差</p>
+                    <div class="inner-echart-wrap">百度图表</div>
+                    </div>
+                    <div class="echarts-wrap">
+                      <p class="p-title-echart">用水环比</p>
+                    <div class="inner-echart-wrap">百度图表</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 模块2 结束 -->
+            </div>
+          </div>
+          <!-- 单位节能 结束 -->
+
+          <!-- 小区营销 开始 -->
+          <div class="tab-con swiper-container xqyx">
+            <div class="swiper-wrapper">
+              <!-- 模块1 开始 -->
+              <div class="swiper-slide module-1">
+                <!-- 左侧浮层 开始 -->
+                <div class="aside-left">
+                  <a class="btn drop-down" href="javascript:;">
+                    <div class="p-bc-wrap-1">
+                      <div class="top">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="bottom">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="left">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="right">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="center"></div>
+                    </div>
+                    <span>小区指标分析</span>
+                  </a>
+                  <ul>
+                    <li class="p-num-item">
+                      <div class="p-bc-wrap-1">
+                        <div class="top">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="bottom">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="left">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="right">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="center"></div>
+                      </div>
+                      <i class="p-icon-2 gln"></i>
+                      <p class="value">
+                        <strong>88888</strong>
+                      </p>
+                      <p class="title">高老年占比小区数</p>
+                    </li>
+
+                    <li class="p-num-item">
+                      <div class="p-bc-wrap-1">
+                        <div class="top">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="bottom">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="left">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="right">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="center"></div>
+                      </div>
+                      <i class="p-icon-2 gxf"></i>
+                      <p class="value">
+                        <strong>88888</strong>
+                      </p>
+                      <p class="title">高消费占比小区数</p>
+                    </li>
+
+                    <li class="p-num-item">
+                      <div class="p-bc-wrap-1">
+                        <div class="top">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="bottom">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="left">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="right">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="center"></div>
+                      </div>
+                      <i class="p-icon-2 gsb"></i>
+                      <p class="value">
+                        <strong>88888</strong>
+                      </p>
+                      <p class="title">高上班族占比小区数</p>
+                    </li>
+
+                    <li class="p-num-item">
+                      <div class="p-bc-wrap-1">
+                        <div class="top">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="bottom">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="left">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="right">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="center"></div>
+                      </div>
+                      <i class="p-icon-2 grz"></i>
+                      <p class="value">
+                        <strong>88888</strong>
+                      </p>
+                      <p class="title">高入住率占比小区数</p>
+                    </li>
+
+                    <li class="p-num-item">
+                      <div class="p-bc-wrap-1">
+                        <div class="top">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="bottom">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="left">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="right">
+                          <div class="inner"></div>
+                        </div>
+                        <div class="center"></div>
+                      </div>
+                      <i class="p-icon-2 glh"></i>
+                      <p class="value">
+                        <strong>88888</strong>
+                      </p>
+                      <p class="title">高绿化率用水占比小区</p>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 左侧浮层 结束 -->
+
+                <!-- 右侧浮层 开始 -->
+                <div class="aside-right">
+                  <a class="btn" href="javascript:;">水司</a>
+                  <ul id="waterList" class="list-wrap ztree"></ul>
+                </div>
+                <!-- 右侧浮层 结束 -->
+
+                <!-- 地图容器 开始 -->
+                <div class="map-wrap"></div>
+                <!-- 地图容器 结束 -->
+
+                <!-- 地图浮层 开始 -->
+                  <!--
+                    1. style样式仅仅为演示，自行删除
+                    2.这个容器宽度是跟随父亲的宽度，但是最大宽度我限制为600px，最小宽度为500px;
+                    3.这个容器的高度固定为310px;
+                    4.图片宽高没固定
+                   -->
+                <div style="position: absolute; right: 350px; top: 120px;" class="p-map-float-layer-1">
+                  <a class="btn-close" href="javascript:;"></a>
+                  <div class="img-wrap">
+                    <div class="tit-wrap">
+                      <p class="title">X小区属于老龄小区，高绿化小区</p>
+                      <p class="sub-title">建议推荐养老服务、医疗等服务</p>
+                    </div>
+                    <i style="position: absolute; left: 100px; top: 123px;" class="p-map-tip no-point">老龄化小区</i>
+                    <i style="position: absolute; left: 80px; top: 200px;" class="p-map-tip no-point">老龄化小区</i>
+                  </div>
+                  <div class="echarts-list">
+                    <div class="echarts-wrap">图表1</div>
+                    <div class="echarts-wrap">图表2</div>
+                  </div>
+                </div>
+                <i style="position: absolute; left: 250px; top: 0;" class="p-map-tip">老龄化小区</i>
+                <!-- 地图浮层 结束 -->
+              </div>
+              <!-- 模块1 结束 -->
+
+              <div class="swiper-slide module-1">
+                临时模块
+              </div>
+            </div>
+          </div>
+          <!-- 小区营销 结束 -->
+
+          <!-- 家庭服务 开始 -->
+          <div class="tab-con swiper-container jtfw">
+            <div class="swiper-wrapper">
+              <!-- 模块1 开始 -->
+              <div class="swiper-slide module-1">
+                <div class="itme-block first">
+                  <i class="p-icon-2 gln"></i>
+                  <p class="title">老人近24小时用水用电实时监控</p>
+                  <div class="echarts-wrap">百度图表</div>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+                <div class="itme-block second">
+                  <i class="p-icon-2 zx"></i>
+                  <p class="title">装修后、放旅游外出用水量实时监控</p>
+                  <div class="echarts-wrap">百度图表</div>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+                <div class="itme-block">
+                  <i class="p-icon-2 gsb"></i>
+                  <p class="title">上班族近24小时用水实时监控</p>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+                <div class="itme-block">
+                  <i class="p-icon-2 jt"></i>
+                  <p class="title">有家庭主妇的用水量异常监控</p>
+                  <div class="echarts-wrap">百度图表</div>
+                </div>
+              </div>
+              <!-- 模块1 结束 -->
+            </div>
+          </div>
+          <!-- 家庭服务 结束 -->
+        </div>
+      </div>
+      <div class="pagination-wrap">
+        <div class="pagination pagination-csdc active"></div>
+        <div class="pagination pagination-swfn"></div>
+        <div class="pagination pagination-dwjn"></div>
+        <div class="pagination pagination-xqyx"></div>
+        <div class="pagination pagination-jtfw"></div>
+      </div>
+      <div class="arrow-list">
+        <div class="arrow-wrap csdc active">
+          <a class="arrow-left" href="javascript:;"></a>
+          <a class="arrow-right" href="javascript:;"></a>
+        </div>
+        <div class="arrow-wrap swfn">
+          <a class="arrow-left" href="javascript:;"></a>
+          <a class="arrow-right" href="javascript:;"></a>
+        </div>
+        <div class="arrow-wrap dwjn">
+          <a class="arrow-left" href="javascript:;"></a>
+          <a class="arrow-right" href="javascript:;"></a>
+        </div>
+        <div class="arrow-wrap xqyx">
+          <a class="arrow-left" href="javascript:;"></a>
+          <a class="arrow-right" href="javascript:;"></a>
+        </div>
+        <div class="arrow-wrap jtfw">
+          <a class="arrow-left" href="javascript:;"></a>
+          <a class="arrow-right" href="javascript:;"></a>
+        </div>
+      </div>
+    </template>
+
+    <template id="popupTabCard-2">
+      <div class="p-tab-card">
+        <div class="nav-wrap">
+          <a class="tab-nav" href="javascript:;">
+            <span>水司地图</span>
+          </a>
+          <a class="tab-nav active" href="javascript:;">
+            <span>监控点流量</span>
+          </a>
+        </div>
+        <div class="con-wrap">
+          <div class="tab-con">弹窗跳转</div>
+          <div class="tab-con jkdll active">
+            <div class="aside-right">
+              <a class="btn" href="javascript:;">监控点</a>
+              <ul id="monitorList" class="list-wrap ztree"></ul>
+            </div>
+            <div class="row first">
+              <div class="echarts-wrap">百度图表</div>
+            </div>
+            <div class="row second">
+              <!-- 第1个块 开始 -->
+              <div class="itme-block">
+                <div class="p-bc-wrap-1">
+                  <div class="top">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="bottom">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="left">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="right">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="center"></div>
+                </div>
+                <div class="echarts-wrap">百度图表</div>
+              </div>
+              <!-- 第1个块 结束 -->
+
+              <!-- 第2个块 开始 -->
+              <div class="itme-block">
+                <div class="p-bc-wrap-1">
+                  <div class="top">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="bottom">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="left">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="right">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="center"></div>
+                </div>
+                <div class="echarts-wrap">百度图表</div>
+              </div>
+              <!-- 第2个块 结束 -->
+
+              <!-- 第3个块 开始 -->
+              <div class="itme-block">
+                <div class="p-bc-wrap-1">
+                  <div class="top">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="bottom">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="left">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="right">
+                    <div class="inner"></div>
+                  </div>
+                  <div class="center"></div>
+                </div>
+                <div class="echarts-wrap">百度图表</div>
+              </div>
+              <!-- 第3个块 结束 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="popupTabCard-3">
+      <!-- water-utilities -->
+      <div class="dashboard">
+        <div class="p-num-item">
+          <div class="p-bc-wrap-1">
+            <div class="top">
+              <div class="inner"></div>
+            </div>
+            <div class="bottom">
+              <div class="inner"></div>
+            </div>
+            <div class="left">
+              <div class="inner"></div>
+            </div>
+            <div class="right">
+              <div class="inner"></div>
+            </div>
+            <div class="center"></div>
+          </div>
+          <i class="p-icon-2 data"></i>
+          <p class="value">
+            <strong>15,456,13</strong> 万条
+          </p>
+          <p class="title">累计数量总量</p>
+        </div>
+
+        <div class="p-num-item">
+          <div class="p-bc-wrap-1">
+            <div class="top">
+              <div class="inner"></div>
+            </div>
+            <div class="bottom">
+              <div class="inner"></div>
+            </div>
+            <div class="left">
+              <div class="inner"></div>
+            </div>
+            <div class="right">
+              <div class="inner"></div>
+            </div>
+            <div class="center"></div>
+          </div>
+          <i class="p-icon-2 add"></i>
+          <p class="value">
+            <strong>12,456,70</strong> 条
+          </p>
+          <p class="title">日新增数据量</p>
+        </div>
+
+        <div class="p-num-item">
+          <div class="p-bc-wrap-1">
+            <div class="top">
+              <div class="inner"></div>
+            </div>
+            <div class="bottom">
+              <div class="inner"></div>
+            </div>
+            <div class="left">
+              <div class="inner"></div>
+            </div>
+            <div class="right">
+              <div class="inner"></div>
+            </div>
+            <div class="center"></div>
+          </div>
+          <i class="p-icon-2 store"></i>
+          <p class="value">
+            <strong>2,459,45</strong> 月
+          </p>
+          <p class="title">最长数据托管时间</p>
+        </div>
+
+        <div class="p-num-item">
+          <div class="p-bc-wrap-1">
+            <div class="top">
+              <div class="inner"></div>
+            </div>
+            <div class="bottom">
+              <div class="inner"></div>
+            </div>
+            <div class="left">
+              <div class="inner"></div>
+            </div>
+            <div class="right">
+              <div class="inner"></div>
+            </div>
+            <div class="center"></div>
+          </div>
+          <i class="p-icon-2 time"></i>
+          <p class="value">
+            <strong>1,147,69</strong> 个
+          </p>
+          <p class="title">在线设备数量</p>
+        </div>
+      </div>
+      <div class="aside-right">
+        <a class="btn" href="javascript:;">水司</a>
+        <ul id="companyList" class="list-wrap ztree skin-1"></ul>
+      </div>
+      <div class="echarts-wrap"></div>
+
+      <!-- 地图浮层 开始 -->
+      <!-- style的样式记得删除，这边仅仅是方便看效果 -->
+      <div style="left: 400px; top: 200px;" class="p-map-float-layer-2">
+        <div class="tit-block">
+          <span>xxoo监控点</span>
+          <a class="btn-close" href="javascript:;"></a>
+        </div>
+        <dl>
+          <dt>流量（m³/h）</dt>
+          <dd>
+            正向瞬时：20,
+            <span class="up">5% ↑</span>
+          </dd>
+          <dd>正向累计：480705 m³</dd>
+          <dd>
+            反向瞬时：20,
+            <span class="down">2% ↓</span>
+          </dd>
+          <dd>反向累计：480705 m³</dd>
+        </dl>
+        <div class="tool-wrap">
+          <a class="btn-info" href="javascript:;">详情</a>
+        </div>
+      </div>
+      <!-- 地图浮层 结束 -->
+    </template>
+
+    <template id="popupTabCard-4">
+      <!-- slfx -->
+      <div class="echarts-block">
+        <p class="title-summary">公司2008年开始为客户提供数据托管服务，截至目前累计数据量11亿多条，月新增6千万条，日新增203万条，数据存储量20T，在线设备数量70W台。</p>
+        <div class="left-side echarts-wrap">
+          <p class="p-title-echart">年累计数据量</p>
+          <div class="inner-echart-wrap">百度图表</div>
+        </div>
+        <div class="right-side">
+          <div class="item-block">
+            <div class="echarts-wrap">
+              <p class="p-title-echart">月新增数据量</p>
+              <div class="inner-echart-wrap">百度图表</div>
+            </div>
+          </div>
+          <div class="item-block">
+            <div class="echarts-wrap">
+              <p class="p-title-echart">日新增数据量</p>
+              <div class="inner-echart-wrap">百度图表</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="popupTabCard-5">
+      <!-- sjtg -->
+      <div class="overview">
+        <div class="num-item-list">
+          <div class="p-num-item">
+            <i class="p-icon-2 tg"></i>
+            <p class="value">
+              <strong>170</strong> 个
+            </p>
+            <p class="title">托管客户数</p>
+          </div>
+
+          <div class="p-num-item">
+            <i class="p-icon-2 jf"></i>
+            <p class="value">
+              <strong>373</strong> 平方米
+            </p>
+            <p class="title">机房面积</p>
+          </div>
+          <div class="p-num-item">
+            <i class="p-icon-2 jg"></i>
+            <p class="value">
+              <strong>176</strong> 个
+            </p>
+            <p class="title">机柜数量</p>
+          </div>
+        </div>
+      </div>
+      <div class="echarts-list">
+        <div class="item-block">
+          <div class="p-bc-wrap-1">
+            <div class="top">
+              <div class="inner"></div>
+            </div>
+            <div class="bottom">
+              <div class="inner"></div>
+            </div>
+            <div class="left">
+              <div class="inner"></div>
+            </div>
+            <div class="right">
+              <div class="inner"></div>
+            </div>
+            <div class="center"></div>
+          </div>
+          <div class="echarts-wrap">百度图表</div>
+        </div>
+        <div class="item-block">
+          <div class="p-bc-wrap-1">
+            <div class="top">
+              <div class="inner"></div>
+            </div>
+            <div class="bottom">
+              <div class="inner"></div>
+            </div>
+            <div class="left">
+              <div class="inner"></div>
+            </div>
+            <div class="right">
+              <div class="inner"></div>
+            </div>
+            <div class="center"></div>
+          </div>
+          <div class="echarts-wrap">百度图表</div>
+        </div>
+        <div class="item-block">
+          <div class="p-bc-wrap-1">
+            <div class="top">
+              <div class="inner"></div>
+            </div>
+            <div class="bottom">
+              <div class="inner"></div>
+            </div>
+            <div class="left">
+              <div class="inner"></div>
+            </div>
+            <div class="right">
+              <div class="inner"></div>
+            </div>
+            <div class="center"></div>
+          </div>
+          <div class="echarts-wrap">百度图表</div>
+        </div>
+        <div class="item-block">
+          <div class="p-bc-wrap-1">
+            <div class="top">
+              <div class="inner"></div>
+            </div>
+            <div class="bottom">
+              <div class="inner"></div>
+            </div>
+            <div class="left">
+              <div class="inner"></div>
+            </div>
+            <div class="right">
+              <div class="inner"></div>
+            </div>
+            <div class="center"></div>
+          </div>
+          <div class="echarts-wrap">百度图表</div>
+        </div>
+        <div class="item-block io">
+          <div class="p-bc-wrap-1">
+            <div class="top">
+              <div class="inner"></div>
+            </div>
+            <div class="bottom">
+              <div class="inner"></div>
+            </div>
+            <div class="left">
+              <div class="inner"></div>
+            </div>
+            <div class="right">
+              <div class="inner"></div>
+            </div>
+            <div class="center"></div>
+          </div>
+          <div class="echarts-wrap">
+            <p>io占用率：50%</p>
+            <div class="p-echart-progress">
+              <i style="height: 40%;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- 脚本引入开始 -->
+    <script src="../widget/jquery-1.11.1/jquery.js"></script>
+    <script src="../widget/layer-v3.1.1/layer.js"></script>
+    <script src="../widget/swiper2.7.6/js/idangerous.swiper.min.js"></script>
+    <script src="../widget/zTree_v3/js/jquery.ztree.core.js"></script>
+    <script src="../widget/digitalScroll/js/digitalScroll.js"></script>
+    <script src="../widget/echarts-2.2.7/build/dist/echarts.js"></script>
+    <script src="../scripts/tab.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/index-echarts.js"></script>
+    <script>
+      $(function () {
+        $('#popup1').on('click', function () {
+          layer.open({
+            type: 1,
+            skin: 'dark',
+            move: false,
+            anim: 0,
+            title :'我是标题我是标题',
+            content: $('#popupTabCard-1').html(),
+            success: function (layero, index) {
+              var csdcLength = $('.swiper-container.csdc').find('.swiper-slide').length;
+              var swfnLength = $('.swiper-container.swfn').find('.swiper-slide').length;
+              var dwjnLength = $('.swiper-container.dwjn').find('.swiper-slide').length;
+              var xqyxLength = $('.swiper-container.xqyx').find('.swiper-slide').length;
+              var jtfwLength = $('.swiper-container.jtfw').find('.swiper-slide').length;
+
+              var swiperCSDC = $('.swiper-container.csdc').swiper({
+                loop: false, // 不要循环
+                resistance: false, // 是否抗反弹
+                watchActiveIndex : true, // 监听激活索引
+                pagination : '.pagination-csdc',
+                paginationClickable :true
+              });
+              var swiperSWFN = $('.swiper-container.swfn').swiper({
+                loop: false, // 不要循环
+                resistance: false, // 是否抗反弹
+                watchActiveIndex : true, // 监听激活索引
+                pagination : '.pagination-swfn',
+                paginationClickable :true
+              });
+              var swiperDWJN = $('.swiper-container.dwjn').swiper({
+                loop: false, // 不要循环
+                resistance: false, // 是否抗反弹
+                watchActiveIndex : true, // 监听激活索引
+                pagination : '.pagination-dwjn',
+                paginationClickable :true
+              });
+              var swiperXQYX = $('.swiper-container.xqyx').swiper({
+                loop: false, // 不要循环
+                resistance: false, // 是否抗反弹
+                watchActiveIndex : true, // 监听激活索引
+                pagination : '.pagination-xqyx',
+                paginationClickable :true
+              });
+              var swiperJTFW = $('.swiper-container.jtfw').swiper({
+                loop: false, // 不要循环
+                resistance: false, // 是否抗反弹
+                watchActiveIndex : true, // 监听激活索引
+                pagination : '.pagination-jtfw',
+                paginationClickable :true
+              });
+              var swiperList = [swiperCSDC, swiperSWFN, swiperDWJN, swiperXQYX, swiperJTFW];
+              var reInitSwiper = function (index) {
+                swiperList[index].reInit();
+              }
+
+              // 城市洞察
+              $('.arrow-list .arrow-wrap.csdc').on('click', '.arrow-left', function () {
+                // 如果当前是第一个，则选项卡切换至 【家庭服务】
+                if(swiperCSDC.activeIndex === 0) {
+                  $('.p-tab-card .tab-nav.jtfw').trigger('click');
+                  return;
+                }
+                swiperCSDC.swipePrev();
+              });
+              $('.arrow-list .arrow-wrap.csdc').on('click', '.arrow-right', function () {
+                // 如果是最后一个轮播，则选项卡切换至 【水务赋能】
+                if(swiperCSDC.activeIndex === csdcLength - 1) {
+                  swiperCSDC.swipeTo(0, 1000, false);
+                  $('.p-tab-card .tab-nav.swfn').trigger('click');
+                  return;
+                }
+                swiperCSDC.swipeNext();
+              });
+
+              // 水务赋能
+              $('.arrow-list .arrow-wrap.swfn').on('click', '.arrow-left', function () {
+                // 如果当前是第一个，则选项卡切换至 【城市洞察】
+                if(swiperSWFN.activeIndex === 0) {
+                  $('.p-tab-card .tab-nav.csdc').trigger('click');
+                  return;
+                }
+                swiperSWFN.swipePrev();
+              });
+              $('.arrow-list .arrow-wrap.swfn').on('click', '.arrow-right', function () {
+                // 如果是最后一个，则选项卡切换至 【单位节能】
+                if(swiperSWFN.activeIndex === swfnLength - 1) {
+                  swiperSWFN.swipeTo(0, 1000, false);
+                  $('.p-tab-card .tab-nav.dwjn').trigger('click');
+                  return;
+                }
+                swiperSWFN.swipeNext();
+              });
+
+              // 单位节能
+              $('.arrow-list .arrow-wrap.dwjn').on('click', '.arrow-left', function () {
+                // 如果当前是第一个，则选项卡切换至 【水务赋能】
+                if(swiperDWJN.activeIndex === 0) {
+                  $('.p-tab-card .tab-nav.swfn').trigger('click');
+                  return;
+                }
+                swiperDWJN.swipePrev();
+              });
+              $('.arrow-list .arrow-wrap.dwjn').on('click', '.arrow-right', function () {
+                // 如果是最后一个，则选项卡切换至 【小区营销】
+                if(swiperDWJN.activeIndex === dwjnLength - 1) {
+                  swiperDWJN.swipeTo(0, 1000, false);
+                  $('.p-tab-card .tab-nav.xqyx').trigger('click');
+                  return;
+                }
+                swiperDWJN.swipeNext();
+              });
+
+              // 小区营销
+              $('.arrow-list .arrow-wrap.xqyx').on('click', '.arrow-left', function () {
+                // 如果当前是第一个，则选项卡切换至 【单位节能】
+                if(swiperXQYX.activeIndex === 0) {
+                  $('.p-tab-card .tab-nav.dwjn').trigger('click');
+                  return;
+                }
+                console.log(swiperXQYX.activeIndex);
+                swiperXQYX.swipePrev();
+              });
+              $('.arrow-list .arrow-wrap.xqyx').on('click', '.arrow-right', function () {
+                // 如果是最后一个，则选项卡切换至 【家庭服务】
+                if(swiperXQYX.activeIndex === xqyxLength - 2) {
+                  swiperXQYX.swipeTo(0, 1000, false);
+                  $('.p-tab-card .tab-nav.jtfw').trigger('click');
+                  return;
+                }
+                console.log(swiperXQYX.activeIndex);
+                swiperXQYX.swipeNext();
+              });
+
+              // 家庭服务
+              $('.arrow-list .arrow-wrap.jtfw').on('click', '.arrow-left', function () {
+                // 如果当前是第一个，则选项卡切换至 【小区营销】
+                if(swiperJTFW.activeIndex === 0) {
+                  $('.p-tab-card .tab-nav.xqyx').trigger('click');
+                  return;
+                }
+                swiperJTFW.swipePrev();
+              });
+              $('.arrow-list .arrow-wrap.jtfw').on('click', '.arrow-right', function () {
+                // 如果是最后一个，则选项卡切换至 【城市洞察】
+                if(swiperJTFW.activeIndex === jtfwLength - 1) {
+                  swiperJTFW.swipeTo(0, 1000, false);
+                  $('.p-tab-card .tab-nav.csdc').trigger('click');
+                  return;
+                }
+                swiperJTFW.swipeNext();
+              });
+
+              // 启用选项卡脚本
+              $('.p-tab-card').tab({
+                init: function () {
+                  var waterListNodes = [
+                    {
+                      name: '一级DMA分区1',
+                      iconSkin: 'province',
+                      children: [
+                        {
+                          name: '监控点11',
+                          iconSkin: 'home'
+                        },
+                        {
+                          name: '监控点22',
+                          iconSkin: 'home'
+                        }
+                      ]
+                    },
+                    {
+                      name: '一级DMA分区2',
+                      iconSkin: 'city',
+                      children: [
+                        {
+                          name: '监控点33',
+                          iconSkin: 'home'
+                        },
+                        {
+                          name: '监控点44',
+                          iconSkin: 'home'
+                        }
+                      ]
+                    }
+                  ];
+                  var waterListSetting = {};
+                  var zTreeObj = $.fn.zTree.init($("#waterList"), waterListSetting, waterListNodes);
+                },
+                callBack: function (opts) {
+                  reInitSwiper(opts.index);
+                  $('.pagination-wrap .pagination').removeClass('active').eq(opts.index).addClass('active');
+                  $('.arrow-list .arrow-wrap').removeClass('active').eq(opts.index).addClass('active');
+                }
+              });
+            }
+          });
+        });
+
+        $('#popup2').on('click', function () {
+          layer.open({
+            type: 1,
+            skin: 'dark',
+            move: false,
+            anim: 0,
+            title :'我是标题我是标题',
+            content: $('#popupTabCard-2').html(),
+            success: function (layero, index) {
+              // 启用选项卡脚本
+              $('.p-tab-card').tab({
+                init: function () {
+                  var monitorListNodes = [
+                    {
+                      name: '一级DMA分区1',
+                      iconSkin: 'province',
+                      children: [
+                        {
+                          name: '监控点11',
+                          iconSkin: 'home'
+                        },
+                        {
+                          name: '监控点22',
+                          iconSkin: 'home'
+                        }
+                      ]
+                    },
+                    {
+                      name: '一级DMA分区2',
+                      iconSkin: 'city',
+                      children: [
+                        {
+                          name: '监控点33',
+                          iconSkin: 'home'
+                        },
+                        {
+                          name: '监控点44',
+                          iconSkin: 'home'
+                        }
+                      ]
+                    }
+                  ];
+                  var monitorListSetting = {};
+                  var zTreeObj = $.fn.zTree.init($("#monitorList"), monitorListSetting, monitorListNodes);
+                }
+              });
+            }
+          });
+        });
+
+        $('#popup3').on('click', function () {
+          layer.open({
+            type: 1,
+            skin: 'dark water-utilities',
+            move: false,
+            anim: 0,
+            title :'我是标题我是标题',
+            content: $('#popupTabCard-3').html(),
+            success: function (layero, index) {
+              var companyListNodes = [
+                {
+                  name: '福建省',
+                  children: [
+                    {
+                      name: '福建智恒科技'
+                    },
+                    {
+                      name: '健康之路有限公司'
+                    }
+                  ]
+                },
+                {
+                  name: '江西省',
+                  children: [
+                    {
+                      name: '南昌智恒科技'
+                    },
+                    {
+                      name: '九江健康之路有限公司'
+                    }
+                  ]
+                },
+                {
+                  name: '江西省1',
+                  children: [
+                    {
+                      name: '南昌智恒科技1'
+                    },
+                    {
+                      name: '九江健康之路有限公司1'
+                    }
+                  ]
+                },
+                {
+                  name: '江西省1',
+                  children: [
+                    {
+                      name: '南昌智恒科技1'
+                    },
+                    {
+                      name: '九江健康之路有限公司1'
+                    }
+                  ]
+                }
+              ];
+              var companyListSetting = {};
+              var zTreeObj = $.fn.zTree.init($("#companyList"), companyListSetting, companyListNodes);
+            }
+          });
+        });
+
+        $('#popup4').on('click', function () {
+          layer.open({
+            type: 1,
+            skin: 'dark slfx',
+            move: false,
+            anim: 0,
+            title :'累计数据量分析',
+            content: $('#popupTabCard-4').html(),
+            success: function (layero, index) {
+              //
+            }
+          });
+        });
+
+        $('#popup5').on('click', function () {
+          layer.open({
+            type: 1,
+            skin: 'dark sjtg',
+            move: false,
+            anim: 0,
+            title :'数据托管能力',
+            content: $('#popupTabCard-5').html(),
+            success: function (layero, index) {
+              //
+            }
+          });
+        });
+
+        // 数字滑动效果
+        var sum = 1234567890;
+        swiperNumber({
+          number: sum,
+          numberImgHeight: 50,
+          numberDom: $('.swiper-number')
+        });
+        setInterval(function(){
+          sum++;
+          swiperNumber({
+            number: sum,
+            numberImgHeight: 50,
+            numberDom: $('.swiper-number')
+          });
+        }, 1800);
+      });
+    </script>
+    <!-- 脚本引入结束 -->
+  </body>
+</html>

@@ -1,0 +1,546 @@
+@import './resetMobile';
+
+// 超出省略号
+@mixin textEllipsis($maxLength: 100%) {
+  max-width:$maxLength;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+
+// 三角
+@mixin arrow ($borderWidth: 5px, $left: 0, $top: 0){
+  content: '';
+  position: absolute;
+  left: $left; top: $top;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border: $borderWidth dashed transparent;
+}
+// 上三角
+@mixin arrow-t($borderBottomWidth: 5px, $borderBottomColor: red) {
+  border-bottom: $borderBottomWidth solid $borderBottomColor;
+}
+// 下三角
+@mixin arrow-b($borderTopWidth: 5px, $borderTopColor: red) {
+  border-top: $borderTopWidth solid $borderTopColor;
+}
+// 左三角
+@mixin arrow-l($borderRightWidth: 5px, $borderRighColor: red) {
+  border-right: $borderRightWidth solid $borderRighColor;
+}
+// 右三角
+@mixin arrow-r($borderLeftWidth: 5px, $borderLeftColor: red) {
+  border-left: $borderLeftWidth solid $borderLeftColor;
+}
+// 使用示例
+// .k-2{
+//   &:after{
+//     @include arrow(5px, 5px, 5px);
+//     @include arrow-b();
+//   }
+// }
+
+.switch-item {
+  $height: 22px; // 小圆圈 的高度
+  $margin: 2px; // 小圆圈距离周边的距离
+  position: relative;
+
+  input[type="checkbox"] {
+    z-index: 10;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+
+    &:checked {
+      & ~ .inner-text {
+        padding-left: 8px;
+        padding-right: $height - $margin * 2 + 5px; // 一个小圆球的大小 再增加5px的距离
+        text-align: left;
+        background: #409eff;
+        // css 过渡的前提是 过渡前后属性必须是一致的 因此这边不能再用right
+        &:after {
+          left: calc(100% - 2px);
+          transform: translate(-100%, 0);
+        }
+      }
+    }
+    &:disabled {
+      & ~ .inner-text {
+        opacity: .5;
+      }
+    }
+  }
+  .inner-text {
+    position: relative;
+    padding-left: $height - $margin * 2 + 5px;
+    padding-right: 8px;
+    min-width: 45px; height: $height;
+    line-height: $height;
+    color: #fff;
+    text-align: right;
+    font-size: 12px;
+    border-radius: $height;
+    background: #c0c4cc;
+    transition: all .2s;
+
+    &:after {
+      position: absolute; content: "";
+      left: $margin; top: $margin; bottom: $margin;
+      width: $height - $margin * 2; // 保证 宽度 和 高度 的值是一致的
+      border-radius: 50%;
+      background: #fff;
+      transition: all .2s;
+    }
+  }
+}
+
+html {
+  height: 100%;
+
+  .iconfont {
+    display:inline-block;
+    vertical-align:middle;
+    line-height:1;
+    font-family:"iconfont" !important;
+    font-size:inherit;
+    font-style:normal;
+    color:inherit;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-stroke-width:0.2px;
+    -moz-osx-font-smoothing:grayscale;
+  }
+}
+
+// 采集器
+.page-collector {
+  position: relative;
+
+  .main-map-wrap {
+    height: 100vh;
+  }
+
+  .search-wrap,
+  .edit-project,
+  .tool-wrap {
+    z-index: 20;
+    position: absolute;
+  }
+
+  .search-wrap {
+    top: .2rem; left: .3rem; right: .3rem;
+    display: flex; align-items: center;
+    padding: 0 .1rem;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+	  border-radius: 5px;
+    background: #fff;
+
+    .btn-bluetooth {
+      color: #666;
+      animation: flicker 1s ease 0 infinite;
+
+      &.connect {
+        color: #1983d1;
+        animation: none;
+      }
+    }
+    input {
+      margin: 0 .15rem;
+      width: 0; height: .55rem;
+      flex-grow: 1;
+      border: none;
+      background: transparent;
+
+      &::-webkit-input-placeholder {
+        font-size: .26rem;
+        color: #999;
+      }
+    }
+    .btn-search {
+      color: #666;
+      transition: all .2s;
+
+      &:active {
+        opacity: .5;
+      }
+    }
+
+    @keyframes flicker {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  .tool-wrap {
+    &.tube-point {
+      left: .15rem; top: 1rem;
+    }
+    &.view {
+      left: .15rem; bottom: 1.5rem;
+    }
+    &.edit {
+      right: .15rem; top: 1rem;
+    }
+
+    .item {
+      display: block;
+      margin-top: .1rem;
+      width: .5rem; height: .5rem;
+      text-align: center;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.3);
+      transition: all .2s;
+
+      &:active {
+        i {
+          opacity: .5;
+        }
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+      i {
+        color: #1983d1;
+      }
+    }
+  }
+  .edit-project {
+    bottom: .4rem; left: 50%;
+    display: flex;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, 0);
+    transition: all .2s;
+    overflow: hidden;
+
+    .item {
+      padding: .16rem .35rem .16rem .52rem;
+      text-align: center;
+      background: rgba(0, 153, 219, 0.822);
+
+      &:active {
+        background: rgba(0, 153, 219, 1);
+      }
+      &:first-child {
+        border-right: 1px solid #fff;
+      }
+      &:last-child {
+        padding-left: .35rem;
+        padding-right: .52rem;
+      }
+      i {
+        font-size: .4rem;
+      }
+      span {
+        font-size: .18rem;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+// 新建工程
+.page-new-project {
+  background: #e6e6e6;
+
+  .new-project-info {
+    background: #fff;
+
+    li {
+      display: flex;
+      padding: .2rem .3rem;
+      border-bottom: 1px solid #e6e6e6;
+
+      .attr {
+        span {
+          font-size: .24rem;
+        }
+      }
+      .content {
+        margin-left: .4rem;
+        width: 0;
+        flex-grow: 1;
+
+        textarea,
+        input {
+          display: block;
+          width: 100%;
+          color: #666;
+          border: none;
+          background: transparent;
+        }
+        textarea {
+          font-size: .28rem;
+          resize:none;
+        }
+        .input-item {
+          display: flex;
+          align-items: center;
+
+          .btn-search {
+            margin-left: .1rem;
+            font-size: .28rem;
+            color: #ccc;
+            transition: all .2s;
+
+            &:active {
+              opacity: .5;
+            }
+          }
+        }
+      }
+    }
+  }
+  .submit-wrap {
+    padding: .4rem .3rem 0;
+  }
+  .btn-submit {
+    display: block;
+    padding: .23rem 0;
+    width: 100%;
+    font-size: .28rem;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    user-select: none;
+    background: #009bdb;
+    transition: all .2s;
+
+    &:active {
+      background: #05aaf1;
+    }
+  }
+}
+
+// 搜索
+.page-search {
+  .search-wrap {
+    display: flex; align-items: center;
+    padding: .12rem .2rem .12rem .15rem;
+    background: #009bdb;
+
+    .btn-go-back {
+      color: #fff;
+      transition: all .2s;
+
+      &:active {
+        opacity: .8;
+      }
+    }
+    .input-wrap {
+      display: flex; align-items: center;
+      margin: 0 .25rem 0 .2rem;
+      padding: 0 .2rem;
+      width: 0; flex-grow: 1;
+      border-radius: 5px;
+      background: #fff;
+
+      i {
+        margin-right: .1rem;
+        color: #b3b3b3;
+      }
+      input {
+        width: 0; height: .55rem;
+        flex-grow: 1;
+        border: none;
+        background: transparent;
+      }
+    }
+    .btn-search {
+      font-size: .28rem;
+      color: #f0eff4;
+      transition: all .2s;
+
+      &:active {
+        opacity: .5;
+      }
+    }
+  }
+  .search-history {
+    .title {
+      padding: .1rem .3rem;
+      font-size: .24rem;
+      color: #666;
+      border-bottom: 1px solid #f3f3f3;
+      background: #ededf3;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      padding: .11rem .3rem;
+      border-bottom: 1px solid #f3f3f3;
+      transition: all .2s;
+
+      &:active {
+        background: #f3f3f3;
+      }
+      .iconfont {
+        margin-right: .1rem;
+        color: #009bdb;
+      }
+      span {
+        @include textEllipsis;
+        color: #555;
+      }
+    }
+  }
+}
+
+// 浮层样式
+.layer-confirm-item {
+  z-index: 10;
+  position: relative;
+  padding: 0.1rem .13rem;
+  font-size: .2rem;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+
+  &:after {
+    @include arrow(10px, 50%, 100%);
+    @include arrow-b(10px, #fff);
+  }
+  .text,
+  .btn-sure {
+    vertical-align: middle;
+  }
+  .btn-sure {
+    color: #009bdb;
+    transition: all .2s;
+
+    &:active {
+      opacity: .5;
+    }
+    & > * {
+      vertical-align: middle;
+    }
+  }
+}
+
+// 管点采集 浮层
+.tube-point-collector {
+  z-index: 20;
+  position: relative;
+  border-top: 1px solid #e3e3e3;
+  background: #ededf3;
+  box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.3);
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: .1rem .2rem;
+    background: #ededf3;
+
+    .title {
+      width: 0;
+      flex: 1;
+      font-size: .24rem;
+      color: #666;
+    }
+    .edit-wrap {
+      display: flex;
+      align-items: center;
+    }
+    .edit-item {
+      margin-left: .12rem;
+      transition: all .2s;
+
+      &:active {
+        opacity: .5;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      i {
+        color: #1983d1;
+      }
+      span {
+        font-size: .24rem;
+      }
+    }
+  }
+  .title-wrap {
+    padding: .1rem .2rem;
+    font-size: .24rem;
+    border-bottom: 1px solid #e3e3e3;
+    background: #fff;
+
+    .attr {
+      margin-right: .2rem;
+    }
+    .value {
+      color: #666;
+    }
+  }
+  .list {
+    margin-top: .1rem;
+    padding: .1rem .2rem;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    background: #fff;
+
+    dd {
+      display: flex;
+      flex-wrap: wrap;
+      max-height: 2rem;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+    .item {
+      margin-top: .1rem; margin-right: .1rem;
+      padding: .05rem .2rem;
+      text-align: center;
+      font-size: .24rem; color: #666;
+      border: 1px solid #c8c7cc;
+      border-radius: 4px;
+      background: #ededf3;
+      transition: all .2s;
+
+      &:active {
+        opacity: .5;
+      }
+      &.select {
+        color: #fff;
+        border-color:  #009bdb;
+        background: #009bdb;
+      }
+    }
+  }
+  .btn-wrap {
+    padding: .2rem;
+
+    .btn-save {
+      display: block;
+      padding: .1rem;
+      color: #fff;
+      letter-spacing: 2px;
+      text-align: center;
+      border-radius: 4px;
+      background: #009bdb;
+      transition: all .2s;
+
+      &:active {
+        opacity: .5;
+      }
+    }
+  }
+
+  // layer 插件样式修改
+  &.layui-m-layer-footer {
+    z-index: 20;
+    width: 100% !important;
+    bottom: 0 !important;
+
+    .layui-m-layercont {
+      padding: 0;
+    }
+  }
+}

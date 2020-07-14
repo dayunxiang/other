@@ -1,0 +1,24 @@
+root = true
+
+[*.{js,jsx,ts,tsx,vue}]
+indent_size = 4
+
+# 缩进风格，可选"space"、"tab"
+indent_style = space
+
+# 设置字符集
+charset = utf-8
+
+# 在文件结尾插入新行
+insert_final_newline = true
+
+# 删除一行中的前后空格
+trim_trailing_whitespace = true
+
+#换行符lf
+end_of_line = lf
+
+# 以下匹配，类同
+[*.{js, ts}]
+indent_style = space
+indent_size = 4

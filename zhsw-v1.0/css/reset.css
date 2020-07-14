@@ -1,0 +1,121 @@
+@charset "utf-8";
+/*
+    如有疑问可联系作者：674059309@qq.com
+    http://www.qiaodaima.me
+*/
+
+/* html body标签 开始 ****************/
+html{min-width:1140px;max-width:1920px;font:12px/1.5 "Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,sans-serif,tahoma,arial,\5b8b\4f53;_line-height:1.5;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;overflow:auto;}
+body{position:relative;margin:0;}
+/**************** html body标签 结束 */
+
+/* 行内元素居中 开始 ****************/
+a,
+b,
+i,
+em,
+abbr,
+span,
+small,
+strong,
+time,
+address,
+input[type="text"],
+input[type="file"],
+input[type="radio"],
+input[type="password"],
+input[type="checkbox"]{display:inline-block;vertical-align:baseline;}
+/**************** 行内元素居中 结束 */
+
+/* 标题标签 开始 ****************/
+h1,h2,h3,h4,h5,h6,p{margin:0;font-size:100%;font-weight:normal;}
+/**************** 标题标签 结束 */
+
+/* 文本框标签 开始 ****************/
+pre{margin:0;}
+/**************** 文本框标签 结束 */
+
+/* 强调标签 开始 ****************/
+small{font-size:80%;}
+i,em{font-style:normal;}
+/**************** 强调标签 结束 */
+
+/* 地址标签 开始 ****************/
+address{font-style:normal;}
+/**************** 地址标签 结束 */
+
+/* 缩写标签 开始 ****************/
+abbr[title]{text-decoration:none;cursor:pointer;}
+/**************** 缩写标签 结束 */
+
+/* 上标、下标标签 开始 ****************/
+sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline;}
+/* sup{top:-0.5em;}
+sub{bottom:-0.25em;} */
+/**************** 上标、下标标签 结束 */
+
+/* 水平线标签 开始 ****************/
+hr{margin:0;border:none;height:0;box-sizing:content-box;overflow:visible;}
+/**************** 水平线标签 结束 */
+
+/* 图像标签 开始 ****************/
+img{/* max-width:100%; */border:none;vertical-align:top;font-size:0;}
+/**************** 图像标签 结束 */
+
+/* 表格标签 开始 ****************/
+table{border-collapse:collapse;border-spacing:0;}
+th,td{padding:0;}
+/**************** 表格标签 结束 */
+
+/* 列表标签 开始 ****************/
+dl,dd{margin:0;}
+ol,ul{margin:0;padding:0;list-style:none;}
+/**************** 列表标签 结束 */
+
+/* 重置a标签 开始 ****************/
+a{text-decoration:none;color:inherit;cursor:pointer;}
+a:focus{outline:none;}
+/**************** 重置a标签 结束 */
+
+/* 表单标签 开始 ****************/
+input[type="reset"],
+input[type="submit"],
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"],
+select,button{cursor:pointer;}
+input,textarea{outline:none;}
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus{border:1px solid #f60 !important;box-shadow:0 0 2px #f60 !important;outline:none;}
+button,input,textarea,select{font-size:100%;font-family:inherit;}
+/**************** 表单标签 结束 */
+
+/* 框架标签 开始 ****************/
+iframe{display:block;height:100%;width:100%;border:none;}
+/**************** 框架标签 结束 */
+
+/* 选择性标签 开始 ****************/
+[hidden]{display:none;}
+template{display:none;}
+/**************** 选择性标签 结束 */
+
+/* 清除浮动 开始 ****************/
+.clearfix:after{display:block;height:0;clear:both;visibility:hidden;font-size:0;content:"";}
+.clearfix{zoom:1;}
+.fl,.fr{display:inline;}
+.fl{float:left;}
+.fr{float:right;}
+/**************** 清除浮动 结束 */
+
+
+/**
+    * 参考：http://www.zhangxinxu.com/wordpress/?p=758
+    * 参考：https://github.com/necolas/normalize.css
+    * 参考：玉伯的那份css,貌似国内大部分用的都是这份css
+    * 参考：http://www.cnblogs.com/yizuierguo/archive/2009/07/15/1524106.html
+*/
+
+
+

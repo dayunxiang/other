@@ -1,0 +1,19 @@
+// 浮动、清除浮动
+@mixin clearFix {
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        font-size: 0;
+    }
+}
+
+// 超出省略号
+@mixin textEllipsis($maxLength: 100%) {
+    max-width:$maxLength;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}

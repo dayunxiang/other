@@ -1,0 +1,74 @@
+﻿/************************************
+*p-ajaxform006 style:default css (pop,only form,with lines, small list, tabs)
+*writor:SD
+*time:2012-10-23
+************************************/
+
+/*group*/
+.ajaxform .ul-title{ border-bottom: 1px dotted #CCC;}
+.ajaxform .ul-mform{border-top-color: #E8EBE3;border-left-color: #E8EBE3;border-right-color: white;}
+.ajaxform .ul-cld{ border-top:1px dashed #e6e6e6;}
+.ajaxform .ul-bottom-bt{ border-top: 1px dotted #CCC;}
+
+/*area*/
+.ajaxform li.li-area{ background-color:transparent!important; border-left-color: white;border-top-color: white;border-right-color: #E5E5E5;border-bottom-color: #E5E5E5;}
+
+
+.ajaxform .group-title{ color:#333; }
+
+.ajaxform label.area-title {color: #333;background-color: #F7F7F7;border-right-color: #E5E5E5;}
+
+.ajaxform .field-content{color:#454545; background-color:transparent!important; }
+
+.ajaxform label.desc, legend.desc {color: #222;}
+
+/*child*/
+.ajaxform .lf-head{}
+.ajaxform .ul-listtitle{background-color :#f7f7f7;border-top-color:#e8ebe3;border-left-color:#e8ebe3;border-right-color:#ffffff;}
+
+.ajaxform .li-head-item{  background-color:transparent!important;border-right-color:#e8ebe3;border-bottom-color:#e8ebe3;border-left-color: white;border-top-color: white;}
+
+.ajaxform .head-label{color :#333;}
+
+.ajaxform .lf-body{}
+.ajaxform .ul-listfield{border-left-color:#e8ebe3;border-right-color:#fff;background-color :#fff;}
+
+.ajaxform .li-listfield{ background-color:transparent!important;border-right-color:#e8ebe3;border-bottom-color:#e8ebe3;border-left-color: white;border-top-color: white;}
+	
+.ajaxform .list-field{ background-color: transparent!important;}
+
+/*small ajaxform*/
+.ajaxform  .ul-form{border-top-color: #E8EBE3;border-left-color: #E8EBE3;
+border-right-color: white;}
+.ajaxform .ul-form .li-area_s{background-color: transparent!important;border-left-color: white;border-top-color: white;border-right-color: #E5E5E5;border-bottom-color: #E5E5E5;}
+.ajaxform .ul-form .li-area_s .area-title_s{color: #333;background-color: #F7F7F7;border-right-color: #E5E5E5;}
+.ajaxform .ul-form .li-area_s .field-content_s{color: #333;background-color: transparent!important;}
+
+
+.ajaxform ul li .delete a {
+
+}
+.ajaxform ul li .delete a {
+background: url(../listreport/images/toolbar1.pngg") no-repeat;
+width: 18px;
+height: 18px;
+overflow: hidden;
+line-height: 223px;
+text-align: center;
+display: inline-block;
+background-position: -77px 0px;
+}
+
+
+/*table*/
+.ajaxform .afTitle{ color:#000;}
+.ajaxform .afTable {border:solid #f7f6f6; }
+.ajaxform .afTable .HeadTr {  }
+.ajaxform .afTable .HeadTd {  background:#a3a3a3;color:#fff;}
+
+.ajaxform .afTable .BodyOddTd,
+.ajaxform .afTable .BodyEvenTd{border:solid #f7f6f6;}
+
+
+
+.browse .ul-browse{ border-top-color: #E8EBE3;border-left-color: #E8EBE3;border-right-color: white;}

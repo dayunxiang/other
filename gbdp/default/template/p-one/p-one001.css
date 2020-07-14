@@ -1,0 +1,14 @@
+/************************************
+*p-one template style:default css001 (pop-up, 1 module)
+*writor:SD
+*upload-time:2012-10-09
+*edit-time:2012-10-09
+************************************/
+
+html, body, div, span, img, li,  ul  ,label, legend {margin:0;padding:0;border:0;}
+
+body { font-size:13px;font-family:Arial, "Microsoft YaHei", "HelveticaNeue", Helvetica,  "Lucida Grande", sans-serif; }
+
+ul,li {list-style:none;}
+
+.main { margin:0;  }/* overflow:auto;width:820px;*/

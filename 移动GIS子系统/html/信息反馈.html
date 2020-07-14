@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="google" value="notranslate">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>信息反馈</title>
+        <link href="../css/resetMobile.css" rel="stylesheet">
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/public.css" rel="stylesheet">
+        <link href="../css/page.css" rel="stylesheet">
+        <script src="../script/base.js"></script>
+    </head>
+    <body class="page-info-back">
+        <!-- 头部菜单 开始 -->
+        <nav class="p-head-menu">
+            <!--
+                如果菜单要用于页面跳转，
+                直接把div改成a标签即可哦~
+             -->
+            <div class="item curr">
+                <i class="iconfont">&#xe769;</i>
+                <p>信息查询</p>
+            </div>
+
+            <div class="item">
+                <i class="iconfont">&#xe6e4;</i>
+                <p>信息反馈</p>
+            </div>
+
+            <div class="item">
+                <i class="iconfont">&#xe752;</i>
+                <p>量算工具</p>
+            </div>
+
+            <div class="item sign-out">
+                <i class="iconfont">&#xe6b3;</i>
+                <p>退出</p>
+            </div>
+        </nav>
+        <!-- 头部菜单 结束 -->
+
+        <!-- 信息列表 开始 -->
+        <div class="info-wrap">
+            <ul class="info-list">
+                <li class="align-top">
+                    <label class="attr">事件标题</label>
+                    <div class="con-wrap">
+                        <div class="textarea" contenteditable="true" placeholder="请输入事件标题"></div>
+                    </div>
+                </li>
+                <li>
+                    <label class="attr">事件类型</label>
+                    <div class="con-wrap">
+                        <div class="select-wrap">
+                            <select>
+                                <!-- <option disabled selected>类型选择</option> -->
+                                <option>管线故障</option>
+                                <option>管线点故障</option>
+                                <option>其他</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <label class="attr">当前位置</label>
+                    <div class="con-wrap">
+                        <input type="text" placeholder="默认用户当前所在位置，可修改">
+                    </div>
+                </li>
+                <li class="align-top">
+                    <label class="attr">事件描述</label>
+                    <div class="con-wrap">
+                        <div class="textarea" contenteditable="true" placeholder="请输入事件描述"></div>
+                    </div>
+                </li>
+                <li>
+                    <label class="attr">添加录音</label>
+                    <div class="con-wrap">
+                        <a class="btn btn-add-sound" href="javascript:;">
+                            <i class="iconfont">&#xe654;</i>
+                            <span>按住录音</span>
+                            <a class="btn-sound" href="javascript:;">201707031525.mp4</a>
+                        </a>
+                    </div>
+                </li>
+                <li class="up-img">
+                    <div class="row">
+                        <label class="attr">
+                            图片列表
+                            <small>(最多上传三张图片)</small>
+                        </label>
+                    </div>
+
+                    <div class="row img-wrap">
+                        <!--
+                            只要动态的添加img就行了，
+                            有图片的时候，删除按钮会自动显示，
+                            如果没有图片，则不显示删除按钮，
+                            已经用css控制好了，
+                            但是节点的顺序不要随便更改哦，亲~
+                         -->
+                        <div class="img-item">
+                            <img src="../images/demo.jpg">
+                            <a class="btn-del" href="javascript:;">
+                                <i class="iconfont">&#xe60b;</i>
+                            </a>
+                            <a class="btn-add" href="javascript:;">
+                                <i class="iconfont">&#xe66e;</i>
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a class="btn-del" href="javascript:;">
+                                <i class="iconfont">&#xe60b;</i>
+                            </a>
+                            <a class="btn-add" href="javascript:;">
+                                <i class="iconfont">&#xe66e;</i>
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a class="btn-del" href="javascript:;">
+                                <i class="iconfont">&#xe60b;</i>
+                            </a>
+                            <a class="btn-add" href="javascript:;">
+                                <i class="iconfont">&#xe66e;</i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <a class="btn-submit" href="javascript:;">上传</a>
+        </div>
+        <!-- 信息列表 结束 -->
+
+        <!-- 添加图片弹窗 开始 -->
+        <div class="hidden">
+            <div class="pop-add-pic">
+                <div class="pic-type">
+                    <i class="iconfont">&#xe66e;</i>
+                    <p>拍照</p>
+                </div>
+                <div class="pic-type">
+                    <i class="iconfont">&#xe640;</i>
+                    <p>从相册选择</p>
+                </div>
+            </div>
+        </div>
+        <!-- 添加图片弹窗 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-2.1.4/jquery.js"></script>
+        <script src="../script/public.js"></script>
+        <script src="../widget/layer-2.0/layer.js"></script>
+        <script>
+            $(function(){
+                //添加图片
+                $('.up-img').on('click', '.btn-add', function(){
+                    layer.open({
+                        title: ['添加照片'],
+                        anim: 'scale',
+                        content: $('.pop-add-pic').prop("outerHTML")
+                    });
+                });
+
+                // 删除相片
+                $('.up-img').on('click', '.btn-del', function(){
+                    layer.open({
+                        title: ['图片删除'],
+                        anim: 'scale',
+                        content: '您确定要删除这张图片么？',
+                        btn: ['确认', '取消'],
+                        yes: function(index){
+                            layer.open({
+                                content: '图片删除成功',
+                                skin: 'msg',
+                                time:1.5
+                            });
+                            layer.close(index);
+                        }
+                    });
+                });
+
+                //录音
+                $('.btn-add-sound').on('click', function(){
+                    layer.open({
+                        anim: 'scale',
+                        content: '<i class="iconfont" style="color:#0da0dd;">&#xe654;</i>',
+                        style: 'font-size:2.5rem;',
+                        btn: ['确认', '取消']
+                    });
+                });
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

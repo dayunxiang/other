@@ -1,0 +1,68 @@
+﻿[
+    {
+        "id": "0",
+        "text": "健康之路",
+        "orgType": 2,
+        "open": true,
+        "name": "健康之路",
+        "children": [
+            {
+                "id": "BD16FC45CEBA4E71999AB26489DB4659",
+                "name": "总经办",
+                "text": "总经办",
+                "orgType": 0,
+                "children": [
+                    {
+                        "id": "DE325D46ABF746F9A23F57B8A4FE9C34",
+                        "name": "公用test",
+                        "text": "公用test",
+                        "orgType": 0,
+                        "children": [
+                            {
+                                "id": "4A8D67ECC9BA4104809B75F918D2CC43",
+                                "text": "wyq测试",
+                                "name": "wyq测试",
+                                "orgType": 0,
+                                "children": []
+                            },
+                            {
+                                "id": "47D62624DE244C36A2ED03692C225EC3",
+                                "text": "南平市人民医院",
+                                "name": "南平市人民医院",
+                                "orgType": 0,
+                                "children": [
+                                    {
+                                        "id": "1C7819BD268E4F6687A90F778EE5F165",
+                                        "name": "南平市人民医院帐号",
+                                        "text": "南平市人民医院帐号"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "226DB86885B4454DB4CA9231E405569F",
+                                "text": "呼叫中心公用帐号",
+                                "name": "呼叫中心公用帐号",
+                                "orgType": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "4598A7FF8C1F49B0809CA98CB622821E",
+                        "name": "ttt001",
+                        "text": "ttt001",
+                        "orgType": 0,
+                        "children": []
+                    },
+                    {
+                        "id": "8FA388DBAB8D4D1F8CB0D4DBD2436F65",
+                        "name": "00l",
+                        "text": "00l",
+                        "orgType": 0,
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,320 @@
+@charset "utf-8";
+
+// 浮动、清除浮动
+@mixin clearFix {
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        font-size: 0;
+    }
+}
+
+// 字体图标
+@mixin iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px; font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    // 修改阿里图标样式
+    line-height: 1;
+    vertical-align: middle;
+    font-size: inherit;
+    font-style: normal;
+    color: inherit;
+}
+
+// 圆形
+@mixin circular($size) {
+    width: $size; height: $size;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+// 单行超出省略号
+@mixin textEllipsis($type: 'multipleRows', $maxLength: 100%, $row: 1) {
+    @if $type == 'singleRow' {
+        max-width: $maxLength;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    @if $type == 'multipleRows' {
+        display: -webkit-box;
+        -webkit-line-clamp: $row;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow : hidden;
+    }
+}
+
+// 移动端 1px细线边框
+@mixin thinLine($useBefore: true, $position: 'top', $backgroundColor: #eee, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+    position: relative;
+
+    @if $useBefore {
+        &:before {
+            position: absolute;
+            content: "";
+            background-color: $backgroundColor;
+
+            @if $position == 'top' {
+                left: $left; right: $right; top: $top;
+                height: 1px;
+                transform: scale(1, .5);
+            }
+
+            @if $position == 'bottom' {
+                left: $left; right: $right; bottom: $bottom;
+                height: 1px;
+                transform: scale(1, .5);
+            }
+
+            @if $position == 'left' {
+                left: $left; top: $top; bottom: $bottom;
+                width: 1px;
+                transform: scale(.5, 1);
+            }
+
+            @if $position == 'right' {
+                right: $right; top: $top; bottom: $bottom;
+                width: 1px;
+                transform: scale(.5, 1);
+            }
+        }
+    } @else {
+        &:after {
+            position: absolute;
+            content: "";
+            background-color: $backgroundColor;
+
+            @if $position == 'top' {
+                left: $left; right: $right; top: $top;
+                height: 1px;
+                transform: scale(1, .5);
+            }
+
+            @if $position == 'bottom' {
+                left: $left; right: $right; bottom: $bottom;
+                height: 1px;
+                transform: scale(1, .5);
+            }
+
+            @if $position == 'left' {
+                left: $left; top: $top; bottom: $bottom;
+                width: 1px;
+                transform: scale(.5, 1);
+            }
+
+            @if $position == 'right' {
+                right: $right; top: $top; bottom: $bottom;
+                width: 1px;
+                transform: scale(.5, 1);
+            }
+        }
+    }
+}
+
+// 面板
+@mixin panelItem {
+    margin-top: .3rem;
+    user-select: none;
+    background: #fff;
+
+    &:first-child {
+        margin-top: 0;
+    }
+    &.fold {
+        .btn-switch {
+            &:before {
+                content: "\e610";
+            }
+        }
+    }
+    dt {
+        @include thinLine($useBefore: false, $position: 'bottom', $backgroundColor: #eee,$bottom: 0, $right: 0,$left: 0);
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: .2rem .3rem .2rem .4rem;
+
+        &:before {
+            position: absolute;
+            content: "";
+            left: .2rem; top: .25rem; bottom: .25rem;
+            width: .05rem;
+            background: #2e7ae6;
+        }
+        .panel-tit {
+            width: 0;
+            flex-grow: 1;
+            font-weight: bold;
+            color: #2e7ae6;
+        }
+        .btn-close,
+        .link {
+            display: inline-flex;
+            align-items: center;
+            font-size: .24rem;
+            color: #2e7ae6;
+            border: none;
+            background: transparent;
+
+            i {
+                @include iconfont;
+                font-size: .18rem;
+            }
+        }
+        .btn-switch {
+            @include iconfont;
+            border: none;
+            color: #2e7ae6;
+            background: transparent;
+
+            &:before {
+                content: "\e60d";
+            }
+        }
+    }
+    dd {
+        position: relative;
+        padding: .2rem;
+    }
+}
+
+// 图片 视频预览列表
+@mixin previewList {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 .1rem .2rem;
+
+    figure {
+        position: relative;
+        margin: 0;
+        padding: .2rem .1rem 0;
+        width: 33.33%; height: 2rem;
+
+        video,
+        img {
+            display: block;
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        .btn-del {
+            position: absolute;
+            right: 0; top: 0;
+            width: .3rem; height: .3rem;
+            margin-top: .05rem;
+            margin-right: -.05rem;
+            border-radius: 50%;
+            border: none;
+            background: rgba(0, 0, 0, .7);
+
+            &:before,
+            &:after {
+                position: absolute;
+                left: 50%; top: 50%;
+                content: "";
+                width: 1px; height: 65%;
+                background: #fff;
+            }
+            &:before {
+                transform:translate(-50%, -50%) rotate(45deg);
+            }
+            &:after {
+                transform:translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+}
+
+// 文字列表 key-value
+@mixin panelTextList {
+    margin-top: .3rem;
+    background: #fff;
+    user-select: none;
+
+    &.fold {
+        .btn-switch {
+            &:before {
+                content: "\e610";
+            }
+        }
+        dd {
+            height: 0;
+            overflow: hidden;
+        }
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+    dt {
+        @include thinLine($useBefore: false, $position: 'bottom', $backgroundColor: #eee,$bottom: 0, $right: 0,$left: 0);
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: .2rem .2rem .2rem .4rem;
+
+        &:before {
+            position: absolute;
+            content: "";
+            left: .2rem; top: .25rem; bottom: .25rem;
+            width: .05rem;
+            background: #2e7ae6;
+        }
+        .panel-tit {
+            width: 0;
+            flex-grow: 1;
+            font-weight: bold;
+            color: #2e7ae6;
+        }
+        .btn-switch {
+            @include iconfont;
+            border: none;
+            color: #2e7ae6;
+            background: transparent;
+
+            &:before {
+                content: "\e60d";
+            }
+        }
+        .link {
+            display: inline-flex;
+            align-items: center;
+            font-size: .24rem;
+            color: #2e7ae6;
+            border: none;
+            background: transparent;
+
+            i {
+                @include iconfont;
+                font-size: .18rem;
+            }
+        }
+    }
+    .text-item {
+        @include thinLine($useBefore: false, $position: 'bottom', $backgroundColor: #eee,$bottom: 0, $right: .3rem,$left: .3rem);
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        padding: .3rem;
+        transition: all .3s;
+
+        &:active {
+            background: #f3f3f3;
+        }
+        .attr {
+            color: #666;
+        }
+        .content {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row-reverse;
+            width: 0;
+        }
+    }
+}

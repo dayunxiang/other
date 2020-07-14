@@ -1,0 +1,252 @@
+@charset "utf-8";
+/**
+* Email:674059309@qq.com
+* www.qiaodaima.me
+*/
+
+
+
+/* 自定义样式 开始 ****************/
+html{
+    height:100%;
+}
+html .hidden,
+html .template{display:none;}
+/**************** 自定义样式 结束 */
+
+
+
+/* 字体图标 开始 ****************/
+html .iconfont
+{
+    display:inline-block;vertical-align:middle;line-height:1;
+    font-family:"iconfont" !important;
+    font-size:inherit;font-style:normal;color:inherit;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-stroke-width:0.2px;
+    -moz-osx-font-smoothing:grayscale;
+}
+/**************** 字体图标 结束 */
+
+
+
+/* 弹窗插件样式 开始 ****************/
+html .layui-m-layercont{
+    padding:0.3rem 0.2rem;
+    padding-top:0;
+    line-height:1.5;
+}
+html .layui-m-layerbtn{
+    border-top:1px solid #e6e6e6;
+    background-color:#fff;
+}
+html .layui-m-layerbtn span[no]{
+    border-right: 1px solid #e6e6e6;
+}
+html body .layui-m-layer .layui-m-layer-msg{
+    bottom:auto;
+}
+/**************** 弹窗插件样式 结束 */
+
+
+
+/* 头部菜单 开始 ****************/
+.p-head-menu{
+    display: -webkit-flex;
+    display: flex;
+    background:#1983d1;
+}
+.p-head-menu .item{
+    flex-grow: 1;
+    padding:0.2rem 0;
+    width: 0;
+    text-align:center;
+    color:#fff;
+    -webkit-transition:background color 0.2s;
+            transition:background color 0.2s;
+}
+.p-head-menu .item.curr{
+    color:#ffff00;
+}
+.p-head-menu .item:active{
+    background:rgba(0,0,0,0.1);
+}
+.p-head-menu .item .iconfont{
+    font-size:0.45rem;
+}
+.p-head-menu .item p{
+    margin-top:0.2rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+/**************** 头部菜单 结束 */
+
+
+
+/* 类型小图标 开始 ****************/
+.p-type-item{
+    width:0.6rem;
+    height:0.6rem;
+    line-height:0.6rem;
+    text-align:center;
+    border-radius:4px;
+    background:#1983d1;
+    font-size:0;
+    color:#fff;
+}
+.p-type-item .iconfont{
+    font-size:0.35rem;
+}
+/**************** 类型小图标 结束 */
+
+
+
+/* 地图页面 开始 ****************/
+.p-map-page{
+    display:-webkit-box;
+    display:box;
+    -webkit-box-orient:vertical;
+            box-orient:vertical;
+    height:100%;
+}
+.p-map-page .info-wrap{
+    display:-webkit-box;
+    display:box;
+    -webkit-box-align:center;
+    box-align:center;
+    padding:0.1rem 0.2rem;
+    border-bottom:1px solid #ddd;
+    background:#efeef3;
+}
+.p-map-page .info-wrap .toggle-type{
+    margin-right:0.2rem;
+    font-size:0;
+}
+.p-map-page .info-wrap .p-type-item{
+    margin-left:0.1rem;
+    color:#1983d1;
+    background:none;
+}
+.p-map-page .info-wrap .p-type-item:first-child{
+    margin-left:0;
+}
+.p-map-page .info-wrap .p-type-item.curr{
+    color:#fff;
+    background:#1983d1;
+}
+.p-map-page .info-wrap .value-wrap .btn-help{
+    color:#999;
+}
+.p-map-page .info-wrap .value-wrap{
+    -webkit-box-flex:1;
+    box-flex:1;
+    text-align:right;
+}
+.p-map-page .info-wrap .search-wrap{
+    display:-webkit-box;
+    display:box;
+    -webkit-box-align:center;
+            box-align:center;
+    -webkit-box-flex:1;
+    box-flex:1;
+}
+.p-map-page .info-wrap .search-wrap{
+    padding:0 10px;
+    background:#fff;
+}
+.p-map-page .info-wrap .search-wrap .iconfont{
+    color:#b3b3b3;
+}
+.p-map-page .info-wrap .search-wrap input{
+    display:block;
+    -webkit-box-flex:1;
+    box-flex:1;
+    margin-left:5px;
+    height: 0.6rem;
+    border:none;
+    font-size:0.26rem;
+}
+.p-map-page .map-wrap{
+    -webkit-box-flex:1;
+    box-flex:1;
+    position:relative;
+}
+.p-map-page .map-wrap .tools-wrap{
+    position: absolute;
+    right:0.1rem;bottom:0.1rem;
+}
+.p-map-page .map-wrap .p-type-item{
+    display:block;
+    margin-top:0.1rem;
+}
+.p-map-page .map-wrap .p-type-item:first-child{
+    margin-top:0;
+}
+/**************** 地图页面 结束 */
+
+
+
+/* 查询结果 开始 ****************/
+.p-result-item{
+    display:-webkit-box;
+    display:box;
+    -webkit-box-align:center;
+            box-align:center;
+    margin-left:0.3rem;
+    padding:0.25rem 0.3rem 0.25rem 0;
+    border-bottom:1px solid #f1f1f1;
+    color:#999;
+}
+.p-result-item:active{
+    margin-left:0;
+    padding-left:0.3rem;
+    border-color:transparent;
+    background:#f7f7f7;
+}
+.p-result-item .address-info-wrap{
+    -webkit-box-flex:1;
+    box-flex:1;
+    margin-left:0.2rem;
+}
+.p-result-item .address-info-wrap address{
+    font-size:0.24rem;
+}
+.p-result-item .key{
+    color:#1983d1;
+}
+/**************** 查询结果 结束 */
+
+
+
+/* 选项卡 开始 ****************/
+.p-tab-card{
+    position:relative;
+}
+.p-tab-card .nav-wrap{
+    display:-webkit-box;
+    display:box;
+    -webkit-box-align:center;
+            box-align:center;
+    background:#fff;
+}
+.p-tab-card .tab-nav{
+    -webkit-box-flex:1;
+    box-flex:1;
+}
+.p-tab-card .tab-con{
+    display:none;
+}
+.p-tab-card .tab-con.active{
+    display:block;
+}
+/**************** 选项卡 结束 */
+
+
+
+
+
+
+
+/*  开始 ****************/
+/****************  结束 */

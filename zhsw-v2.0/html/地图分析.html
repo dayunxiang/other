@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+    <html class="fuck-you" lang="zh-CN">
+<![endif]-->
+
+<!--[if IE 8]>
+    <html class="ie ie-8" lang="zh-CN">
+<![endif]-->
+
+<!--[if IE 9]>
+    <html class="ie ie-9" lang="zh-CN">
+<![endif]-->
+
+<!--[if !IE]><!-->
+    <html lang="zh-CN">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>地图分析</title>
+        <link href="../css/reset-pc.css" rel="stylesheet">
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/animate.css" rel="stylesheet">
+        <link href="../css/page.css" rel="stylesheet">
+    </head>
+    <body class="page-dtfx">
+        <!-- 滑块 开始 -->
+        <div class="p-swiper">
+            <a class="prev iconfont disabled" href="javascript:;">&#xe62b;</a>
+            <div class="ul-wrap">
+                <ul class="clearfix">
+                    <li>A指标关联下钻</li>
+                    <li class="active">A指标多维分析</li>
+                    <li>A指标地图分析</li>
+                    <li>我要派单</li>
+                    <li>工单跟踪处理</li>
+                    <li>C指标多维分析</li>
+                    <li>C指标地图分析</li>
+                </ul>
+            </div>
+            <a class="next iconfont" href="javascript:;">&#xe629;</a>
+        </div>
+        <!-- 滑块 结束 -->
+
+        <!-- 地图块 开始 -->
+        <div class="map-box">
+            <!-- 右上角悬浮层 开始 -->
+            <div class="i-map-aside clearfix">
+                <div class="clearfix">
+                    <div class="bar">
+                        <div class="search-wrap">
+                            <input type="text" placeholder="设备名称">
+                            <i class="iconfont icon-find"></i>
+                        </div>
+                        <label>
+                            <i class="ico checked">
+                                <input type="checkbox" name="" value="">
+                            </i>
+                            <span>告警</span>
+                        </label>
+                        <label>
+                            <i class="ico">
+                                <input type="checkbox" name="" value="">
+                            </i>
+                            <span>未告警</span>
+                        </label>
+                        <a class="btn-switch" href="javascript:;">
+                            <i class="iconfont icon-qhu"></i>
+                            切换到列表
+                        </a>
+                    </div>
+                </div>
+
+                <div class="clearfix">
+                    <a class="btn-tab" href="javascript:;">
+                        <i class="iconfont icon-dy"></i>
+                        <span>今日告警</span>
+                    </a>
+                </div>
+
+                <div class="p-tab-card">
+                    <div class="clearfix">
+                        <div class="nav-wrap clearfix">
+                            <a class="tab-nav active" href="javascript:;">实时告警</a>
+                            <a class="tab-nav" href="javascript:;">分区趋势</a>
+                            <a href="javascript:;">历史</a>
+                            <a class="btn-up" href="javascript:;">
+                                <i class="iconfont icon-dyh"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="con-wrap">
+                        <div class="tab-con active">
+                            <!-- 警告列表 开始 -->
+                            <div class="p-warning-wrap">
+                                <div class="tit-wrap"> <strong></strong>
+                                    当前共 <strong>3</strong> 个监控点告警，未处理 <strong>2</strong> 个
+                                    <a class="btn-more" href="javascript:;">查看全部</a>
+                                </div>
+                                <ul class="p-warning-list">
+                                    <li>
+                                        <div class="row">
+                                            <i class="iconfont warning icon-jg"></i>
+                                            <i class="iconfont icon-yx tag"></i>
+                                            <address>
+                                                朝阳1#
+                                            </address>
+                                            <div class="state">
+                                                <time>报警时间：23:34</time>
+                                                <span>未派单</span>
+                                            </div>
+                                        </div>
+                                        <div class="row up">
+                                            <time>23:14</time>
+                                            <span>流量：145m³/h</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↑</i>警</span>
+                                        </div>
+                                        <div class="row down">
+                                            <time>23:14</time>
+                                            <span>压力：145Pa</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↓</i>警</span>
+                                        </div>
+                                        <div class="ico-list">
+                                            <a class="iconfont icon-jnfx" href="javascript:;"></a>
+                                            <a class="iconfont icon-gjk" href="javascript:;"></a>
+                                            <a class="iconfont icon-pd" href="javascript:;"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <i class="iconfont warning icon-jg"></i>
+                                            <i class="iconfont icon-yd tag"></i>
+                                            <address>
+                                                朝阳1#
+                                            </address>
+                                            <div class="state">
+                                                <time>报警时间：23:34</time>
+                                                <span>已派单</span>
+                                            </div>
+                                        </div>
+                                        <div class="row down" "="">
+                                            <time>23:14</time>
+                                            <span>流量：145m³/h</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↓</i>警</span>
+                                        </div>
+                                        <div class="row up" "="">
+                                            <time>23:14</time>
+                                            <span>压力：145Pa</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↑</i>警</span>
+                                        </div>
+                                        <div class="ico-list">
+                                            <a class="iconfont icon-jnfx" href="javascript:;"></a>
+                                            <a class="iconfont icon-gjk" href="javascript:;"></a>
+                                            <a class="iconfont icon-dd" href="javascript:;"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <i class="iconfont warning icon-jg"></i>
+                                            <i class="iconfont icon-yx tag"></i>
+                                            <address>
+                                                朝阳1#
+                                            </address>
+                                            <div class="state">
+                                                <time>报警时间：23:34</time>
+                                                <span>未派单</span>
+                                            </div>
+                                        </div>
+                                        <div class="row up">
+                                            <time>23:14</time>
+                                            <span>流量：145m³/h</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↑</i>警</span>
+                                        </div>
+                                        <div class="row down">
+                                            <time>23:14</time>
+                                            <span>压力：145Pa</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↓</i>警</span>
+                                        </div>
+                                        <div class="ico-list">
+                                            <a class="iconfont icon-jnfx" href="javascript:;"></a>
+                                            <a class="iconfont icon-gjk" href="javascript:;"></a>
+                                            <a class="iconfont icon-pd" href="javascript:;"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <i class="iconfont warning icon-jg"></i>
+                                            <i class="iconfont icon-yd tag"></i>
+                                            <address>
+                                                朝阳1#
+                                            </address>
+                                            <div class="state">
+                                                <time>报警时间：23:34</time>
+                                                <span>已派单</span>
+                                            </div>
+                                        </div>
+                                        <div class="row down" "="">
+                                            <time>23:14</time>
+                                            <span>流量：145m³/h</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↓</i>警</span>
+                                        </div>
+                                        <div class="row up" "="">
+                                            <time>23:14</time>
+                                            <span>压力：145Pa</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↑</i>警</span>
+                                        </div>
+                                        <div class="ico-list">
+                                            <a class="iconfont icon-jnfx" href="javascript:;"></a>
+                                            <a class="iconfont icon-gjk" href="javascript:;"></a>
+                                            <a class="iconfont icon-dd" href="javascript:;"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <i class="iconfont warning icon-jg"></i>
+                                            <i class="iconfont icon-yx tag"></i>
+                                            <address>
+                                                朝阳1#
+                                            </address>
+                                            <div class="state">
+                                                <time>报警时间：23:34</time>
+                                                <span>未派单</span>
+                                            </div>
+                                        </div>
+                                        <div class="row up">
+                                            <time>23:14</time>
+                                            <span>流量：145m³/h</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↑</i>警</span>
+                                        </div>
+                                        <div class="row down">
+                                            <time>23:14</time>
+                                            <span>压力：145Pa</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↓</i>警</span>
+                                        </div>
+                                        <div class="ico-list">
+                                            <a class="iconfont icon-jnfx" href="javascript:;"></a>
+                                            <a class="iconfont icon-gjk" href="javascript:;"></a>
+                                            <a class="iconfont icon-pd" href="javascript:;"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <i class="iconfont warning icon-jg"></i>
+                                            <i class="iconfont icon-yd tag"></i>
+                                            <address>
+                                                朝阳1#
+                                            </address>
+                                            <div class="state">
+                                                <time>报警时间：23:34</time>
+                                                <span>已派单</span>
+                                            </div>
+                                        </div>
+                                        <div class="row down" "="">
+                                            <time>23:14</time>
+                                            <span>流量：145m³/h</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↓</i>警</span>
+                                        </div>
+                                        <div class="row up" "="">
+                                            <time>23:14</time>
+                                            <span>压力：145Pa</span>
+                                            <span class="value">30%</span>
+                                            <span class="tag"><i>↑</i>警</span>
+                                        </div>
+                                        <div class="ico-list">
+                                            <a class="iconfont icon-jnfx" href="javascript:;"></a>
+                                            <a class="iconfont icon-gjk" href="javascript:;"></a>
+                                            <a class="iconfont icon-dd" href="javascript:;"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 警告列表  结束 -->
+                        </div>
+                        <div class="tab-con">
+                            <div class="nice-wrap">
+                                <table class="fqqs-table" style="table-layout: fixed;">
+                                    <thead>
+                                        <tr>
+                                            <td width="40px;">行</td>
+                                            <td>分区名称</td>
+                                            <td width="60px;">漏损率</td>
+                                            <td width="60px;">状态</td>
+                                            <td>说明</td>
+                                            <td width="110px;">操作</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <span>哈哈哈哈哈</span>
+                                            </td>
+                                            <td>75.6%</td>
+                                            <td>
+                                                <a class="iconfont icon-zan" href="javascript"></a>
+                                            </td>
+                                            <td>
+                                                <span>哈哈哈呵呵</span>
+                                            </td>
+                                            <td>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>
+                                                <span>哈哈哈哈哈</span>
+                                            </td>
+                                            <td>75.6%</td>
+                                            <td>
+                                                <a class="iconfont icon-cai" href="javascript"></a>
+                                            </td>
+                                            <td>
+                                                <span>哈哈哈呵呵</span>
+                                            </td>
+                                            <td>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <span>哈哈哈哈哈</span>
+                                            </td>
+                                            <td>75.6%</td>
+                                            <td>
+                                                <a class="iconfont icon-zan" href="javascript"></a>
+                                            </td>
+                                            <td>
+                                                <span>常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常</span>
+                                            </td>
+                                            <td>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>
+                                                <span>哈哈哈哈哈</span>
+                                            </td>
+                                            <td>75.6%</td>
+                                            <td>
+                                                <a class="iconfont icon-cai" href="javascript"></a>
+                                            </td>
+                                            <td>
+                                                <span>哈哈哈呵呵</span>
+                                            </td>
+                                            <td>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <span>哈哈哈哈哈</span>
+                                            </td>
+                                            <td>75.6%</td>
+                                            <td>
+                                                <a class="iconfont icon-zan" href="javascript"></a>
+                                            </td>
+                                            <td>
+                                                <span>哈哈哈呵呵</span>
+                                            </td>
+                                            <td>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>
+                                                <span>哈哈哈哈哈</span>
+                                            </td>
+                                            <td>75.6%</td>
+                                            <td>
+                                                <a class="iconfont icon-cai" href="javascript"></a>
+                                            </td>
+                                            <td>
+                                                <span>哈哈哈呵呵</span>
+                                            </td>
+                                            <td>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <span>哈哈哈哈哈</span>
+                                            </td>
+                                            <td>75.6%</td>
+                                            <td>
+                                                <a class="iconfont icon-zan" href="javascript"></a>
+                                            </td>
+                                            <td>
+                                                <span>常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常常</span>
+                                            </td>
+                                            <td>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>
+                                                <span>哈哈哈哈哈</span>
+                                            </td>
+                                            <td>75.6%</td>
+                                            <td>
+                                                <a class="iconfont icon-cai" href="javascript"></a>
+                                            </td>
+                                            <td>
+                                                <span>哈哈哈呵呵</span>
+                                            </td>
+                                            <td>
+                                                <a class="iconfont edit icon-jnfx" href="javascript:;"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右上角悬浮层 结束 -->
+
+            <!-- 右下角悬浮层 开始 -->
+            <div class="i-map-type clearfix">
+                <a class="item" href="javascript:;">
+                    <i class="iconfont icon-map"></i>
+                    <span>二维地图</span>
+                </a>
+                <a class="item" href="javascript:;">
+                    <i class="iconfont icon-ew"></i>
+                    <span>2.5地图</span>
+                </a>
+                <a class="item" href="javascript:;">
+                    <i class="iconfont icon-jz"></i>
+                    <span>三维地图</span>
+                </a>
+            </div>
+            <!-- 右下角悬浮层 结束 -->
+
+            <!-- 左上角浮层 开始 -->
+            <div class="i-refresh">
+                <time>更新时间：16:30</time>
+                <a class="btn-switch" href="javascript:;">
+                    <i class="iconfont icon-dw"></i>
+                    <span>DMA2</span>
+                    <i class="iconfont icon-jtx"></i>
+                </a>
+                <div class="select-wrap">
+                    <address>福州市</address>
+                    <div class="list-wrap">
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr class="disabled" title="全称提示">中华人民共和国中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dt>
+                            <dd>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                                <abbr title="全称提示">中华人民共和国</abbr>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="i-map-tool">
+                <ul>
+                    <li>
+                        <a class="p-ico-map ico-py" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <a class="p-ico-map ico-gw" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <a class="p-ico-map ico-cgq" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <a class="p-ico-map ico-fd" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <a class="p-ico-map ico-sx" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <a class="p-ico-map ico-qt" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <a class="p-ico-map ico-sg" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <a class="p-ico-map ico-xg" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <a class="p-ico-map ico-tc" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <a class="p-ico-map ico-dt" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <a class="p-ico-map ico-sy" href="javascript:;"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 左上角浮层 结束 -->
+
+            <!-- 左下角悬浮层  开始 -->
+            <div class="i-legend">
+                <dl class="clearfix">
+                    <dt>
+                        <div class="attr">状态：</div>
+                        <div class="value">
+                            <span>正常</span>
+                            <span>报警</span>
+                        </div>
+                    </dt>
+                    <dd>
+                        <div class="attr">流量测点：</div>
+                        <div class="value">
+                            <i class="iconfont icon-ll"></i>
+                            <i class="iconfont icon-ll"></i>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">压力测点：</div>
+                        <div class="value">
+                            <i class="iconfont icon-yb"></i>
+                            <i class="iconfont icon-yb"></i>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">虚拟测压点：</div>
+                        <div class="value">
+                            <i class="iconfont icon-xnh"></i>
+                            <i class="iconfont icon-xnh"></i>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">原水管网：</div>
+                        <div class="value">
+                            <div class="bar ysgw"></div>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">供水管网：</div>
+                        <div class="value">
+                            <div class="bar gsgw"></div>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">低于经济流速：</div>
+                        <div class="value">
+                            <div class="bar ysgw" style="background:#7ac389;"></div>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">经济流速：</div>
+                        <div class="value">
+                            <div class="bar gsgw" style="background:#5c9cec;"></div>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">高于经济流速：</div>
+                        <div class="value">
+                            <div class="bar gsgw" style="background:#f36a63;"></div>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">&lt;2 bar：</div>
+                        <div class="value">
+                            <div class="bar ysgw" style="background:#7ac389;"></div>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">2~3 bar：</div>
+                        <div class="value">
+                            <div class="bar ysgw" style="background:#66cccc;"></div>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">3~4 bar：</div>
+                        <div class="value">
+                            <div class="bar gsgw" style="background:#5c9cec;"></div>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">4~5 bar：</div>
+                        <div class="value">
+                            <div class="bar gsgw" style="background:#c694d6;"></div>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr">&gt;5 bar：</div>
+                        <div class="value">
+                            <div class="bar gsgw" style="background:#f36a63;"></div>
+                        </div>
+                    </dd>
+
+                    <!--
+                        背景图片样式写style,图片去images文件下查看，单个图片尺寸是30*15，
+                        所以第2张图片的位置就是 -30 0
+                        所以第3张图片的位置就是 -60 0
+                     -->
+
+                    <dd>
+                        <div class="attr" style="margin-top:5px;">&gt;5 bar：</div>
+                        <div class="value">
+                            <div class="bar gsgw" style="width:30px;height:15px;background:url('../images/base/colors.png') no-repeat 0 0;"></div>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="attr" style="margin-top:5px;">&gt;5 bar：</div>
+                        <div class="value">
+                            <div class="bar gsgw" style="width:30px;height:15px;background:url('../images/base/colors.png') no-repeat -30px 0;"></div>
+                        </div>
+                    </dd>
+                </dl>
+                <a class="btn" href="javascript:;">图例</a>
+            </div>
+
+            <a class="i-btn-llyj" href="javascript:;">七日流量预警</a>
+            <div class="i-llyj-box">
+                <div class="tit-warp">南昌市－七日流量曲线</div>
+                <div class="echart-wrap">
+                    <!-- 不要谢我，立方米的火星文都给你找好了哈~~ -->
+                    <!-- m³ -->
+                </div>
+            </div>
+            <!-- 左下角悬浮层  结束 -->
+        </div>
+        <!-- 地图块 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <script src="../widget/nicescroll-3.6.8/nicescroll.js"></script>
+        <script src="../widget/layer-v3.0.3/layer.js"></script>
+        <script src="../js/tab.js"></script>
+        <script src="../js/page.js"></script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

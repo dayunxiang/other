@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>添加策略</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/allPage.min.css" rel="stylesheet">
+    </head>
+
+    <body class="page-celue">
+        <div class="step-wrap">
+            <div class="step-item complete">
+                <i class="step-state">1</i>
+                <p class="step-name">审计类型</p>
+            </div>
+
+            <div class="step-item">
+                <i class="step-state">2</i>
+                <p class="step-name">审计事件</p>
+            </div>
+
+            <div class="step-item">
+                <i class="step-state">3</i>
+                <p class="step-name">完成</p>
+            </div>
+        </div>
+
+        <div class="p-tab-card celue">
+            <div class="nav-wrap">
+                <a class="tab-nav active" href="javascript:;">会话审计策略</a>
+                <a class="tab-nav" href="javascript:;">SQL审计策略</a>
+                <a class="tab-nav" href="javascript:;">自定义策略</a>
+            </div>
+
+            <div class="con-wrap">
+                <div class="tab-con active">
+                    <dl class="celue-item">
+                        <dt>会话审计策略</dt>
+                        <dd>
+                            <div class="item active">
+                                <i style="background: #84b1f1;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">登录地址异常</p>
+                                    <p class="describe">
+                                        根据用户账户统计并记录用户使用IP地址
+                                        (可能多个或IP段)进行访问控制
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item active">
+                                <i style="background: #b980e2;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">账号尝试认证</p>
+                                    <p class="describe">
+                                        根据帐号分组统计认证失败次数，筛选大于N次的规则
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i style="background: #5fa6ed;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">IP尝试认证</p>
+                                    <p class="describe">
+                                        根据IP分组统计认证失败次数，筛选大于N次的规则；
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i style="background: #fc6665;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">响应时长告警</p>
+                                    <p class="describe">
+                                        根据IP或者用户统计访问响应时长，筛选超过N秒的规则
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i style="background: #00cec0;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">越权访问菜单</p>
+                                    <p class="describe">
+                                        根据IP/用户ID分组统计越权访问，大于N次后才触发策略
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i style="background: #f3a54a;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">访问频次告警</p>
+                                    <p class="describe">
+                                        根据IP统计菜单访问次数，筛选大于N次的规则
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i style="background: #f4a64a;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">敏感菜单业务访问</p>
+                                    <p class="describe">
+                                        根据菜单地址筛选请求记录，可配置多条策略
+                                    </p>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="tab-con">
+                    <dl class="celue-item">
+                        <dt>SQL审计策略</dt>
+                        <dd>
+                            <div class="item">
+                                <i style="background: #60a7ee;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">黑名单语句</p>
+                                    <p class="describe">
+                                        根据配置的黑名单，筛选SQL日志
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i style="background: #9269e1;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">关键业务操作</p>
+                                    <p class="describe">
+                                        业务角度设置规则，大数据平台核心业务操作，如：服务发布、服务下线
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i style="background: #f4a64a;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">高危操作</p>
+                                    <p class="describe">
+                                        系统安全角度设置规则，比如操作用户表、删除用户、修改用户授权，以及一些DCL类型操作；
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i style="background: #5fa6ed;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">执行速度慢语句</p>
+                                    <p class="describe">
+                                        根据指定应用数据库执行语句的响应时长，筛选超过响应时长N秒的规则
+                                    </p>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <dl class="celue-item">
+                        <dt>自定义策略</dt>
+                        <dd>
+                            <div class="item">
+                                <i style="background: #02a7f0;" class="icon">&#xe696;</i>
+
+                                <div class="text-wrap">
+                                    <p class="celue-title">自定义审计策略</p>
+                                    <p class="describe">
+                                        根据自定义的安全策略进行审计，可配置多条策略
+                                    </p>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="tab-con">自定义策略</div>
+            </div>
+        </div>
+
+        <div class="tools">
+            <button class="theme1">上一步</button>
+            <button>下一步</button>
+        </div>
+
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <script src="../scripts/tab.js"></script>
+        <script>
+            $(function() {
+                // 启用选项卡脚本
+                $('.p-tab-card').tab();
+            });
+        </script>
+    </body>
+</html>

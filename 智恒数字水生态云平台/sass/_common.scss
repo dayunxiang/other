@@ -1,0 +1,14 @@
+@import './_mixin.scss';
+
+// 浮动、清除浮动
+.clearfix {
+    @include clearFix;
+    zoom: 1;
+
+    .fl {
+        float: left;
+    }
+    .fr {
+        float: right;
+    }
+}

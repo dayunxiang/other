@@ -1,0 +1,28 @@
+/************************************
+*p-defaultform001 style:default css (pop,only form)
+*writor:SD
+*time:2012-10-09
+************************************/
+
+/*×é*/
+.defaultform .ul-title{ border-bottom: 1px dotted #CCC;}
+.defaultform .ul-bottom-bt{ border-top: 1px dotted #CCC;}
+/*ÇøÓò #E0E0E0*/
+
+.defaultform li.li-area{width:596px;clear:both;min-width:100px; border:1px solid  #fff;}
+.defaultform .group-title{font-weight:bold;font-size:15px;color:#333}
+.defaultform label.area-title{ color:#222;font-size:16px; font-weight :200 ;}
+.defaultform label.area-title{color:#222;font-weight:200;font-family:"Microsoft YaHei","Helvetica Neue","HelveticaNeue",Helvetica,Arial,"Lucida Grande",sans-serif;}
+.defaultform label.area-title div{float:right;}
+.defaultform div.field-content{font-size:13px;color:#333;}
+.defaultform label.desc{overflow:hidden}
+.defaultform label.desc,legend.desc{color:#222; float :none ; clear :both ;}
+
+
+
+
+
+
+
+
+

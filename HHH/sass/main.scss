@@ -1,0 +1,95 @@
+@import './_mixin';
+@import './_resetMobile';
+@import './_common';
+
+// 其他页面样式
+.page-index {
+  .banner {
+    height: 3.5rem;
+    background: #4f77aa url("../images/index/banner-1.png") no-repeat top center / cover;
+  }
+  .menu-list {
+    margin: -1.2rem .2rem 0;
+    padding: .6rem 0 .3rem;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background: #fff;
+  }
+  .menu-item {
+    position: relative;
+    flex-basis: 33.33%;
+    padding: .3rem .2rem;
+    text-align: center;
+    user-select: none;
+    transition: all .2s;
+    background: transparent;
+
+    &:active {
+      background: #f3f3f3;
+    }
+    em {
+      position: absolute;
+      right: .3rem; top: .05rem;
+      padding: 1px 5px;
+      line-height: 1;
+      font-size: .18rem;
+      color: #fff;
+      border-radius: 50px;
+      background: #ff6600;
+    }
+    i {
+      font-size: .7rem;
+      color: #1296db;
+    }
+    p {
+      margin-top: .1rem;
+      font-size: .24rem;
+    }
+  }
+  .navigation-list {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    background: #f3f3f3;
+
+    .navigation-item {
+      position: relative;
+      width: 0;
+      padding: .15rem 0;
+      flex-grow: 1;
+      text-align: center;
+      transition: all .2s;
+
+      &:active,
+      &.active {
+        color: #1296db;
+      }
+      &:active {
+        background: #f1f1f1;
+      }
+      em {
+        position: absolute;
+        right: .3rem; top: .05rem;
+        padding: 1px 5px;
+        line-height: 1;
+        font-size: .18rem;
+        color: #fff;
+        border-radius: 50px;
+        background: #ff6600;
+      }
+      i {
+        font-size: .5rem;
+      }
+      span {
+        display: block;
+        margin-top: .05rem;
+        font-size: .2rem;
+      }
+    }
+  }
+}

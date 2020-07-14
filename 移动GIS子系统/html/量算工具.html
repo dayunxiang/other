@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="google" value="notranslate">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>量算工具</title>
+        <link href="../css/resetMobile.css" rel="stylesheet">
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/public.css" rel="stylesheet">
+        <link href="../css/page.css" rel="stylesheet">
+        <script src="../script/base.js"></script>
+    </head>
+    <body class="page-localize-tools p-map-page">
+        <!-- 头部菜单 开始 -->
+        <nav class="p-head-menu">
+            <!--
+                如果菜单要用于页面跳转，
+                直接把div改成a标签即可哦~
+             -->
+            <div class="item curr">
+                <i class="iconfont">&#xe769;</i>
+                <p>信息查询</p>
+            </div>
+
+            <div class="item">
+                <i class="iconfont">&#xe6e4;</i>
+                <p>信息反馈</p>
+            </div>
+
+            <div class="item">
+                <i class="iconfont">&#xe752;</i>
+                <p>量算工具</p>
+            </div>
+
+            <div class="item sign-out">
+                <i class="iconfont">&#xe6b3;</i>
+                <p>退出</p>
+            </div>
+        </nav>
+        <!-- 头部菜单 结束 -->
+
+        <!-- 信息提示块 开始 -->
+        <div class="info-wrap">
+            <div class="toggle-type">
+                <a class="p-type-item" href="javascript:;">
+                    <i class="iconfont">&#xe68f;</i>
+                </a>
+                <a class="p-type-item curr" href="javascript:;">
+                    <i class="iconfont">&#xe650;</i>
+                </a>
+            </div>
+            <div class="value-wrap">
+                <span>面积：181743.0平方米</span>
+                <a class="iconfont btn-help" href="javascript:;">&#xe64f;</a>
+            </div>
+        </div>
+        <!-- 信息提示块 结束 -->
+
+        <!-- 地图块 开始 -->
+        <div class="map-wrap">
+            <!-- 测试样式 模拟地图效果 开始 -->
+            <img style="position:absolute;left:0;top:0;width:100%;height:100%;" src="../images/map-demo.png">
+            <!-- 测试样式 模拟地图效果 结束 -->
+
+            <!-- 工具栏 开始 -->
+            <div class="tools-wrap">
+                <a class="p-type-item" href="javascript:;">
+                    <i class="iconfont">&#xe665;</i>
+                </a>
+                <a class="p-type-item" href="javascript:;">
+                    <i class="iconfont">&#xe776;</i>
+                </a>
+                <a class="p-type-item" href="javascript:;">
+                    <i class="iconfont">&#xe684;</i>
+                </a>
+                <a class="p-type-item" href="javascript:;">
+                    <i class="iconfont">&#xe80a;</i>
+                </a>
+            </div>
+            <!-- 工具栏 结束 -->
+        </div>
+        <!-- 地图块 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-2.1.4/jquery.js"></script>
+        <script src="../script/public.js"></script>
+        <script src="../widget/layer-2.0/layer.js"></script>
+        <script>
+            $(function(){
+                $('.btn-help').on('click', function(){
+                    layer.open({
+                        title: ['操作说明'],
+                        anim: 'scale',
+                        content:'点击开始，双击结束，系统自动连接计算面积',
+                        btn: ['关闭']
+                    });
+                });
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

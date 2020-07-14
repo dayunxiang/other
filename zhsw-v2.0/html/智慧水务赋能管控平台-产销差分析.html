@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>智慧水务赋能管控平台-产销差分析</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/reset-pc.css" rel="stylesheet">
+        <link href="../css/public-1.css" rel="stylesheet">
+        <link href="../css/page-1.css" rel="stylesheet">
+        <link href="../css/skin-1.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- 百度图表 开始 -->
+        <div class="cx-echarts">
+            <div class="tit-box clearfix">
+                <div class="fl">
+                    <span class="tit">DMA2产销差多维分析</span>
+                </div>
+                <div class="fr">
+                    <a class="btn-blue-normal btn-gl" href="javascript:;">关联分析</a>
+                    <a class="btn-blue-normal btn-xz" href="javascript:;">下钻分析</a>
+                    <a class="btn-blue-normal btn-gl" href="javascript:;">多维分析</a>
+                    <a class="btn-blue-normal btn-xz" href="javascript:;">地图分析</a>
+                </div>
+            </div>
+            <div class="content">
+                <ul class="screen-list cx-screen-list">
+                    <li class="text">
+                        <span class="name">周期：</span>
+                        <a class="item active" href="javascript:;">年</a>
+                        <a class="item" href="javascript:;">月</a>
+                        <a class="item" href="javascript:;">日</a>
+                    </li>
+                    <li class="text">
+                        <span class="name">时间：</span>
+                        <a class="item" href="javascript:;">2016</a>
+                        <a class="item active" href="javascript:;">2016</a>
+                        <a class="item" href="javascript:;">2016</a>
+                        <a class="item" href="javascript:;">2016</a>
+                        <div class="date-wrap">
+                            <input class="datetime" type="text" placeholder="自定义开始时间">
+                            <span>-</span>
+                            <input class="datetime" type="text" placeholder="自定义结束时间">
+                        </div>
+                        <a class="btn-blue-normal" href="javascript::">查询</a>
+                    </li>
+                </ul>
+                <div class="echart-wrap">
+                    <div class="explain">
+                        <div class="tit">
+                            产销差率：X%
+                        </div>
+                        <div class="type">
+                            <dl>
+                                <dt>同比：</dt>
+                                <dd class="tb">5% ↑</dd>
+
+                                <dt>环比：</dt>
+                                <dd class="hb">2% ↓</dd>
+                            </dl>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>[指标定义]</dt>
+                                <dd>
+                                    产销差率，在国外它被称为“未计量水百分率”，
+                                    指的是供水企业提供给城市输水配水系统的自来水总量与所有用户的用水量总量中收费部分的差值定义为产销差水。
+                                    产销差水 = 免费供水量 + 物理漏水量 + 帐面漏水量。
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>[指标计算方法]</dt>
+                                <dd>
+                                    产销差率=[（供水量-售水量）/供水量]x100%
+                                </dd>
+                            </dl>
+                            <a class="btn-look-more" href="javascript:;">
+                                查看详情
+                                <i class="iconfont">&#xe62c;</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="cx-echart" class="echarts-box"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 百度图表 结束 -->
+
+        <!-- 告警 开始 -->
+        <div class="cx-order">
+            <div class="tit-box clearfix">
+                <div class="fl">
+                    <span class="tit">告警：</span>
+                    <a class="btn-look-more" href="javascript:;">查看全部</a>
+                </div>
+            </div>
+            <div class="or-list-wrap">
+                <!-- 无数据提示 开始 -->
+                <!-- <div class="no-message clearfi">
+                    <i class="ico iconfont">&#xe631;</i>
+                    <div class="text">
+                        <strong>暂无数据！</strong>
+                        <p>No data</p>
+                    </div>
+                </div> -->
+                <!-- 无数据提示 结束 -->
+
+                <!-- 告警列表 开始 -->
+                <ul class="or-list">
+                    <li>
+                        <time>2017-09-10 16:46</time>
+                        <span class="tips">KPI产销差告警</span>
+                        <div class="deit-link">
+                            <a class="link has-more" href="javascript:;">
+                                我要派单
+                                <i class="iconfont">&#xe62c;</i>
+                            </a>
+                            <div class="show-more">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>标题</th>
+                                            <th>派单人</th>
+                                            <th>派单时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#" target="view_window" class="name" title="名称超出会被截取，鼠标经过会显示全部">任务名称任务名称任务名称任务名称</a>
+                                            </td>
+                                            <td>
+                                                小小俊
+                                            </td>
+                                            <td>
+                                                <time>2017-02-21 09:29</time>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" target="view_window" class="name" title="名称超出会被截取，鼠标经过会显示全部">任务名称任务名称任务名称任务名称</a>
+                                            </td>
+                                            <td>
+                                                小小俊
+                                            </td>
+                                            <td>
+                                                <time>2017-02-21 09:29</time>
+                                            </td>
+                                        </tr>
+                                    </body>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 展开折叠的脚本我没写，我不清楚这里面的交互，展开的话，li添加类open，折叠的话 li移除类open  -->
+                    <li class="open">
+                        <time>2017-09-10 16:46</time>
+                        <span class="tips">KPI产销差告警</span>
+                        <div class="deit-link">
+                            <a class="link has-more" href="javascript:;">
+                                我要派单
+                                <i class="iconfont">&#xe62c;</i>
+                            </a>
+                            <div class="show-more">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>标题</th>
+                                            <th>派单人</th>
+                                            <th>派单时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#" target="view_window" class="name" title="名称超出会被截取，鼠标经过会显示全部">任务名称任务名称任务名称任务名称</a>
+                                            </td>
+                                            <td>
+                                                小小俊
+                                            </td>
+                                            <td>
+                                                <time>2017-02-21 09:29</time>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" target="view_window" class="name" title="名称超出会被截取，鼠标经过会显示全部">任务名称任务名称任务名称任务名称</a>
+                                            </td>
+                                            <td>
+                                                小小俊
+                                            </td>
+                                            <td>
+                                                <time>2017-02-21 09:29</time>
+                                            </td>
+                                        </tr>
+                                    </body>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="open-list">
+                            <p class="tips-text">上车的乘客请买票，买了票的乘客请下车~上车的乘客请买票，买了票的乘客请下车~</p>
+                        </div>
+                    </li>
+                    <li>
+                        <time>2016-09-10 16:46</time>
+                        <span class="tips">KPI产销差告警</span>
+                        <div class="deit-link" target="view_window">
+                            我要派单
+                            <i class="iconfont">&#xe62c;</i>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 告警列表 结束 -->
+            </div>
+        </div>
+        <!-- 告警 结束 -->
+
+        <!-- 工单 开始 -->
+        <div class="cx-order">
+            <div class="tit-box clearfix">
+                <div class="fl">
+                    <span class="tit">工单：</span>
+                    <a class="btn-look-more" href="javascript:;">查看全部</a>
+                </div>
+                <div class="fr">
+                    <a class="btn-blue-normal btn-send-single" href="javascript:;">我要派单</a>
+                </div>
+            </div>
+            <div class="or-list-wrap">
+                <!-- 无数据提示 开始 -->
+                <!-- <div class="no-message clearfi">
+                    <i class="ico iconfont">&#xe631;</i>
+                    <div class="text">
+                        <strong>暂无数据！</strong>
+                        <p>No data</p>
+                    </div>
+                </div> -->
+                <!-- 无数据提示 结束 -->
+
+                <!-- 工单列表 开始 -->
+                <ul class="or-list">
+                    <li class="ing">
+                        <span class="tag orange">发起</span>
+                        <span class="state">
+                            <i class="iconfont">&#xe61d;</i>
+                            进行中
+                        </span>
+                        <time>2017-09-10 16:46</time>
+                        <span class="tips">山海花园小区夜间流量异常监控告警</span>
+                        <div class="deit-link">
+                            <a class="link has-more" href="javascript:;">
+                                工单处理
+                                <i class="iconfont">&#xe62c;</i>
+                            </a>
+                            <div class="show-more">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>标题</th>
+                                            <th>派单人</th>
+                                            <th>派单时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#" target="view_window" class="name" title="名称超出会被截取，鼠标经过会显示全部">任务名称任务名称任务名称任务名称</a>
+                                            </td>
+                                            <td>
+                                                小小俊
+                                            </td>
+                                            <td>
+                                                <time>2017-02-21 09:29</time>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" target="view_window" class="name" title="名称超出会被截取，鼠标经过会显示全部">任务名称任务名称任务名称任务名称</a>
+                                            </td>
+                                            <td>
+                                                小小俊
+                                            </td>
+                                            <td>
+                                                <time>2017-02-21 09:29</time>
+                                            </td>
+                                        </tr>
+                                    </body>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ing">
+                        <span class="tag orange">发起</span>
+                        <span class="state">
+                            <i class="iconfont">&#xe61d;</i>
+                            进行中
+                        </span>
+                        <time>2017-09-10 16:46</time>
+                        <span class="tips">山海花园小区夜间流量异常监控告警</span>
+                        <div class="deit-link">
+                            <a class="link has-more" href="javascript:;">
+                                工单处理
+                                <i class="iconfont">&#xe62c;</i>
+                            </a>
+                            <div class="show-more">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>标题</th>
+                                            <th>派单人</th>
+                                            <th>派单时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#" target="view_window" class="name" title="名称超出会被截取，鼠标经过会显示全部">任务名称任务名称任务名称任务名称</a>
+                                            </td>
+                                            <td>
+                                                小小俊
+                                            </td>
+                                            <td>
+                                                <time>2017-02-21 09:29</time>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" target="view_window" class="name" title="名称超出会被截取，鼠标经过会显示全部">任务名称任务名称任务名称任务名称</a>
+                                            </td>
+                                            <td>
+                                                小小俊
+                                            </td>
+                                            <td>
+                                                <time>2017-02-21 09:29</time>
+                                            </td>
+                                        </tr>
+                                    </body>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="end">
+                        <span class="tag gray">参与</span>
+                        <span class="state">
+                            <i class="iconfont">&#xe620;</i>
+                            已完结
+                        </span>
+                        <time>2016-09-10 16:46</time>
+                        <span class="tips">山海花园小区夜间流量异常监控告警</span>
+                        <div class="deit-link" target="view_window">
+                            工单查看
+                            <i class="iconfont">&#xe62c;</i>
+                        </div>
+                    </li>
+                    <li class="end">
+                        <span class="tag gray">参与</span>
+                        <span class="state">
+                            <i class="iconfont">&#xe620;</i>
+                            已完结
+                        </span>
+                        <time>2016-09-10 16:46</time>
+                        <span class="tips">山海花园小区夜间流量异常监控告警</span>
+                        <div class="deit-link" target="view_window">
+                            工单查看
+                            <i class="iconfont">&#xe62c;</i>
+                        </div>
+                    </li>
+                    <li class="end">
+                        <span class="tag gray">参与</span>
+                        <span class="state">
+                            <i class="iconfont">&#xe620;</i>
+                            已完结
+                        </span>
+                        <time>2016-09-10 16:46</time>
+                        <span class="tips">山海花园小区夜间流量异常监控告警</span>
+                        <div class="deit-link" target="view_window">
+                            工单查看
+                            <i class="iconfont">&#xe62c;</i>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 工单列表 结束 -->
+            </div>
+        </div>
+        <!-- 工单 结束 -->
+
+        <!-- 遮罩层 开始 -->
+        <div class="pop-mask hide"></div>
+        <!-- 遮罩层 结束 -->
+
+        <!-- 我要派单弹窗 开始 -->
+        <div class="pop-send-single hide">
+            <div class="pp-title">
+                <p>我要派单</p>
+                <i class="btn-close iconfont">&#xe60c;</i>
+            </div>
+            <div class="pp-contain">
+                <div class="form-wrap">
+                    <ul class="form-list">
+                        <li>
+                            <div class="tit">
+                                <sub>*</sub>
+                                 告警详细原因：
+                            </div>
+                            <div class="con">
+                                <textarea rows="5" placeholder="请输入告警详细原因..."></textarea>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">
+                                <sub>*</sub>
+                                 处理建议：
+                            </div>
+                            <div class="con">
+                                <textarea rows="5" placeholder="请输入处理建议..."></textarea>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">
+                                <sub>*</sub>
+                                 期望完成时间：
+                            </div>
+                            <div class="con">
+                                <input class="input-text datetime" type="text" placeholder="请选择期望完成时间">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">
+                                <sub>*</sub>
+                                 处理人：
+                            </div>
+                            <div class="con">
+                                <input class="input-text" type="text" placeholder="请选择处理人">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">
+                                <sub>*</sub>
+                                 备注：
+                            </div>
+                            <div class="con">
+                                <textarea rows="5" placeholder="请输入备注..."></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pp-edit">
+                <a class="btn-ok" href="javascript:;">确定</a>
+                <a class="btn-cancel" href="javascript:;">取消</a>
+            </div>
+        </div>
+        <!-- 我要派单弹窗 结束 -->
+
+        <!-- 产销差率弹窗 开始 -->
+        <div class="pop-sales-slip hide">
+            <div class="pp-title">
+                <p>定义</p>
+                <i class="btn-close iconfont">&#xe60c;</i>
+            </div>
+            <div class="pp-contain">
+                <div class="sales-slip-wrap">
+                    <dl>
+                        <dt>
+                            指标定义
+                        </dt>
+                        <dd>
+                            产销差率，在国外它被称为“未计量水百分率”，指的是供水企业提供给城市输水配水系统的自来水总量与所有用户的用水量总量中收费部份的差值定义为产销差水。
+                        </dd>
+                        <dd>
+                            产销差水＝免费供水量+物理量水量+账面漏水量。
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            产销差率的计算方法
+                        </dt>
+                        <dd>
+                            产销差率＝[（供水量－售水量）/供水量]X100%
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            产销差水量的组成部份
+                        </dt>
+                        <dd>
+                            产销差率＝未计费水量+失窃水量+漏失水量+由于水表精度误差损失水量；
+                        </dd>
+                        <dd>
+                            未计费水量＝销防用水+园林绿化环卫水量+市政用水+公司自耗水量（含办公及宿舍用水，施工清洗管道用水量等）；
+                        </dd>
+                        <dd>
+                            失窃水量＝用户偷盗水量+黑户水量+人情水量等；
+                        </dd>
+                        <dd>
+                            漏失水量＝破管损失水量（明漏、间漏、渗漏水量）+抢修损失水量+阀门，消防栓等供水设施漏水等。
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!-- 产销差率弹窗 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <script src="../widget/placeholder-2.3.1/jquery.placeholder.min.js"></script>
+        <script src="../widget/nicescroll-3.6.8/nicescroll.js"></script>
+        <script src="../js/public-1.js"></script>
+        <link href="../widget/datetimepicker/jquery.datetimepicker.min.css" rel="stylesheet">
+        <script src="../widget/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+        <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+        <script>
+            /* Echarts公共路径配置 开始 ****************/
+            require.config({
+                paths: {
+                    echarts: 'http://echarts.baidu.com/build/dist'
+                }
+            });
+            /**************** Echarts公共路径配置 结束 */
+
+            $(function(){
+                /* 使用Echarts模块加载 开始 ****************/
+                require(
+                    [
+                        'echarts',
+                        'echarts/chart/line'
+                    ],
+                    //加载完毕回调
+                    initCharts
+                );
+                /**************** 使用Echarts模块加载 结束 */
+
+                /* Echarts初始化函数 开始 ****************/
+                function initCharts()
+                {
+                    /* 第1个图表构造 开始 ****************/
+                    var echartOne = require('echarts').init(document.getElementById('cx-echart'));
+                    echartOne.showLoading({
+                        text : '数据读取中...',
+                        effect:'bubble',
+                        textStyle:{fontSize:16}
+                    });
+
+                    //设置数据
+                    var optionDemoOne = {
+
+                            tooltip : {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data:['小小俊1']
+                            },
+                            calculable : true,
+                            xAxis : [
+                                {
+                                    type : 'category',
+                                    boundaryGap : false,
+                                    data : ['周一','周二','周三','周四','周五','周六','周日']
+                                }
+                            ],
+                            yAxis : [
+                                {
+                                    type : 'value',
+                                    axisLabel : {
+                                        formatter: '{value}'
+                                    }
+                                }
+                            ],
+                            series : [
+                                {
+                                    name:'小小俊1',
+                                    type:'line',
+                                    data:[1, -2, 2, 5, 3, 2, 0],
+                                    markPoint : {
+                                        data : [
+                                            {name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}
+                                        ]
+                                    },
+                                    markLine : {
+                                        data : [
+                                            {type : 'average', name : '平均值'}
+                                        ]
+                                    }
+                                }
+                            ]
+                        };
+                    /**************** 第1个图表构造 结束 */
+
+                    /* 模拟数据载入时间 开始 ****************/
+                    setTimeout(function (){
+                        echartOne.hideLoading();
+                        echartOne.setOption(optionDemoOne);
+                    },2200);
+                    /**************** 模拟数据载入时间 结束 */
+                }
+                /**************** Echarts初始化函数 结束 */
+            });
+        </script>
+        <script>
+            $(function(){
+                /* 日期插件初始化 开始 ****************/
+                $.datetimepicker.setLocale('zh');
+                $('.datetime').datetimepicker({
+                    timepicker:false,
+                    format:'Y-m-d'
+                });
+                /**************** 日期插件初始化 结束 */
+
+
+                /* 工单小弹窗 开始 ****************/
+                $(document).on('click',function(){
+                    $(this).find('.or-list .show-more').hide();
+                })
+                $('.or-list').on('click','.link.has-more',function(event){
+                    event.stopPropagation();
+                    $(this).parents('li').siblings('li').find('.show-more').hide();
+                    $(this).siblings('.show-more').toggle();
+                });
+                /**************** 工单小弹窗 结束 */
+
+
+                /* 产销差率弹窗 开始 ****************/
+                $('.cx-echarts').on('click','.btn-look-more',function(){
+                    $('.pop-sales-slip').pop();
+                });
+                /**************** 产销差率弹窗 结束 */
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

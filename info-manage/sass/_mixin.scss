@@ -1,0 +1,66 @@
+// 浮动、清除浮动
+@mixin clearFix {
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+  }
+}
+
+// 超出省略号
+@mixin textEllipsis($maxLength: 100%) {
+  max-width:$maxLength;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+
+// 字体图标
+@mixin iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  line-height:1;
+  vertical-align:middle;
+  font-size:inherit;
+  font-style:normal;
+  color:inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// // 三角
+// @mixin arrow ($borderWidth: 5px, $left: 0, $top: 0) {
+//   content: '';
+//   position: absolute;
+//   left: $left; top: $top;
+//   width: 0;
+//   height: 0;
+//   font-size: 0;
+//   border: $borderWidth dashed transparent;
+// }
+// // 上三角
+// @mixin arrow-t($borderBottomWidth: 5px, $borderBottomColor: red) {
+//   border-bottom: $borderBottomWidth solid $borderBottomColor;
+// }
+// // 下三角
+// @mixin arrow-b($borderTopWidth: 5px, $borderTopColor: red) {
+//   border-top: $borderTopWidth solid $borderTopColor;
+// }
+// // 左三角
+// @mixin arrow-l($borderRightWidth: 5px, $borderRighColor: red) {
+//   border-right: $borderRightWidth solid $borderRighColor;
+// }
+// // 右三角
+// @mixin arrow-r($borderLeftWidth: 5px, $borderLeftColor: red) {
+//   border-left: $borderLeftWidth solid $borderLeftColor;
+// }
+// 使用示例
+// .k-2{
+//   &:after{
+//     @include arrow(5px, 5px, 5px);
+//     @include arrow-b();
+//   }
+// }

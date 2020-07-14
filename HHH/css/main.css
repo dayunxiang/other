@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/*!
+* Email:qiaodaima@qq.com
+* https://github.com/qiaodaima
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\000039}}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000318}}
+html {
+  font: 50px/1.5 sans-serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000321}}
+body {
+  position: relative;
+  margin: 0;
+  font-size: 0.28rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000328}}
+a,
+b,
+i,
+em,
+sub,
+sup,
+abbr,
+span,
+code,
+time,
+label,
+input,
+audio,
+small,
+video,
+button,
+select,
+canvas,
+strong,
+address,
+textarea,
+progress {
+  display: inline-block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000354}}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000364}}
+pre {
+  margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000369}}
+i,
+em,
+dfn,
+cite,
+address {
+  font-style: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000376}}
+b,
+strong {
+  font-weight: inherit; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000380}}
+small {
+  font-size: inherit; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000383}}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000389}}
+sub,
+sup {
+  line-height: 1;
+  font-size: 12px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\0000396}}
+input,
+button,
+select,
+option,
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  outline: none;
+  color: inherit;
+  font: inherit; }
+
+/* 分割线 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\00003109}}
+legend,
+fieldset,
+blockquote {
+  margin: 0;
+  padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\00003116}}
+dl,
+dd {
+  margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\00003120}}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\00003127}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\00003131}}
+th,
+td {
+  padding: 0;
+  font-weight: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\00003138}}
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\00003143}}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  vertical-align: top; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_resetMobile\.scss}line{font-family:\00003149}}
+hr {
+  margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_common\.scss}line{font-family:\000034}}
+html {
+  color: #333; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_common\.scss}line{font-family:\000037}}
+  html .hidden {
+    display: none !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_common\.scss}line{font-family:\0000310}}
+  html .disabled {
+    cursor: not-allowed !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/_common\.scss}line{font-family:\0000313}}
+  html .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1;
+    vertical-align: middle;
+    font-size: inherit;
+    font-style: normal;
+    color: inherit; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\000037}}
+.page-index .banner {
+  height: 3.5rem;
+  background: #4f77aa url("../images/index/banner-1.png") no-repeat top center/cover; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000311}}
+.page-index .menu-list {
+  margin: -1.2rem .2rem 0;
+  padding: .6rem 0 .3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 20px;
+  background: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000319}}
+.page-index .menu-item {
+  position: relative;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+  padding: .3rem .2rem;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background: transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000328}}
+  .page-index .menu-item:active {
+    background: #f3f3f3; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000331}}
+  .page-index .menu-item em {
+    position: absolute;
+    right: .3rem;
+    top: .05rem;
+    padding: 1px 5px;
+    line-height: 1;
+    font-size: .18rem;
+    color: #fff;
+    border-radius: 50px;
+    background: #ff6600; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000341}}
+  .page-index .menu-item i {
+    font-size: .7rem;
+    color: #1296db; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000345}}
+  .page-index .menu-item p {
+    margin-top: .1rem;
+    font-size: .24rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000350}}
+.page-index .navigation-list {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #ddd;
+  background: #f3f3f3; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000360}}
+  .page-index .navigation-list .navigation-item {
+    position: relative;
+    width: 0;
+    padding: .15rem 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: center;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000368}}
+    .page-index .navigation-list .navigation-item:active, .page-index .navigation-list .navigation-item.active {
+      color: #1296db; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000372}}
+    .page-index .navigation-list .navigation-item:active {
+      background: #f1f1f1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000375}}
+    .page-index .navigation-list .navigation-item em {
+      position: absolute;
+      right: .3rem;
+      top: .05rem;
+      padding: 1px 5px;
+      line-height: 1;
+      font-size: .18rem;
+      color: #fff;
+      border-radius: 50px;
+      background: #ff6600; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000385}}
+    .page-index .navigation-list .navigation-item i {
+      font-size: .5rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/HHH\/sass\/main\.scss}line{font-family:\0000388}}
+    .page-index .navigation-list .navigation-item span {
+      display: block;
+      margin-top: .05rem;
+      font-size: .2rem; }
+
+/*# sourceMappingURL=main.css.map */

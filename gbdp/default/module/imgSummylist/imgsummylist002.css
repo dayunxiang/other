@@ -1,0 +1,24 @@
+/************************************
+*imgSummyList module style:default css002
+*writor:SD
+*time:2012-10-07
+************************************/
+
+.imgsummylist .toolbar {color:#333; }
+
+.imgsummylist .tool-ul { border-bottom:1px solid #eee;}
+
+.imgsummylist .listarea .list-title{ background-color:#f7f7f7;}
+
+.imgsummylist .listarea .list-title .title-ul .li-title{color:#D09202; }
+
+.imgsummylist .listarea .list-title .title-ul a{ color:#333;}
+.imgsummylist .listarea .list-title .title-ul a:hover{ color:#FFCC33;}
+
+.imgsummylist .listarea .list-body .sum-right .field-title{color: #333;}
+.imgsummylist .listarea .list-body .sum-right .field-content{color:#666; }
+.imgsummylist .listarea .list-body .sum-right .field-content1{color:#454545; }
+.imgsummylist .listarea .list-body .sum-right .alink{ color:#3366CC;}
+.imgsummylist .listarea .list-body .sum-right .alink:hover{ color:#FFCC33;}
+
+

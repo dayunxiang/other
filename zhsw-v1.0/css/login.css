@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* body{min-width:1000px;} */
+/*
+    如有疑问可联系作者：674059309@qq.com
+    http://www.qiaodaima.me
+*/
+html,body{position:relative;height:100%;overflow:hidden;}
+.login-box .main-box{position:absolute;left:0;right:0;top:82px;bottom:51px;background:#048dd1 url("../images/public/login-1.png") no-repeat center center;background-size:auto 100%;}
+/* 头部 */
+.login-box .header{padding:15px 0;margin:0 auto;width:85%;}
+.login-box .header dl{display:inline-block;vertical-align:middle;}
+.login-box .header dt,
+.login-box .header dd{display:inline-block;vertical-align:middle;color:#4c4c4c;}
+.login-box .header .logo{display:inline-block;width:155px;height:52px;vertical-align:middle;background:url("../images/fixed/logo-2.png") no-repeat left top;}
+.login-box .header .form-name{margin-left:10px;}
+.login-box .header h1{line-height:1;font-size:22px;letter-spacing:1px}
+.login-box .header .form-name small{display:block;font-size:12px;-ms-transform:scale(0.83);-moz-transform:scale(0.83);-webkit-transform:scale(0.83);transform:scale(0.83);-ms-transform-origin:0 50%;-moz-transform-origin:0 50%;-webkit-transform-origin:0 50%;transform-origin:0 50%;}
+.ie-9 .header .form-name small{font-size:12px;}
+.ie-8 .header .form-name small{font-size:10px;}
+.login-box .header .btn-switch-form{-ms-transform:translate(-40px,0px);-moz-transform:translate(-40px,0px);-webkit-transform:translate(-40px,0px);transform:translate(-40px,0px);padding-left:10px;line-height:1;border-left:3px solid #ccc;font-size:16px;}
+.login-box .header .btn-switch-form span{font-size:20px;color:#666;}
+/* 登入框 */
+.login-box .login-wrap{position:absolute;top:50%;margin-top:-153px;right:80px;width:280px;height:306px;background:#fff\9;background:rgba(255,255,255,0.75);animation:scale 1s ease 0s 1;animation-fill-mode:backwards;}
+.login-box .login-wrap .tit-wrap{padding:10px 20px;border-bottom:1px solid #fff;font-size:16px;color:#333;font-weight:bold;}
+.login-box .login-wrap .row{position:relative;margin:15px 30px 0;}
+.login-box .login-wrap .row .iconfont{position:absolute;color:#b2b2b2;font-size:18px;left:8px;top:9px;line-height:1;}
+.login-box .login-wrap .row .text-input{margin:0 auto;display:block;padding:0 10px 0 35px;width:100%;height:34px;line-height:32px; border:1px solid #ccc;border-radius:4px;font-size:16px;color:#333;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.login-box .login-wrap .row.code .text-input{display:inline-block;width:120px;}
+.login-box .login-wrap .row.code img{float:right;width:91px;height:34px;cursor:pointer;}
+.login-box .login-wrap .row.state{font-size:14px;}
+.login-box .login-wrap .row.state input{width:16px;height:16px;vertical-align:middle;}
+.login-box .login-wrap .row.state a{color:#0099e6;}
+.login-box .login-wrap .btn-login{display:block;height:41px;line-height:41px;font-size:16px;color:#fff;text-align:center;font-weight:bold;text-indent:60px;background:url("../images/public/btn-login.png") no-repeat;}
+/* 底部 */
+.login-box .footer{position:absolute;left:0;right:0;bottom:0;padding:15px 0;font-size:14px;text-align:center;color:#4c4c4c;}
+.login-box .footer .business:hover{color:#f90;}
+@keyframes scale
+{
+    0%   {opacity:0;transform:scale(0.5,0.5);}
+    100% {opacity:1;transform:scale(1,1);}
+}

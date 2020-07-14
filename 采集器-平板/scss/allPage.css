@@ -1,0 +1,317 @@
+@charset "UTF-8";
+/*!
+* 参考：http://www.zhangxinxu.com/wordpress/?p=758
+* 参考：http://g.alicdn.com/msui/sm/0.6.2/css/sm.css
+* 参考：https://github.com/necolas/normalize.css/blob/master/normalize.css
+* 参考：https://ant.design/
+* 由于设计稿的尺寸在重构的时候要除以2，
+* 因此这个样式表用50px为基准（刚好凑成除以100，方便计算）
+* 1rem == 50 px;
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000314}}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000323}}
+body {
+  position: relative;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.28rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000331}}
+a,
+b,
+i,
+em,
+sub,
+sup,
+abbr,
+span,
+code,
+time,
+label,
+input,
+audio,
+small,
+video,
+button,
+select,
+canvas,
+strong,
+address,
+textarea,
+progress {
+  display: inline-block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000357}}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000367}}
+pre {
+  margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000372}}
+i,
+em,
+dfn,
+cite,
+address {
+  font-style: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000379}}
+b,
+strong {
+  font-weight: inherit; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000383}}
+small {
+  font-size: inherit; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000386}}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000392}}
+sub,
+sup {
+  line-height: 1;
+  font-size: 12px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\0000399}}
+input,
+button,
+select,
+option,
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  outline: none;
+  color: inherit;
+  font: inherit; }
+
+/* 分割线 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\00003112}}
+legend,
+fieldset,
+blockquote {
+  margin: 0;
+  padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\00003119}}
+dl,
+dd {
+  margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\00003123}}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\00003130}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\00003134}}
+th,
+td {
+  padding: 0;
+  font-weight: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\00003141}}
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\00003146}}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  vertical-align: top; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/_resetMobile\.scss}line{font-family:\00003152}}
+hr {
+  margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\0000345}}
+.switch-item {
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\0000350}}
+  .switch-item input[type="checkbox"] {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\0000358}}
+    .switch-item input[type="checkbox"]:checked ~ .inner-text {
+      padding-left: 8px;
+      padding-right: 23px;
+      text-align: left;
+      background: #409eff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\0000364}}
+      .switch-item input[type="checkbox"]:checked ~ .inner-text:after {
+        left: calc(100% - 2px);
+        -webkit-transform: translate(-100%, 0);
+                transform: translate(-100%, 0); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\0000371}}
+    .switch-item input[type="checkbox"]:disabled ~ .inner-text {
+      opacity: .5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\0000376}}
+  .switch-item .inner-text {
+    position: relative;
+    padding-left: 23px;
+    padding-right: 8px;
+    min-width: 45px;
+    height: 22px;
+    line-height: 22px;
+    color: #fff;
+    text-align: right;
+    font-size: 12px;
+    border-radius: 22px;
+    background: #c0c4cc;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\0000389}}
+    .switch-item .inner-text:after {
+      position: absolute;
+      content: "";
+      left: 2px;
+      top: 2px;
+      bottom: 2px;
+      width: 18px;
+      border-radius: 50%;
+      background: #fff;
+      -webkit-transition: all .2s;
+      transition: all .2s; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003100}}
+html {
+  height: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003103}}
+  html .iconfont {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-family: "iconfont" !important;
+    font-size: inherit;
+    font-style: normal;
+    color: inherit;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003118}}
+.page-collector {
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003121}}
+  .page-collector .main-map-wrap {
+    height: 100vh; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003125}}
+  .page-collector .tool-wrap {
+    z-index: 20;
+    position: absolute; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003129}}
+    .page-collector .tool-wrap.view {
+      left: .15rem;
+      bottom: .5rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003132}}
+    .page-collector .tool-wrap.edit {
+      left: .15rem;
+      top: .5rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003136}}
+    .page-collector .tool-wrap .item {
+      display: block;
+      margin-top: .1rem;
+      width: .5rem;
+      height: .5rem;
+      text-align: center;
+      border-radius: 4px;
+      background: #fff;
+      -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+              box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+      -webkit-transition: all .2s;
+      transition: all .2s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003147}}
+      .page-collector .tool-wrap .item:active i {
+        opacity: .5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003151}}
+      .page-collector .tool-wrap .item:first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003154}}
+      .page-collector .tool-wrap .item i {
+        color: #1983d1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003162}}
+.layer-confirm-item {
+  z-index: 10;
+  position: relative;
+  padding: 0.1rem .13rem;
+  font-size: .2rem;
+  border-radius: 6px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003171}}
+  .layer-confirm-item:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border: 10px dashed transparent;
+    border-top: 10px solid #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003175}}
+  .layer-confirm-item .text,
+  .layer-confirm-item .btn-sure {
+    vertical-align: middle; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003179}}
+  .layer-confirm-item .btn-sure {
+    color: #009bdb;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003183}}
+    .layer-confirm-item .btn-sure:active {
+      opacity: .5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003186}}
+    .layer-confirm-item .btn-sure > * {
+      vertical-align: middle; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lijun\/Documents\/project-collection\/\%E9\%87\%87\%E9\%9B\%86\%E5\%99\%A8-\%E5\%B9\%B3\%E6\%9D\%BF\/scss\/allPage\.scss}line{font-family:\00003192}}
+.side-bar-wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 3rem;
+  padding: .1rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.22); }
+
+/*# sourceMappingURL=allPage.css.map */

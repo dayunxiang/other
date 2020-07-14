@@ -1,0 +1,838 @@
+@charset "utf-8";
+body{padding:0;color:#76e6ff;background:transparent;}
+
+select{border: 1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);color: #fff;}
+::-webkit-input-placeholder{color:#fff;}
+:-moz-placeholder{color:#fff;}
+::-moz-placeholder{color:#fff;}
+:-ms-input-placeholder{color:#fff;}
+
+
+/* 按钮 开始 ****************/
+.btn-blue-normal,
+.btn-gray-normal{color:#fff;}
+.btn-blue-big,
+.btn-gray-big{color:#fff;}
+.btn-blue-normal,
+.btn-blue-big{border:1px solid rgba(0,255,255,0.2);background: #0b1920;}
+.btn-gray-normal,
+.btn-gray-big{border:1px solid rgba(0,255,255,0.2);background: #0b1920;}
+
+.btn-blue-normal,
+.btn-blue-big{border-color: #98792e;background: url(../images/base/tab-active.png) repeat left top;}
+/**************** 按钮 结束 */
+
+
+/* 无数据 开始 ****************/
+.no-message .ico{color:#fff;}
+.no-message .text strong{color:#fff;}
+.no-message .text p{color:#fff;}
+/**************** 无数据 结束 */
+
+
+
+/* 日期插件 开始 ****************/
+html .jedateblue{
+    border: 1px solid rgba(0,255,255,0.2);
+    color: #76e6ff;
+    background:rgba(15,41,51,0.9);
+}
+
+html .jedateblue .jedatetop{
+    border-bottom: 1px solid rgba(118,230,255,0.2);
+    color: #fff;
+    background-color: rgba(15,41,51,0.9);
+}
+
+html .jedateblue .jedaul li{
+    border-right: 1px solid rgba(118,230,255,0.2);
+    border-bottom: 1px solid rgba(118,230,255,0.2);
+}
+
+html .jedateblue .jedatebot{
+    background: rgba(4,18,26,0.8);
+}
+
+html .jedateblue .jedatebot .jedatebtn span{
+    border: 1px solid rgba(0,255,255,0.2);
+    background: rgba(15,41,51,0.9);
+    color: #76e6ff;
+    cursor:pointer;
+}
+html .jedateblue .jedaol li.weeks{
+    background: rgba(15,41,51,0.9);
+    border-bottom: 1px solid rgba(118,230,255,0.2);
+}
+html .jedateblue .jedatebot .jedatehms{
+    border: 1px solid rgba(0,255,255,0.2);
+    background-color: #0b1920;
+}
+html .jedateblue .jedatebot .botflex li input,
+html .jedateblue .jedatebot .botflex li input[disabled]{
+    color: #76e6ff;
+    background-color: #0b1920;
+    cursor:pointer;
+}
+html .jedateblue .jedatebot .botflex i{
+    background:none;
+}
+html .jedateblue .jedaul li.action,
+html .jedateblue .jedaul li.action:hover,
+html .jedateblue .jedaul li.action .lunar{
+    border:1px solid #98792e;
+    background: url('../images/base/tab-active.png') repeat left top;
+    color: #fff;
+}
+html .jedateblue .jedaul li:hover{
+    border:1px solid #98792e;
+    background: url('../images/base/tab-active.png') repeat left top;
+    color: #fff;
+}
+html .jedateblue .jedatesety,
+html .jedateblue .jedatesetm{
+    background: rgba(4,18,26,0.8);
+}
+
+html .jedateblue .jedatepropcon{
+    background: rgba(4,18,26,0.8);
+}
+html .jedateblue .jedateprophms{
+    background: rgba(4,18,26,0.8);
+}
+html .jedateblue .jedatehmstitle{
+    background: rgba(15,41,51,0.9);
+}
+
+html .jedateblue .jedatesety .ymdropul li.action,
+html .jedateblue .jedatesetm .ymdropul li.action {
+    border:1px solid #98792e;
+    background: url('../images/base/tab-active.png') repeat left top;
+}
+html .jedateblue .jedatesety .ymdropul li:hover,
+html .jedateblue .jedatesetm .ymdropul li:hover {
+    border:1px solid #98792e;
+    background: url('../images/base/tab-active.png') repeat left top;
+}
+
+html .jedateblue .jedatesety .ymdropul li.action:hover,
+html .jedateblue .jedatesetm .ymdropul li.action:hover {
+    border:1px solid #98792e;
+    background: url('../images/base/tab-active.png') repeat left top;
+}
+
+html .jedateblue .jedatetopym p span.jedateymchok,
+html .jedateblue .jedatetopym p span.jedateymchle,
+html .jedateblue .jedatetopym p span.jedateymchri{
+    border: 1px solid rgba(0,255,255,0.2);
+    background: rgba(15,41,51,0.9);
+    color: #76e6ff;
+}
+
+html .jedateblue .jedayy li.action,
+html .jedateblue .jedayy li.action:hover,
+html .jedateblue .jedayy li:hover,
+html .jedateblue .jedaym li.action,
+html .jedateblue .jedaym li.action:hover,
+html .jedateblue .jedaym li:hover{
+    border:1px solid #98792e;
+    background: url('../images/base/tab-active.png') repeat left top;
+}
+
+html .jedateblue .jedaul li.disabled:hover{
+    border-right: 1px solid rgba(118,230,255,0.2);
+    border-bottom: 1px solid rgba(118,230,255,0.2);
+    border-left:none;
+    border-top:none;
+    background:none;
+}
+
+html .jedateblue .jedatehmscon{
+    border: 1px solid rgba(0,255,255,0.2);
+}
+
+html .jedateblue .jedatehmscon p.disabled{
+    background:none;
+    border:none;
+}
+
+html .jedateblue .jedatesety .ymdropul li.disabled:hover,
+html .jedateblue .jedatesetm .ymdropul li.disabled:hover,
+html .jedateblue .jedaym li.disabled{
+    background: none;
+    border: none;
+}
+html .jedateblue .jedateym .triangle,
+html .jedateblue .jedatehmsclose{
+    cursor:pointer;
+}
+html .jedateblue .jedateym .triangle:hover{
+    color:#fff;
+    background-color:rgba(15,41,51,0.9);
+}
+
+html .jedateblue .jedatehmscon p:hover,
+html .jedateblue .jedatehmscon p.action,
+html .jedateblue .jedatehmscon p.action:hover{
+    border:1px solid #98792e;
+    background: url('../images/base/tab-active.png') repeat left top;
+}
+
+html .jedatebox .jedatehmscon::-webkit-scrollbar{background:none;}
+html .jedatebox .jedatehmscon::-webkit-scrollbar-thumb{background:#1179ad;}
+html .jedatebox .jedatehmscon::-webkit-scrollbar-thumb:hover{background:#1179ad;}
+html .jedatebox .jedatehmscon::-webkit-scrollbar-thumb:active{background:#1179ad;}
+html .jedatebox .jedatehmscon::-webkit-scrollbar-thumb:window-inactive {background: rgba(0,0,0,0.4);}
+
+/**************** 日期插件 结束 */
+
+
+
+/* ****************************************滑块样式开始******************************************* */
+.t-tit-box .check{color:#fff;}
+.t-tit-box .check.start{border:1px solid #0190d4;background:#0190d4;}
+.t-tit-box .check.end{border:1px solid #f60;background:#f60;}
+/* ---分割线--- */
+.t-swiper-wrap li{color:#0190d4;}
+.t-swiper-wrap li:hover,
+.t-swiper-wrap li.curr{border-color:#98792e;background: url(../images/base/tab-active.png) repeat left top;color:#fff;}
+/* ---分割线--- */
+.t-swiper-wrap .prev,
+.t-swiper-wrap .next,
+.t-swiper-wrap li{border:1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);color:#76e6ff;}
+.t-swiper-wrap li:hover a{max-width:93%;}
+/* ---分割线--- */
+.t-swiper-wrap .prev,
+.t-swiper-wrap .next{color:#999;}
+/* ---分割线--- */
+.t-swiper-wrap.hover li .iconfont{color:#fff;background:none;}
+.t-swiper-wrap.hover li.curr .iconfont{color:#f60;background:none;}
+.t-swiper-wrap.hover li:hover{border-color:#98792e;color:#fff;}
+.t-swiper-wrap.hover li.curr:hover{color:#fff;}
+.t-swiper-wrap.hover li.curr:hover .iconfont{color:#fff;}
+.t-swiper-wrap.hover li:hover .iconfont{color:#fff;}
+/* ****************************************滑块样式结束******************************************* */
+
+
+/* 自定义KPI开始 ****************/
+.layout-item-1{box-shadow:0 0 5px rgba(8,3,4,0.4);border:1px solid rgba(0,255,255,0.2);border-radius:4px;color:#fff;background-color:rgba(76,195,255,0.1);}
+.layout-item-1:hover{border:1px solid #cccc00;background:none;}
+.layout-item-1 .tb{color:#cccc00;}
+.layout-item-1 .hb{color:#00cc00;}
+/* 分割线 */
+.custom-kpi-zb{color:#76e6ff;}
+.custom-kpi-zb .tit-wrap .btn-custom{color:#76e6ff;}
+.custom-kpi-zb .tit-wrap .btn-custom .iconfont{color:#fff;}
+/**************** 自定 义KPI 结束 */
+
+
+/* 表单布局 开始 ****************/
+.form-list .input-text,
+.form-list textarea{border: 1px solid rgba(0,255,255,0.2);background: #0b1920;color:#fff;}
+/* ---分割线--- */
+.form-list .tit{color:#fff;}
+.form-list .tit sub{color:#cccc00;bottom:0;}
+/**************** 表单布局 结束 */
+
+
+
+/* 时间筛选 开始 ****************/
+.select-time{color:#76e6ff;border:1px solid rgba(0,255,255,0.2);}
+.select-time a{border-right:1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);}
+.select-time a:last-child{border-right:none;}
+.select-time a.checked{color:#fff;background:url('../images/base/tab-active.png') repeat left top;}
+/**************** 时间筛选 结束 */
+
+
+
+/* 关联下钻豆腐块 开始 ****************/
+.modular-item{border: 1px solid rgba(0,255,255,0.2);background-color: rgba(4,18,26,0.8);}
+.modular-item:hover{border-color:#ad8b34 !important;}
+/* ---分割线--- */
+.modular-item .tit{color:#fff;background-color: rgba(15,41,51,0.9);}
+.modular-item .tit .tag small,
+.modular-item .tit .warning small{color:#000;}
+/* ---分割线--- */
+.modular-item .tit .tag{border:16px dashed transparent;border-left:16px solid #f60;}
+.modular-item .tit .warning{border:12px dashed transparent;border-top:12px solid yellow;border-right:12px solid yellow;border-left:13px dashed transparent;}
+/* ---分割线--- */
+
+.modular-item .info dt{color:#fff;}
+.modular-item .info .tb{color:#cccc00;margin-right:10px;}
+.modular-item .info .hb{color:#00cc00;}
+/* ---分割线--- */
+.modular-item .link-info{border-top:1px solid rgba(118,230,255,0.2);color:#76e6ff;}
+/* ---分割线--- */
+.modular-item .type-list .iconfont{border:1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);color: #76e6ff;}
+.modular-item .type-list .iconfont:hover{background:url('../images/base/tab-active.png') repeat left top;background-size:100% 100%;}
+/* ---分割线--- */
+.modular-item.other{background:rgba(4,18,26,0.8) url("../images/public/j-tag-red.png") no-repeat right bottom;}
+.modular-item.other .info{color:#0190d4;}
+/**************** 关联下钻豆腐块 结束 */
+
+
+
+/* 筛选样式开始 ****************/
+.screen-list li{border-bottom:1px solid rgba(0,0,0,0.1); font-size:14px;color:#76e6ff;}
+.screen-list li:last-child{border-bottom:none;}
+.screen-list .name{position:absolute;color:#76e6ff;}
+.screen-list .item:hover{color:#fff;}
+.screen-list .item{margin-right:5px;padding:1px 5px;transition:all .2s;border:1px solid transparent;}
+.screen-list .item .iconfont{color:transparent;}
+.screen-list .item:hover{border: 1px solid #98792e;background: url('../images/base/tab-active.png') repeat left top;}
+.screen-list .item:hover .iconfont{color:#fff;}
+.screen-list li.text .item:hover,
+.screen-list .item.active{border:1px solid #98792e;background: url('../images/base/tab-active.png') repeat left top;color:#fff;}
+.screen-list .btn-toggle {position:absolute;top:10px;right:0;color:#76e6ff;}
+/**************** 筛选样式结束 */
+
+
+/* 日期样式 开始 ****************/
+.date-wrap input{border: 1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);color:#fff;}
+/**************** 日期样式 结束 */
+
+
+
+/* 设备监控警告列表 开始 ****************/
+.warning-list{color:#76e6ff;}
+.warning-list li{border-bottom:1px solid rgba(118,230,255,0.2);}
+.warning-list .tag{color:#ff3b00;}
+.warning-list .row.up .value{color:#cccc00;}
+.warning-list .row.down .value{color:#00cc00;}
+.warning-list .row.up .tag i{color:#cccc00;}
+.warning-list .row.down .tag i{color:#00cc00;}
+/* 分割线 */
+.warning-list .iconfont.warning{color:#ff3b00;}
+/* 分割线 */
+.warning-list .ico-list .iconfont{color:#76e6ff;}
+/**************** 设备监控警告列表 结束 */
+
+
+
+/* 条状排版 开始 ****************/
+.pro-bar-box .text{color:#76e6ff;}
+.pro-bar-box .pro-bar{height:28px;line-height:28px;font-size:12px;text-align:center;color:#fff;}
+/**************** 条状排版 结束 */
+
+
+/* 关键kpi指标 开始 ****************/
+.layout-item-2{box-shadow: 0 0 5px rgba(8,3,4,0.4);border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);box-shadow: 0 0 5px rgba(8,3,4,0.4);}
+.layout-item-2:hover{border-color:#cccc00;}
+.layout-item-2 .info-item-1{margin-top:5px;}
+.layout-item-2 .echart-wrap{height:176px;}
+.layout-item-2 .echart-wrap .iconfont{color:#fff;display:block;text-align:center;height:176px;line-height:176px;font-size:80px;}
+.layout-item-2 .tit{padding-right:5px;line-height:1.8;font-size:12px;text-align:center;}
+.layout-item-2 .tb{color:#cccc00;}
+.layout-item-2 .hb{color:#00cc00;}
+/**************** 关键kpi指标 结束 */
+
+
+/* 表格样式1 开始 ****************/
+.tab-1{font-size:14px;color:#fff;}
+.tab-1 th{color:#fff;border:1px solid rgba(67, 183, 191, 0.2);background:rgba(118,230,255,0.09);}
+.tab-1 tbody tr:nth-child(odd){background: rgba(15,41,51,0.9);}
+.tab-1 tbody tr:nth-child(even){background:rgba(255,255,255,0.03);}
+.tab-1 tbody td{border:1px solid rgba(67, 183, 191, 0.2);}
+/* 表格插件 */
+.dlshouwen-grid.tab-1{font-size:14px;color:#fff;}
+.dlshouwen-grid.tab-1 th{color:#fff;border:1px solid rgba(67, 183, 191, 0.2);background:rgba(118,230,255,0.09);}
+.dlshouwen-grid.tab-1 tbody td{border:1px solid rgba(67, 183, 191, 0.2);}
+.dlshouwen-grid.tab-1  tbody tr:nth-child(4n - 1){background:rgba(255,255,255,0.03);}
+.dlshouwen-grid.tab-1  tbody tr:hover{background:url('../images/base/tab-active.png') repeat left top;}
+/* 分页 */
+.dlshouwen-grid.toolbar-box .pager-wrap li a{border: 1px solid rgba(0,255,255,0.2);color: #76e6ff;background-color:rgba(15,41,51,0.9);}
+.dlshouwen-grid.toolbar-box .pager-wrap li.active a{border-color: #ad8b34;background: url('../images/base/swiper-active.png') repeat-x left 50%;color:#fff;}
+.dlshouwen-grid.toolbar-box .pager-status{color:#fff;}
+.dlshouwen-grid.toolbar-box select{border: 1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);color: #fff;}
+/**************** 表格样式1 结束 */
+
+
+/* 二级设备实时监控 开始 ****************/
+.device-item{border: 1px solid rgba(0,255,255,0.2);color:#76e6ff;background:rgba(4,18,26,0.8);}
+/* 分割线 */
+.device-item .up em{color:#cccc00;}
+.device-item .down em{color:#00cc00;}
+.device-item .up strong i{color:#cccc00;}
+.device-item .down strong i{color:#093;}
+.device-item .tit-wrap{border-bottom:1px solid rgba(118,230,255,0.2);color: #fff;background-color: rgba(15,41,51,0.9);}
+.device-item .tit-wrap .warning{border-top:12px solid yellow;border-right:12px solid yellow;}
+.device-item .tit-wrap small{color:#000;}
+/* 分割线 */
+.device-item .banner{border-bottom:1px solid rgba(118,230,255,0.2);}
+.device-item .banner .ico-list .iconfont{color:#76e6ff;}
+/* 分割线 */
+.device-item .info .item:first-child{border-left:1px solid rgba(118,230,255,0.2);}
+.device-item .info .item strong{color:#cccc00;}
+/* 分割线 */
+.device-item-list > li .device-item:hover{border-color:#cccc00;}
+/**************** 二级设备实时监控 结束 */
+
+
+/* 分页 开始 ****************/
+.paging-wrap{margin-top:10px;font-size:0;text-align:right;color:#76e6ff;}
+.paging-wrap .page-single{display:inline-block;padding:0 10px;margin:0 5px;height:28px;line-height:28px;color: #76e6ff;border:1px solid rgba(0,255,255,0.2);font-size:14px;background-color:rgba(15,41,51,0.9);vertical-align:middle;}
+.paging-wrap .page-single:hover,
+.paging-wrap .page-single.curr{border-color:#ad8b34;color:#fff;background:url("../images/base/swiper-active.png") repeat-x left 50%;}
+.paging-wrap .page-single.disabled:hover{border:1px solid rgba(0,255,255,0.2);background:rgba(15,41,51,0.9);}
+.paging-wrap .page-single.ellipsis,
+.paging-wrap .page-single.total{padding:0;border:none;background:transparent;cursor:default;}
+.paging-wrap .page-search-box{display:inline-block;margin-left:10px;font-size:14px;vertical-align:middle;color: #76e6ff;}
+.paging-wrap .page-search-box .search-wrap{display:inline-block;margin:0 5px;vertical-align:middle;}
+.paging-wrap .page-search-box input,
+.paging-wrap .page-search-box .btn-go-page{float:left;height:28px;line-height:28px;border:1px solid rgba(0,255,255,0.2);}
+.paging-wrap .page-search-box input{display:inline-block;padding:0 10px;width:45px;border:1px solid rgba(0,255,255,0.2);color:#76e6ff;background:#0b1920;border-right:none;}
+.paging-wrap .page-search-box .btn-go-page{padding:0 10px;color:#fff;background: #0b1920;}
+/**************** 分页 结束 */
+
+
+/* 遮罩层、弹窗 开始 ****************/
+.pop-mask{z-index:1000;filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#40000000,endColorStr=#40000000);background:rgba(0,0,0,.5);}
+.pop-mask,
+[class^="pop-"],
+[class*=" pop-"]{position:fixed;left:0;right:0;top:0;bottom:0;}
+[class^="pop-"],
+[class*=" pop-"]{margin:auto;z-index:1010;border: 1px solid rgba(0,255,255,0.5);}
+/* ---分割线--- */
+[class^="pop-"]  .pp-title,
+[class*=" pop-"] .pp-title{position:relative;padding:7px;color:#fff;background:rgba(15,41,51,0.9);}
+[class^="pop-"]  .pp-title p,
+[class*=" pop-"] .pp-title p{font-size:14px;}
+[class^="pop-"]  .pp-title .btn-close,
+[class*=" pop-"] .pp-title .btn-close{display:block;position:absolute;right:10px;top:10px;font-size:12px;cursor:pointer;transition:all .8s;}
+[class^="pop-"]  .pp-title .btn-close:hover,
+[class*=" pop-"] .pp-title .btn-close:hover{transform:rotate(360deg);}
+/* ---分割线--- */
+[class^="pop-"]  .pp-contain,
+[class*=" pop-"] .pp-contain{padding:15px;overflow-y:auto;background-color: rgba(8,20,26,0.85);}
+/* ---分割线--- */
+[class^="pop-"]  .pp-edit,
+[class*=" pop-"] .pp-edit{padding:5px 0;text-align:center;font-size:14px;background:rgba(15,41,51,0.9);}
+/* ---分割线--- */
+[class^="pop-"]  .pp-edit > a,
+[class*=" pop-"] .pp-edit > a{margin-left:10px;display:inline-block;padding:3px 25px;color:#fff;}
+[class^="pop-"]  .pp-edit > a:first-child,
+[class*=" pop-"] .pp-edit > a:first-child{margin-left:0;}
+/* ---分割线--- */
+[class^="pop-"]  .pp-edit .btn-ok,
+[class*=" pop-"] .pp-edit .btn-ok{border: 1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);color: #76e6ff;}
+/* ---分割线--- */
+[class^="pop-"]  .pp-edit .btn-ok:hover,
+[class*=" pop-"] .pp-edit .btn-ok:hover{background: rgba(15,41,51,0.9);}
+/* ---分割线--- */
+[class^="pop-"]  .pp-edit .btn-cancel,
+[class*=" pop-"] .pp-edit .btn-cancel{border: 1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);color: #76e6ff;}
+/* ---提示性弹窗--- */
+#pop-tips{display:table;position:fixed;top:50%;left:50%;margin:-40px 0 0 -160px;width:320px;height:80px;border-radius:6px; background:#666\9; background:rgba(0,0,0,.6);animation:scale 1s ease 0s 1;animation-fill-mode:backwards;}
+#pop-tips .tips-text{display:table-cell;vertical-align:middle;padding:15px;font-size:14px; color:#fff;text-align:center;}
+@keyframes scale
+{
+    50%   {opacity:0;transform:scale(0.5,0.5);}
+    100% {opacity:1;transform:scale(1,1);}
+}
+/**************** 遮罩层、弹窗 结束 */
+
+
+
+
+
+
+/* ****************************************DMA分析运营样式开始******************************************* */
+.fxyy-list > li > *{border:1px solid rgba(0,255,255,0.2);background-color:rgba(76,195,255,0.1);box-shadow: 0 0 5px rgba(8,3,4,0.4);}
+.fxyy-list > li > *:hover{border:1px solid #cccc00;}
+/* 分割线 */
+.fxyy-list .echart-item .tit{color:#fff;}
+.fxyy-list .echart-item .tit em{color:#fff;}
+.fxyy-list .echart-item .tit .tb{color: #cccc00;}
+.fxyy-list .echart-item .tit .hb{color: #00cc00;}
+.fxyy-list .echart-item .no-data{color:#76e6ff;}
+/* 实时监控 */
+.fxyy-list .ssjk .tit{border-bottom:1px solid rgba(67, 183, 191, 0.2);color: #76e6ff;background:rgba(15,41,51,0.9);}
+.fxyy-list .ssjk .text{color: #76e6ff;}
+.fxyy-list .ssjk .pro-bar{color:#fff;}
+.fxyy-list .ssjk .no-data{color:#76e6ff;}
+/* 场景告警 */
+.fxyy-list .cjgj .tit{border-bottom:1px solid rgba(67, 183, 191, 0.2);color: #76e6ff;background:rgba(15,41,51,0.9);}
+.fxyy-list .cjgj .no-data{color:#76e6ff;}
+.fxyy-list .cjgj li{border-bottom:1px dashed rgba(67, 183, 191, 0.2);color: #76e6ff;}
+.fxyy-list .cjgj li:hover{background:none;}
+.fxyy-list .cjgj li .iconfont{color:#ffa86e;}
+.fxyy-list .cjgj li b{background:#f60;color:#fff;}
+/* 产销差率排名 */
+.fxyy-list .sjqk .tit{border-bottom:1px solid rgba(67, 183, 191, 0.2);color: #76e6ff;background:rgba(15,41,51,0.9);}
+.fxyy-list .sjqk .no-data{color:#76e6ff;}
+.fxyy-list .sjqk table{color:#76e6ff;}
+.fxyy-list .sjqk tr{border-bottom: 1px dashed rgba(67, 183, 191, 0.2);}
+.fxyy-list .sjqk tr.hot td:first-child{color:#f60;}
+.fxyy-list .sjqk tbody tr:hover{background:none;}
+.fxyy-list .sjqk td strong{color: #76e6ff;}
+.fxyy-list .sjqk td:last-child em{color: #76e6ff;}
+/* ****************************************DMA分析运营样式结束******************************************* */
+
+
+/* ****************************************指标分析-指标关联页面开始******************************************* */
+.gl-modular-wrap .tips{color:#cccc00;}
+/* 分割线 */
+.gl-modular-wrap .modular-list > li .modular-item:first-child{border:1px solid #cccc00;}
+.gl-modular-wrap .modular-list > li:before{background:url("../images/public/route1.png") no-repeat center center;}
+.gl-modular-wrap .modular-list > li.index-2:before{background:url("../images/public/route.png") no-repeat center center;}
+.gl-modular-wrap .modular-list > li.info-wrap:before{background:url("../images/public/oute-first.png") no-repeat left center;}
+.gl-modular-wrap .modular-list > li.lose:before{background:url("../images/public/oute-first.png") no-repeat left center;}
+.gl-modular-wrap .modular-list > li.index-2.lose:before{background:url("../images/public/oute-first.png") no-repeat center center;}
+.gl-modular-wrap .modular-list > li.index-2.info-wrap:before{background-position:center center;}
+.gl-modular-wrap .modular-list > li:first-child:before{background:none;}
+.gl-modular-wrap .modular-list > li .modular-item.active{border-color:#cccc00;}
+/* 分割线 */
+.gl-modular-wrap .modular-list .info-wrap{border: 1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);}
+.gl-modular-wrap .modular-list .info-wrap .modular-item:first-child{border: 1px solid rgba(0,255,255,0.2);}
+.gl-modular-wrap .modular-list .info-wrap .modular-item:first-child:hover{border-color:#cccc00;}
+/* 指标模块弹窗 */
+/* ****************************************指标分析-指标关联页面结束******************************************* */
+
+
+
+
+/* ****************************************多维分析页面开始******************************************* */
+/* 百度图表 */
+.dw-chart{border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);}
+.dw-chart .edit .btn-switch{font-size:14px;color: #76e6ff;}
+/* DMA表格 */
+.dw-mda-tab{margin:15px 20px;}
+.dw-mda-tab .btn-export{font-size:14px;color: #76e6ff;}
+/* DMA更多弹窗 */
+.pop-dma-more .pp-contain{padding:0;}
+.pop-dma-more .screen-list li:first-child{border-bottom:1px solid rgba(67, 183, 191, 0.2);;}
+.pop-dma-more .screen-list li.area .all{color:#fff;border-color: #98792e;background: url('../images/base/tab-active.png') repeat left top;}
+/* ---分割线--- */
+.pop-dma-more .screen-list li .name{color:#fff;}
+.pop-dma-more .search-wrap{border:1px solid rgba(67, 183, 191, 0.2);border-radius:4px;}
+.pop-dma-more .search-wrap input[type="text"]{border:1px solid transparent;border-radius:4px;border-right:none;background-color: transparent;color:#fff;}
+.pop-dma-more .search-wrap .btn-del{color: #76e6ff;font-size:16px;}
+/* ****************************************多维分析页面结束******************************************* */
+
+
+
+
+/* ****************************************产销差分析页面开始******************************************* */
+.cx-echarts .content{box-shadow: 0 0 5px rgba(8,3,4,0.4);border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);}
+.cx-echarts .tit-box .tit{color:#fff;}
+/* 查询 */
+/* 百度图表 */
+.cx-echarts .explain{float:right;margin-left:20px;width:228px;height:100%;font-size:14px;border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);}
+.cx-echarts .explain .tit{padding:7px 0;font-weight:bold;color:#fff;text-align:center;background-color: rgba(15,41,51,0.9);}
+.cx-echarts .explain .type{padding:7px 0;text-align:center;border-bottom:1px solid #e6e6e6;color:#fff;}
+.cx-echarts .explain .tb{font-weight:bold;color:#cccc00;}
+.cx-echarts .explain .hb{font-weight:bold;color:#00cc00;}
+.cx-echarts .explain .info{color:#fff;}
+.cx-echarts .explain .info dt{font-weight:bold;}
+.cx-echarts .btn-look-more{color: #76e6ff;background:none;}
+/* 工单 */
+.cx-order .tit-box{padding-bottom:5px;border-bottom:none;font-size:14px;}
+.cx-order .tit-box .tit{font-weight:bold;}
+.cx-order .tit-box .btn-look-more{color: #76e6ff;font-size:14px;}
+/* ---分割线--- */
+.cx-order .or-list-wrap{padding:15px 10px;box-shadow: 0 0 5px rgba(8,3,4,0.4);border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);}
+.cx-order .or-list{position:relative;margin-left:52px;padding:15px 0;border-left:1px solid #ccc;}
+.cx-order .or-list:before,
+.cx-order .or-list:after{position:absolute;content:"";left:-3px;width:5px;height:5px;border-radius:50%;background:#0190d4;}
+/* ---分割线--- */
+.cx-order .or-list > li{position:relative;padding:13px 0 13px 0;margin-left:15px;border-bottom:1px dashed rgba(67, 183, 191, 0.2);font-size:14px;color:#fff;cursor:pointer;}
+.cx-order .or-list > li:before{position:absolute;top:19px;left:-22px;width:11px;height:11px;border:1px solid #0190d4;border-radius:50%;background:#fff;content:"";}
+.cx-order .or-list > li.end:before{border-color:#009933;}
+.cx-order .or-list > li:after{position:absolute;top:22px;left:-19px;width:5px;height:5px;border-radius:50%;background:#0190d4;content:"";}
+.cx-order .or-list > li.end:after{background:#009933;}
+.cx-order .or-list > li.ing .state{color: #cccc00;}
+.cx-order .or-list > li.end .state{color:#00cc00;}
+.cx-order .or-list > li.end time,
+.cx-order .or-list > li.end .tips{color:#fff;}
+.cx-order .or-list > li.open .tips{font-weight:bold;}
+.cx-order .or-list > li.open{margin-top:-1px; background:none;border-bottom:none;}
+/* ---分割线--- */
+.cx-order .or-list .tag{position:absolute;top:13px;left:-70px;padding:0 3px;height:22px;line-height:22px;font-size:13px;color:#fff;border-top-left-radius:4px;border-bottom-left-radius:4px;}
+.cx-order .or-list .tag:before{position:absolute;right:-23px;width:0;height:0;border:11px dashed transparent;border-left:11px solid transparent;line-height:0;font-size:0;content:"";}
+.cx-order .or-list .tag:after{position:absolute;right:-5px;top:8px;width:5px;height:5px;border-radius:50%;background:#fff;content:"";}
+.cx-order .or-list .tag.orange:before{border-left-color:rgba(0,255,255,0.2);}
+.cx-order .or-list .tag.orange{border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);color: #cccc00;}
+.cx-order .or-list .tag.gray:before{border-left-color:rgba(0,255,255,0.2);}
+.cx-order .or-list .tag.gray{border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);color:#00cc00;}
+.cx-order .or-list > li.open time{font-weight:bold;}
+.cx-order .or-list .open-list{display:none;margin-top:5px; width:100%;border-top:1px solid rgba(76,195,255,0.1);cursor:text;color: #76e6ff;}
+.cx-order .or-list >li.open .open-list{display:block;}
+.cx-order .or-list .open-list .tips-text{margin:10px 0 0 10px;line-height:1.5;}
+/* ---分割线--- */
+.cx-order .or-list .deit-link{position:relative;display:inline-block;margin-left:15px;color: #76e6ff;}
+.cx-order .or-list .deit-link .iconfont{font-size:12px;}
+.cx-order .or-list .deit-link .show-more{display:none;position:absolute;left:0;top:29px;z-index:10;width:425px;border:1px solid rgba(0,255,255,0.2);background:none;box-shadow:0 0 5px #76e6ff;font-size:12px;color: #76e6ff;cursor:default;}
+.cx-order .or-list .deit-link .show-more:before,
+.cx-order .or-list .deit-link .show-more:after{position:absolute;border:12px dashed transparent;font-size:0;line-height:0;content: "";}
+.cx-order .or-list .deit-link .show-more:before{left:20px;top:-24px;border-bottom: 12px solid rgba(0,255,255,0.2);}
+.cx-order .or-list .deit-link .show-more:after{left:20px;top:-21px;border-bottom: 12px solid rgba(15,41,51,0.9);}
+.cx-order .or-list .deit-link .show-more table{width:100%;}
+.cx-order .or-list .deit-link .show-more thead{background-color: rgba(15,41,51,0.9);color:#fff;}
+.cx-order .or-list .deit-link .show-more th,
+.cx-order .or-list .deit-link .show-more td{padding:5px 10px;}
+.cx-order .or-list .deit-link .show-more tbody{background-color:#102833}
+.cx-order .or-list .deit-link .show-more .name{display:inline-block;max-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cx-order .or-list .deit-link .show-more .name:hover{color:#cccc00;}
+.cx-order .or-list .deit-link .show-more time{color: #76e6ff;font-weight:normal;}
+/* 产销差率弹窗弹窗 */
+.pop-sales-slip .sales-slip-wrap{font-size:14px;color:#fff;}
+/* ****************************************产销差分析页面结束******************************************* */
+
+
+
+/* ****************************************DMA数据管理样式开始******************************************* */
+/* 分割线 */
+.sjgl-tab-wrap .tool-wrap .btn{color: #76e6ff;}
+.sjgl-tab-wrap td.last .iconfont{color: #76e6ff;}
+.sjgl-tab-wrap td.last .iconfont:hover{background:#f60;color:#fff;}
+.sjgl-tab-wrap .btn-file{color: #76e6ff;}
+/* 新增弹窗 */
+/* ****************************************DMA数据管理样式结束******************************************* */
+
+
+
+
+/* ****************************************工单跟踪处理页面开始******************************************* */
+.gdcl-wrap{border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0);color:#fff;}
+.gdcl-wrap .tit-wrap{border-bottom:1px solid rgba(67, 183, 191, 0.2);color: #76e6ff;}
+/* ---分割线--- */
+.gdcl-wrap .item{border: 1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);color: #76e6ff;}
+.gdcl-wrap .item.active{border-color: #98792e;background: url('../images/base/tab-active.png') repeat left top;color: #fff;}
+.gdcl-wrap .item:after{position:absolute;right:-25px;top:10px;width:24px;height:10px;background:url("../images/public/jty.png") no-repeat center center;content:"";}
+.gdcl-wrap .item:last-child:after{background:none;}
+/* ---分割线--- */
+.gdcl-wrap .tab-1 td:last-child a{color:#76e6ff;}
+/* ****************************************工单跟踪处理页面结束******************************************* */
+
+
+
+
+/* ****************************************管网运营首页开始******************************************* */
+/* 分割线 */
+.gwsy-water-info .tb{color:#cccc00;}
+.gwsy-water-info .hb{color:#00cc00;}
+/* 分割线 */
+.gwsy-water-info .tab-nav{color:#76e6ff;}
+.gwsy-water-info .tab-nav.active{border-bottom:2px solid #cccc00;color:#fff;}
+/* 分割线 */
+/* 分割线 */
+.gwsy-water-info .echart-block{border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);box-shadow: 0 0 5px rgba(8,3,4,0.4);}
+.gwsy-water-info .echart-block:hover{border-color:#cccc00;}
+/* 分割线 */
+.gwsy-water-info .aside-box .item-box{border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);box-shadow: 0 0 5px rgba(8,3,4,0.4);}
+.gwsy-water-info .aside-box .item-box:hover{border-color:#cccc00;}
+/* 分割线 */
+.gwsy-water-info .aside-box .item-box .echart-box{height:226px;}
+/* 分割线 */
+.gwsy-water-info .aside-box .item-box .step-box{border-bottom:1px dashed rgba(0,255,255,0.2);}
+/* ****************************************管网运营首页结束******************************************* */
+
+
+/* ****************************************客户服务首页开始******************************************* */
+.khfw-water-info .tab-nav{color:#76e6ff;}
+.khfw-water-info .tab-nav.active{border-bottom:2px solid #cccc00;color:#fff;font-weight:bold;}
+/* 分割线 */
+.khfw-water-info .tb{color:#cccc00;}
+.khfw-water-info .hb{color:#00cc00;}
+.khfw-water-info .echart-item{border:1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);}
+.khfw-water-info .echart-item:hover{border-color:#cccc00;}
+/* ****************************************客户服务首页结束******************************************* */
+
+
+
+
+/* ****************************************大表详情开始******************************************* */
+.dbxq-survey .row{color:#76e6ff;}
+.dbxq-survey .row.tit{border-top:1px solid rgba(67, 183, 191, 0.2);color:#fff;background:none;}
+.dbxq-survey .iconfont.warning{color:#cccc00;}
+.dbxq-survey .warning-mes{color:#cccc00;}
+/* 分割线 */
+.dbxq-tab-card{color:#76e6ff;}
+.dbxq-tab-card .nav-wrap{margin-bottom:-1px;}
+.dbxq-tab-card .tab-nav{border: 1px solid rgba(0,255,255,0.2);background:rgba(15,41,51,0.9);color: #76e6ff;}
+.dbxq-tab-card .tab-nav.active{border-color:#98792e;background: url('../images/base/tab-active.png') repeat left top;color: #fff;}
+.dbxq-tab-card .con-wrap{border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);}
+/* 分割线 */
+.dbxq-tab-card .con-wrap .select-box .btn-toggle{color:#76e6ff;}
+/* 分割线 */
+.dbxq-tab-card .echart-wrap .tit-info b{color:#cccc00;}
+.dbxq-tab-card .echart-wrap .echart-item{background:none;}
+/* ****************************************大表详情结束******************************************* */
+
+
+/* ****************************************场景-配表异常-分析过程开始******************************************* */
+.cjfx-warning{color:#76e6ff;}
+.cjfx-warning b{color:#cccc00;}
+/* 分割线 */
+.cjfx-modular{color:#76e6ff;border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);}
+.cjfx-modular .item-box .tit-wrap{border-bottom:1px solid rgba(67, 183, 191, 0.2);color:#fff;}
+/* 分割线 */
+.cjfx-modular .tab-card .nav-wrap{border-bottom:1px solid rgba(67, 183, 191, 0.2);}
+.cjfx-modular .tab-card .tab-nav{color:#76e6ff;}
+.cjfx-modular .tab-card .tab-nav.active{border-bottom:2px solid #cccc00;color:#fff;}
+.cjfx-modular .tab-card .echart-box{background:none;}
+/* ****************************************场景-配表异常-分析过程结束******************************************* */
+
+
+
+/* 指标分析-地图分析、二级设备实时监控（地图） 开始 ****************/
+.tit-map{color:#76e6ff;}
+/* 分割线 */
+.tit-map .time-wrap .btn-refresh{color:#76e6ff;}
+/* 分割线 */
+.tit-map .btn-switch {border: 1px solid transparent;}
+.tit-map .location:hover .btn-switch{border-color:#98792e;background:url('../images/base/tab-active.png') repeat left top;color: #fff;}
+.tit-map .location:hover .btn-switch .iconfont{color:#fff;}
+.tit-map .location .name{color:#76e6ff;}
+.tit-map .btn-switch .iconfont{color:#76e6ff;}
+/* DMA选择列表 */
+.tit-map .select-wrap{color:#76e6ff;border:1px solid rgba(0,255,255,0.2);background:rgba(0,17,26,0.9);}
+.tit-map .select-wrap address{background:none;}
+.tit-map .select-wrap dl{border-bottom:1px solid rgba(255,255,255,0.15);background:none;}
+.tit-map .select-wrap dl:last-child{border-bottom:none;}
+.tit-map .select-wrap abbr {border-bottom:none;}
+.tit-map .select-wrap dt abbr:hover{color:#cccc00;}
+.tit-map .select-wrap dd{padding:10px 15px 0;background:none;}
+.tit-map .select-wrap dd abbr.disabled{color:#b3b3b3;}
+.tit-map .select-wrap dd abbr.disabled:hover{color:#b3b3b3;}
+.tit-map .select-wrap dd abbr:hover{color:#cccc00;}
+/* 复选列表 */
+.tit-map .search-wrap input{border: 1px solid rgba(0,255,255,0.2);background: rgba(15,41,51,0.9);color: #fff;}
+.tit-map .search-wrap .btn-search{color:#ddd;border-left:1px solid rgba(0,255,255,0.2);}
+.tit-map .btn-toggle{color:#76e6ff;}
+/* 分割线 */
+.tit-map .select-list li{color:#76e6ff;}
+/* 地图 */
+.map-wrap{color:#76e6ff;border: 1px solid rgba(0,255,255,0.2);background-color: rgba(76,195,255,0.1);}
+.map-wrap .aside .btn-switch-open{display:none;border:1px solid #98792e;background: url('../images/base/tab-active.png') repeat left top;color: #fff;}
+/* 分割线 */
+.map-wrap .modular-item.bottom-arrow:before,
+.map-wrap .modular-item.bottom-arrow:after,
+.map-wrap .modular-item.right-arrow:before,
+.map-wrap .modular-item.right-arrow:after{border:12px dashed transparent;}
+/* 分割线 */
+.map-wrap .modular-item.bottom-arrow:before{border-top:12px solid rgba(0,255,255,0.2);}
+.map-wrap .modular-item.bottom-arrow:after{border-top:12px solid rgba(4,18,26,0.8);}
+.map-wrap .modular-item.right-arrow:before{border-left:12px solid rgba(0,255,255,0.2);}
+.map-wrap .modular-item.right-arrow:after{border-left:12px solid rgba(4,18,26,0.8);}
+/**************** 指标分析-地图分析、二级设备实时监控（地图） 结束 */
+
+
+
+/* ****************************************指标地图分析样式开始******************************************* */
+/* 选项卡部分 */
+.zb-map-wrap .tab-card{border:1px solid rgba(0,255,255,0.2);background:rgba(4,18,26,0.8);}
+.zb-map-wrap .tab-card .nav-wrap{color:#fff;border-bottom:1px solid rgba(0,255,255,0.2); background: rgba(15,41,51,0.9);}
+.zb-map-wrap .tab-card .tab-nav{color: #76e6ff;border-right:1px solid rgba(0,255,255,0.2);}
+.zb-map-wrap .tab-card .tab-nav.active{color:#fff;background: url('../images/base/tab-active.png') repeat left top;}
+/* 代办任务 和 相关公告 公用表格 */
+.zb-map-wrap .tab-com thead tr{border-bottom:1px solid rgba(67, 183, 191, 0.2);}
+.zb-map-wrap .tab-com tbody tr{border-bottom:1px dashed rgba(67, 183, 191, 0.2);}
+.zb-map-wrap .tab-com tbody tr:hover{background:none;}
+/* DMA概况 */
+.zb-map-wrap .dma-gk .tb{color:#cccc00;}
+.zb-map-wrap .dma-gk .hb{color:#00cc00;}
+.zb-map-wrap .dma-gk th,
+.zb-map-wrap .dma-gk td{border:1px solid rgba(67, 183, 191, 0.2);}
+.zb-map-wrap .dma-gk th{background:none;color:#fff;}
+/* 关联指标 */
+.zb-map-wrap .glzb .modular-item{border:1px solid rgba(0,255,255,0.2);}
+/* 关联预警 */
+.zb-map-wrap .glyj td.no{color:#cccc00;}
+.zb-map-wrap .glyj td:nth-child(2){color:#fff;}
+/* 筛选 */
+.zb-map-wrap .aside .choice{border-bottom:1px solid rgba(0,255,255,0.2);}
+.zb-map-wrap .aside .choice a{color:#76e6ff;border: 1px solid rgba(0,255,255,0.2);border-left:none;}
+.zb-map-wrap .aside .choice a:first-child{border-left:1px solid rgba(0,255,255,0.2);}
+.zb-map-wrap .aside .choice a:last-child{border-right:1px solid rgba(0,255,255,0.2);}
+.zb-map-wrap .aside .choice a.checked{border-color:#98792e;background: url('../images/base/tab-active.png') repeat left top;color: #fff;color:#fff;}
+.zb-map-wrap .aside .choice strong{color:#cccc00;}
+/* 代办任务 */
+.zb-map-wrap .dbrw td:last-child{color:#fff;}
+/* 相关公告 */
+.zb-map-wrap .xggg td:last-child{color:#fff;}
+/* 地图弹窗 */
+.zb-map-wrap .modular-item{border-color:rgba(0,255,255,0.2);}
+/* 大表详情弹窗 */
+.pop-big-echart-info{color:#76e6ff;}
+/* 分割线 */
+.pop-big-echart-info .echart-wrap .tit-info b{color:#cccc00;}
+.pop-big-echart-info .echart-wrap .echart-item{border: 1px solid rgba(0,255,255,0.5);background:none;}
+/* ****************************************指标地图分析样式结束******************************************* */
+
+
+
+/* ****************************************场景-配表异常-告警信息开始******************************************* */
+.cjgj-tit-map b{color:#cccc00;}
+/* 弹窗元素 */
+.cjgj-map-wrap .modular-item{border: 1px solid rgba(0,255,255,0.2);}
+/* 选项卡部分 */
+.cjgj-map-wrap .tab-card{border:1px solid rgba(0,255,255,0.2);background:rgba(4,18,26,0.8);}
+.cjgj-map-wrap .tab-card .nav-wrap{color:#fff;border-bottom:1px solid rgba(0,255,255,0.2);background:rgba(15,41,51,0.9);}
+.cjgj-map-wrap .tab-card .tab-nav{border-right:1px solid rgba(0,255,255,0.2);}
+.cjgj-map-wrap .tab-card .tab-nav.active{border-color: #98792e;background: url('../images/base/tab-active.png') repeat left top;color: #fff;}
+/* 代办任务 和 相关公告 公用表格 */
+.cjgj-map-wrap .tab-com thead tr{border-bottom:1px solid rgba(118,230,255,0.2);}
+.cjgj-map-wrap .tab-com tbody tr{border-bottom:1px dashed rgba(118,230,255,0.2);}
+.cjgj-map-wrap .tab-com tbody tr:hover{background:none;}
+/* 告警信息 */
+.cjgj-map-wrap .gjxx .item-box .tit-wrap{border-bottom:1px solid rgba(118,230,255,0.2);}
+.cjgj-map-wrap .gjxx .foot{background:rgba(15,41,51,0.9);}
+/* 设备信息 */
+.cjgj-map-wrap .sbxx .tb{color:#f60;}
+.cjgj-map-wrap .sbxx .hb{color:#093;}
+.cjgj-map-wrap .sbxx th,
+.cjgj-map-wrap .sbxx td{border:1px solid rgba(118,230,255,0.2);}
+.cjgj-map-wrap .sbxx th{color:#fff;background:rgba(4,18,26,0.8);}
+/* 关联任务 */
+.cjgj-map-wrap .glrw td:last-child{color:#fff;}
+/* 相关公告 */
+.cjgj-map-wrap .xggg td.no{color:#cccc00;}
+.cjgj-map-wrap .xggg td:last-child{color:#fff;}
+.cjgj-map-wrap .xggg .tag{color:#cccc00}
+/* 筛选 */
+.cjgj-map-wrap .aside .choice{border-bottom:1px solid rgba(0,255,255,0.2);}
+.cjgj-map-wrap .aside .choice a{border: 1px solid rgba(0,255,255,0.2);border-left:none;background: rgba(15,41,51,0.9);color: #76e6ff;}
+.cjgj-map-wrap .aside .choice a:first-child{border-left:1px solid rgba(0,255,255,0.2);}
+.cjgj-map-wrap .aside .choice a:last-child{border-right:1px solid rgba(0,255,255,0.2);}
+.cjgj-map-wrap .aside .choice a.checked{border-color:#98792e;background:url('../images/base/tab-active.png') repeat left top;color: #fff;}
+.cjgj-map-wrap .aside .choice strong{color:#cccc00;}
+/* ****************************************场景-配表异常-告警信息结束******************************************* */
+
+
+/* ****************************************二级设备实时监控(地图)开始******************************************* */
+.ejsb-map-wrap .warning-wrap{border:1px solid rgba(0,255,255,0.2);color:#76e6ff;background:rgba(4,18,26,0.8);}
+.ejsb-map-wrap .warning-wrap .nav-wrap{border: none;border-left:1px solid rgba(0,255,255,0.2);}
+.ejsb-map-wrap .warning-wrap .nav-wrap > *{background:red;}
+.ejsb-map-wrap .warning-wrap .nav-wrap .nav-item.real-time{background: url('../images/base/tab-active.png') repeat left top;color:#fff;}
+.ejsb-map-wrap .warning-wrap .nav-wrap .nav-item.history{border: 1px solid rgba(0,255,255,0.2);border-top:none;border-bottom: none;background:rgba(15,41,51,0.9);color: #76e6ff;}
+.ejsb-map-wrap .warning-wrap .nav-wrap .btn-switch-fold{border: 1px solid rgba(0,255,255,0.2);border-right:none;border-bottom: none;border-left:none;border-top:none;background:rgba(15,41,51,0.9);color: #76e6ff;}
+/* 分割线 */
+.ejsb-map-wrap .warning-wrap .tit-wrap{border-bottom:1px solid rgba(118,230,255,0.2);background:rgba(15,41,51,0.9);}
+.ejsb-map-wrap .warning-wrap .tit-wrap time{color:#cccc00;}
+.ejsb-map-wrap .warning-wrap .tit-wrap strong{color:#cccc00;}
+.ejsb-map-wrap .warning-wrap .tit-wrap .btn-more{color:#fff;}
+/* 分割线 */
+.ejsb-map-wrap .device-item{border-color:rgba(0,255,255,0.2);}
+/* 分割线 */
+.ejsb-map-wrap .device-item.small .small-info .item:first-child{border-right:1px solid rgba(118,230,255,0.2);}
+.ejsb-map-wrap .device-item.small .small-info .item.warning{color:#cccc00;}
+/* 分割线 */
+.ejsb-map-wrap .device-item.left-arrow:before{border-right:12px solid rgba(0,255,255,0.2);}
+.ejsb-map-wrap .device-item.left-arrow:after{border-right:12px solid rgba(4,18,26,0.8);}
+.ejsb-map-wrap .device-item.right-arrow:before{border-left:12px solid rgba(0,255,255,0.2);}
+.ejsb-map-wrap .device-item.right-arrow:after{border-left:12px solid rgba(4,18,26,0.8);}
+/* 分割线 */
+.ejsb-map-wrap .device-item .telescopic{color:#76e6ff;background:rgba(15,41,51,0.9);}
+.ejsb-map-wrap .device-item .telescopic:hover{background:rgba(15,41,51,0.9);color:#fff;}
+/* ****************************************二级设备实时监控(地图)结束******************************************* */
+
+
+
+/* ****************************************二级设备实时监控(列表)开始******************************************* */
+.lbjk-tit-box .text{color:#76e6ff;}
+.lbjk-tit-box .text b{color:#cccc00;}
+.lbjk-tit-box .text .btn-refresh{color:#76e6ff;}
+.lbjk-tit-box .btn-toggle{color:#76e6ff;}
+/* ****************************************二级设备实时监控(列表)结束******************************************* */
+
+

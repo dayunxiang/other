@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.bigautocomplete-layout{display:none;background-color:#FFFFFF;border:1px solid #BCBCBC;position:absolute;z-index:888;max-height:220px;overflow-x:hidden;overflow-y:auto; line-height:26px; padding-bottom:5px; }
+.bigautocomplete-layout table{border-collapse:collapse;border-spacing:0;background:none repeat scroll 0 0 #FFFFFF;width:100%;cursor:default;}
+.bigautocomplete-layout table tr{background:none repeat scroll 0 0 #FFFFFF;}
+.bigautocomplete-layout .ct{background:none repeat scroll 0 0 #D2DEE8 !important;}
+.bigautocomplete-layout div{word-wrap:break-word;word-break:break-all;padding:1px 5px;}
+.demo{width:720px;margin:30px auto;}
+.demo h2{font-size:16px;color:#3366cc;height:30px;}
+.demo li{float:left;}
+.text,.button{background:url(../img/spis_031ddf34.png) no-repeat;}
+.text{width:529px;height:22px;padding:4px 7px;padding:6px 7px 2px\9;font:16px arial;border:1px solid #cdcdcd;border-color:#9a9a9a #cdcdcd #cdcdcd #9a9a9a;vertical-align:top;outline:none;margin:0 5px 0 0;}
+.button{width:95px;height:32px;padding:0;padding-top:2px\9;border:0;background-position:0 -35px;background-color:#ddd;cursor:pointer}

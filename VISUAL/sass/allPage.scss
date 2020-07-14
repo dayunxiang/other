@@ -1,0 +1,1066 @@
+@import './mixin.scss';
+@import './resetPc.scss';
+@import './common.scss';
+
+// 单屏幕
+html,
+body{
+  height: 100%;
+  max-height:1080px;
+  overflow:hidden;
+}
+
+// 框架
+body.frame{
+  background: #000 url(#{$baseImgPath}frame-bc.jpg) left top no-repeat;
+
+  &:before{
+    z-index:1;
+    content: '';
+    position: absolute;
+    left: 0;right: 0;top: 0;bottom:0;
+    width: 100%;height:100%;
+    background: url(#{$baseImgPath}frame.png) left top no-repeat;
+  }
+  &:after{
+    z-index: 2;
+    content: '';
+    position: absolute;
+    left:50%;top: 0;
+    margin-left:-505px;
+    width:1010px;height:1010px;
+    background: url(#{$baseImgPath}turntable.png) center center no-repeat;
+    animation: turnAround 30s linear 0s infinite normal;
+  }
+}
+
+// 首页
+.page-index{
+  // 首页图片路径
+  $imgPath: '../images/index/';
+
+  z-index: 10;
+  position: relative;
+  height:100%;
+  background: url(#{$imgPath}index-bc.png) left top no-repeat;
+
+  // 标题
+  h1{
+    padding-top: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+
+  // 左侧概览、右侧概览
+  .view-left,
+  .view-right{
+    position: absolute;
+    top: 75px;bottom:80px;
+    width: 290px;
+
+    .item{
+      position: relative;
+      margin-top: 10px;
+      height: 180px;
+
+      &:first-child{
+        margin-top:0;
+      }
+    }
+    .p-num-item{
+      margin-top:8px;
+      padding-top: 40px;
+      padding-left: 75px;
+
+      &:first-child{
+        margin-top:0;
+      }
+      .value{
+        margin: 15px 0;
+      }
+      .p-icon-1{
+        z-index: 5;
+        top: 20px;
+      }
+      strong{
+        font-size: 34px;
+      }
+    }
+  }
+
+  // 左侧概览
+  .view-left{
+    left: 50px;
+
+    .echarts-wrap{
+      height: 100%;
+
+      & + .p-icon-1{
+        position: absolute;
+        left: 8px; top: 20px;
+      }
+    }
+  }
+
+  // 右侧概览
+  .view-right{
+    right: 50px;
+
+    .item{
+      &.xqyx{
+        text-align: center;
+
+        p{
+          margin-bottom: 30px;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  // 中间的百度图表
+  .main-echart{
+    position: absolute;
+    left:354px;top: 128px;
+    width: 1210px;height:840px;
+  }
+  .echart-singapore{
+    z-index: 1;
+    position: absolute;
+    left:450px; bottom: 160px;
+    width: 220px; height: 160px;
+    border: 2px solid #0b8ba4;
+    border-radius: 8px;
+    background: url(#{$imgPath}singapore.png) center center no-repeat;
+  }
+  .main-echart-aside{
+    width: 180px;
+    max-height: 300px;
+    border: 1px solid #0b8ba4;
+    color: #fff;
+    background: #000c26;
+    overflow-y:auto;
+
+    th,
+    td{
+      padding: 0 5px;
+      &:first-child{
+        text-align:center;
+      }
+      span{
+        @include textEllipsis;
+        max-width: 9em;
+      }
+      text-align: left;
+
+    }
+    th{
+      font-weight: bold;
+      color: $mainColor;
+    }
+    tbody{
+      tr:hover{
+        color: $mainColor;
+      }
+    }
+  }
+
+  // 底部列表
+  .list-assets{
+    @include clearFix;
+
+    position: absolute;
+    left: 0;right: 0;bottom: 25px;
+    text-align: center;
+    font-size:0;
+
+    dl{
+      display: inline-block;
+      margin:0 45px;
+      text-align: center;
+    }
+    dt{
+      font-size: 16px;
+    }
+    dd{
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+}
+
+// 登录
+.page-login{
+  // 首页图片路径
+  $imgPath: '../images/login/';
+
+  &{
+    background:url(#{$imgPath}login.jpg) no-repeat center center;
+    background-size:100% 100%;
+  }
+  .login-box{
+    position:absolute;
+    left:50%;top:50%;
+    margin:-349px 0 0 -304px;
+    width:609px;height:698px;
+    background:url(#{$imgPath}login-bc.png) no-repeat left top;
+  }
+  .login-from{
+    position:absolute;
+    left:50%;top:235px;
+    margin-left:-130px;
+    width:260px;
+    color:#fff;
+
+    .row{
+      position:relative;
+      margin-top:18px;
+
+      &:first-child{
+        margin-top:0;
+      }
+      .p-icon-3{
+        position:absolute;
+        left:8px;top:11px;
+      }
+      .text-input{
+        margin:0 auto;
+        display:block;
+        padding:0 10px 0 35px;
+        width:100%;height:40px;
+        line-height:38px;
+        border:1px solid #ccc;border-radius:4px;
+        color:#fff;
+        background:#31374c;
+      }
+      &.code{
+        .text-input{
+          display:inline-block;
+          width:145px;
+        }
+        img{
+          float:right;
+          width:108px;height:40px;
+          cursor:pointer;
+        }
+      }
+      &.state{
+        margin-top:10px;
+
+        input{
+          margin-right:5px;
+          width:16px;height:16px;
+          vertical-align:middle;
+        }
+      }
+      &.btn{
+        margin-top:0;
+      }
+    }
+    .btn-login{
+      display:block;
+      height:66px;line-height:66px;
+      font-size:18px;
+      text-indent:140px;
+      font-weight:bold;
+      background:url(#{$imgPath}btn-login.png) no-repeat center center;
+    }
+  }
+
+  .turntable-box{
+    z-index:-999;
+    position:absolute;
+    left:50%; top: 50%;
+    margin:-505px 0 0 -505px;
+    width:1011px;height:1011px;
+    background:url(#{$baseImgPath}turntable.png) no-repeat center center;
+    animation: turntable 30s linear 0s infinite normal;
+  }
+  @keyframes turntable
+  {
+      0%{
+        transform:rotate(0deg);
+      }
+      100%{
+        transform:rotate(360deg);
+      }
+  }
+}
+
+// 城市洞察
+.csdc{
+  .module-1{
+    .aside-left,
+    .aside-right{
+      z-index: 5;
+      position: absolute;
+      top: 0;
+
+      .btn{
+        position: relative;
+        padding: 6px 34px 6px 10px;
+
+        span{
+          z-index: 1;
+          position: relative;
+          color: #fff;
+          font-size: 16px;
+          transition: all 0.2s;
+
+          &:after{
+            @include arrow(8px);
+            @include arrow-b(8px, #5892a0);
+
+            right: -20px;
+            top: 10px;
+          }
+        }
+        &.drop-down{
+          span{
+            &:after{
+              @include arrow-b(8px, transparent);
+              @include arrow-t(8px, #5892a0);
+
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+    .aside-left{
+      left: 0;
+      width: 240px;
+
+      .p-tips-item{
+        margin-bottom: 10px;
+      }
+      .echarts-wrap{
+        @include customEchartsTitle;
+
+        height: 380px;
+        border: 1px solid #0b8ba4;
+        background: rgba(16,28,52,0.9);
+      }
+    }
+    .aside-right{
+      right: 0;
+      width: 440px;
+
+      .btn{
+        float: right;
+      }
+      .echarts-list{
+        height: 670px;
+        clear: both;
+
+        .item-block{
+          position: relative;
+          padding-bottom: 10px;
+          height: 33.33%;
+
+          .p-title-echart{
+            z-index: 10;
+            position: absolute;
+            left: 15px; top: 15px;
+          }
+        }
+        .echarts-wrap{
+          height: 100%;
+          background: rgba(16,28,52,0.9);
+        }
+      }
+    }
+    .map-wrap{
+      height: 100%;
+    }
+  }
+}
+
+// 水务赋能
+.swfn{
+  .module-1,
+  .module-2{
+    @include clearFix;
+
+    .itme-block{
+      position: relative;
+      float: left;
+      width: 50%;height: 50%;
+      padding: 10px;
+    }
+    .echarts-wrap{
+      z-index: 1;
+      position: relative;
+      height: 100%;
+    }
+  }
+  .btn-toggle{
+    @include clearFix;
+
+    z-index: 5;
+    position: absolute;
+    right: 0;top: 30px;
+
+    .btn{
+      float: left;
+      padding: 0 12px;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #105872;
+
+      &.active{
+        color: #fff;
+        border-color: #ad8b34;
+        background: url(#{$iconImgPath}btn-toggle-active.png) left top repeat-x;
+      }
+    }
+  }
+  .module-1{
+    .p-title-echart{
+      z-index: 10;
+      position: absolute;
+      left: 15px; top: 15px;
+    }
+  }
+  .module-2{
+    .itme-block{
+      &.second{
+        @include clearFix;
+
+        .echarts-wrap{
+          float: left;
+          width: 50%;
+        }
+      }
+      .p-title-echart{
+        z-index: 10;
+        position: absolute;
+        left: 15px; top: 15px;
+      }
+    }
+  }
+  .module-3{
+    @include clearFix;
+    box-sizing: border-box;
+    padding-top: 20px;
+
+    .aside-left,
+    .aside-right{
+      height: 100%;
+    }
+
+    .aside-left{
+      float: left;
+      width: 55%;
+      padding-top: 60px;
+      border: 1px solid #5387b9;
+      border-radius: 6px;
+      box-shadow: inset 0 0 5px 5px #12465a;
+      background: rgba(16,28,52,0.9);
+
+      .p-title-echart{
+        position: absolute;
+        left: 20px;top: 40px;
+      }
+    }
+    .aside-right{
+      float: right;
+      width: 45%;
+      padding-left: 10px;
+
+      .echarts-wrap{
+        height: 100%;
+      }
+      .row{
+        height: 50%;
+
+        &.first{
+          @include clearFix;
+
+          .echarts-wrap{
+            float: left;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+  .module-list{
+    margin: 0 20px;
+
+    li{
+      position: relative;
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0;
+
+      &:after{
+        content: '';
+        position: absolute;
+        left: 0; right: 0; bottom: -40px;
+        height: 40px;
+        background: url(#{$baseImgPath}p-modular-item.png) center -40px no-repeat;
+      }
+      &:first-child{
+        margin-top: 0;
+
+        &:after{
+          background-position-y: 0;
+        }
+      }
+      &:last-child{
+        &:after{
+          background: none;
+        }
+      }
+      &.info-wrap-father{
+        &:after{
+          bottom: -21px;
+          height: 21px;
+          background-position-y: -80px;
+        }
+      }
+      &.info-wrap{
+        margin-top: 21px;
+        padding-bottom: 20px;
+        border: 1px solid #596375;
+        text-align: left;
+
+        .p-modular-item{
+          margin: 20px 0 0 20px;
+        }
+      }
+    }
+    .p-modular-item{
+      .float-layer{
+        z-index: 10;
+        max-height: 240px;
+        position: absolute;
+        top: 40px; left: 110px;
+        width: 400px;
+        opacity: 0;
+        border: 1px solid #047e8f;
+        cursor: default;
+        overflow-y: auto;
+
+        .p-table-1{
+          border: none;
+
+          .name{
+            @include textEllipsis;
+            max-width: 14em;
+          }
+        }
+      }
+      &.active{
+        .float-layer{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// 单位节能
+.dwjn{
+  .echarts-wrap{
+    @include customEchartsTitle;
+  }
+  .module-echart-title{
+    padding:5px 0 5px 15px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(16,28,52,0.9);
+  }
+  .module-1{
+    @include clearFix;
+
+    .echarts-wrap{
+      z-index: 1;
+      position: relative;
+      height: 100%;
+    }
+    .left-content,
+    .right-content {
+      float: left;
+      height: 100%;
+    }
+
+    .left-content{
+      width: 40%;
+
+      .itme-block{
+        position: relative;
+        padding-top: 5px;
+        height: 50%;
+
+        &:first-child{
+          padding-top:0;
+          padding-bottom: 5px;
+        }
+      }
+    }
+    .right-content{
+      padding-left: 10px;
+      width: 60%;
+    }
+  }
+  .module-2{
+    @include clearFix;
+
+    .p-title-echart{
+      color: #aecff8;
+    }
+    .left-side,
+    .right-side{
+      position: relative;
+      padding-top: 15px;
+      float: left;
+      height: 100%;
+    }
+    .left-side{
+      width: 40%;
+
+      .echarts-wrap{
+        height: 50%;
+        background: rgba(16,28,52,0.9);
+      }
+    }
+    .right-side{
+      padding-left: 15px;
+      width: 60%;
+
+      .row{
+        @include clearFix;
+
+        position: relative;
+        height: 50%;
+
+        &.first{
+          padding-bottom: 25px;
+        }
+        &.second{
+          padding-top: 25px;
+        }
+        .echarts-wrap{
+          float: left;
+          width: 50%; height: 100%;
+          background: rgba(16,28,52,0.9);
+        }
+      }
+    }
+  }
+}
+
+// 小区营销
+.xqyx{
+  .module-1{
+    .aside-left{
+      position: absolute;
+      left: 0; top: 0;
+      width: 240px;
+
+      .btn{
+        position: relative;
+        padding: 6px 34px 6px 10px;
+
+        span{
+          z-index: 1;
+          position: relative;
+          color: #fff;
+          font-size: 16px;
+          transition: all 0.2s;
+
+          &:after{
+            @include arrow(8px);
+            @include arrow-b(8px, #5892a0);
+
+            right: -20px;
+            top: 10px;
+          }
+        }
+        &.drop-down{
+          span{
+            &:after{
+              @include arrow-b(8px, transparent);
+              @include arrow-t(8px, #5892a0);
+
+              top: 0;
+            }
+          }
+        }
+      }
+      .p-num-item{
+        margin-top: 5px;
+
+        &:first-child{
+          margin-top: 0;
+        }
+        .title{
+          color: #aecff8;
+        }
+      }
+    }
+    .aside-right{
+      z-index: 5;
+      position: absolute;
+      top: 0;right: 0;
+
+      .btn{
+        @include btn-1;
+
+        float: right;
+        margin-bottom: 2px;
+      }
+      .list-wrap{
+        clear: both;
+        padding: 5px;
+        width: 180px;
+        max-height: 280px;
+        overflow-y: auto;
+        border: 1px solid #0b8ba4;
+        color: #fff;
+        background: #000c26;
+      }
+    }
+    .map-wrap{
+      height: 100%;
+    }
+  }
+}
+
+// 家庭服务
+.jtfw{
+  @include clearFix;
+
+  .itme-block{
+    position: relative;
+    float: left;
+    padding: 5px;
+    width: 50%;height: 50%;
+
+    &.first,
+    &.second{
+      @include clearFix;
+
+      .echarts-wrap{
+        float: left;
+        width: 50%;
+      }
+    }
+    .p-icon-2{
+      position: absolute;
+      left: 20px;top: 20px;
+    }
+    .title{
+      position: absolute;
+      left: 85px; top: 35px;
+      font-size: 16px;
+      color: #fff;
+    }
+    .echarts-wrap{
+      height: 100%;
+      background: rgba(0,0,0,0.2);
+    }
+  }
+}
+
+// 监控点流量
+.jkdll{
+  position: relative;
+
+  .aside-right{
+    z-index: 5;
+    position: absolute;
+    top: 0;right: 0;
+
+    .btn{
+      @include btn-1;
+
+      float: right;
+      margin-bottom: 2px;
+    }
+    .list-wrap{
+      clear: both;
+      padding: 5px;
+      width: 180px;
+      max-height: 280px;
+      overflow-y: auto;
+      border: 1px solid #0b8ba4;
+      color: #fff;
+      background: #000c26;
+    }
+  }
+  .echarts-wrap{
+    z-index: 1;
+    position: relative;
+    height: 100%;
+  }
+  .row{
+    height: 50%;
+
+    &.second{
+      @include clearFix;
+
+      padding-top: 10px;
+
+      .itme-block{
+        position: relative;
+        float: left;
+        padding-left: 10px;
+        width: 33.33%; height: 100%;
+      }
+    }
+  }
+}
+
+// 水司地图
+.water-utilities{
+  .dashboard{
+    z-index: 5;
+    position: absolute;
+    left: 60px; top: 80px;
+    width: 275px;
+
+    .p-num-item{
+      margin-top: 5px;
+      padding-left: 70px;
+
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+  .aside-right{
+    z-index: 5;
+    position: absolute;
+    top: 60px; right: 40px;
+
+    .btn{
+      @include btn-1;
+
+      float: right;
+      margin-bottom: 2px;
+    }
+    .list-wrap{
+      clear: both;
+      padding: 5px;
+      width: 180px;
+      max-height: 280px;
+      overflow-y: auto;
+      border: 1px solid #0b8ba4;
+      color: #fff;
+      background: #000c26;
+    }
+  }
+  .echarts-wrap{
+    height: 100%;
+  }
+}
+
+// 累计数量分析
+.slfx{
+  .title-summary{
+    position: absolute;
+    left: 0;top: 10px;right: 0;
+    text-align: center;
+    font-size: 20px;
+  }
+  .echarts-block{
+    @include clearFix;
+
+    position: relative;
+    padding-top: 70px;
+    height: 100%;
+
+    .echarts-wrap{
+      @include customEchartsTitle;
+
+      height: 100%;
+      background:  rgba(16,28,52, 0.5);
+    }
+    .left-side,
+    .right-side{
+      float: left;
+      height: 100%;
+    }
+    .left-side{
+      width: 40%;
+
+      &.echarts-wrap{
+        height: 100%;
+        background:  none;
+      }
+    }
+    .right-side{
+      width: 60%;
+
+      .item-block{
+        padding-top: 5px;
+        height: 50%;
+
+        &:first-child{
+          padding-top: 0;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+// 轮播元素
+.swiper-slide{
+  position:relative;
+}
+
+// 所有轮播分页集合
+.pagination-wrap{
+  position: absolute;
+  bottom: -50px;left: 0;right: 0;
+}
+
+// 轮播分页容器
+.pagination{
+  z-index: -10;
+  position: absolute;
+  left: 0;right: 0;top: 0;
+  opacity: 0;
+  text-align: center;
+
+  &.active{
+    z-index: 10;
+    opacity: 1;
+  }
+  // 这个样式是临时的，解决小区营销的bug
+  &.pagination-xqyx{
+    .swiper-pagination-switch{
+      &:last-child{
+        display: none;
+      }
+    }
+  }
+  .swiper-pagination-switch {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #84898c;
+    margin: 0 3px;
+    cursor: pointer;
+  }
+  .swiper-active-switch {
+    background: #d94d4c;
+  }
+}
+
+// 所有轮播左右导航
+.arrow-list{
+  z-index: 0;
+  position: absolute;
+  left: -80px; right: -80px;top: 50%;
+  margin-top: -35px;
+}
+
+// 轮播左右导航
+.arrow-wrap{
+  @include clearFix;
+
+  z-index: -10;
+  position: absolute;
+  opacity: 0;
+  &.active{
+    z-index: 10;
+    position: relative;
+    opacity: 1;
+  }
+
+  a{
+    width: 70px;height:70px;
+    background: url(#{$iconImgPath}btn-arrow.png) no-repeat;
+
+    &.arrow-left{
+      float: left;
+      background-position: 0 0;
+
+      &:hover{
+        background-position: 0 -70px;
+      }
+    }
+    &.arrow-right{
+      float: right;
+      background-position: -70px 0;
+
+      &:hover{
+        background-position: -70px -70px;
+      }
+    }
+  }
+}
+
+// 数据托管
+.sjtg{
+  .overview{
+    position: relative;
+    height:70%;
+    background: url(#{$indexImgPath}sjtg-bc.png) center top no-repeat;
+  }
+  .num-item-list{
+    @include clearFix;
+
+    position: absolute;
+    right:105px;top:35px;
+  }
+  .p-num-item{
+    float: left;
+    margin-left: 20px;
+    padding-left: 75px;
+    width: 270px;
+    background: rgba(16,28,52,0.9);
+
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  .echarts-list{
+    @include clearFix;
+
+    height: 30%;
+
+    .item-block{
+      position: relative;
+      float: left;
+      width: 20%; height: 100%;
+
+      &.io{
+        .echarts-wrap{
+          padding-top: 20px;
+          text-align: center;
+
+          p{
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .echarts-wrap{
+      z-index: 5;
+      position: relative;
+      height: 100%;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

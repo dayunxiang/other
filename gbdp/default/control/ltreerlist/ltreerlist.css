@@ -1,0 +1,108 @@
+/************************************
+*LTreeRList style:default css 
+*writor:SD
+*upload-time:2012-10-11
+*edit-time:2012-10-11
+************************************/
+
+.sptree{ background-color :white ;}
+
+.sptree .sptree-container a:link,.sptree .sptree-container a:visited,.sptree .sptree-container a:hover{color:#58656f;}
+
+.sptree .sptree-container .sptree_title,
+.sptree .sptree-container .tab_now,
+.sptree .sptree-container .tab_other,
+/*.sptree .sptree-container .sptree_search,*/
+.sptree .sptree-container .sptree_search .nd-search-btn,
+/*.sptree .sptree-container .sptree_search .nd-search,*/
+/*.sptree .sptree-container .sptree-list dt .nd-text,*/
+.sptree .sptree-container .sptree-list dt .nd-add-all,
+.sptree .sptree-container .nd-checked,
+.sptree .sptree-container .sptree-list li a.nd-right,
+.sptree .sptree-container .sptree_addnode dd .fs_btn_add,
+.sptree .sptree-container .sptree_selected li .nd-remove
+{background-image:url("images/sptree_selector.png");background-repeat:no-repeat;}
+
+
+/*total frame*/
+
+/*width of frame L R  font-family:Arial,Simsun;*/
+
+.sptree .sptree-container{border:1px solid #d6ddcb;background:#FFF;}
+
+
+
+/*title area*/
+
+.sptree .sptree-container .sptree_title{background:#d9efc2;} 
+.sptree .sptree-container .sptree_title{ border-bottom:1px solid #cbe3b0;color:#6B8C6F;}
+
+.sptree .sptree-container .sptree_title .right-count span{color:#2b7fbf;}
+
+.sptree .sptree-container .sptree_title .tree-ok a{color:#2b7fbf;}
+
+.sptree .sptree-container .sptree_title .fs_empty:link,.sptree .sptree-container .sptree_title .fs_empty:visited{color:#2b7fbf;}
+
+.sptree .sptree-container .sptree_title .sptree_tab a.tab_now{background-position:2px -101px;background-repeat:no-repeat;color:#517f07; }
+
+.sptree .sptree-container .sptree_title .sptree_tab a.tab_other{background-position:-121px -101px;background-repeat:no-repeat;}
+
+/*search*/
+
+.sptree .sptree-container .sptree_search{background-color:#fcfcfd;border-bottom:1px solid #eff4ea; }
+
+.sptree .sptree-container .sptree_search .nd-search{background-color:#fff; border:1px solid #dce2d4;}
+
+.sptree .sptree-container .sptree_search .nd-search .nd-search-btn{background-position:0 -292px;}
+
+.sptree .sptree-container .sptree_search .nd-search .nd-search-txt{ background:none;border:0 none; color:#ccc;}
+
+.sptree .sptree-container .sptree_search .nd-search .nd-search-btn.nd-search-del{background-position:2px -222px;}
+
+.sptree .sptree-container .sptree_search .nd-search .nd-search-btn.nd-search-del:hover{background-position:2px -248px;}
+
+/*tree node*/
+
+.sptree .sptree-container .sptree-list a:link,.sptree .sptree-container .sptree-list a:visited{color:#333;}
+
+.sptree .sptree-container .sptree-list dt,.sptree .sptree-container .sptree-list li{border:1px solid #FFF;}
+
+
+/*tree node icons*/
+
+.sptree .sptree-container .sptree-list dt .spicon-open{background: url(images/head-icon.png) -64px -25px no-repeat;}
+
+.sptree .sptree-container .sptree-list dt .spicon-close{background: url(images/head-icon.png) -80px -3px no-repeat;}
+
+
+.sptree .sptree-container .sptree-list dt .spicon-unfold{background-image: url(images/open.png); }
+
+.sptree .sptree-container .sptree-list dt .spicon-fold{background-image: url(images/close.png);}
+
+
+/*unfold*/
+
+.sptree .sptree-container dt:hover,.sptree .sptree-container li:hover{border:1px solid #e6ecf3;background-color:#f1f5fa;background-position:0 -44px;}/*mouse hover*/
+
+
+.sptree .sptree-container .sptree-list dt .nd-add-all{background-position:0 -197px; }
+
+.sptree .sptree-container .sptree-list dt .nd-add-all:hover{background-position:0 -174px}/*add all button*/
+
+
+.sptree .sptree-container .nd-checked{background-position:0 -273px;}/*selected*/
+
+
+/*search result*/
+.sptree .sptree-container .ul-node-list li a.nd-right{background-position:-173px -128px;}
+
+.sptree .sptree-container .ul-node-list li .nd-remove{background-position:0 -153px;}
+
+.sptree .sptree-container .ul-node-list li .nd-remove:hover{background-position:0 -153px;}
+
+.sptree .sptree-container .ul-node-list li .sptree-awoke{background:#fff9e0;border:1px solid #ffeda7;}
+
+
+
+
+

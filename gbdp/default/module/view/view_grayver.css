@@ -1,0 +1,44 @@
+/*ÐÂ°æ height:auto;*/
+.view{margin-top:10px;margin-bottom:10px;}
+.view-box ul,.view-box li{list-style:none;}
+/*ul,li{list-style:none;padding:0;margin:0;font:12px/20px arial, helvetica, verdana, tahoma, sans-serif;word-break:break-all;word-wrap:break-word;}*/
+
+.view-box {float:left;width:680px;height:300px;border:solid 1px #ddd ;overflow:hidden;zoom:1;_overflow:hidden;}
+/*background:url("images/sprite_list[1].png") no-repeat 0px 0px;
+.view-title {width:100%;font-size:14px;color:#414141;text-indent:10px; font-weight :bolder ; background:url("images/tit_bg_1.gif") repeat-x top; height:31px;background-repeat:repeat-x;line-height:31px; z-index:1000;}
+
+.view-title {width:100%;font-size:14px;color:#414141;text-indent:10px; font-weight :bolder ; background:url("images/sprite_list[1].png") repeat-x top; height:31px;line-height:31px; z-index:1000;}
+*/
+.view-box .view-title h2 {margin:0px;padding:0px;font-size:14px;color:#414141;text-indent:10px;}
+.view-title-li{background-color:transparent!important;clear: none;float:left ; width :100px;}
+.view-title-ul{background-color:transparent!important;}
+
+
+.view .view-box .view-title{display:block; *display:inline-block; height:28px; margin:0 0 4px 0; padding:0 10px; background:url("images/sprite_list[1].png") repeat-x top; font:bold 14px/28px Arial, Helvetica, sans-serif;text-align :left ;}
+
+
+
+
+.view-box a{cursor:pointer;color:#03c;text-decoration:none;}
+.view-box a:hover{text-decoration:underline;}
+.view-body{width:100%;padding:10px 10px;float:left;overflow:hidden;}
+
+
+.view-group{background-color:transparent!important;width:99%;margin-bottom:10px;}
+.view-group-li{background-color:transparent!important;width:99%; overflow :hidden ;}
+
+
+.group-title{background-color:transparent!important;clear :none ;float:left ; height:24px; border :solid 1px transparent!important;}
+.group-title li{background-color:transparent!important;width:60px;height:24px;padding :3px;clear: none;float:left ;color: #585858;font-size: 14px;font-weight: bold; border :solid 1px transparent!important;}
+.group-body{ clear :none ;float:left ; border :solid 1px #ffffff;}
+.group-option{width:75px;height:22px;margin-right:10px; padding :4px;overflow:hidden;float:left;white-space:nowrap;  border :solid 1px transparent!important;}
+.group-option a{ float :left ; display:inline-block;*display:inline;*zoom:1;color:#014ccc;font-size: 12px;padding:2px 3px;white-space: nowrap;}
+.group-option .current,
+.group-option .current:hover{text-decoration:none;background-color:#666;color:#fff;cursor:default;outline:none; vertical-align :middle ;}
+ /* position :relative ;top:-1px;*/
+
+
+.view-box .clear{clear:both;height:0px;overflow:hidden;}
+.label-title{ position :relative ;top:3px; }
+
+

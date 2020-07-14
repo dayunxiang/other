@@ -1,0 +1,46 @@
+/************************************
+*LrList style:default css 
+*writor:SD
+*upload-time:2012-10-11
+*edit-time:2012-10-11
+************************************/ 
+
+ul,li{ list-style :none;}
+.form-lrlist{font-size:13px; }
+
+
+/*±êÌâÇø*/
+
+.form-lrlist .form-lrlist-title{background:#D9EFC2;}
+
+.form-lrlist .form-lrlist-title{ border-bottom:1px solid #CBE3B0;color:#6B8C6F;}
+
+.form-lrlist .form-lrlist-title-txt{color: #517f07;}
+
+.form-lrlist .form-lrlist-title-addall,
+.form-lrlist .form-lrlist-title-empty{ color:#333;}
+
+.form-lrlist .form-lrlist-title-addall:hover,.form-lrlist .form-lrlist-title-empty:hover{color:red;}
+
+.form-lrlist-left{ border:1px solid #d6ddcb; }
+.form-lrlist-right{ border:1px solid #d6ddcb; }
+
+.form-lrlist .form-lrlist-list li .form-lrlist-text{ color:#888;}
+
+.form-lrlist .form-lrlist-list li .form-lrlist-text:hover{ color:#000; }
+
+.form-lrlist .form-lrlist-content .form-lrlist-list li:hover{ background:#f6f6f6;}
+
+
+.form-lrlist .form-lrlist-list li .form-lrlist-checked,.form-lrlist .form-lrlist-list li .form-lrlist-remove{ background: url("images/LrList_Selector.png") no-repeat;}
+
+.form-lrlist .form-lrlist-list li .form-lrlist-checked{ background-position:0 -270px;}
+.form-lrlist .form-lrlist-list li .form-lrlist-remove{ background-position:0 -153px; }
+
+.form-lrlist .form-lrlist-list li .form-lrlist-selected{}
+
+
+
+
+
+

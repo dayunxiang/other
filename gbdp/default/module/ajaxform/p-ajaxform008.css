@@ -1,0 +1,153 @@
+/************************************
+*p-ajaxform008 style:default css 
+(pop,only form,主表有表格线, small list, tabs)
+*writor:SD
+*upload-time:2012-10-23
+*edit-time:2012-10-23
+************************************/
+
+body {
+    color: #545454;
+}
+
+
+/*组*/
+
+.ajaxform .ul-title {
+    border-bottom: 0px solid #CCC;
+    margin-bottom: 0px;
+}
+
+.ul-mform {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.ul-cld {
+    border-top: 1px dashed #e6e6e6;
+}
+
+.ul-bottom-bt {
+    border-top: 1px dotted #CCC;
+}
+
+
+/*区域 #E0E0E0*/
+
+.ajaxform li.li-area {
+    background-color: transparent!important;
+    overflow: visible;
+    clear: none;
+    float: left;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.ajaxform .group-title {
+    color: #333;
+}
+
+.ajaxform label.area-title {
+    color: #333;
+    background-color: transparent;
+    border-right-color: transparent;
+    font-size: 13px;
+}
+
+.ajaxform .field-content {
+    color: #333;
+    background-color: transparent!important;
+}
+
+.ajaxform label.desc,
+legend.desc {
+    color: #222;
+}
+
+
+/*child*/
+
+.ajaxform .lf-head {}
+
+.ajaxform .ul-listtitle {
+    background-color: #63a8eb;
+    border-top-color: #63a8eb;
+    border-left-color: #63a8eb;
+    border-right-color: #63a8eb;
+    border-width: 0;
+    color: #fff;
+}
+
+.ajaxform .li-head-item {
+    background-color: transparent!important;
+    border-right-color: #e8ebe3;
+    border-bottom-color: #e8ebe3;
+    border-left-color: white;
+    border-top-color: white;
+    border-width: 1px;
+}
+
+.ajaxform .head-label {
+    color: #fff;
+}
+
+.ajaxform .lf-body {}
+
+.ajaxform .ul-listfield {
+    background-color: #fff;
+    border-left-color: #fff;
+    border-right-color: #fff;
+}
+
+.ajaxform .li-head-item,
+.ajaxform .list-body-li,
+.ajaxform .li-listfield {
+    border-right-color: #fff;
+    border-bottom-color: #fff!important;
+    border-left-color: #fff;
+    border-color: #fff;
+    background: #fff;
+}
+
+.ajaxform .li-head-item {
+    border-right-color: #63a8eb;
+    border-bottom-color: #63a8eb!important;
+    border-left-color: #63a8eb;
+    border-color: #63a8eb;
+    background: #63a8eb;
+}
+
+.ajaxform .li-listfield {
+    background-color: transparent!important;
+    border-style: dotted;
+}
+
+.ajaxform .list-field,
+..list-li-field {
+    color: #666!important;
+    background-color: transparent!important;
+}
+
+.ajaxform .list-body-select,
+.ajaxform .list-head-select {
+    background-color: transparent!important;
+    border-right-color: #e8ebe3;
+    border-bottom-color: #e8ebe3!important;
+    border-left-color: #fff;
+    border-color: #fff;
+}
+
+.browse .ul-browse {
+    border-top-color: #E8EBE3;
+    border-left-color: #E8EBE3;
+    border-right-color: white;
+}
+
+.ajaxform ul.list-body-ul li.list-body-li .list-field,
+.ajaxform ul.list-body-ul li.list-body-li .form-ctr,
+.ajaxform ul.list-body-ul li.list-body-li .lt-txt {
+    width: 100%!important;
+}

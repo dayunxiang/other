@@ -1,0 +1,77 @@
+.framework{
+	background-color:#f5f5f5!important;
+}
+.framework-treeForm{
+	position:absolute;
+	top:12px;
+	left:12px;
+	right:12px;
+	bottom:12px;
+}
+
+.framework-treeForm-left{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	width:250px;
+	overflow:hidden;
+}
+
+.framework-treeForm-left .sptree{
+	width:auto!important;
+	height:100%!important;
+	position:relative;
+}
+
+.framework-treeForm-left .sptree-container{
+	width:auto!important;
+	height:auto!important;
+	position:absolute!important;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+}
+
+.framework-treeForm-left .dscroll{
+	width:auto!important;
+	height:auto!important;
+	position:absolute!important;
+	top:61px;
+	left:0;
+	bottom:0;
+	right:0;
+}
+
+.framework-treeForm-left .dscroll-box{
+	width:auto!important;
+	height:auto!important;
+	position:absolute!important;
+	top:0px;
+	left:0;
+	bottom:0;
+	right:0;
+}
+
+.framework-treeForm-right{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:262px;
+	right:0;
+	overflow:auto;
+	border:1px solid #d6ddcb;
+	background:#fff;
+}
+
+.framework-treeForm-notree{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	overflow:auto;
+	border:1px solid #d6ddcb;
+	background:#fff;
+}

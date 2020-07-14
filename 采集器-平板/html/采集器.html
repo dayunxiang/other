@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="google" value="notranslate">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>采集器</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../scss/allPage.css" rel="stylesheet">
+        <script src="../script/base.js"></script>
+    </head>
+    <body class="page-collector">
+        <!-- 地图容器 开始 -->
+        <div id="mainMap" class="main-map-wrap"></div>
+        <!-- 地图容器 结束 -->
+
+        <!-- 左下角工具 开始-->
+        <div class="tool-wrap view">
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe776;</i>
+            </a>
+
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe684;</i>
+            </a>
+
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe665;</i>
+            </a>
+        </div>
+        <!-- 左下角工具 结束 -->
+
+        <!-- 右上角工具 开始 -->
+        <div class="tool-wrap edit">
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe699;</i>
+            </a>
+
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe613;</i>
+            </a>
+
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe60e;</i>
+            </a>
+
+            <a class="item" href="javascript:;">
+                <i class="iconfont">&#xe601;</i>
+            </a>
+        </div>
+        <!-- 右上角工具 结束 -->
+
+        <!-- 浮层组件1 开始-->
+        <!-- 使用时，请把 style 样式删除，这里仅做模拟效果而已-->
+        <div style="position: absolute; left: 80px; top: 240px;" class="layer-confirm-item">
+            <span class="text">移到此位置？</span>
+            <a class="btn-sure" href="javascript:;">
+                <i class="iconfont">&#xe60d;</i>
+                <span>确定</span>
+            </a>
+        </div>
+        <!-- 浮层组件1 结束 -->
+
+        <!-- 侧边栏 开始-->
+        <div class="side-bar-wrap">
+            <div class="side-bar-title">
+                <span></span>
+            </div>
+        </div>
+        <!-- 侧边栏 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-2.1.4/jquery.js"></script>
+        <script src="../widget/layer-2.0/layer.js"></script>
+        <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=c7b659647fff9caa665b49bbe95bbf33"></script>
+        <script src="../script/public.js"></script>
+        <script>
+            $(function() {
+                // 模拟地图效果 仅做测试效果
+                var map = new AMap.Map('mainMap');
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

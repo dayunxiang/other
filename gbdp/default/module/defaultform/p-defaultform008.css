@@ -1,0 +1,26 @@
+/************************************
+*p-defaultform008 style:default css
+*writor:SD
+*time:2012-10-09
+************************************/
+
+/*group*/
+.defaultform .ul-title{ border-bottom: 1px dotted #CCC;}
+.defaultform .ul-bottom-bt{ border-top: 1px dotted #CCC;}
+/*.defaultform .ul-mform{border-top-color: #E8EBE3;border-left-color: #E8EBE3;border-right-color: white;}
+.defaultform .ul-cld{ border-top:1px dashed #e6e6e6;}*/
+
+/*area*/
+.defaultform .group-title{color:#333}
+.defaultform .field-content{color:#333; background-color:transparent!important;}
+.defaultform .li-area{ background-color:transparent;!important; /* border-left-color: white;border-top-color: white;border-right-color: #E5E5E5;border-bottom-color: #E5E5E5;*/}
+
+.defaultform label.desc,legend.desc{color:#222;}
+
+
+/*small defaultform,frame defaultform*/
+.defaultform  .ul-form{border-top-color: #E8EBE3;border-left-color: #E8EBE3;
+border-right-color: white;}
+.defaultform .ul-form .li-area_s{background-color: transparent!important;border-left-color: white;border-top-color: white;border-right-color: #E5E5E5;border-bottom-color: #E5E5E5;}
+.defaultform .ul-form .li-area_s .area-title_s,.defaultform .ul-form .li-area_s .area-title_s1{color: #333;background-color: #F7F7F7;border-right-color: #E5E5E5;}
+.defaultform .ul-form .li-area_s .field-content_s,.defaultform .ul-form .li-area_s .field-content_s1{color: #333;background-color: transparent!important;}

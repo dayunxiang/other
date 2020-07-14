@@ -1,0 +1,91 @@
+﻿/*span*/
+/*表单版本V1.0
+特点：表格线颜色浅，
+文本框粗，有背色*/
+
+/*选项卡*/
+@import url(../../../../../control/tabs/tabs_gray.csss");
+/*模块：AJAX表单*/
+.ajaxform {font-size:12px;margin:auto;}
+.ajaxform .container{ float:left;width:100%;}
+.ajaxform .container .grid{ float:left;width:100%;}
+.ajaxform a{color:#0966BE;}
+
+.vonle {
+font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+letter-spacing: .01em;
+}
+
+/*组*/
+.ul-group{  margin-top:10px; height :auto;overflow :hidden;
+        	border-width:1px 1px 1px 1px ;border-style :solid ;border-left-style :solid ;border-top-color:#ffffff;
+            border-left-color:#ffffff;border-right-color:#ffffff;border-bottom-color:#ffffff;}
+
+/*区域*/
+.li-area{display :block ; clear: both;float: none;list-style :none;vertical-align :middle ;  padding:0px;margin: 0px;min-width: 100px; 
+         background-color : transparent!important;border-width:1px; border-style :solid ;
+         border-left-color:#ffffff;border-top-color:#ffffff; border-right-color:#ffffff;border-bottom-color:#ffffff; 
+         display: list-item; }
+/*
+.li-area:hover {
+background-color: #DFEFFF!important;
+border: 1px solid #C2D7EF!important;
+}
+*/
+.group-title{font-weight: bold;font-size :15px; color :#333; }
+
+label.area-title {
+border: none;
+color: #222;
+display: block;
+font-size: 15px;
+font-weight: 700;
+line-height: 150%;
+margin: 0;
+white-space: normal;
+width: 100%;
+}
+
+.field-content{ width :auto;height :100%;font-size :12px; color :#333;overflow :auto; background-color : transparent!important;  }
+
+
+label.desc {
+overflow: hidden;
+}
+label.desc, legend.desc {
+border: none;
+color: #222;
+display: block;
+font-size: 95%;
+font-weight: 700;
+line-height: 150%;
+margin: 0;
+padding: 0 0 3px;
+white-space: normal;
+width: 100%;
+}
+
+
+
+
+
+
+/*表格*/
+.ajaxform .afTitle{  font-weight:bolder ; font-size:18px; text-align:center;color:#000000;}
+.ajaxform .afTable {text-align:center;width:100%;border-collapse:collapse;border:solid #f7f6f6; border-width:1px 0px 0px 1px;} /*表格*/
+.ajaxform .afTable .HeadTr {  }/*表格标题tr行*/
+.ajaxform .afTable .HeadTd {  font-weight:normal;  background:#a3a3a3;text-align:left;color:#ffffff}/*表格标题td单元格*/
+.ajaxform .afTable .BodyOddTr,/*{text-align:left;}表格数据体的奇数行tr*/
+.ajaxform .afTable .BodyEvenTr{text-align:left;}/*表格数据体的偶数行tr*/
+.ajaxform .afTable .BodyTr{}/*表格数据体的tr行 #f7f6f6*/
+.ajaxform .afTable .BodyOddTd,/*{text-align:left;empty-cells:show;border:solid #cccccc; border-width:0px 1px 1px 0px;padding:6px 3px 4px 5px;height:20px;vertical-align:middle;}表格数据体的奇数行td单元格*/
+.ajaxform .afTable .BodyEvenTd{text-align:left;empty-cells:show;border:solid #f7f6f6; border-width:0px 1px 1px 0px;padding:5px 3px 5px 7px;height:20px;vertical-align:middle;}/*表格数据体的偶数行td单元格*/
+.ajaxform .headspan { }
+.ajaxform .afTable .afSpan { }
+
+.div_tabs  {width:97%; overflow :hidden ;}
+
+
+.div_tabs .tab_ul{ margin-top :10px;}
+.tab_ul li a{font-weight:normal ;font-size:12px;/*background-color:#ffffff; */text-decoration :none;}
+ 

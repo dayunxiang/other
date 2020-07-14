@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>首页</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/allPage.min.css" rel="stylesheet">
+    </head>
+
+    <body class="page-frame">
+        <div class="frame-header">
+            <div class="logo-bar">
+                <a class="logo" href="javascript:;"></a>
+
+                <div class="frame-title">
+                    <p>智慧管网综合信息管理系统</p>
+                    <small>Intelligent pipe integrated information management</small>
+                </div>
+            </div>
+
+            <div class="status-bar">
+                <div class="channel">
+                    <div class="channel-wrap">
+                        <div class="channel-item">
+                            <i class="icon">&#xe608;</i>
+                            <p class="channel-title">总览</p>
+                        </div>
+
+                        <div class="channel-item">
+                            <i class="icon">&#xe654;</i>
+                            <p class="channel-title">河湖</p>
+                        </div>
+
+                        <div class="channel-item">
+                            <i class="icon">&#xe65f;</i>
+                            <p class="channel-title">排水监管</p>
+                        </div>
+
+                        <div class="channel-item">
+                            <i class="icon">&#xe608;</i>
+                            <p class="channel-title">水库</p>
+                        </div>
+
+                        <div class="channel-item">
+                            <i class="icon">&#xe654;</i>
+                            <p class="channel-title">防洪</p>
+                        </div>
+
+                        <div class="channel-item">
+                            <i class="icon">&#xe65f;</i>
+                            <p class="channel-title">工程管理</p>
+                        </div>
+
+                        <div class="channel-item">
+                            <i class="icon">&#xe65f;</i>
+                            <p class="channel-title">水保</p>
+                        </div>
+
+                        <div class="channel-item">
+                            <i class="icon">&#xe65f;</i>
+                            <p class="channel-title">更多</p>
+                        </div>
+                    </div>
+
+                    <div class="aside">
+                        <div class="user-info">
+                            <i class="icon-user">&#xe608;</i>
+                            <span class="user-name">小。小俊</span>
+                        </div>
+
+                        <div class="tools">
+                            <button class="btn">&#xe608;</button>
+                            <button class="btn">&#xe608;</button>
+                            <button class="btn">&#xe608;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-menu">
+                    <a class="menu-item" href="javascript:;">
+                        <span>地图首页</span>
+                        <i class="btn-close"></i>
+                    </a>
+
+                    <a class="menu-item curr" href="javascript:;">
+                        <span>管网总览</span>
+                        <i class="btn-close"></i>
+                    </a>
+
+                    <a class="menu-item" href="javascript:;">
+                        <span>巡检事件总览</span>
+                        <i class="btn-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="frame-content-wrap">
+            <div class="frame-side-menu-wrap fold">
+                <button class="btn-fold"></button>
+
+                <ul class="frame-side-menu">
+                    <li>
+                        <a class="menu-item" href="javascript:;">
+                            <i class="iconfont">&#xe633;</i>
+                            <span>地图首页</span>
+                        </a>
+                    </li>
+
+                    <!-- 那个节点需要展开 添加类名 curr 即可 -->
+                    <li class="curr">
+                        <a class="menu-item" href="javascript:;">
+                            <i class="iconfont">&#xe8a6;</i>
+                            <span>巡检管理</span>
+                            <i></i>
+                        </a>
+
+                        <ul class="inner-menu">
+                            <li>
+                                <a class="menu-item" href="javascript:;">
+                                    <i class="iconfont">&#xe610;</i>
+                                    <span>巡检事件总览</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="menu-item curr" href="javascript:;">
+                                    <i class="iconfont">&#xe610;</i>
+                                    <span>巡检报表导出</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="menu-item" href="javascript:;">
+                                    <i class="iconfont">&#xe610;</i>
+                                    <span>巡检覆盖统计</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="javascript:;">
+                            <i class="iconfont">&#xe606;</i>
+                            <span>监控调度</span>
+                            <i></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="javascript:;">
+                            <i class="iconfont">&#xe600;</i>
+                            <span>漏损管控</span>
+                            <i></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="javascript:;">
+                            <i class="iconfont">&#xe674;</i>
+                            <span>水利模型</span>
+                            <i></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="javascript:;">
+                            <i class="iconfont">&#xe6ae;</i>
+                            <span>系统管理</span>
+                            <i></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="javascript:;">
+                            <i class="iconfont">&#xe681;</i>
+                            <span>综合分析</span>
+                            <i></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="frame-content-main">
+                <div id="mainMap" class="map-wrap"></div>
+
+                <div class="layer-2">
+                    <div class="title">
+                        <span>异常列表</span>
+
+                        <div class="input-item">
+                            <input class="datetime" type="text" placeholder="请选择时间...">
+                        </div>
+                    </div>
+
+                    <div class="list-wrap">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td width="35%">2019-09-12 18:45:13</td>
+                                    <td>一些乱七八糟的文字</td>
+                                </tr>
+
+                                <tr>
+                                    <td width="35%">2019-09-12 18:45:13</td>
+                                    <td>一些乱七八糟的文字</td>
+                                </tr>
+
+                                <tr>
+                                    <td width="35%">2019-09-12 18:45:13</td>
+                                    <td>一些乱七八糟的文字</td>
+                                </tr>
+
+                                <tr>
+                                    <td width="35%">2019-09-12 18:45:13</td>
+                                    <td>一些乱七八糟的文字</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div style="left: 600px; top: 80px;" class="layer-1">
+                    <div class="title">
+                        <span>管道属性</span>
+                        <button class="btn-close">&#xe60c;</button>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>启用状态</th>
+                                <th>启用/禁用</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    流量
+                                </td>
+                                <td>
+                                    3.3m/h
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    流速
+                                </td>
+                                <td>
+                                    3.3m/h
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    管材
+                                </td>
+                                <td>
+                                    PE管
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    水头损失
+                                </td>
+                                <td>
+                                    0.0001m
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    起始节点
+                                </td>
+                                <td>
+                                    JS5789
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tu-li">
+                    <div class="tu-li-info">
+                        <div class="title">
+                            <span>管线流速</span>
+                            <button class="btn-close">&#xe60c;</button>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>图例</th>
+                                    <th>范围(m/s)</th>
+                                    <th>占比</th>
+                                    <th>显示</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div style="background: #f90;" class="oblong-item"></div>
+                                    </td>
+                                    <td>
+                                        < 0.1
+                                    </td>
+                                    <td>
+                                        10%
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div style="background: #f90;" class="oblong-item"></div>
+                                    </td>
+                                    <td>
+                                        0.1 ~ .6
+                                    </td>
+                                    <td>
+                                        20%
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div style="background: #f90;" class="oblong-item"></div>
+                                    </td>
+                                    <td>
+                                        0.6 ~ .9
+                                    </td>
+                                    <td>
+                                        30%
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div style="background: #f90;" class="oblong-item"></div>
+                                    </td>
+                                    <td>
+                                        0.9 ~ 1.4
+                                    </td>
+                                    <td>
+                                        20%
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div style="background: #f90;" class="oblong-item"></div>
+                                    </td>
+                                    <td>
+                                        < 0.1 </td> <td>
+                                            10%
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <button class="toggle-button">图例</button>
+                </div>
+
+                <div class="say-love-dialog">
+                    <div class="title">
+                        <span>当前时间段：2019年05月01日 08:24:56</span>
+                    </div>
+
+                    <dl class="project-item">
+                        <dt>
+                            24小时供水量趋势(m3/h)
+                        </dt>
+                        <dd>
+                            <div class="echart-wrap"></div>
+                        </dd>
+                    </dl>
+
+                    <dl class="project-item">
+                        <dt>
+                            24小时水力分析
+                        </dt>
+                        <dd>
+                            <div class="form-list">
+                                <div class="row">
+                                    <div class="attr">
+                                        图例范围：
+                                    </div>
+
+                                    <div class="content">
+                                        <div style="float: left; width: 33.33%; padding-left: 0;">
+                                            <select>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <div style="float: left; width: 33.33%; padding-left: 10px;">
+                                            <select>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <div style="float: left; width: 33.33%; padding-left: 10px;">
+                                            <select>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="attr">
+                                        模拟类型：
+                                    </div>
+
+                                    <div class="content">
+                                        <select>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="attr">
+                                        模拟时段：
+                                    </div>
+
+                                    <div class="content">
+                                        <select>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tools">
+                                <input class="range" type="range">
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <dl class="project-item">
+                        <dt>
+                            水利模型精度
+                        </dt>
+                        <dd>
+                            <div style="width: 50%; float: left;" class="echart-wrap"></div>
+                            <div style="width: 50%; float: left;" class="echart-wrap"></div>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="dialog-5">
+                    <div class="title">
+                        <span>当前时间段：2019年05月01日 08:24:56</span>
+                        <!-- <button class="btn-full">&#xe615;</button> -->
+                    </div>
+
+                    <dl>
+                        <dt>基本信息</dt>
+                        <dd>
+                            <div class="dialog-form-list">
+                                <div class="row">
+                                    <div class="lable">
+                                        <span class="text">方案名称:</span>
+                                    </div>
+
+                                    <div class="content">
+                                        <input value="" placeholder="请输入..." type="text">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="lable">
+                                        <span class="text">方案描述:</span>
+                                    </div>
+
+                                    <div class="content">
+                                        <textarea rows="4"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="lable">
+                                        <span class="text">工况选择:</span>
+                                    </div>
+
+                                    <div class="content">
+                                        <select style="float: left; width: 75%;">
+                                            <option value="1">选项1</option>
+                                            <option value="2">选项2</option>
+                                        </select>
+
+                                        <button style="float: right;">计算</button>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="lable">
+                                        <span class="text">模型文件:</span>
+                                    </div>
+
+                                    <div class="content">
+                                        <select>
+                                            <option value="1">选项1</option>
+                                            <option value="2">选项2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>组件属性调整</dt>
+                        <dd class="scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>组件</th>
+                                        <th>属性</th>
+                                        <th>调整前值</th>
+                                        <th>调整后值</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            管道：JS29019
+                                        </td>
+                                        <td>
+                                            管径
+                                        </td>
+                                        <td>
+                                            300mm
+                                        </td>
+                                        <td>
+                                            200mm
+                                        </td>
+                                        <td>
+                                            <button class="icon">&#xe613;</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>备注</dt>
+                        <dd>
+                            <textarea rows="3"></textarea>
+                        </dd>
+                    </dl>
+
+                    <div class="tools">
+                        <button>保存</button>
+                        <button>返回</button>
+                    </div>
+                </div>
+
+                <div class="dialog-6">
+                    <div class="title">
+                        <span>模拟计算结果</span>
+                    </div>
+
+                    <div class="dialog-form-list">
+                        <div class="row">
+                            <div class="lable">
+                                <span class="text">分析项目:</span>
+                            </div>
+
+                            <div class="content">
+                                <select>
+                                    <option value="1">选项1</option>
+                                    <option value="2">选项2</option>
+                                </select>
+
+                                <label class="btn-edit">
+                                    <input type="checkbox">
+                                    <span>显示图例</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialog-7">
+                    <div class="title">
+                        <span>管线流量变化</span>
+                        <button class="btn-close">&#xe60c;</button>
+                    </div>
+
+                    <div class="tu-li-info">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>图例</th>
+                                    <th>范围(m/s)</th>
+                                    <th>占比</th>
+                                    <th>显示</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div style="background: #f90;" class="oblong-item"></div>
+                                    </td>
+                                    <td>
+                                        < 0.1 </td> <td>
+                                            10%
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div style="background: #f90;" class="oblong-item"></div>
+                                    </td>
+                                    <td>
+                                        0.1 ~ .6
+                                    </td>
+                                    <td>
+                                        20%
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div style="background: #f90;" class="oblong-item"></div>
+                                    </td>
+                                    <td>
+                                        0.6 ~ .9
+                                    </td>
+                                    <td>
+                                        30%
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div style="background: #f90;" class="oblong-item"></div>
+                                    </td>
+                                    <td>
+                                        0.9 ~ 1.4
+                                    </td>
+                                    <td>
+                                        20%
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div style="background: #f90;" class="oblong-item"></div>
+                                    </td>
+                                    <td>
+                                        < 0.1 </td> <td>
+                                            10%
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 节点属性 -->
+        <template id="jdsx">
+            <div class="dialog-1">
+                <div class="dialog-form-list">
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">组件编号:</span>
+                        </div>
+
+                        <div class="content">
+                            <input disabled value="JS1234567876" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">需求量:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="1.601m3/h" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">高程:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="101m" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">压力:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="26m" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">坐标:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="519090,2790901" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- 阀门属性 -->
+        <template id="fmsx">
+            <div class="dialog-2">
+                <div class="dialog-form-list">
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">组件编号:</span>
+                        </div>
+
+                        <div class="content">
+                            <input disabled value="JS1234567876" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">开度:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="1.601m3/h" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">高程:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="101m" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">压力:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="26m" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">坐标:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="519090,2790901" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- 管道属性 -->
+        <template id="gdsx">
+            <div class="dialog-3">
+                <div class="dialog-form-list">
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">组件编号:</span>
+                        </div>
+
+                        <div class="content">
+                            <input disabled value="JS1234567876" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">管径:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="800mm" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">阻力系统:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="100" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">启用状态:</span>
+                        </div>
+
+                        <div class="content">
+                            <select>
+                                <option value="1">选项1</option>
+                                <option value="2">选项2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">流量:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="3.33m3/h" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">流速:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="0.9m/s" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">水头损失:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="0.001m" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">管材:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="PE管" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">起始节点:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="JS90876" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">终止节点:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="JS90877" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- 水汞属性 -->
+        <template id="sgsx">
+            <div class="dialog-4">
+                <div class="dialog-form-list">
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">组件编号:</span>
+                        </div>
+
+                        <div class="content">
+                            <input disabled value="JS1234567876" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">启用状态:</span>
+                        </div>
+
+                        <div class="content">
+                            <select>
+                                <option value="1">选项1</option>
+                                <option value="2">选项2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">描述:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="水库水库" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">起始节点:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="JS1234567876" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="lable">
+                            <span class="text">终止节点:</span>
+                        </div>
+
+                        <div class="content">
+                            <input value="JS1234567876" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- 历史数据查询 -->
+        <template id="historicalData">
+            <div class="historical-data-dialog">
+                <div class="form-list">
+                    <div class="row horizontal">
+                        <div class="lable">
+                            <span class="text">分析项目:</span>
+                        </div>
+
+                        <div class="content">
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row horizontal date-wrap">
+                        <div class="lable">
+                            <span class="text">监控时间:</span>
+                        </div>
+
+                        <div class="content">
+                            <div class="input-item datetime start">
+                                <input type="text" placeholder="请选择时间...">
+                            </div>
+
+                            <span>至</span>
+
+                            <div class="input-item datetime end">
+                                <input type="text" placeholder="请选择时间...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row horizontal">
+                        <div class="lable">
+                            <span class="text">指标:</span>
+                        </div>
+
+                        <div class="content">
+                            <label class="label-item">
+                                <input type="checkbox">
+                                <span>瞬时流量</span>
+                            </label>
+
+                            <label class="label-item">
+                                <input type="checkbox">
+                                <span>压力</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row tools">
+                        <div class="lable">
+                            <span class="text"></span>
+                        </div>
+
+                        <div class="content">
+                            <button>查询</button>
+                            <button>其他操作</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="echart-wrap"></div>
+            </div>
+        </template>
+
+        <!-- 脚本引入开始 -->
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <script src="../widget/layer-v3.1.1/layer.js"></script>
+        <link href="../widget/datetimepicker/jquery.datetimepicker.min.css" rel="stylesheet">
+        <script src="../widget/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+        <script src="../scripts/tab.js"></script>
+        <script src="../scripts/common.js"></script>
+        <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=c7b659647fff9caa665b49bbe95bbf33"></script>
+        <script>
+            $(function () {
+                // 模拟地图效果 仅做测试效果
+                var map = new AMap.Map('mainMap');
+
+                // 侧边栏的左右滑动
+                $('.page-frame .frame-content-wrap').on('click', '.btn-fold', function () {
+                    $(this).parent().toggleClass('fold');
+                });
+
+                // 弹窗
+                layer.open({
+                    type: 1,
+                    area: ['400px', ''],
+                    shadeClose: true, //点击遮罩关闭
+                    title: '节点属性',
+                    content: $('#jdsx').html(),
+                    btn: ['保存', '取消'],
+                    btnAlign: 'c',
+                    success: function (layero, index) {
+                        //
+                    }
+                });
+
+                // 弹窗 历史数据查询
+                layer.open({
+                    zIndex: 100,
+                    type: 1,
+                    area: ['800px', ''],
+                    shadeClose: true, //点击遮罩关闭
+                    title: '历史数据查询',
+                    content: $('#historicalData').html(),
+                    success: function (layero, index) {
+                        // 日期插件
+                        $.datetimepicker.setLocale('ch');
+                        $('.date-wrap .datetime.start').datetimepicker({
+                            format: 'Y-m-d',
+                            onShow: function (ct) {
+                                this.setOptions({
+                                    maxDate: $('.date-wrap .datetime.end').val() ? $('.date-wrap .datetime.end').val() : false
+                                })
+                            },
+                            timepicker: false
+                        });
+                        $('.date-wrap .datetime.end').datetimepicker({
+                            format: 'Y-m-d',
+                            onShow: function (ct) {
+                                this.setOptions({
+                                    minDate: $('.date-wrap .datetime.start').val() ? $('.date-wrap .datetime.start').val() : false
+                                })
+                            },
+                            timepicker: false
+                        });
+                    }
+                });
+
+                // 异常列表
+                $.datetimepicker.setLocale('ch');
+                $('.layer-2 .datetime').datetimepicker({
+                    format: 'Y-m-d',
+                    timepicker: false
+                });
+
+                // 图例
+                $('.tu-li').on('click', '.toggle-button', function () {
+                    $(this).siblings('.tu-li-info').toggle();
+                })
+            });
+        </script>
+        <!-- 脚本引入结束 -->
+    </body>
+</html>

@@ -1,0 +1,49 @@
+/************************************
+*search module style:default css002
+*writor:SD
+*upload-time:2012-9-20
+*edit-time:2012-9-20
+************************************/
+
+.searchform {
+    background-color: #fff;
+    _background-color: #fff;
+    _min-height: 600px;
+    _width: auto;
+    border:1px solid #ebecee;
+}
+
+.searchform .search-block .search-input {
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+}
+
+.searchform .searchform-button {
+    background-color: #428bca;
+}
+
+.searchform .searchform-button:hover {
+    background-color: #428bca;
+}
+
+.searchform .searchform-button .search-btn {
+    background: url(images/search.pngg") no-repeat;
+    _background: url(images/search.giff") no-repeat;
+}
+
+.searchform .searchform-button a {
+    color: #fff;
+}
+
+.searchform .search-title {
+    text-align: right;
+}
+
+.searchform .search-block .search-li, .searchform .li-area{
+	height:auto!important;
+}
+
+
+/*.searchform .searchform-button { background:url(images/searchbt.pngg") no-repeat;}
+.searchform .searchform-button { background-position:0 0;}
+.searchform .searchform-button:hover { background-position:0 -30px}*/

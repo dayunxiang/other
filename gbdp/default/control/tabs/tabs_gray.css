@@ -1,0 +1,29 @@
+/*选项卡overflow :hidden ; height:800px;*/
+
+.div_tabs {margin:0;padding:0;min-height:100px; }
+.div_tabs .tab_ul,.div_tabs .tab_ul li{margin:0;padding:0;}
+
+/*选项 font:12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;*/
+.div_tabs .tab_ul{height:29px;border-bottom:1px solid #e14333;margin-bottom:10px;}
+.div_tabs .tab_ul{color:#000;background:#fff;}
+.div_tabs .tab_ul li,
+.div_tabs .tab_ul li a{background:url("images/tab.png") no-repeat -9999px -9999px;}
+.div_tabs .tab_ul li{float:left;background-position:-136px -903px;height:25px;line-height:27px;margin:2px 4px 0 0;overflow:hidden;}
+.div_tabs .tab_ul li.de-selected{background-position:-136px -872px;height:29px;position:relative;margin-top:0;}
+.div_tabs .tab_ul li a{background-position:100% -968px;color:#333;display:block;padding:0 0px;}
+.div_tabs .tab_ul li a:hover{color:#ff7300;text-decoration:underline;}
+
+
+/*当前选项*/
+.div_tabs .tab_ul li.de-selected a{background-position:100% -936px;cursor:default;line-height:29px;}
+.div_tabs .tab_ul li.de-selected a:hover{color:#fff;text-decoration:underline;}
+.div_tabs .tab_ul li.de-selected a:link,.div_tabs .tab_ul li.de-selected a:visited{color:#fff;text-decoration:none;}
+/*width:97%; overflow :hidden ;*/
+
+.div_tabs  {}
+.div_tabs .tab_ul{ margin-top :10px;}
+.tab_ul li a{font-weight:normal ;font-size:12px;background-color:#ffffff; text-decoration :none;}
+
+.div_tabs li .tab-icon{background: url(../../../../../Designer/images/dcx/moreOperate2.pngg"); float :left ;width: 12px;
+height: 12px;}
+

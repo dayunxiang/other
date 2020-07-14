@@ -1,0 +1,507 @@
+@import './_mixin.scss';
+@import './_resetPc.scss';
+@import './common.scss';
+
+html {
+  height: 100%;
+}
+
+//首页
+.page-frame {
+  padding-top: 96px;
+  height: 100%;
+
+  .frame-header {
+    @include clearFix;
+    position: absolute;
+    left: 0; top: 0; right: 0;
+    z-index: 1;
+    background: #2e7ae6;
+    box-shadow: 0 5px 5px rgba(202, 198, 198, 0.36);
+
+    .logo-bar {
+      float: left;
+      padding-left: 20px;
+      line-height: 96px;
+
+      & > * {
+        line-height: 1.5;
+      }
+    }
+    .status-bar {
+      padding-left: 20px;
+      overflow: hidden;
+    }
+    .logo {
+      margin-right: 10px;
+      width: 146px;
+      height: 52px;
+      vertical-align: middle;
+      background: url("../images/base/logo.png") no-repeat center;
+      background-size: 100% 100%;
+    }
+    .frame-title {
+      display: inline-block;
+      vertical-align: middle;
+      color: #fff;
+
+      p {
+        line-height: 1;
+        font-size: 22px;
+      }
+      small {
+        font-size: 12px;
+        opacity: .75;
+        transform-origin: 0 0;
+        transform: scale(.92, 1);
+      }
+    }
+    .channel {
+      @include clearFix;
+      padding-right: 10px;
+      color: #fff;
+    }
+    .sub-title {
+      position: relative;
+      float: left;
+      padding-left: 10px;
+      font-size: 16px;
+      line-height: 51px;
+      cursor: pointer;
+      transition: all .2s;
+
+      &:hover {
+        opacity: .8;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        left: 0; top: 19px; bottom: 19px;
+        width: 2px;
+        background: #fff;
+      }
+    }
+    .btn-full {
+      @include iconfont;
+      float: right;
+      margin-left: 15px;
+      line-height: 51px;
+      border: none;
+      background: transparent;
+    }
+    .user-info {
+      position: relative;
+      float: right;
+      padding-left: 10px;
+      line-height: 51px;
+
+      &:before {
+        position: absolute;
+        left: 0; top: 17px; bottom: 17px;
+        content: "";
+        width: 1px;
+        background: rgba(255, 255, 255, .3);
+      }
+      .btn-exit {
+        margin-left: 5px;
+        cursor: pointer;
+      }
+    }
+    .channel-wrap {
+      float: right;
+
+      .channel-item {
+        float: left;
+        padding: 15px 10px;
+        font-size: 0;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+          background: rgba(0, 0, 0, .1);
+        }
+        i,
+        span {
+          vertical-align: middle;
+        }
+        i {
+          margin-right: 5px;
+          font-size: 20px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .tab-menu {
+      @include clearFix;
+      position: relative;
+      background: #fff;
+
+      &:before {
+        position: absolute;
+        left: -38px;
+        bottom: -148px;
+        content: "";
+        width: 100px;
+        height: 100px;
+        transform: rotate(-68deg);
+        transform-origin: 0 0;
+        background: #fff;
+      }
+      .menu-item {
+        position: relative;
+        float: left;
+        padding: 12px 20px;
+        border-right: 1px solid #e4ecf7;
+        overflow: hidden;
+        transition: all .2s;
+
+        &:hover {
+          .btn-close {
+            visibility: visible;
+            right: 5px;
+          }
+        }
+        &:hover,
+        &.curr {
+          color: #2e7ae6;
+        }
+        .btn-close {
+          @include iconfont;
+          visibility: hidden;
+          position: absolute;
+          right: -20px; top: 5px;
+          font-size: 12px;
+          transition: all .2s;
+          cursor: pointer;
+
+          &:before {
+            content: "\e60c";
+          }
+        }
+      }
+    }
+  }
+  .frame-content-wrap {
+    @include clearFix;
+    height: 100%;
+  }
+  .frame-side-menu-wrap {
+    z-index: 1;
+    float: left;
+    position: relative;
+    margin-left: 0;
+    height: 100%;
+    background: #465263;
+    box-shadow: 5px 0 5px rgba(202, 198, 198, 0.36);
+    transition: all .2s;
+
+    &.fold {
+      .btn-fold {
+        background-position: -12px 0;
+      }
+      .frame-side-menu {
+        & > li {
+
+          &.curr {
+            .menu-item {
+              background: #384454;
+            }
+          }
+          .menu-item {
+            span {
+              display: none;
+            }
+            i {
+              &:last-child {
+                display: none;
+              }
+            }
+          }
+        }
+        .inner-menu {
+          display: none;
+        }
+      }
+    }
+    .btn-fold {
+      z-index: 5;
+      position: absolute;
+      right: -12px; top: 50%;
+      width: 12px; height: 90px;
+      border: none;
+      background: url("../images/base/btn-push-pull.png") no-repeat 0 0;
+      transform: translate(0, -50%);
+      cursor: pointer;
+    }
+  }
+  .frame-side-menu {
+    max-height: 100%;
+    overflow-y: auto;
+
+    & > li {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+
+      &.curr {
+        .menu-item {
+          i {
+            &:last-child {
+              color: #2e7ae6;
+
+              &:before {
+                content: "\e60f";
+              }
+            }
+          }
+        }
+        .inner-menu {
+          position: relative;
+          transform: scale(1, 1);
+          visibility: visible;
+        }
+      }
+      & > .menu-item {
+        position: relative;
+        display: block;
+        padding: 15px;
+        color: #fff;
+        transition: all .2s;
+
+        &:hover {
+          background: #384454;
+        }
+        i {
+          &:first-child {
+            margin-right: 5px;
+            font-size: 18px;
+          }
+          &:last-child {
+            @include iconfont;
+            position: absolute;
+            top: 50%; right: 20px;
+            transform: translate(0, -50%);
+            color: #566c7a;
+
+            &:before {
+              content: "\e9bb";
+            }
+          }
+        }
+      }
+    }
+    .inner-menu {
+      position: absolute;
+      transform: scale(1, 0);
+      transform-origin: 50% 0;
+      transition: all .2s;
+      visibility: hidden;
+
+      li {
+        padding: 5px 20px;
+      }
+      .menu-item {
+        display: block;
+        padding: 5px 20px;
+        color: #bcc4cc;
+        transition: all .2s;
+
+        &:hover,
+        &.curr {
+          color: #fff;
+          border-radius: 1000px;
+          background: #2e7ae6;
+        }
+        i {
+          &:first-child {
+            font-size: 12px;
+            transform: scale(.8, .8);
+          }
+        }
+      }
+    }
+  }
+  .frame-content-main {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    .map-wrap {
+      position: relative;
+      height: 100%;
+    }
+    .tool-bar {
+      position: absolute;
+      left: 15px; top: 15px;
+    }
+    .tool-nav {
+      font-size: 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 5px 5px rgba(210, 207, 207, 0.4);
+
+      dd {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 8px 8px;
+        cursor: pointer;
+        transition: all .2s;
+
+        &.curr,
+        &:hover {
+          color: #ff6600;
+        }
+        &:hover {
+          background: rgba(0, 0, 0, .1);
+        }
+        i {
+          @include iconfont;
+          margin-right: 5px;
+          font-size: 12px;
+          vertical-align: middle;
+        }
+        span {
+          font-size: 12px;
+          vertical-align: middle;
+        }
+      }
+    }
+    .tool-list {
+      margin-top: 5px;
+      padding: 7px 5px;
+      width: 100px;
+      border: 1px solid #ddd;
+      background: #fff;
+      box-shadow: 0 0 5px 5px rgba(210, 207, 207, 0.4);
+    }
+    .tool-item {
+      border-top: 1px solid #d9d9d9;
+
+      &:first-child {
+        border-top: none;
+      }
+      dd {
+        padding: 5px 5px;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover,
+        &.curr {
+          color: #fff;
+          background: #2e7ae6;
+        }
+      }
+      .icon {
+        @include iconfont;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+    .search-bar {
+      position: absolute;
+      top: 15px; right: 15px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 5px 5px rgba(210, 207, 207, 0.4);
+      background: #fff;
+
+      & > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .search-item {
+        padding: 0 5px;
+        border: 1px solid #ddd;
+
+        input {
+          height: 22px;
+          line-height: 22px;
+          border: none;
+          vertical-align: middle;
+        }
+        .btn-search {
+          @include iconfont;
+          vertical-align: middle;
+          color: #2e7ae6;
+          cursor: pointer;
+
+          &:before {
+            content: "\e613";
+          }
+        }
+      }
+      .filter {
+        cursor: pointer;
+
+        &:hover {
+          & > span {
+            color: #ff6600;
+          }
+          & > i {
+            color: #ff6600;
+            transform: rotate(180deg);
+          }
+          .filter-list {
+            visibility: visible;
+            transform: scale(1, 1);
+          }
+        }
+        span {
+          font-size: 12px;
+          vertical-align: middle;
+          transition: all .2s;
+        }
+        i {
+          @include iconfont;
+          font-size: 12px;
+          color: #999;
+          transition: all .2s;
+
+          &:before {
+            content: "\e9bb";
+          }
+        }
+      }
+      .btn-close {
+        @include iconfont;
+        margin-left: 5px;
+        padding: 0 10px;
+        font-size: 12px;
+        color: #2e7ae6;
+        border: none;
+        border-left: 1px solid rgba(46, 123, 230, 0.315);
+        background: transparent;
+        transition: all .2s;
+
+        &:hover {
+          opacity: .6;
+        }
+      }
+    }
+    .filter-list {
+      position: absolute;
+      right: 35px; top: 35px;
+      transform: scale(1, 0);
+      transform-origin: 50% 0;
+      transition: all .2s;
+      visibility: hidden;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 5px 5px rgba(210, 207, 207, 0.4);
+    }
+    .option-item {
+      display: block;
+      padding: 5px 8px;
+      cursor: pointer;
+      background: #fff;
+      transition: all .2s;
+
+      &:hover {
+        background: #e3e3e3;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}

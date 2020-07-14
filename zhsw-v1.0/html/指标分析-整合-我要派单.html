@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>我要派单</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+        <link href="../css/public.css" rel="stylesheet">
+        <link href="../css/page.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- 滑块部分 开始 -->
+        <div class="t-tit-box clearfix">
+            <div class="t-swiper-wrap hover clearfix">
+                <a class="iconfont prev" href="javascript:;">&#xe62b;</a>
+                <div class="ul-wrap">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li class="curr">
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                        <li>
+                            <a href="javascript:;">刘亦菲刘亦菲刘亦菲刘亦菲</a>
+                            <i class="iconfont">&#xe60c;</i>
+                        </li>
+                    </ul>
+                </div>
+                <a class="iconfont next" href="javascript:;">&#xe629;</a>
+            </div>
+            <div class="fr">
+                <a class="btn-blue-normal" href="javascript:;">我要派单</a>
+            </div>
+        </div>
+        <!-- 滑块部分 结束 -->
+
+        <!-- 我要派单 开始 -->
+        <div class="pd-send-order">
+            <ul class="form-list">
+                <li>
+                    <div class="tit">
+                        <sub>*</sub>
+                         告警详细原因：
+                    </div>
+                    <div class="con">
+                        <textarea rows="5" placeholder="请输入告警详细原因..."></textarea>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit">
+                        <sub>*</sub>
+                         处理建议：
+                    </div>
+                    <div class="con">
+                        <textarea rows="5" placeholder="请输入处理建议..."></textarea>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit">
+                        <sub>*</sub>
+                         期望完成时间：
+                    </div>
+                    <div class="con">
+                        <input class="input-text datetime" type="text" placeholder="请选择期望完成时间">
+                    </div>
+                </li>
+                <li>
+                    <div class="tit">
+                        <sub>*</sub>
+                         处理人：
+                    </div>
+                    <div class="con">
+                        <input class="input-text" type="text" placeholder="请选择处理人">
+                    </div>
+                </li>
+                <li>
+                    <div class="tit">
+                        <sub>*</sub>
+                         备注：
+                    </div>
+                    <div class="con">
+                        <textarea rows="5" placeholder="请输入备注..."></textarea>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit">&nbsp;</div>
+                    <div class="con">
+                        <a class="btn-blue-big btn-ok" href="javascript:;">确定</a>
+                        <a class="btn-gray-big btn-cancel" href="javascript:;">取消</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 我要派单 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-1.8.3/jquery.min.js"></script>
+        <script src="../widget/placeholder-2.3.1/jquery.placeholder.min.js"></script>
+        <script src="../widget/jquery.nicescroll_3.6.8/jquery.nicescroll.min.js"></script>
+        <script src="../js/public.js"></script>
+        <link href="../widget/datetimepicker/jquery.datetimepicker.min.css" rel="stylesheet">
+        <script src="../widget/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+        <script>
+            $(function(){
+                /* 日期插件初始化 开始 ****************/
+                $.datetimepicker.setLocale('zh');
+                $('.datetime').datetimepicker({
+                    timepicker:false,
+                    format:'Y-m-d'
+                });
+                /**************** 日期插件初始化 结束 */
+
+                /* 滑块轮播 开始 ****************/
+                swiper(0.75);
+                window.onresize = throttle( function(){
+                    swiper(0.75);
+                });
+                /**************** 滑块轮播 结束 */
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

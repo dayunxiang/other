@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>待办事宜</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/allPage.min.css" rel="stylesheet">
+    </head>
+    <body class="page-daibanshiyi">
+        <div class="aside">
+            <div class="search-wrap">
+                <div class="search-item">
+                    <input placeholder="类型搜索" type="text">
+                    <i>&#xe677;</i>
+                </div>
+            </div>
+
+            <div class="task-wrap">
+                <!--
+                    1.添加fold实现折叠效果
+                 -->
+                <dl class="task-item fold">
+                    <dt>
+                        <p class="task-title">人事管理</p>
+                    </dt>
+
+                    <!-- 高亮添加active -->
+                    <dd>
+                        <div class="count">
+                            (
+                            <span class="num1">2</span>
+                            /
+                            <span class="num2">78</span>
+                            )
+                        </div>
+                        <p class="task-name">请假申请(包含调休)</p>
+                    </dd>
+
+                    <dd class="active">
+                        <div class="count">
+                            (
+                            <span class="num1">2</span>
+                            /
+                            <span class="num2">78</span>
+                            )
+                        </div>
+                        <p class="task-name">请假申请(包含调休)</p>
+                    </dd>
+
+                    <dd>
+                        <div class="count">
+                            (
+                            <span class="num1">2</span>
+                            /
+                            <span class="num2">78</span>
+                            )
+                        </div>
+                        <p class="task-name">请假申请(包含调休)</p>
+                    </dd>
+
+                    <dd>
+                        <div class="count">
+                            (
+                            <span class="num1">2</span>
+                            /
+                            <span class="num2">78</span>
+                            )
+                        </div>
+                        <p class="task-name">请假申请(包含调休)</p>
+                    </dd>
+                </dl>
+
+                <dl class="task-item">
+                    <dt>
+                        <p class="task-title">人事管理</p>
+                    </dt>
+
+                    <dd>
+                        <div class="count">
+                            (
+                            <span class="num1">2</span>
+                            /
+                            <span class="num2">78</span>
+                            )
+                        </div>
+                        <p class="task-name">请假申请(包含调休)</p>
+                    </dd>
+
+                    <dd>
+                        <div class="count">
+                            (
+                            <span class="num1">2</span>
+                            /
+                            <span class="num2">78</span>
+                            )
+                        </div>
+                        <p class="task-name">请假申请(包含调休)</p>
+                    </dd>
+
+                    <dd>
+                        <div class="count">
+                            (
+                            <span class="num1">2</span>
+                            /
+                            <span class="num2">78</span>
+                            )
+                        </div>
+                        <p class="task-name">请假申请(包含调休)</p>
+                    </dd>
+
+                    <dd>
+                        <div class="count">
+                            (
+                            <span class="num1">2</span>
+                            /
+                            <span class="num2">78</span>
+                            )
+                        </div>
+                        <p class="task-name">请假申请(包含调休)</p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="p-tab-card">
+                <div class="nav-wrap">
+                    <a class="tab-nav active" href="javascript:;">
+                        <span>全部</span>
+                        <em>26</em>
+                    </a>
+                    <a class="tab-nav" href="javascript:;">
+                        <span>未读</span>
+                    </a>
+                    <a class="tab-nav" href="javascript:;">
+                        <span>超时</span>
+                    </a>
+                    <a class="tab-nav" href="javascript:;">
+                        <span>催办</span>
+                    </a>
+                </div>
+
+                <div class="con-wrap">
+                    <div class="tab-con active">
+                        <!--
+                            1.添加fold实现折叠效果
+                        -->
+                        <div class="chaxun-wrap 1fold">
+                            <div class="lists-wrap">
+                                <div class="list-item">
+                                    <div class="item-main">
+                                        <div class="attr">
+                                            <p class="attr-text">流程名称：</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="input-item">
+                                                <select>
+                                                    <option value="1">选项1</option>
+                                                    <option value="2">选项2</option>
+                                                    <option value="3">选项3</option>
+                                                    <option value="4">选项4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-item">
+                                    <div class="item-main">
+                                        <div class="attr">
+                                            <p class="attr-text">流水号：</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="input-item">
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-item">
+                                    <div class="item-main">
+                                        <div class="attr">
+                                            <p class="attr-text">创建日期：</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="input-item">
+                                                <input class="datetimepicker" type="text">
+                                                <i>&#xe612;</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-item">
+                                    <div class="item-main">
+                                        <div class="attr">
+                                            <p class="attr-text">流程分类：</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="input-item">
+                                                <select>
+                                                    <option value="1">选项1</option>
+                                                    <option value="2">选项2</option>
+                                                    <option value="3">选项3</option>
+                                                    <option value="4">选项4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-item">
+                                    <div class="item-main">
+                                        <div class="attr">
+                                            <p class="attr-text">创建人：</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="input-item">
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-item">
+                                    <div class="item-main">
+                                        <div class="attr">
+                                            <p class="attr-text">接收日期：</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="input-item">
+                                                <input class="datetimepicker" type="text">
+                                                <i>&#xe612;</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-item">
+                                    <div class="item-main">
+                                        <div class="attr">
+                                            <p class="attr-text">流程标题：</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="input-item">
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-item">
+                                    <div class="item-main">
+                                        <div class="attr">
+                                            <p class="attr-text">创建人部门：</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="input-item">
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tool-wrap">
+                                <button>查询</button>
+                                <button>更多查询</button>
+                            </div>
+                        </div>
+
+                        <div class="search-wrap">
+                            <div class="tool-wrap">
+                                <button>批量驳回</button>
+                                <button>批量同意</button>
+                                <button>批量拒绝</button>
+                            </div>
+
+                            <div class="table-wrap">
+                                <table id="processList" class="p-tab-theme-1">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" />
+                                            </th>
+                                            <th>
+                                                <i class="icon">&#xe641;</i>
+                                            </th>
+                                            <th>流水号</th>
+                                            <th>当前节点</th>
+                                            <th>创建人</th>
+                                            <th>创建时间</th>
+                                            <th>上节点提交人</th>
+                                            <th>上节点提交时间</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" />
+                                            </td>
+                                            <td>
+                                                <!--
+                                                    添加i标签添加active 高亮
+                                                -->
+                                                <i class="icon active">&#xe641;</i>
+                                            </td>
+                                            <td>
+                                                <p class="tips">
+                                                    <span>LD:0000123</span>
+                                                    <i>&#xe68c;</i>
+                                                </p>
+                                            </td>
+                                            <td>第三步：分管领导审批</td>
+                                            <td>张三</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>李四</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>
+                                                <button class="btn-config">查看</button>
+                                                <button class="btn-config">驳回</button>
+                                                <button class="btn-config">同意</button>
+                                                <button class="btn-config">拒绝</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" />
+                                            </td>
+                                            <td>
+                                                <i class="icon">&#xe641;</i>
+                                            </td>
+                                            <td>
+                                                <p class="tips">
+                                                    <span>LD:0000123</span>
+                                                    <i>&#xe68c;</i>
+                                                </p>
+                                            </td>
+                                            <td>第三步：分管领导审批</td>
+                                            <td>张三</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>李四</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>
+                                                <button class="btn-config">查看</button>
+                                                <button class="btn-config">驳回</button>
+                                                <button class="btn-config">同意</button>
+                                                <button class="btn-config">拒绝</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" />
+                                            </td>
+                                            <td>
+                                                <i class="icon">&#xe641;</i>
+                                            </td>
+                                            <td>
+                                                <p class="tips">
+                                                    <span>LD:0000123</span>
+                                                    <i>&#xe68c;</i>
+                                                </p>
+                                            </td>
+                                            <td>第三步：分管领导审批</td>
+                                            <td>张三</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>李四</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>
+                                                <button class="btn-config">查看</button>
+                                                <button class="btn-config">驳回</button>
+                                                <button class="btn-config">同意</button>
+                                                <button class="btn-config">拒绝</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" />
+                                            </td>
+                                            <td>
+                                                <i class="icon">&#xe641;</i>
+                                            </td>
+                                            <td>
+                                                <p class="tips">
+                                                    <span>LD:0000123</span>
+                                                    <i>&#xe68c;</i>
+                                                </p>
+                                            </td>
+                                            <td>第三步：分管领导审批</td>
+                                            <td>张三</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>李四</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>
+                                                <button class="btn-config">查看</button>
+                                                <button class="btn-config">驳回</button>
+                                                <button class="btn-config">同意</button>
+                                                <button class="btn-config">拒绝</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" />
+                                            </td>
+                                            <td>
+                                                <i class="icon">&#xe641;</i>
+                                            </td>
+                                            <td>
+                                                <p class="tips">
+                                                    <span>LD:0000123</span>
+                                                    <i>&#xe68c;</i>
+                                                </p>
+                                            </td>
+                                            <td>第三步：分管领导审批</td>
+                                            <td>张三</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>李四</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>
+                                                <button class="btn-config">查看</button>
+                                                <button class="btn-config">驳回</button>
+                                                <button class="btn-config">同意</button>
+                                                <button class="btn-config">拒绝</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" />
+                                            </td>
+                                            <td>
+                                                <i class="icon">&#xe641;</i>
+                                            </td>
+                                            <td>
+                                                <p class="num tips">
+                                                    <span>LD:0000123</span>
+                                                </p>
+                                            </td>
+                                            <td>第三步：分管领导审批</td>
+                                            <td>张三</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>李四</td>
+                                            <td>2020/10/10 16:55:19</td>
+                                            <td>
+                                                <button class="btn-config">查看</button>
+                                                <button class="btn-config">驳回</button>
+                                                <button class="btn-config">同意</button>
+                                                <button class="btn-config">拒绝</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-con">未读</div>
+                    <div class="tab-con">超时</div>
+                    <div class="tab-con">催办</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <link href="../widget/datatables-1.10.13/css/jquery.dataTables.default.css" rel="stylesheet">
+        <script src="../widget/datatables-1.10.13/js/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="../widget/datetimepicker/jquery.datetimepicker.min.css">
+        <script src="../widget/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+        <script src="../scripts/tab.js"></script>
+        <script>
+            $(function() {
+                $.extend($.fn.dataTable.defaults, {
+                    searching: false,
+                    ordering: false,
+                    'dom': 'rtilp',
+                    'language': {
+                        "url": "../widget/datatables-1.10.13/js/Chinese.json"
+                    }
+                });
+                $('#processList').DataTable();
+
+                $.datetimepicker.setLocale('ch');
+                $('.datetimepicker').datetimepicker();
+
+                $('.p-tab-card').tab();
+
+                $('.aside .task-wrap').on('click', '.task-item dt', function() {
+                    $(this).parent('.task-item').removeClass('fold').siblings().addClass('fold');
+                });
+            })
+        </script>
+    </body>
+</html>

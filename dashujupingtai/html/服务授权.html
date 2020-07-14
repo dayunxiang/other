@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>服务授权</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/allPage.min.css" rel="stylesheet">
+    </head>
+
+    <body class="page-service-empower">
+        <div class="search-content">
+            <div class="tools">
+                <p class="table-title">水表服务授权</p>
+
+                <div class="btn-wrap">
+                    <button class="btn">
+                        <i>&#xe6ac;</i>
+                        <span>新增授权</span>
+                    </button>
+
+                    <button class="btn">
+                        <i>&#xe6b8;</i>
+                        <span>取消授权</span>
+                    </button>
+
+                    <button class="btn">
+                        <i>&#xe698;</i>
+                        <span>调整策略配置</span>
+                    </button>
+                </div>
+            </div>
+
+            <table id="daibangongdan" class="p-tab-theme-1">
+                <thead>
+                    <tr>
+                        <th width="50px">
+                            <input type="checkbox" name="">
+                        </th>
+                        <th width="50px">序号</th>
+                        <th>用户名称</th>
+                        <th>用户编码</th>
+                        <th width="180px">调用策略</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td>4</td>
+                        <td>指尖榕径</td>
+                        <td>123456</td>
+                        <td>
+                            0次/分钟
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td>4</td>
+                        <td>指尖榕径</td>
+                        <td>123456</td>
+                        <td>
+                            0次/分钟
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td>4</td>
+                        <td>指尖榕径</td>
+                        <td>123456</td>
+                        <td>
+                            0次/分钟
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td>4</td>
+                        <td>指尖榕径</td>
+                        <td>123456</td>
+                        <td>
+                            0次/分钟
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td>4</td>
+                        <td>指尖榕径</td>
+                        <td>123456</td>
+                        <td>
+                            0次/分钟
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td>4</td>
+                        <td>指尖榕径</td>
+                        <td>123456</td>
+                        <td>
+                            0次/分钟
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td>4</td>
+                        <td>指尖榕径</td>
+                        <td>123456</td>
+                        <td>
+                            0次/分钟
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td>4</td>
+                        <td>指尖榕径</td>
+                        <td>123456</td>
+                        <td>
+                            0次/分钟
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td>4</td>
+                        <td>指尖榕径</td>
+                        <td>123456</td>
+                        <td>
+                            0次/分钟
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td>4</td>
+                        <td>指尖榕径</td>
+                        <td>123456</td>
+                        <td>
+                            0次/分钟
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <link href="../widget/datatables-1.10.13/css/jquery.dataTables.default.css" rel="stylesheet">
+        <script src="../widget/datatables-1.10.13/js/jquery.dataTables.js"></script>
+        <script>
+            $(function() {
+                // 表格插件
+                $.extend($.fn.dataTable.defaults, {
+                    searching: false,
+                    ordering: false,
+                    'dom': 'rtilp',
+                    'language': {
+                        "url": "../widget/datatables-1.10.13/js/Chinese.json"
+                    }
+                });
+                $('#daibangongdan').DataTable();
+            });
+        </script>
+    </body>
+</html>

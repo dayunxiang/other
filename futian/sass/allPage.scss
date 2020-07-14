@@ -1,0 +1,267 @@
+@import './_mixin.scss';
+@import './resetPc';
+
+// 浮动、清除浮动
+.clearfix {
+    @include clearFix;
+    zoom: 1;
+
+    .fl {
+        float: left;
+    }
+    .fr {
+        float: right;
+    }
+}
+.disabled {
+    cursor:not-allowed !important;
+}
+.iconfont {
+    @include iconfont;
+}
+.hidden {
+    display: none !important;
+}
+
+html {
+    height: 100%;
+}
+body {
+    margin:0 auto;
+    overflow-x:auto;
+    color: #333;
+}
+
+
+//外层框架
+.page-frame {
+    .frame-header {
+        z-index: 20;
+        position: relative;
+        background: #5b8cff;
+        font-size: 0;
+        box-shadow: 0 5px 5px rgba(202,198,198,0.36);
+
+        .company {
+            vertical-align: middle;
+            padding: 13px 0 13px 20px;
+            background: #4877e8;
+            font-size: 14px;
+
+            .logo {
+                margin-right: 10px;
+                vertical-align: middle;
+                width: 40px; height: 40px;
+                background: url("../images/base/logo.png") no-repeat center / 100% 100%;
+            }
+            .text {
+                vertical-align: middle;
+                display: inline-block;
+
+                p {
+                    font-weight: bold;
+                    font-size: 26px;
+                    color: #fff;
+                    letter-spacing: 1px;
+                }
+                small {
+                    font-size: 12px;
+                    color: #fff;
+                    transform-origin: 0 0;
+                    transform: scale(0.82, 1);
+                    font-family:sans-serif;
+                }
+            }
+        }
+        .menu-list {
+            @include clearFix;
+            margin-left: 1px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .menu-item {
+            float: left;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+            transition: all .3s;
+
+            &.curr,
+            &:hover {
+                background: #4877e8;
+            }
+            .icon {
+                @include iconfont;
+                font-size: 40px;
+            }
+            span {
+                display: block;
+                min-width: 4em;
+                margin-top: 5px;
+            }
+        }
+        .aside {
+            position: absolute;
+            right: 20px; top: 50%;
+            transform: translate(0, -50%);
+            font-size: 14px;
+
+            .user-info {
+                margin-right: 10px;
+                vertical-align: middle;;
+                display: inline-block;
+            }
+            .user-img {
+                vertical-align: middle;
+                width: 50px; height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                background: no-repeat center / cover;
+            }
+            .uesr-name {
+                vertical-align: middle;
+                margin-left: 10px;
+                font-weight: bold;
+                color: #fff;
+            }
+            .btn-tools {
+                @include iconfont;
+                position: relative;
+                margin-left: 10px;
+                font-size: 20px;
+                border: none;
+                color: #fff;
+                background: transparent;
+                transition: all .3s;
+
+                &.tips {
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        right: -3px; top: -3px;
+                        width: 5px; height: 5px;
+                        border-radius: 50%;
+                        background: red;
+                        overflow: hidden;
+                    }
+                }
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+    .frame-content-wrap {
+        @include clearFix;
+        position: absolute;
+        left: 0; right: 0; top: 86px; bottom: 0;
+    }
+    .frame-side-menu-wrap {
+        z-index: 30;
+        position: relative;
+        float: left;
+        padding-top: 10px;
+        height: 100%;
+        background: #344058;
+
+        &.fold {
+            .frame-side-menu {
+                .menu-item {
+                    span {
+                        position: absolute;
+                        left: -200px;
+                    }
+                }
+            }
+        }
+        .btn-fold {
+            @include iconfont;
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            background: #242d3e;
+        }
+    }
+    .content-menus {
+        z-index: 5;
+        position: absolute;
+        right: 60px; top: -10px;
+
+        .ment-item {
+            margin-left: -35px;
+            width: 132px; height: 45px;
+            line-height: 50px;
+            text-align: center;
+            background: url("../images/base/menu.png") no-repeat center / 100% 100%;
+
+            &.curr {
+                background-image: url("../images/base/menu-active.png");
+            }
+            &:hover {
+                .btn-close {
+                    pointer-events: auto;
+                    opacity: 1;
+                }
+            }
+            span {
+                vertical-align: middle;
+                color: #666;
+                font-size: 16px;
+            }
+            .btn-close {
+                pointer-events: none;
+                opacity: 0;
+                @include iconfont;
+                cursor: pointer;
+                color: crimson;
+                transition: all .3s;
+
+                &:before {
+                    content: "\e63e";
+                }
+            }
+        }
+    }
+    .frame-side-menu {
+        .menu-item {
+            position: relative;
+            padding: 15px 20px;
+            color: #fff;
+            transition: all .3s;
+            cursor: pointer;
+            user-select: none;
+
+            &.curr,
+            &:hover {
+                background: #2f394f;
+            }
+            &.curr {
+                &:before {
+                    position: absolute;
+                    content: "";
+                    left: 0; top: 0; bottom: 0;
+                    width: 2px;
+                    background: #4877e8;
+                }
+            }
+            .icon {
+                @include iconfont;
+                font-size: 20px;
+            }
+            span {
+                margin-left: 5px;
+                min-width: 6em;
+            }
+        }
+    }
+    .frame-content-main {
+        overflow: hidden;
+        height: 100%;
+    }
+}

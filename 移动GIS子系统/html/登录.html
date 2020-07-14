@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="google" value="notranslate">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>登录</title>
+        <link href="../css/resetMobile.css" rel="stylesheet">
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/public.css" rel="stylesheet">
+        <link href="../css/page.css" rel="stylesheet">
+        <script src="../script/base.js"></script>
+    </head>
+    <body class="page-login">
+        <!-- 头部logo 开始 -->
+        <header>
+            <a class="logo" href="javascript:;">
+                <img src="../images/base/Logo.png">
+            </a>
+            <h1>移动GIS系统</h1>
+        </header>
+        <!-- 头部logo 结束 -->
+
+        <!-- 登录框 开始 -->
+        <div class="form-login">
+            <div class="row account">
+                <i class="iconfont">&#xe643;</i>
+                <input type="text" maxlength="24" placeholder="登录账号">
+            </div>
+            <div class="row password">
+                <i class="iconfont">&#xe669;</i>
+                <input type="password" placeholder="登录密码">
+                <i class="iconfont btn-look-password">&#xe688;</i>
+            </div>
+            <div class="row choice">
+                <label>
+                    <input type="checkbox">
+                    <span>记住密码</span>
+                </label>
+                <a class="btn-link" href="#">
+                    <span>忘记密码</span>
+                    <i class="iconfont">&#xe64f;</i>
+                </a>
+            </div>
+            <div class="row">
+                <a class="btn-login" href="javascript:;">登录</a>
+            </div>
+        </div>
+        <!-- 登录框 结束 -->
+
+        <!-- 版权信息 开始 -->
+        <footer>
+            <p>西宁供水集团移动GIS系统</p>
+        </footer>
+        <!-- 版权信息 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-2.1.4/jquery.js"></script>
+        <script src="../script/public.js"></script>
+        <script src="../widget/layer-2.0/layer.js"></script>
+        <script>
+            $(function(){
+                // 密码显示隐藏
+                $('.btn-look-password').on('click',function(){
+                    var $inputPassword = $(this).siblings('input');
+                    if($inputPassword.prop('type') == 'text')
+                    {
+                        $inputPassword.prop({
+                            type: 'password'
+                        });
+                    }
+                    else
+                    {
+                        $inputPassword.prop({
+                            type: 'text'
+                        });
+                    }
+                });
+
+                // 用户名、密码校验提示
+                layer.open({
+                    content: '您的用户名或密码输入错误！',
+                    skin: 'msg',
+                    time:1.5
+                });
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

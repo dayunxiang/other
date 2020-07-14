@@ -1,0 +1,96 @@
+@import './reset-pc';
+@import './page';
+@import './animate';
+
+
+.page-page1 {
+    position: relative;
+    background: url("../images/bc.png") no-repeat center;
+
+    .p-title {
+        display: none;
+        padding: 8px 10px;
+        overflow: hidden;
+
+        & > span {
+            position: relative;
+            padding-left: 10px;
+            font-size: 16px;
+            font-weight: bold;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0; top: 4px; bottom: 4px; width: 3px;
+                background: #5386bb;
+            }
+        }
+        button {
+            float: right;
+            color: #fff;
+            border: none;
+            background: transparent;
+
+            i {
+                font-size: 12px;
+            }
+        }
+    }
+    .view-item {
+        z-index: 5;
+        position: relative;
+        height: 100%;
+        // background: rgba(0, 0, 0, .6);
+    }
+    .side-left {
+        position: absolute;
+        left: 0; top: 20px; bottom: 220px;
+        width: 380px;
+
+        .row {
+            height: 50%;
+
+            &:first-child {
+                padding-bottom: 5px;
+            }
+            &:last-child {
+                padding-top: 5px;
+            }
+        }
+    }
+    .side-right {
+        position: absolute;
+        right: 0; top: 20px; bottom: 220px;
+        width: 406px;
+
+        .row {
+            // height: 50%;
+            text-align: right;
+
+            &:first-child {
+                padding-bottom: 5px;
+                height: 40%;
+            }
+            &:last-child {
+                padding-top: 5px;
+                height: 60%;
+            }
+        }
+    }
+    .side-bottom {
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        height: 210px;
+
+        .col {
+            float: left;
+            padding-left: 10px;
+            width: 25%;
+            height: 100%;
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}

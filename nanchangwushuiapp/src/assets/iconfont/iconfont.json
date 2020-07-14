@@ -1,0 +1,303 @@
+{
+  "id": "1661878",
+  "name": "南昌污水APP",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "814208",
+      "name": "验证码",
+      "font_class": "yanzhengma",
+      "unicode": "e764",
+      "unicode_decimal": 59236
+    },
+    {
+      "icon_id": "8337994",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "2500526",
+      "name": "意见反馈",
+      "font_class": "pen-",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "3649554",
+      "name": "关于",
+      "font_class": "guanyu",
+      "unicode": "e701",
+      "unicode_decimal": 59137
+    },
+    {
+      "icon_id": "5119606",
+      "name": "修改密码",
+      "font_class": "xiugaimima1",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "770602",
+      "name": "箭头",
+      "font_class": "arrow-bottom",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "770603",
+      "name": "箭头",
+      "font_class": "arrow-top",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "98967",
+      "name": "右箭头",
+      "font_class": "yjt",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "354892",
+      "name": "关闭",
+      "font_class": "guanbi1",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "10710871",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    },
+    {
+      "icon_id": "13131283",
+      "name": "登录",
+      "font_class": "denglu",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "9492301",
+      "name": "个人资料",
+      "font_class": "gerenziliao",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "9591242",
+      "name": "信息",
+      "font_class": "xinxi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "2776774",
+      "name": "修改密码",
+      "font_class": "xiugaimima",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "8315694",
+      "name": "污水厂",
+      "font_class": "wushuichang",
+      "unicode": "e7f9",
+      "unicode_decimal": 59385
+    },
+    {
+      "icon_id": "8386849",
+      "name": "关  闭 (3)",
+      "font_class": "guanbi",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "2258068",
+      "name": "设备",
+      "font_class": "cloud-equipment",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "3867422",
+      "name": "数据监测2",
+      "font_class": "shujujiance",
+      "unicode": "e95f",
+      "unicode_decimal": 59743
+    },
+    {
+      "icon_id": "8191685",
+      "name": "统计分析",
+      "font_class": "tongjifenxi",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "8855779",
+      "name": "异常报警",
+      "font_class": "yichangbaojing",
+      "unicode": "e6cf",
+      "unicode_decimal": 59087
+    },
+    {
+      "icon_id": "3863787",
+      "name": "备品备件",
+      "font_class": "beipinbeijian",
+      "unicode": "e798",
+      "unicode_decimal": 59288
+    },
+    {
+      "icon_id": "4381115",
+      "name": "完好率",
+      "font_class": "wanhaoshuai",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "7984771",
+      "name": "维修记录 (1)",
+      "font_class": "weixiujilu",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "10885721",
+      "name": "资料",
+      "font_class": "ziliao",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "3146762",
+      "name": "关注",
+      "font_class": "guanzhu1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "3183264",
+      "name": "关注",
+      "font_class": "guanzhu",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "9808451",
+      "name": "水厂",
+      "font_class": "shuichang3",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    },
+    {
+      "icon_id": "11039289",
+      "name": "扫码",
+      "font_class": "saoma",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "1791529",
+      "name": "首页-首页",
+      "font_class": "sy1",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "1843448",
+      "name": "首页_首页",
+      "font_class": "sy",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "2427551",
+      "name": "维修",
+      "font_class": "weixiu",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "2885331",
+      "name": "告警",
+      "font_class": "jinggao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "3019029",
+      "name": "巡检",
+      "font_class": "xunjian",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "3863257",
+      "name": "报警",
+      "font_class": "baojing",
+      "unicode": "e6df",
+      "unicode_decimal": 59103
+    },
+    {
+      "icon_id": "6274933",
+      "name": "维修",
+      "font_class": "weixiu1",
+      "unicode": "e6af",
+      "unicode_decimal": 59055
+    },
+    {
+      "icon_id": "6839079",
+      "name": "水厂",
+      "font_class": "shuichang1",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "7100353",
+      "name": "水厂",
+      "font_class": "shuichang2",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "7374031",
+      "name": "巡检",
+      "font_class": "xunjian1",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "7526212",
+      "name": "巡检 ",
+      "font_class": "xunjian2",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "8024751",
+      "name": "巡检",
+      "font_class": "xunjian3",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "8738869",
+      "name": "巡检",
+      "font_class": "weibiaoti--",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "12756396",
+      "name": "报警 警报-2",
+      "font_class": "baojingjingbao-",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

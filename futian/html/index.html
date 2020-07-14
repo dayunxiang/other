@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>首页</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/allPage.min.css" rel="stylesheet">
+    </head>
+
+    <body class="page-frame">
+        <div class="frame-header">
+            <a class="company" href="javascript:;">
+                <i class="logo"></i>
+
+                <div class="text">
+                    <p>福田区智慧管网监管平台</p>
+                    <small>Futian District Intelligent Pipeline Network Supervisory Platform</small>
+                </div>
+            </a>
+
+            <div class="menu-list">
+                <div class="menu-item">
+                    <i class="icon">&#xe601;</i>
+                    <span>总览</span>
+                </div>
+
+                <div class="menu-item curr">
+                    <i class="icon">&#xe693;</i>
+                    <span>水质监管</span>
+                </div>
+
+                <div class="menu-item">
+                    <i class="icon">&#xe7a3;</i>
+                    <span>污染溯源</span>
+                </div>
+
+                <div class="menu-item">
+                    <i class="icon">&#xe60b;</i>
+                    <span>工单管理</span>
+                </div>
+            </div>
+
+            <div class="aside">
+                <div class="user-info">
+                    <i style="background-image: url('../images/temp-user.jpg');" class="user-img"></i>
+                    <span class="uesr-name">欢迎您，小哥哥</span>
+                </div>
+
+                <button class="btn-tools tips">&#xe62d;</button>
+                <button class="btn-tools">&#xe629;</button>
+            </div>
+        </div>
+
+        <div class="frame-content-wrap">
+            <!-- 添加 fold 折叠 -->
+            <div class="frame-side-menu-wrap">
+                <ul class="frame-side-menu">
+                    <li class="menu-item">
+                        <i class="icon">&#xe602;</i>
+                        <span>数据中心</span>
+                    </li>
+
+                    <li class="menu-item curr">
+                        <i class="icon">&#xea6b;</i>
+                        <span>数据中心</span>
+                    </li>
+
+                    <li class="menu-item">
+                        <i class="icon">&#xe600;</i>
+                        <span>数据中心</span>
+                    </li>
+
+                    <li class="menu-item">
+                        <i class="icon">&#xe681;</i>
+                        <span>数据中心</span>
+                    </li>
+
+                    <li class="menu-item">
+                        <i class="icon">&#xe600;</i>
+                        <span>数据中心</span>
+                    </li>
+
+                    <li class="menu-item">
+                        <i class="icon">&#xe600;</i>
+                        <span>数据中心</span>
+                    </li>
+                </ul>
+
+                <button class="btn-fold arrow-left"></button>
+            </div>
+
+            <div class="content-menus">
+                <a class="ment-item" href="javascript:;">
+                    <span>菜单1</span>
+                    <i class="btn-close"></i>
+                </a>
+
+                <a class="ment-item curr" href="javascript:;">
+                    <span>菜单2</span>
+                    <i class="btn-close"></i>
+                </a>
+
+                <a class="ment-item" href="javascript:;">
+                    <span>菜单3</span>
+                    <i class="btn-close"></i>
+                </a>
+            </div>
+
+            <div id="map" class="frame-content-main">
+                主体容器
+            </div>
+        </div>
+
+        <!-- 脚本引入开始 -->
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <script type="text/javascript"
+            src="https://webapi.amap.com/maps?v=1.4.10&key=c7b659647fff9caa665b49bbe95bbf33"></script>
+        <script>
+            $(function() {
+                $('.frame-side-menu').on('click', '.menu-item', function () {
+                    $(this).addClass('curr').siblings('.menu-item').removeClass('curr');
+                });
+
+                $('.frame-side-menu-wrap .btn-fold').on('click', function () {
+                    if ($(this).hasClass('arrow-left')) {
+                        $(this).removeClass('arrow-left').addClass('arrow-right');
+                    } else {
+                        $(this).removeClass('arrow-right').addClass('arrow-left');
+                    }
+
+                    $('.frame-side-menu-wrap').toggleClass('fold');
+                });
+
+                var map = new AMap.Map('map', {
+                    zoom: 12,
+                    center: [116.39, 35.9]
+                });
+
+                AMap.plugin(['AMap.ToolBar', 'AMap.Driving'], function () {//异步同时加载多个插件
+                    var toolbar = new AMap.ToolBar();
+                    map.addControl(toolbar);
+                });
+            });
+        </script>
+        <!-- 脚本引入结束 -->
+    </body>
+</html>

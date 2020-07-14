@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+    <html class="fuck-you" lang="zh-CN">
+<![endif]-->
+
+<!--[if IE 8]>
+    <html class="ie ie-8" lang="zh-CN">
+<![endif]-->
+
+<!--[if IE 9]>
+    <html class="ie ie-9" lang="zh-CN">
+<![endif]-->
+
+<!--[if !IE]><!-->
+    <html lang="zh-CN">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>图片和视频</title>
+        <link href="../css/reset-pc.css" rel="stylesheet">
+        <link href="../widget/video-5.18.4/css/video-js.css" rel="stylesheet">
+        <link href="../widget/lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
+        <link href="../widget/swiper-3.4.2/css/swiper.css" rel="stylesheet">
+        <link href="../css/page.css" rel="stylesheet">
+    </head>
+    <body class="page-picture-video">
+        <a class="p-btn-close iconfont icon-dc" href="javascript:;" onclick="window.close();"></a>
+        <!-- 主体框架背景 开始 -->
+        <div class="p-frame-bc">
+            <div class="head">
+                <div class="left">
+                    <div class="inner">
+                        <div class="fix"></div>
+                        <div class="repeat"></div>
+                    </div>
+                </div>
+                <div class="center"></div>
+                <div class="right">
+                    <div class="inner">
+                        <div class="repeat"></div>
+                        <div class="fix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="left-bc">
+                    <div class="top"></div>
+                    <div class="middle">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="right-bc">
+                    <div class="top"></div>
+                    <div class="middle">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+            <div class="foot">
+                <div class="left"></div>
+                <div class="center">
+                    <div class="inner"></div>
+                </div>
+                <div class="right"></div>
+            </div>
+        </div>
+        <!-- 主体框架背景 结束 -->
+
+        <!-- 图片和视频块 开始 -->
+        <div class="content">
+            <div style="display:none;" class="video-wrap">
+                <video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none" width="100%" height="100%" poster="" data-setup="{}">
+                    <!-- <source src="../../menus/测试1/movie.ogg"     type='video/ogg'>
+                    <source src="http://vjs.zencdn.net/v/oceans.mp4"     type='video/mp4'>
+                    <source src="http://vjs.zencdn.net/v/oceans.webm"    type='video/webm'>
+                    <source src="http://vjs.zencdn.net/v/oceans.ogv"     type='video/ogg'> -->
+                </video>
+            </div>
+
+            <div style="display:none;" class="swiper-container picture-wrap">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide">
+                        <img src="../images/temp/1.jpg">
+                    </div> -->
+                </div>
+            </div>
+
+            <a class="p-ico-arrow prev" href="javascript:;"></a>
+            <a class="p-ico-arrow next" href="javascript:;"></a>
+
+            <div class="p-paging">
+                <a class="p-ico-arrow back" onclick="window.history.go(-1);" href="javascript:;"></a>
+                <a class="p-ico-arrow home" href="./index.html"></a>
+            </div>
+        </div>
+        <!-- 图片和视频块 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <script src="../widget/lightbox2-master/dist/js/lightbox.js"></script>
+        <script src="../widget/swiper-3.4.2/js/swiper.js"></script>
+        <script src="../widget/video-5.18.4/js/video.min.js"></script>
+        <script src="../js/page.js"></script>
+        <script src="../../data.js"></script>
+        <script>
+            $(function(){
+                var showWho     = getParams().index - 0;  //第几个模块
+                var picIndex    = getParams().picIndex - 0; // 点击的图片索引
+                var videoIndex  = getParams().videoIndex - 0; // 点击的视频索引
+                var type        = getParams().type - 0; // 资源类型 【1 视频】【2图片】
+                var arrImgSrc   = [];     //该模块所有的图片路径
+                var arrVideoSrc   = [];     //该模块所有的视频路径
+                var canPlayVideoType = /(mp4|webm|ogg)$/; //能够播放的视频类型
+                var node        = '';
+                var i           = 0;
+
+                if(type == 1){
+                    $(".video-wrap").show();
+                    $(".p-ico-arrow").hide();
+                    $(".p-ico-arrow.back, .p-ico-arrow.home").show();
+
+                    // 找出改模块内的所有视频
+                    for(i = 0; i < res_data.menus[showWho].resource.length; i++)
+                    {
+                        switch(res_data.menus[showWho].resource[i].type)
+                        {
+                            case 1:
+                                arrVideoSrc.push(res_data.menus[showWho].resource[i].uri);
+                                console.log(res_data.menus[showWho].resource[i].uri);
+                                break;
+                        }
+                    }
+
+                    // 检测是否支持播放
+                    if(!canPlayVideoType.test(arrVideoSrc[videoIndex]))
+                    {
+                        $(".video-wrap").remove();
+                        alert("该视频格式不支持播放！请转码");
+                        window.history.go(-1);
+                        return false;
+                    }
+
+                    // 检测视频格式 并且渲染页面
+                    if(arrVideoSrc[videoIndex].match(canPlayVideoType)[0] == 'mp4')
+                    {
+                        console.log('mp4');
+                        node = '<source src="' + '../../' + arrVideoSrc[videoIndex] + '" type="video/mp4">';
+                    }
+                    else if(arrVideoSrc[videoIndex].match(canPlayVideoType)[0] == 'webm')
+                    {
+                        console.log('webm');
+                        node = '<source src="' + '../../' + arrVideoSrc[videoIndex] + '" type="video/webm">';
+                    }
+                    else if(arrVideoSrc[videoIndex].match(canPlayVideoType)[0] == 'ogg')
+                    {
+                        console.log('ogg');
+                        node = '<source src="' + '../../' + arrVideoSrc[videoIndex] + '" type="video/ogg">';
+                    }
+                    $('#myVideo').html('').append(node);
+
+                    // 播放视屏
+                    var myPlayer = videojs('myVideo');
+                    videojs("myVideo").ready(function(){
+                        var myPlayer = this;
+                        myPlayer.play();
+                    });
+                }
+                else if(type ==2){
+                    $(".picture-wrap").show();
+
+                    // 找出改模块内的所有图片
+                    for(i = 0; i < res_data.menus[showWho].resource.length; i++)
+                    {
+                        switch(res_data.menus[showWho].resource[i].type)
+                        {
+                            case 2:
+                                // 如果不是图标，才推入图片数组
+                                var IconMode = /icon\.png$|icon-hover\.png$/ig;
+                                if( res_data.menus[showWho].resource[i].uri.search(IconMode) == -1 )
+                                {
+                                    arrImgSrc.push(res_data.menus[showWho].resource[i].uri);
+                                    console.log(res_data.menus[showWho].resource[i].uri);
+                                }
+                                break;
+                        }
+                    }
+
+                    // 渲染页面
+                    for(i = 0; i < arrImgSrc.length; i++)
+                    {
+                        node += '<a class="swiper-slide" href="' + '../../' + arrImgSrc[i] + '" data-lightbox="group-2">' +
+                                    '<img src="' + '../../' + arrImgSrc[i] +'" >' +
+                                '</a>';
+                    }
+                    $('.swiper-wrapper').html('').append(node);
+
+                    // 图片轮播
+                    var swiper = new Swiper('.swiper-container', {
+                        // autoplay : 1500,
+                        loop : true,
+                        autoplayDisableOnInteraction : false,
+                        nextButton: '.p-ico-arrow.next',
+                        prevButton: '.p-ico-arrow.prev',
+                        spaceBetween: 30,
+                        effect: 'fade',
+                        initialSlide :picIndex,
+                        grabCursor : true,
+                        cube: {
+                            shadow: true,
+                            slideShadows: true,
+                            shadowOffset: 20,
+                            shadowScale: 0.94
+                        }
+                    });
+                }
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

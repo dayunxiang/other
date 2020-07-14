@@ -1,0 +1,246 @@
+/************************************
+*listreport module style:default css002 --often with browse
+*writor:SD
+*upload-time:2012-9-20
+*edit-time:2012-9-20
+************************************/
+
+.listreport .list-area{
+    border: 1px solid #ebecee;
+}
+
+.listreport .toolbar {
+    color: #333;
+    padding-top: 7px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+.listreport .toolbar .tool-li{
+    float: left;
+}
+
+.listreport .toolbar .pages{
+    float: right;
+    padding-right: 10px;
+}
+
+.listreport .toolbar .list-bt-add{
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+}
+
+.listreport .toolbar .list-bt-more,
+.listreport .toolbar .list-bt-other,
+.listreport .toolbar .list-bt-delete{
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.listreport .toolbar:after,
+.listreport .toolbar .tool-ul:after {
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.listreport .toolbar .tool-ul {
+    width: auto!important;
+}
+
+.listreport .list-head-ul {
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    color: #2d7cc8;
+    font-weight: 500
+}
+
+.listreport .list-head-li,
+.listreport .list-head-op a,
+.listreport .list-head-li label {
+    color: #6bb8f0;
+    font-size: 12px;
+    padding-left: 3px;
+}
+
+.listreport .list-body-ul {
+    background-color: #fff;
+    border-left-color: #fff;
+    border-right-color: #fff;
+}
+
+.listreport .list-head-ul .list-head-li,
+.listreport .list-head-ul .list-head-op,
+.listreport .list-body-select,
+.listreport .list-head-select,
+.listreport .list-body-ul .list-body-li,
+.listreport .list-body-op {
+    border-top: 0px solid #ebecee!important;
+    border-bottom: 0px solid #ebecee!important;
+    border-left: 0px solid #ebecee!important;
+    border-right: 0px solid #ebecee!important;
+    text-align: left;
+    line-height: 40px;
+    height: 40px!important;
+}
+
+.listreport .list-head-ul .list-head-li,
+.listreport .list-body-ul .list-body-li{
+    width: 110px;
+    padding: 0 4px 0 4px;
+    box-sizing: content-box;
+}
+
+.listreport .list-body-ul{
+    border-top: 1px solid #ebecee!important;
+}
+
+.listreport .list-body-ul:nth-child(odd){
+    background-color: #f5faff;
+}
+
+.listreport .list-body-op, .listreport .list-head-op{
+    width: 32px;
+}
+
+.listreport .edit a,
+.listreport .detail a,
+.listreport .delete a,
+.listreport .edit1 a,
+.listreport .delete1 a {
+    background: url(images/listreport-icon.png) no-repeat;
+    _background: url(images/listreport-icon.png) no-repeat;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    line-height: 223px;
+    text-align: center;
+    display: inline-block;
+}
+
+.listreport .detail a {
+    background-position: 0 0px;
+}
+
+.listreport .edit a {
+    background-position: 0 -150px;
+}
+
+.listreport .delete a {
+    background-position: 0 -100px;
+}
+
+.listreport .list-head-op .detail a {
+    background-position: -20px 0px;
+}
+
+.listreport .list-head-op .edit a {
+    background-position: -20px -150px;
+}
+
+.listreport .list-head-op .delete a {
+    background-position: -20px -100px;
+}
+
+.listreport .edit1 a {
+    background-position: -58px -19px;
+}
+
+.listreport .edit1 a:hover {
+    background-position: -58px 0;
+}
+
+.listreport .delete1 a {
+    background-position: -77px -19px;
+}
+
+.listreport .delete1 a:hover {
+    background-position: -77px 0;
+}
+
+.listreport .list-body-select {
+    border-style: dotted;
+}
+
+.listreport .list-body-li {
+    overflow: hidden;
+    text-align: center;
+    border-style: dotted;
+}
+
+.listreport .list-body-op {
+    overflow: hidden;
+    border-style: dotted;
+}
+
+.listreport .list-body-li .list-li-field {
+    color: #999;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.listreport .list-head-li .list-li-field {
+    color: #999!important;
+    font-size: 12px;
+}
+
+.listreport .list-body-li .list-li-field a:hover {
+    color: orange!important;
+    text-decoration: underline!important;
+}
+
+.listreport .list-body-op .edit,
+.listreport .list-body-op .detail,
+.listreport .list-body-op .delete {
+    position: relative;
+    top: 10px;
+}
+
+.listreport .list-head-select {
+    width: 32px;
+}
+
+.listreport .list-body-select, 
+.listreport .list-body-select1 {
+    width: 32px;
+}

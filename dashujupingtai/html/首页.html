@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>首页</title>
+        <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+        <link href="../css/allPage.min.css" rel="stylesheet">
+    </head>
+
+    <body class="page-index">
+        <div class="aside-tree">
+            <div class="tools">
+                <button>
+                    <i>&#xe6ac;</i>
+                    <span>添加</span>
+                </button>
+
+                <button>
+                    <i>&#xe698;</i>
+                    <span>编辑</span>
+                </button>
+
+                <button>
+                    <i>&#xe6b8;</i>
+                    <span>删除</span>
+                </button>
+            </div>
+
+            <div class="search-wrap">
+                <input type="text">
+            </div>
+
+            <div id="serviceTree"></div>
+        </div>
+
+        <div class="aside-assist">
+            <div class="title-wrap">辅助管理区</div>
+
+            <div class="content">
+                <div class="assist-item">
+                    <i class="icon">&#xe69e;</i>
+                    <p class="name">创建服务</p>
+                </div>
+
+                <div class="assist-item">
+                    <i class="icon">&#xe6a6;</i>
+                    <p class="name">创建子服务</p>
+                </div>
+
+                <div class="assist-item">
+                    <i class="icon">&#xe726;</i>
+                    <p class="name">服务授权</p>
+                </div>
+
+                <div class="assist-item">
+                    <i class="icon">&#xe6b6;</i>
+                    <p class="name">服务测试</p>
+                </div>
+
+                <div class="assist-item">
+                    <i class="icon">&#xe6f2;</i>
+                    <p class="name">服务API</p>
+                </div>
+
+                <div class="assist-item">
+                    <i class="icon">&#xe69f;</i>
+                    <p class="name">申请发布</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="block-1">
+                <div class="attr-list">
+                    <div class="row">
+                        <div class="attr">当前服务：</div>
+                        <div class="content">水表服务</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="attr">服务状态：</div>
+                        <div class="content">已上线</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="attr">访问控制：</div>
+                        <div class="content">授权</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="attr">归属租户：</div>
+                        <div class="content">T001</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="attr">服务地址：</div>
+                        <div class="content">https://www.baidu.com/</div>
+                    </div>
+                </div>
+
+                <div class="service-list">
+                    <div class="service-item">
+                        <i class="icon">&#xe7cf;</i>
+                        <p class="service-name">水表服务</p>
+
+                        <div class="mask">
+                            <div class="tools">
+                                <button>&#xe698;</button>
+                                <button>&#xe6b8;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <i class="icon">&#xe7cf;</i>
+                        <p class="service-name">水表服务</p>
+
+                        <div class="mask">
+                            <div class="tools">
+                                <button>&#xe698;</button>
+                                <button>&#xe6b8;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <i class="icon">&#xe7cf;</i>
+                        <p class="service-name">水表服务</p>
+
+                        <div class="mask">
+                            <div class="tools">
+                                <button>&#xe698;</button>
+                                <button>&#xe6b8;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <dl class="data-sheet">
+                <dt>相关数据表</dt>
+
+                <dd>
+                    <div class="data-item">
+                        <i>&#xe695;</i>
+                        <span>HJGJKJHJHVGHJKKHJHKJ</span>
+                    </div>
+
+                    <div class="data-item">
+                        <i>&#xe695;</i>
+                        <span>HJGJKJHJHVGHJKKHJHKJ</span>
+                    </div>
+
+                    <div class="data-item">
+                        <i>&#xe695;</i>
+                        <span>HJGJKJHJHVGHJKKHJHKJ</span>
+                    </div>
+
+                    <div class="data-item">
+                        <i>&#xe695;</i>
+                        <span>HJGJKJHJHVGHJKKHJHKJ</span>
+                    </div>
+
+                    <div class="data-item">
+                        <i>&#xe695;</i>
+                        <span>HJGJKJHJHVGHJKKHJHKJ</span>
+                    </div>
+
+                    <div class="data-item">
+                        <i>&#xe695;</i>
+                        <span>HJGJKJHJHVGHJKKHJHKJ</span>
+                    </div>
+
+                    <div class="data-item">
+                        <i>&#xe695;</i>
+                        <span>HJGJKJHJHVGHJKKHJHKJ</span>
+                    </div>
+
+                    <div class="data-item">
+                        <i>&#xe695;</i>
+                        <span>HJGJKJHJHVGHJKKHJHKJ</span>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+
+        <template id="info">
+            <div class="info-dialog">
+                <div class="search-wrap">
+                    <div class="form-item">
+                        <div class="attr">表名称:</div>
+                        <div class="content">
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="attr">表所属数据库:</div>
+                        <div class="content">
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="edits">
+                        <button>
+                            <i>&#xe641;</i>
+                            <span>查询</span>
+                        </button>
+
+                        <button>
+                            <i>&#xe640;</i>
+                            <span>重置</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+                    <table id="infoTable" class="p-tab-theme-1">
+                        <thead>
+                            <tr>
+                                <th width="70px">
+                                    选择
+                                </th>
+                                <th>表所属数据库</th>
+                                <th>表名</th>
+                                <th>表中文名</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="">
+                                </td>
+                                <td>fsdgfdgdfdf</td>
+                                <td>fsdgfdgdfdf</td>
+                                <td>fsdgfdgdfdf</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="">
+                                </td>
+                                <td>fsdgfdgdfdf</td>
+                                <td>fsdgfdgdfdf</td>
+                                <td>fsdgfdgdfdf</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="">
+                                </td>
+                                <td>fsdgfdgdfdf</td>
+                                <td>fsdgfdgdfdf</td>
+                                <td>fsdgfdgdfdf</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tools">
+                    <button>选择</button>
+                    <button>取消</button>
+                </div>
+            </div>
+        </template>
+
+        <script src="../widget/jquery-1.8.3/jquery.js"></script>
+        <script src="../widget/layer-v3.1.1/layer.js"></script>
+        <link href="../widget/datatables-1.10.13/css/jquery.dataTables.default.css" rel="stylesheet">
+        <script src="../widget/datatables-1.10.13/js/jquery.dataTables.js"></script>
+        <script src="../widget/jsTree/dist/jstree.js"></script>
+        <link href="../widget/jsTree/dist/themes/default/style.css" rel="stylesheet">
+        <script>
+            $(function() {
+                // 插件官网 https://www.jstree.com/
+                // 别人使用的例子： https://mrbird.cc/%E6%A0%91%E5%BD%A2%E6%8F%92%E4%BB%B6jsTree.html
+                $('#serviceTree').jstree({
+                    "plugins": ["checkbox"],
+                    'core': {
+                        'data': [
+                            {
+                                "text": "无数据",
+                                "state": {
+                                    "opened": true
+                                },
+                                "children": [
+                                    {
+                                        "text": "数据服务",
+                                        "state": {
+                                            "selected": true
+                                        },
+                                        "icon": "glyphicon glyphicon-flash"
+                                    },
+                                    {
+                                        "text": "共享服务",
+                                        "state": {
+                                            "disabled": true
+                                        }
+                                    },
+                                    {
+                                        "text": "主服务",
+                                        "state": {
+                                            "selected": false
+                                        },
+                                    },
+                                ]
+                            },
+                            {
+                                "text": "融合服务",
+                                "state": {
+                                    "opened": false
+                                },
+                                "children": [
+                                    {
+                                        "text": "水表数据服务",
+                                        "state": {
+                                            "selected": false // 选择了true, opened：false会失效哈
+                                        },
+                                    },
+                                    {
+                                        "text": "其他服务",
+                                        "state": {
+                                            "disabled": false
+                                        }
+                                    },
+                                ]
+                            },
+                        ]
+                    }
+                });
+
+                // 弹窗
+                layer.open({
+                    type: 1,
+                    area: ['800px', ''],
+                    shadeClose: true, //点击遮罩关闭
+                    title: '信息',
+                    content: $('#info').html(),
+                    success: function (layero, index) {
+                        // 表格插件
+                        $.extend($.fn.dataTable.defaults, {
+                            searching: false,
+                            ordering: false,
+                            'dom': 'rtilp',
+                            'language': {
+                                "url": "../widget/datatables-1.10.13/js/Chinese.json"
+                            }
+                        });
+                        $('#infoTable').DataTable();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

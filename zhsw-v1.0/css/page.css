@@ -1,0 +1,608 @@
+@charset "utf-8";
+body{padding:10px 16px 10px;background:#f5f5f5;}
+/*
+    如有疑问可联系作者：674059309@qq.com
+    http://www.qiaodaima.me
+*/
+
+
+/* ****************************************产销差分析页面开始******************************************* */
+.cx-echarts .tit-box{padding-bottom:5px;font-size:14px;}
+.cx-echarts .content{padding:10px 15px;box-shadow: 0 0 5px rgba(8,3,4,0.4);background:#fff;}
+.cx-echarts .tit-box .tit{color:#323232;font-weight:bold;}
+.cx-echarts .tit-box .btn-blue-normal{margin-left:10px;}
+/* 查询 */
+.cx-screen-list li{padding-left:45px;}
+.cx-screen-list .name{left:0;top:8px;}
+/* 百度图表 */
+.cx-echarts .echart-wrap{margin-top:10px;height:330px;}
+.cx-echarts .echart-wrap .echarts-box{height:100%;overflow:hidden;}
+.cx-echarts .explain{float:right;margin-left:20px;width:228px;height:100%;font-size:14px;background:#f5f5f5;}
+.cx-echarts .explain .tit{padding:7px 0;font-weight:bold;color:#4c4c4c;text-align:center;background:#e6e6e6;}
+.cx-echarts .explain .type{padding:7px 0;text-align:center;border-bottom:1px solid #e6e6e6;color:#4c4c4c;}
+.cx-echarts .explain .type dt,
+.cx-echarts .explain .type dd{display:inline-block;}
+.cx-echarts .explain .type dt{margin-left:10px;}
+.cx-echarts .explain .type dt:first-child{margin-left:0;}
+.cx-echarts .explain .tb{font-weight:bold;color:#f60;}
+.cx-echarts .explain .hb{font-weight:bold;color:#093;}
+.cx-echarts .explain .info{position:relative;padding:10px;height:221px;color:#666;overflow:hidden;}
+.cx-echarts .explain .info dt{font-weight:bold;}
+.cx-echarts .btn-look-more{position:absolute;right:0;bottom:-4px;padding:3px 5px;color:#0190d4;background:#f5f5f5;}
+.cx-echarts .explain .btn-look-more .iconfont{font-size:12px;}
+/* 工单 */
+.cx-order{margin-top:20px;}
+.cx-order .tit-box{padding-bottom:5px;border-bottom:1px solid #eee;font-size:14px;}
+.cx-order .tit-box .tit{font-weight:bold;}
+.cx-order .tit-box .btn-look-more{color:#0190d4;font-size:14px;}
+/* ---分割线--- */
+.cx-order .or-list-wrap{padding:15px 10px;background:#fff;box-shadow: 0 0 5px rgba(8,3,4,0.4);}
+.cx-order .or-list{position:relative;margin-left:52px;padding:15px 0;border-left:1px solid #ccc;}
+.cx-order .or-list:before,
+.cx-order .or-list:after{position:absolute;content:"";left:-3px;width:5px;height:5px;border-radius:50%;background:#0190d4;}
+.cx-order .or-list:before{top:-3px;}
+.cx-order .or-list:after{bottom:-3px;}
+/* ---分割线--- */
+.cx-order .or-list > li{position:relative;padding:13px 0 13px 0;margin-left:15px;border-bottom:1px dashed #e0e0e0;font-size:14px;color:#4c4c4c;cursor:pointer;}
+.cx-order .or-list > li:before{position:absolute;top:19px;left:-22px;width:11px;height:11px;border:1px solid #0190d4;border-radius:50%;background:#fff;content:"";}
+.cx-order .or-list > li.end:before{border-color:#009933;}
+.cx-order .or-list > li:after{position:absolute;top:23px;left:-18px;width:5px;height:5px;border-radius:50%;background:#0190d4;content:"";}
+.cx-order .or-list > li.end:after{background:#009933;}
+.cx-order .or-list > li.ing .state{color:#f60;}
+.cx-order .or-list > li.end .state{color:#009933;}
+.cx-order .or-list > li.end time,
+.cx-order .or-list > li.end .tips{color:#999;}
+.cx-order .or-list > li.open .tips{font-weight:bold;}
+.cx-order .or-list > li.open{margin-top:-1px; background:#f2f2f2;border-bottom:none;}
+/* ---分割线--- */
+.cx-order .or-list .tag{position:absolute;top:13px;left:-70px;padding:0 3px;height:22px;line-height:22px;font-size:13px;color:#4c4c4c;border-top-left-radius:4px;border-bottom-left-radius:4px;}
+.cx-order .or-list .tag:before{position:absolute;right:-22px;width:0;height:0;border:11px dashed transparent;border-left:11px solid transparent;line-height:0;font-size:0;content:"";}
+.cx-order .or-list .tag:after{position:absolute;right:-5px;top:8px;width:5px;height:5px;border-radius:50%;background:#fff;content:"";}
+.cx-order .or-list .tag.orange:before{border-left-color:#ffb27f;}
+.cx-order .or-list .tag.orange{background:#ffb27f;}
+.cx-order .or-list .tag.gray:before{border-left-color:#e6e6e6;}
+.cx-order .or-list .tag.gray{background:#e6e6e6;}
+.cx-order .or-list time{margin:0 10px;}
+.cx-order .or-list > li.open time{font-weight:bold;}
+.cx-order .or-list .open-list{display:none;margin-top:5px; width:100%;border-top:1px solid #d9d9d9;cursor:text;}
+.cx-order .or-list >li.open .open-list{display:block;}
+.cx-order .or-list .open-list .tips-text{margin:10px 0 0 10px;line-height:1.5;}
+/* ---分割线--- */
+.cx-order .or-list .deit-link{position:relative;display:inline-block;margin-left:15px;color:#0190d4;}
+.cx-order .or-list .deit-link .iconfont{font-size:12px;}
+.cx-order .or-list .deit-link .show-more{display:none;position:absolute;left:0;top:29px;z-index:10;width:425px;border:2px solid #f60;background:#e6e6e6;box-shadow:0 0 10px #c9c8c8;font-size:12px;color:#4c4c4c;cursor:default;}
+.cx-order .or-list .deit-link .show-more:before,
+.cx-order .or-list .deit-link .show-more:after{position:absolute;border:12px dashed transparent;font-size:0;line-height:0;content: "";}
+.cx-order .or-list .deit-link .show-more:before{left:20px;top:-24px;border-bottom: 12px solid #f60;}
+.cx-order .or-list .deit-link .show-more:after{left:20px;top:-21px;border-bottom: 12px solid #e6e6e6;}
+.cx-order .or-list .deit-link .show-more table{width:100%;}
+.cx-order .or-list .deit-link .show-more thead{background:#e6e6e6;}
+.cx-order .or-list .deit-link .show-more th,
+.cx-order .or-list .deit-link .show-more td{padding:5px 10px;}
+.cx-order .or-list .deit-link .show-more tbody{background:#fff;}
+.cx-order .or-list .deit-link .show-more .name{display:inline-block;max-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cx-order .or-list .deit-link .show-more .name:hover{color:#f60;}
+.cx-order .or-list .deit-link .show-more time{color:#ccc;font-weight:normal;}
+/* 我要派单弹窗 */
+.pop-send-single{width:700px;}
+.pop-send-single .form-list .tit{width:120px;}
+.pd-send-order .form-list .title{width:600px;}/*小帅哥让我加的*/
+.pop-send-single textarea{width:520px;}
+.pop-send-single .datetime{width:130px;}
+/* 产销差率弹窗弹窗 */
+.pop-sales-slip{width:860px;}
+.pop-sales-slip .pp-contain{padding:20px 30px;}
+.pop-sales-slip .sales-slip-wrap{font-size:14px;color:#4c4c4c;}
+.pop-sales-slip .sales-slip-wrap dl{margin-top:20px;}
+.pop-sales-slip .sales-slip-wrap dl:first-child{margin-top:0;}
+.pop-sales-slip .sales-slip-wrap dt{font-weight:bold;}
+.pop-sales-slip .sales-slip-wrap dd{padding-left:2em;}
+/* ****************************************产销差分析页面结束******************************************* */
+
+
+/* ****************************************多维分析页面开始******************************************* */
+.dw-se-list li{padding-left:140px;}
+.dw-se-list li:last-child{border-bottom:none;}
+/* .dw-se-list .btn-toggle{position:absolute;top:10px;right:0;color:#666;} */
+.dw-se-list .name{left:0;top:9px;width:140px;text-align:right;}
+.dw-se-list .wd .name{top:6px;}
+/* 百度图表 */
+.dw-chart{padding:10px 0;border:1px solid #e6e6e6;}
+.dw-chart .edit{padding:0 40px;}
+.dw-chart .edit .btn-switch{font-size:14px;color:#0190d4;}
+.dw-chart .echarts-box{height:360px;}
+/* DMA表格 */
+.dw-mda-tab{margin:15px 20px;}
+.dw-mda-tab .btn-export{font-size:14px;color:#0190d4;}
+.dw-mda-tab .btn-export .iconfont{margin-top:-6px;font-size:18px;line-height:1;}
+/* DMA更多弹窗 */
+.pop-dma-more{width:800px;}
+.pop-dma-more .pp-contain{padding:0;}
+.pop-dma-more .screen-list li{padding-left:120px;border-bottom:none;}
+.pop-dma-more .screen-list li:first-child{margin-bottom:5px;border-bottom:1px solid #ccc;}
+.pop-dma-more .screen-list li .name{left:0;top:5px;width:115px;text-align:right;}
+.pop-dma-more .screen-list li.area .all{padding:1px 0px;text-align:center;color:#fff;background:#ff9900;}
+.pop-dma-more .screen-list li.area .item{margin-bottom:10px;min-width:45px;}
+.pop-dma-more .screen-list li.search .name{top:11px;}
+/* ---分割线--- */
+.pop-dma-more .search-wrap{position:relative;display:inline-block;border:1px solid #ccc;border-radius:4px;overflow:hidden;}
+.pop-dma-more .search-wrap input[type="text"],
+.pop-dma-more .search-wrap .btn-search{height:33px;line-height:33px;}
+.pop-dma-more .search-wrap input[type="text"]{padding:0 25px 0 10px;width:160px;border:1px solid transparent;border-radius:4px;border-right:1px solid #ccc;}
+.pop-dma-more .search-wrap .btn-search{padding:0 10px;cursor:pointer;}
+.pop-dma-more .search-wrap .btn-del{position:absolute;right:42px;top:4px;font-size:20px;color:#ddd;cursor:pointer;}
+/* ****************************************多维分析页面结束******************************************* */
+
+
+/* ****************************************指标分析-指标关联页面开始******************************************* */
+.gl-modular-wrap{margin-top:15px;}
+.gl-modular-wrap .tips{font-size:14px;color:#f60;}
+.gl-modular-wrap .first-tit{margin-top:50px;font-weight:bold;text-align:center;font-size:15px;}
+/* 分割线 */
+.gl-modular-wrap .modular-list{margin-top:5px;text-align:center;}
+.gl-modular-wrap .modular-list > li{position:relative;margin:35px auto 0;width: 490px;text-align:left;}
+.gl-modular-wrap .modular-list > li:first-child{text-align:center;}
+.gl-modular-wrap .modular-list > li .modular-item:first-child{border:1px solid #f60;}
+.gl-modular-wrap .modular-list > li:before{position:absolute;left:50%;top:-35px;height:35px;width:292px;margin-left:-146px;content:"";background:url("../images/public/route1.png") no-repeat center center;}
+.gl-modular-wrap .modular-list > li:first-child{margin-top:0;}
+.gl-modular-wrap .modular-list > li.index-2{text-align:center;}
+.gl-modular-wrap .modular-list > li.index-2:before{background:url("../images/public/route.png") no-repeat center center;}
+.gl-modular-wrap .modular-list > li.info-wrap:before{background:url("../images/public/oute-first.png") no-repeat left center;}
+.gl-modular-wrap .modular-list > li.lose:before{background:url("../images/public/oute-first.png") no-repeat left center;}
+.gl-modular-wrap .modular-list > li.index-2.lose:before{background:url("../images/public/oute-first.png") no-repeat center center;}
+.gl-modular-wrap .modular-list > li.index-2.lose + .info-wrap:before{background-position:center center;}
+.gl-modular-wrap .modular-list > li.index-2.info-wrap:before{background-position:center center;}
+.gl-modular-wrap .modular-list > li.index-2.info-wrap{text-align:left;}
+.gl-modular-wrap .modular-list > li:first-child:before{background:none;}
+.gl-modular-wrap .modular-list > li .modular-item.active{border-color:#f60;}
+/* 分割线 */
+.gl-modular-wrap .modular-list .info-wrap{display:inline-block;width:866px;width:886px\9;text-align:left;padding:0 10px 10px;padding:0 0 10px 0\9;border:1px solid #e6e6e6;}
+.gl-modular-wrap .modular-list .info-wrap .modular-item{margin:10px 0 0 10px;}
+.gl-modular-wrap .modular-list .info-wrap .modular-item:first-child{border-color:#ccc;}
+.gl-modular-wrap .modular-list .info-wrap .modular-item:first-child:hover{border-color:#f60;}
+.gl-modular-wrap .modular-list .info-wrap .modular-item:nth-child(4n - 3){margin-left:0;}
+/* 指标模块弹窗 */
+.pop-modular{width:940px;}
+.pop-modular .pp-contain{padding-top:5px;}
+.pop-modular .pp-contain .modular-item{margin:10px 0 0 10px;}
+.pop-modular .pp-contain .modular-item:nth-child(4n - 3){margin-left:0;}
+/* ****************************************指标分析-指标关联页面结束******************************************* */
+
+
+/* ****************************************工单跟踪处理页面开始******************************************* */
+.gdcl-wrap{margin-top:5px;padding:20px;border:1px solid #eee;font-size:14px;color:#4c4c4c;}
+.gdcl-wrap .item-box{margin-bottom:45px;}
+.gdcl-wrap .item-box:last-child{margin-bottom:0;}
+.gdcl-wrap .tit-wrap{margin-bottom:20px;padding-bottom:5px;border-bottom:1px solid #ccc;}
+/* ---分割线--- */
+.gdcl-wrap .step-wrap{margin:0 0 25px -25px;}
+.gdcl-wrap .tab-1 td{min-width:120px;}
+.gdcl-wrap .item{position:relative;float:left;margin-left:25px;width:98px;height:28px;line-height:28px;border:1px solid #ccc;text-align:center;background:#e6e6e6;}
+.gdcl-wrap .item.active{border-color:#f60;color:#fff;background:#f60;}
+.gdcl-wrap .item:after{position:absolute;right:-25px;top:10px;width:24px;height:10px;background:url("../images/public/jty.png") no-repeat center center;content:"";}
+.gdcl-wrap .item:last-child:after{background:none;}
+/* ---分割线--- */
+.gdcl-wrap .text-list dt{width:130px;}
+.gdcl-wrap .tab-1 td:nth-child(5){text-align:left;}
+.gdcl-wrap .tab-1 td:last-child a{display:block;text-decoration:underline;color:#0190d4;}
+/* ---分割线--- */
+.gdcl-submit{margin-top:25px;text-align:center;}
+/* 工单处理弹窗 */
+.pop-order-edit{width:800px;}
+.pop-order-edit .form-list .tit{width:120px;}
+.pop-order-edit .form-list textarea{width:600px;}
+.pop-order-edit .form-list .input-text{width:540px;}
+/* ****************************************工单跟踪处理页面结束******************************************* */
+
+
+/* ****************************************我要派单页面开始******************************************* */
+.pd-send-order{margin-top:25px;}
+.pd-send-order .form-list .tit{width:120px;}
+.pd-send-order .form-list textarea{width:600px;}
+.pd-send-order .form-list .btn-cancel{margin-left:15px;}
+/* ****************************************我要派单页面结束******************************************* */
+
+
+/* ****************************************指标地图分析样式开始******************************************* */
+.zb-tit-map{margin-top:15px;}
+/* 选项卡部分 */
+.zb-map-wrap .tab-card{display:none;min-height:180px;border:1px solid #0190d4;background:#fff;}
+.zb-map-wrap .tab-card .nav-wrap{position:relative;color:#fff;background:#0190d4;}
+.zb-map-wrap .tab-card .btn-switch-fold{position:absolute;top:0;bottom:0;right:0;padding:0 15px;line-height:33px;text-align:center;font-size:14px;}
+.zb-map-wrap .tab-card .tab-nav{float:left;padding:6px 10px;border-right:1px solid rgba(255, 255, 255, 0.15);}
+.zb-map-wrap .tab-card .tab-nav.active{color:#4c4c4c;font-weight:bold;background:#f7f7f7;}
+.zb-map-wrap .tab-card .con-wrap{max-height:320px;overflow:hidden;}
+.zb-map-wrap .tab-card .tab-con{display:none;}
+.zb-map-wrap .tab-card .tab-con.active{display:block;}
+/* 代办任务 和 相关公告 公用表格 */
+.zb-map-wrap .tab-com thead tr{border-bottom:1px solid #ccc;}
+.zb-map-wrap .tab-com tbody tr{border-bottom:1px dashed #eee;}
+.zb-map-wrap .tab-com tbody tr:last-child{border-bottom:none;}
+.zb-map-wrap .tab-com tbody tr:hover{background:#fff4e3;}
+.zb-map-wrap .tab-com th,
+.zb-map-wrap .tab-com td{padding:7px 5px;text-align:center;min-width:80px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.zb-map-wrap .tab-com td:first-child{text-align:left;}
+/* DMA概况 */
+.zb-map-wrap table{width:100%;}
+.zb-map-wrap .dma-gk .tit{padding:8px 10px;}
+.zb-map-wrap .dma-gk .tb{color:#f60;}
+.zb-map-wrap .dma-gk .hb{color:#093;}
+.zb-map-wrap .dma-gk th,
+.zb-map-wrap .dma-gk td{padding:10px;border:1px solid #e6e6e6;}
+.zb-map-wrap .dma-gk th{width:100px;background:#f7f7f7;font-weight:normal;}
+/* 关联指标 */
+.zb-map-wrap .glzb{padding:20px;}
+.zb-map-wrap .glzb .modular-list{margin:-15px 0 0 -16px;}
+.zb-map-wrap .glzb .modular-item{float:left;margin:15px 0 0 16px;border:1px solid #ccc;}
+/* 关联预警 */
+.zb-map-wrap .glyj td{max-width:160px;}
+.zb-map-wrap .glyj th,
+.zb-map-wrap .glyj td{text-align:center;}
+.zb-map-wrap .glyj td:first-child{text-align:left;}
+.zb-map-wrap .glyj td.no{color:#f60;}
+.zb-map-wrap .glyj td:nth-child(2){color:#999;}
+/* 筛选 */
+.zb-map-wrap .aside .choice{padding:6px 10px;border-bottom:1px solid #ccc;}
+.zb-map-wrap .aside .choice a{float:left;padding:3px 10px;color:#0190d4;border:1px solid #e6e6e6;border-right:none;}
+.zb-map-wrap .aside .choice a:last-child{border-right:1px solid #e6e6e6;}
+.zb-map-wrap .aside .choice a.checked{border:1px solid #f60;font-weight:bold;color:#4c4c4c;}
+.zb-map-wrap .aside .choice strong{font-weight:normal;color:#f60;vertical-align: baseline;}
+/* 代办任务 */
+.zb-map-wrap .dbrw td{max-width:220px;}
+.zb-map-wrap .dbrw td:last-child{color:#999;}
+/* 相关公告 */
+.zb-map-wrap .xggg td{max-width:320px;}
+.zb-map-wrap .xggg td:last-child{color:#999;}
+/* 地图弹窗 */
+.zb-map-wrap .modular-item{position:relative;display:block;border-color:#0190d4;overflow:visible;z-index:10;}
+.zb-map-wrap .modular-item:hover .info *{visibility:visible;}
+/* 大表详情弹窗 */
+.pop-big-echart-info{width:900px;font-size:14px;color:#333;}
+.pop-big-echart-info .pp-contain{padding:0;}
+.pop-big-echart-info .mes-wrap{padding:10px 10px 5px;}
+.pop-big-echart-info .mes-wrap .screen-list li{padding-left:70px;}
+.pop-big-echart-info .mes-wrap .screen-list .name{left:0;top:9px;font-weight:bold;}
+/* 分割线 */
+.pop-big-echart-info .echart-wrap{padding:0 20px 15px;}
+.pop-big-echart-info .echart-wrap .tit-info .attr-item{display:inline-block;margin-right:30px;height:30px;line-height:30px;}
+.pop-big-echart-info .echart-wrap .tit-info b{color:#f60; }
+.pop-big-echart-info .echart-wrap .echart-item{margin-top:5px;height:200px;background:#e6e6e6;}
+/* ****************************************指标地图分析样式结束******************************************* */
+
+
+/* ****************************************经营总览样式开始******************************************* */
+.kpi-chart-info{font-size:14px;color:#4c4c4c;}
+.kpi-chart-info .nav-wrap{margin-bottom:20px;}
+.kpi-chart-info .tab-nav{float:left;margin:0 30px -2px 0;padding-bottom:5px;color:#0190d4;}
+.kpi-chart-info .tab-nav.active{border-bottom:2px solid #f60;color:#4c4c4c;font-weight:bold;}
+.kpi-chart-info .tab-con{display:none;}
+.kpi-chart-info .tab-con.active{display:block;}
+/* 分割线 */
+.kpi-chart-info .aside-info .tit{line-height:1.8;text-align:center;}
+.kpi-chart-info .aside-info .tit em{color:#999;}
+.kpi-chart-info .aside-info .tit .tb{color:#f60;}
+.kpi-chart-info .aside-info .tit .hb{color:#093;}
+/* 分割线 */
+.kpi-chart-info .auto-width .echart-wrap{height:398px;}
+.kpi-chart-info .auto-width.map-wrap{height:432px;}
+/* 分割线 */
+.kpi-chart-info .auto-width .no-data{height:402px;line-height:398px;text-align:center;color:#ddd;}
+.kpi-chart-info .auto-width .no-data .iconfont{font-size:100px;line-height:1;}
+/* KPI指标自定义弹窗 */
+.pop-kpi-custom{width:900px;font-size:14px;color:#4c4c4c;}
+.pop-kpi-custom .pp-contain{padding:0;}
+.pop-kpi-custom .custom-list li{position:relative;padding:10px 0 10px 70px;margin-top:-15px;border-bottom:1px solid #f2f2f2;overflow:hidden;}
+.pop-kpi-custom .custom-list li:last-child{border-bottom:none;}
+.pop-kpi-custom .custom-list .name{position:absolute;left:0;top:25px;width:65px;font-weight:bold;text-align:right;}
+.pop-kpi-custom .custom-list label{float:left;width:20%;margin-top:15px;line-height:21px;cursor:pointer;}
+.pop-kpi-custom .custom-list abbr{max-width:125px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+/* ****************************************经营总览样式结束******************************************* */
+
+
+/* ****************************************DMA分析运营样式开始******************************************* */
+.fxyy-list{margin:-10px 0 0 -10px;}
+.fxyy-list > li{float:left;width:33.33%;}
+.fxyy-list > li > *{display:block;margin:10px 0 0 10px;min-height:279px;border:2px solid transparent;box-shadow: 0 0 5px rgba(8,3,4,0.4);overflow:hidden;background:#fff;transition: all 0.3s;}
+.fxyy-list > li > *:hover{border:2px solid #f60;}
+.fxyy-list > li .echart-item{max-height:312px;overflow:hidden;}
+/* 分割线 */
+.fxyy-list .echart-item .tit{padding:10px 0;font-size:14px;text-align:center;color:#4c4c4c;}
+.fxyy-list .echart-item .tit strong{font-size:18px;font-weight:bold;}
+.fxyy-list .echart-item .tit em{color:#999;}
+.fxyy-list .echart-item .tit em sup{vertical-align:5px;}
+.fxyy-list .echart-item .tit .tb{color:#f60;}
+.fxyy-list .echart-item .tit .hb{color:#093;}
+.fxyy-list .echart-item .no-data{height:240px;line-height:240px;text-align:center;color:#ddd;}
+.fxyy-list .echart-item .no-data .iconfont{font-size:100px;line-height:1;}
+.fxyy-list .echart-item .echart-wrap{height:240px;}
+/* 实时监控 */
+.fxyy-list .ssjk .tit{padding:6px 10px;border-bottom: 1px solid #ebebeb;font-size:14px;font-weight:bold;color:#4c4c4c;background:#f9f9f9;}
+.fxyy-list .ssjk ul{padding:16px 20px;}
+.fxyy-list .ssjk li{position:relative;padding:9px 0 9px 65px;}
+.fxyy-list .ssjk .text{position:absolute;left:0;top:13px;width:60px;text-align:right;font-size:14px;color:#4c4c4c;}
+.fxyy-list .ssjk .pro-bar{height:31px;line-height:30px;font-size:12px;text-align:center;color:#fff;}
+.fxyy-list .ssjk .no-data{height:245px;line-height:245px;text-align:center;color:#ddd;}
+.fxyy-list .ssjk .no-data .iconfont{font-size:100px;line-height:1;}
+/* 场景告警 */
+.fxyy-list .cjgj{max-height:279px;}
+.fxyy-list .cjgj .tit{padding:6px 10px;font-size:14px;border-bottom: 1px solid #ebebeb;font-weight:bold;color:#4c4c4c;background:#f9f9f9;}
+.fxyy-list .cjgj .no-data{height:245px;line-height:245px;text-align:center;color:#ddd;}
+.fxyy-list .cjgj .no-data .iconfont{font-size:100px;line-height:1;}
+.fxyy-list .cjgj ul{max-height:245px;}
+.fxyy-list .cjgj li{position:relative;padding:8px 15px;border-bottom:1px dashed #d9d9d9;font-size:15px;color:#4c4c4c;}
+.fxyy-list .cjgj li:last-child{border-bottom:none;}
+.fxyy-list .cjgj li:hover{background:#fff4e3;}
+.fxyy-list .cjgj li .iconfont{margin-right:5px;color:#ffa86e;}
+.fxyy-list .cjgj li a{max-width:85%;vertical-align:middle;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.fxyy-list .cjgj li b{position:absolute;right:15px;top:10px;padding:1px 8px;border-radius:1000px;font-size:12px;font-weight:normal;background:#f60;color:#fff;}
+/* 产销差率排名 */
+.fxyy-list .sjqk{max-height:279px;}
+.fxyy-list .sjqk .tit{padding:6px 10px;font-size:14px;border-bottom: 1px solid #ebebeb;font-weight:bold;color:#4c4c4c;background:#f9f9f9;}
+.fxyy-list .sjqk .no-data{height:245px;line-height:245px;text-align:center;color:#ddd;}
+.fxyy-list .sjqk .no-data .iconfont{font-size:100px;line-height:1;}
+.fxyy-list .sjqk .wrap{max-height:245px;}
+.fxyy-list .sjqk table{width:100%;font-size:15px;text-align:center;color:#4c4c4c;}
+.fxyy-list .sjqk tr{border-bottom: 1px dashed #d9d9d9;}
+.fxyy-list .sjqk tr:last-child{border-bottom:none;}
+.fxyy-list .sjqk tr.hot td:first-child{font-weight:bold;color:#f60;}
+.fxyy-list .sjqk tbody tr:hover{background:#fff4e3;}
+.fxyy-list .sjqk td{padding:8px 0;}
+.fxyy-list .sjqk td strong{color:#333;}
+.fxyy-list .sjqk td:last-child em{margin-left:3px;font-weight:normal;color:#999;font-size:13px;vertical-align:top;}
+.fxyy-list .sjqk td:last-child sup{vertical-align:5px;}
+.fxyy-list .sjqk table .name{max-width:12em;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;vertical-align:middle;}
+/* ****************************************DMA分析运营样式结束******************************************* */
+
+
+/* ****************************************DMA数据管理样式开始******************************************* */
+.sjgl-screen-list li{padding-left:45px;}
+.sjgl-screen-list .name{left:0;top:9px;width:45px;}
+/* 分割线 */
+.sjgl-tab-wrap{font-size:14px;}
+.sjgl-tab-wrap th,
+.sjgl-tab-wrap td{padding:5px 10px;white-space:nowrap;}
+.sjgl-tab-wrap .tool-wrap{padding:8px 0;}
+.sjgl-tab-wrap .tool-wrap .btn{margin-right:20px;color:#0190d4;}
+.sjgl-tab-wrap td.last .iconfont{margin:0 5px;padding:0px 5px;font-size:16px;color:#0190d4;}
+.sjgl-tab-wrap td.last .iconfont:hover{border-radius:6px;background:#f60;color:#fff;}
+.sjgl-tab-wrap .btn-file{color:#0190d4;}
+.sjgl-tab-wrap .btn-file > *{display:inline-block;vertical-align:middle;max-width:160px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.sjgl-tab-wrap .btn-file .iconfont{margin-top:-2px;font-size:16px;line-height:1;}
+.sjgl-tab-wrap sup{vertical-align:5px;}
+/* 新增弹窗 */
+.pop-add-xjgl{width:510px;}
+.pop-add-xjgl .form-list .tit{width:180px;}
+.pop-add-xjgl .form-list .input-text{width:284px;}
+.pop-add-xjgl sup:last-child{vertical-align:5px;}
+/* ****************************************DMA数据管理样式结束******************************************* */
+
+
+/* ****************************************二级设备实时监控(列表)开始******************************************* */
+.lbjk-tit-box .text{display:inline-block;margin-left:5px;vertical-align:middle;font-size:14px;color:#4c4c4c;}
+.lbjk-tit-box .text b{color:#f60;}
+.lbjk-tit-box .text .btn-refresh{margin-left:10px;font-size:16px;color:#0190d4;}
+.lbjk-tit-box .btn-toggle{color:#0190d4;}
+/* 查询部分 */
+.lbjk-screen-list li{padding-left:45px;border-bottom:none;}
+.lbjk-screen-list li:last-child{border-bottom:none;}
+.lbjk-screen-list .name{left:0;top:7px;}
+/* 列表 */
+.lbjk-device-list{margin-top:15px;}
+/* ****************************************二级设备实时监控(列表)结束******************************************* */
+
+
+/* ****************************************二级设备实时监控(地图)开始******************************************* */
+.ejsb-map-wrap .warning-wrap{position:relative;margin-top:33px;border:1px solid #0190d4;font-size:14px;color:#4c4c4c;background:#fff;}
+.ejsb-map-wrap .warning-wrap .nav-wrap{position:absolute;right:0;top:-34px;border:1px solid #0190d4;border-bottom:none;}
+.ejsb-map-wrap .warning-wrap .nav-wrap > *{float:left;background:red;}
+.ejsb-map-wrap .warning-wrap .nav-wrap .nav-item{width:85px;height:33px;line-height:33px;text-align:center;}
+.ejsb-map-wrap .warning-wrap .nav-wrap .nav-item.real-time{font-weight:bold;color:#4c4c4c;background:#f7f7f7;}
+.ejsb-map-wrap .warning-wrap .nav-wrap .nav-item.history{color:#fff;background:#0190d4;}
+.ejsb-map-wrap .warning-wrap .nav-wrap .btn-switch-fold{padding:0 6px;height:33px;line-height:33px;border-left:1px solid #27a1da;color:#fff;background:#0190d4;}
+/* 分割线 */
+.ejsb-map-wrap .warning-wrap .tit-wrap{padding:6px 10px;border-bottom:1px solid #ccc;background:#f7f7f7;}
+.ejsb-map-wrap .warning-wrap .tit-wrap time{margin-right:10px;color:#f60;vertical-align:baseline;}
+.ejsb-map-wrap .warning-wrap .tit-wrap strong{color:#f60;vertical-align:baseline;}
+.ejsb-map-wrap .warning-wrap .tit-wrap .btn-more{float:right;color:#0190d4;}
+.ejsb-map-wrap .warning-wrap .warning-list{max-height:300px;overflow-y:auto;}
+/* 分割线 */
+.ejsb-map-wrap .device-item{position:relative;display:block;border-color:#0190d4;overflow:visible;z-index:10;transition:all .2s;}
+.ejsb-map-wrap .device-item.small{min-width:170px;max-width:200px;}
+.ejsb-map-wrap .device-item.small > .tit-wrap,
+.ejsb-map-wrap .device-item.small > .banner,
+.ejsb-map-wrap .device-item.small > .info{display:none;}
+/* 分割线 */
+.ejsb-map-wrap .device-item .small-info{display:none;}
+.ejsb-map-wrap .device-item.small .small-info{display:block;text-align:center;}
+.ejsb-map-wrap .device-item.small .small-info .item{margin-left:-3px;padding:2px 0;width:50%;}
+.ejsb-map-wrap .device-item.small .small-info .item:first-child{border-right:1px solid #e6e6e6;}
+.ejsb-map-wrap .device-item.small .small-info .item.warning{color:#f60;}
+.ejsb-map-wrap .device-item.left-arrow:before,
+.ejsb-map-wrap .device-item.left-arrow:after,
+.ejsb-map-wrap .device-item.right-arrow:before,
+.ejsb-map-wrap .device-item.right-arrow:after{position:absolute;border:12px dashed transparent;font-size:0;line-height:0;content:"";}
+/* 分割线 */
+.ejsb-map-wrap .device-item.left-arrow:before{top:50%;left:-24px;margin-top:-12px;border-right:12px solid #0190d4;}
+.ejsb-map-wrap .device-item.left-arrow:after{top:50%;left:-22px;margin-top:-12px;border-right:12px solid #fff;}
+.ejsb-map-wrap .device-item.right-arrow:before{top:50%;right:-24px;margin-top:-12px;border-left:12px solid #0190d4;}
+.ejsb-map-wrap .device-item.right-arrow:after{top:50%;right:-22px;margin-top:-12px;border-left:12px solid #fff;}
+/* 分割线 */
+.ejsb-map-wrap .device-item .telescopic{position:relative;z-index:1;text-align:center;color:#0290d4;background:#e6e6e6;font-size:0;border-bottom-left-radius:4px;border-bottom-right-radius:4px;transition:all .2s;}
+.ejsb-map-wrap .device-item .telescopic:hover{background:#f60;color:#fff;}
+.ejsb-map-wrap .device-item .telescopic .btn-switch{font-size:12px;line-height:1;}
+.ejsb-map-wrap .device-item .telescopic .btn-switch:before{content:"\e61a";}
+.ejsb-map-wrap .device-item.small .telescopic .btn-switch:before{content:"\e619";}
+/* ****************************************二级设备实时监控(地图)结束******************************************* */
+
+
+/* ****************************************大表详情开始******************************************* */
+.dbxq-survey .row{position:relative;font-size:14px;color:#333;line-height:1.7;}
+.dbxq-survey .row.tit{margin-bottom:5px;padding:8px 10px 8px 25px;border-top:1px solid #eee;font-size:16px;font-weight:bold;color:#333;background:#fafafa;}
+.dbxq-survey .iconfont.warning{position:absolute;left:0;top:8px;font-size:18px;font-weight:normal;color:#f54336;}
+.dbxq-survey .warning-mes{font-size:14px;color:#f60;}
+/* 分割线 */
+.dbxq-tab-card{margin-top:5px;font-size:14px;color:#4c4c4c;}
+.dbxq-tab-card .nav-wrap{margin-bottom:-1px;font-size:0;}
+.dbxq-tab-card .tab-nav{padding:3px 22px;border:1px solid #e6e6e6;border-bottom-color:#fff;font-size:14px;font-weight:bold;color:#333;}
+.dbxq-tab-card .tab-nav.active{border-color:#0190d4;font-weight:bold;color:#fff;background:#0190d4;}
+.dbxq-tab-card .con-wrap{padding:10px;border:1px solid #e6e6e6;}
+.dbxq-tab-card .con-wrap .tab-con{display:none;}
+.dbxq-tab-card .con-wrap .tab-con.active{display:block;}
+/* 分割线 */
+.dbxq-tab-card .con-wrap .select-box{padding-bottom:5px;}
+.dbxq-tab-card .con-wrap .select-box .screen-list li{padding-left:45px;}
+.dbxq-tab-card .con-wrap .select-box .screen-list .name{left:0;top:9px;}
+.dbxq-tab-card .con-wrap .select-box .btn-toggle{z-index:5;position:relative;margin-top:12px;line-height:1;color:#0190d4;}
+/* 分割线 */
+.dbxq-tab-card .con-wrap .type-list{display:none;}
+/* 分割线 */
+.dbxq-tab-card .echart-wrap{margin-top:10px;}
+.dbxq-tab-card .echart-wrap .tit-info .attr-item{display:inline-block;margin-right:30px;height:30px;line-height:30px;}
+.dbxq-tab-card .echart-wrap .tit-info b{margin-left:5px;color:#f60;}
+.dbxq-tab-card .echart-wrap .echart-item{height:220px;background:#e6e6e6;}
+/* ****************************************大表详情结束******************************************* */
+
+
+/* ****************************************场景-配表异常-分析过程开始******************************************* */
+.cjfx-warning{padding:10px 0;font-size:14px;color:#4c4c4c;}
+.cjfx-warning b{color:#f60;vertical-align:baseline;}
+/* 分割线 */
+.cjfx-modular{padding:15px;border:1px solid #e6e6e6;font-size:14px;color:#333;}
+.cjfx-modular .item-box{margin-bottom:20px;}
+.cjfx-modular .item-box .tit-wrap{margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid #ccc;font-weight:bold;}
+.cjfx-modular .item-box .con{line-height:1.8;}
+/* 分割线 */
+.cjfx-modular .tab-card{margin-bottom:25px;}
+.cjfx-modular .tab-card .nav-wrap{margin-bottom:20px;border-bottom:1px solid #ccc;}
+.cjfx-modular .tab-card .tab-nav{margin:0 25px -1px 0;padding-bottom:5px;float:left;color:#0190d4;}
+.cjfx-modular .tab-card .tab-nav.active{border-bottom:2px solid #f60;font-weight:bold;color:#4c4c4c;}
+.cjfx-modular .tab-card .tab-con{display:none;}
+.cjfx-modular .tab-card .tab-con.active{display:block;}
+.cjfx-modular .tab-card .select-box{margin-bottom:10px;}
+.cjfx-modular .tab-card .echart-box{height:220px;background:#ddd;}
+/* ****************************************场景-配表异常-分析过程结束******************************************* */
+
+
+/* ****************************************场景-配表异常-告警信息开始******************************************* */
+.cjgj-tit-map{margin-top:10px;}
+.cjgj-tit-map b{color:#f60;vertical-align:baseline;}
+/* 弹窗元素 */
+.cjgj-map-wrap .modular-item{position:relative;display:block;border-color:#0190d4;overflow:visible;z-index:10;}
+.cjgj-map-wrap .modular-item:hover .info *{visibility:visible;}
+/* 选项卡部分 */
+.cjgj-map-wrap .tab-card{min-height:180px;border:1px solid #0190d4;background:#fff;}
+.cjgj-map-wrap .tab-card .nav-wrap{position:relative;color:#fff;background:#0190d4;}
+.cjgj-map-wrap .tab-card .btn-switch-fold{position:absolute;top:0;bottom:0;right:0;padding:0 15px;line-height:33px;text-align:center;font-size:14px;}
+.cjgj-map-wrap .tab-card .tab-nav{float:left;padding:6px 10px;border-right:1px solid rgba(255, 255, 255, 0.15);}
+.cjgj-map-wrap .tab-card .tab-nav.active{color:#4c4c4c;font-weight:bold;background:#f7f7f7;}
+.cjgj-map-wrap .tab-card .con-wrap{max-height:320px;overflow:hidden;}
+.cjgj-map-wrap .tab-card .tab-con{display:none;}
+.cjgj-map-wrap .tab-card .tab-con.active{display:block;}
+/* 代办任务 和 相关公告 公用表格 */
+.cjgj-map-wrap table{width:100%;}
+.cjgj-map-wrap .tab-com thead tr{border-bottom:1px solid #ccc;}
+.cjgj-map-wrap .tab-com tbody tr{border-bottom:1px dashed #eee;}
+.cjgj-map-wrap .tab-com tbody tr:last-child{border-bottom:none;}
+.cjgj-map-wrap .tab-com tbody tr:hover{background:#fff4e3;}
+.cjgj-map-wrap .tab-com th,
+.cjgj-map-wrap .tab-com td{padding:7px 5px;text-align:center;min-width:80px;max-width:140px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.cjgj-map-wrap .tab-com td:first-child{text-align:left;}
+/* 告警信息 */
+.cjgj-map-wrap .gjxx{padding-top:15px}
+.cjgj-map-wrap .gjxx .item-wrap{max-height:250px;overflow:auto;}
+.cjgj-map-wrap .gjxx .item-box{margin-bottom:20px;padding:0 10px;}
+.cjgj-map-wrap .gjxx .item-box:last-child{margin-bottom:0;}
+.cjgj-map-wrap .gjxx .item-box .tit-wrap{margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid #ccc;font-weight:bold;}
+.cjgj-map-wrap .gjxx .item-box .con{line-height:1.8;}
+.cjgj-map-wrap .gjxx .foot{margin-top:10px;padding:10px 0;text-align:center;background:#e6e6e6;}
+.cjgj-map-wrap .gjxx .foot > a{margin:0 5px;}
+/* 设备信息 */
+.cjgj-map-wrap .sbxx .tit{padding:8px 10px;}
+.cjgj-map-wrap .sbxx .tb{color:#f60;}
+.cjgj-map-wrap .sbxx .hb{color:#093;}
+.cjgj-map-wrap .sbxx th,
+.cjgj-map-wrap .sbxx td{padding:10px;border:1px solid #e6e6e6;}
+.cjgj-map-wrap .sbxx th{/* width:100px; */background:#f7f7f7;font-weight:normal;}
+/* 关联任务 */
+.cjgj-map-wrap .glrw td:first-child a{display:inline-block;max-width:100px\9;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.cjgj-map-wrap .glrw td:last-child{color:#999;}
+/* 相关公告 */
+.cjgj-map-wrap .xggg td{max-width:160px;}
+.cjgj-map-wrap .xggg th,
+.cjgj-map-wrap .xggg td{text-align:center;}
+.cjgj-map-wrap .xggg td:first-child{text-align:left;}
+.cjgj-map-wrap .xggg td.no{color:#f60;}
+.cjgj-map-wrap .xggg td:last-child{color:#999;}
+.cjgj-map-wrap .xggg .tag{color:#f60;}
+/* 筛选 */
+.cjgj-map-wrap .aside .choice{padding:6px 10px;border-bottom:1px solid #ccc;}
+.cjgj-map-wrap .aside .choice a{float:left;padding:3px 10px;color:#0190d4;border:1px solid #e6e6e6;border-right:none;}
+.cjgj-map-wrap .aside .choice a:last-child{border-right:1px solid #e6e6e6;}
+.cjgj-map-wrap .aside .choice a.checked{border:1px solid #f60;font-weight:bold;color:#4c4c4c;}
+.cjgj-map-wrap .aside .choice strong{font-weight:normal;color:#f60;vertical-align: baseline;}
+/* ****************************************场景-配表异常-告警信息结束******************************************* */
+
+
+/* ****************************************管网运营首页开始******************************************* */
+.gwsy-water-info .tab-card{float:left;width:59%;}
+.gwsy-water-info .aside-box{float:right;width:40%;}
+/* 分割线 */
+.gwsy-water-info .tb{color:#f60;}
+.gwsy-water-info .hb{color:#093;}
+/* 分割线 */
+.gwsy-water-info{margin-bottom:15px;font-size:14px;}
+.gwsy-water-info .nav-wrap{margin-bottom:15px;}
+.gwsy-water-info .tab-nav{float:left;margin:0 30px -2px 0;padding-bottom:5px;color:#0190d4;}
+.gwsy-water-info .tab-nav.active{border-bottom:2px solid #f60;color:#4c4c4c;font-weight:bold;}
+.gwsy-water-info .tab-con{display:none;}
+.gwsy-water-info .tab-con.active{display:block;}
+/* 分割线 */
+.gwsy-water-info .block-box{margin:0 0 0 -10px;}
+.gwsy-water-info .block-box > li{float:left;width:33.33%;}
+.gwsy-water-info .block-box > li > *{display:block;margin:10px 0 0 10px;height:215px;}
+.gwsy-water-info .block-box .pro-bar-box{margin-top:15px;}
+/* 分割线 */
+.gwsy-water-info .echart-block{padding-top:10px;border:2px solid transparent;background:#fff;box-shadow: 0 0 5px rgba(8,3,4,0.4);transition: all 0.3s;}
+.gwsy-water-info .echart-block:hover{border-color:#f60;}
+.gwsy-water-info .echart-block .tit-box{min-height:42px;text-align:center;}
+.gwsy-water-info .echart-block .echart-wrap{height:244px;}
+/* 分割线 */
+.gwsy-water-info .aside-box .item-box{margin-top:10px;padding-top:10px;background:#fff; border:2px solid transparent;box-shadow: 0 0 5px rgba(8,3,4,0.4);transition: all 0.3s;}
+.gwsy-water-info .aside-box .item-box:hover{border-color:#f60;}
+.gwsy-water-info .aside-box .item-box.first{margin-top:40px;}
+.gwsy-water-info .aside-box .item-box .tit-box{text-align:center;}
+/* 分割线 */
+.gwsy-water-info .aside-box .item-box .echart-wrap{height:247px;}
+.gwsy-water-info .aside-box .item-box .echart-box{height:253px;}
+/* 分割线 */
+.gwsy-water-info .aside-box .item-box .step-box{padding:10px 20px 15px;border-bottom:1px dashed #ccc;}
+.gwsy-water-info .aside-box .item-box .step-box .pro-bar-box{margin-top:15px;}
+.gwsy-water-info .aside-box .item-box .step-box .pro-bar-box li{padding-left:65px;}
+/* ****************************************管网运营首页结束******************************************* */
+
+
+/* ****************************************客户服务首页开始******************************************* */
+.khfw-echart-list{margin-top:10px; margin-left:-10px;}
+.khfw-echart-list > li{float:left;width:25%;}
+.khfw-echart-list > li > *{display:block;margin-left:10px;}
+/* 分割线 */
+.khfw-water-info{margin:10px 0 10px 0;font-size:14px;}
+.khfw-water-info .nav-wrap{margin-bottom:20px;}
+.khfw-water-info .tab-nav{float:left;margin:0 30px -2px 0;padding-bottom:5px;color:#0190d4;}
+.khfw-water-info .tab-nav.active{border-bottom:2px solid #f60;color:#4c4c4c;font-weight:bold;}
+.khfw-water-info .tab-con{display:none;}
+.khfw-water-info .tab-con.active{display:block;}
+/* 分割线 */
+.khfw-water-info .tb{color:#f60;}
+.khfw-water-info .hb{color:#093;}
+.khfw-water-info .echart-item{padding-top:10px;width:49.3%;border:2px solid transparent;background:#fff;box-shadow:0 0 5px rgba(8,3,4,0.4);transition: all 0.3s;}
+.khfw-water-info .echart-item:hover{border-color:#f60;}
+.khfw-water-info .echart-item .tit-warp{min-height:42px;text-align:center;}
+.khfw-water-info .echart-item .echart-wrap{height:260px;}
+/* ****************************************客户服务首页结束******************************************* */
+
+
+
+
+
+

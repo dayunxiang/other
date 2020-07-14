@@ -1,0 +1,128 @@
+@charset "utf-8";
+/*
+    如有疑问可联系作者：674059309@qq.com
+    http://www.qiaodaima.me
+*/
+
+/*头部提示信息 开始 ****************/
+.index-top-tips{padding:7px 10px;line-height:1;font-size:14px;color:#e6e6e6;background:#2c2f30;}
+.index-top-tips .user{margin:0 5px;font-weight:bold;vertical-align:baseline;cursor:pointer;}
+.index-top-tips .btn-way{margin-left:10px;}
+/****************头部提示信息 结束 */
+
+
+/* 公共头部 开始 ****************/
+.p-head{margin-bottom:8px;padding-left:15px;background:#0190d4;box-shadow:0 3px 10px #a5a3a4;}
+.p-head .head{display:inline-block;vertical-align:middle;margin-top:11px;}
+.p-head .head dt,
+.p-head .head dd{margin-right:10px;display:inline-block;vertical-align:middle;color:#fff;}
+.p-head .logo{width:155px;height:52px;background:url("../images/fixed/logo.png") no-repeat left top;}
+.p-head h1{font-size:22px;text-shadow:2px 2px 0px #016596;letter-spacing:1px}
+.p-head .form-name small{display:block;font-size:12px;-ms-transform:scale(0.83);-moz-transform:scale(0.83);-webkit-transform:scale(0.83);transform:scale(0.83);-ms-transform-origin:0 50%;-moz-transform-origin:0 50%;-webkit-transform-origin:0 50%;transform-origin:0 50%;}
+.ie-9 .p-head .form-name small{font-size:12px;}
+.ie-8 .p-head .form-name small{font-size:10px;}
+.p-head .btn-switch-form{-ms-transform:translate(-40px,0px);-moz-transform:translate(-40px,0px);-webkit-transform:translate(-40px,0px);transform:translate(-40px,0px);padding-left:6px;line-height:1;border-left:3px solid #80c8ea;font-size:16px;cursor:pointer;}
+.p-head .btn-switch-form span,
+.p-head .btn-switch-form .iconfont{font-size:16px;}
+/* 分割线 */
+.p-head .menu{display:inline;float:right;border-left:1px solid #0174ab;border-right:1px solid #34a6dd;}
+.p-head .menu li{position:relative;float:left;padding:17px 25px 9px;border-left:1px solid #34a6dd;border-right:1px solid #0174ab;text-align:center;cursor:pointer;color:#fff;}
+.p-head .menu li.disabled{color:#bfbfbf;cursor:not-allowed;}
+.p-head li:hover .iconfont{transform:scale(1.2);}
+.p-head li:hover .info-wrap{display:block;}
+.p-head .menu .iconfont{display:block;font-size:28px;line-height:1;transition:all .3s;}
+.p-head .menu .name{display:block;margin-top:7px;line-height:1;font-size:14px;}
+.p-head .menu .num{position:absolute;top:5px;right:10px;padding:2px 7px 4px;line-height:1;border-radius:2000px;font-size:9px;-webkit-transform:scale(0.75);background:#f60;}
+/**************** 公共头部 结束 */
+
+
+/* 公共主体 开始 ****************/
+.p-contain .left-side,
+.p-contain .right-side{position:relative;height:100%;}
+.p-contain .left-side{float:left;width:180px;background:#f5f5f5;border-right:1px solid #e6e6e6;}
+.p-contain .right-side{overflow:hidden;background:#f5f5f5;}
+/* 分割线 */
+.menu-tit{position:relative;font-size:14px;font-weight:bold;text-align:left;color:#333;background:#f9f9f7;}
+.menu-tit .iconfont{position:absolute;top:8px;right:5px;padding:0 10px; font-size:14px;cursor:pointer;color:#999;transition:all .3s;}
+.menu-tit .iconfont:hover{right:10px;}
+/* 分割线 */
+.menu-list{margin-top:5px;}
+.menu-list > li{background:#fafafa;margin-bottom:8px;}
+.menu-list .tit,
+.menu-list .inner-menu a{position:relative;display:block;font-size:14px;color:#333;}
+.menu-list .tit{padding:12px;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;background:#fff;}
+.menu-list > li.active .tit{border-left: 4px solid #ff6600;}
+.menu-list .tit .text{max-width:100px;overflow:hidden;vertical-align:middle;text-overflow:ellipsis;white-space:nowrap;}
+.menu-list .tit .iconfont{margin-right:5px;vertical-align:middle;font-size:20px;color:#c2c2c2;}
+.menu-list .tit .iconfont.arrow{position:absolute;top:18px;right:15px;color:#ccc;font-size:12px;}
+.menu-list .inner-menu{display:none;background:#fafafa;}
+.menu-list .inner-menu > li{border-bottom:1px solid #f2f2f2;}
+.menu-list .inner-menu a{padding:14px 14px 14px 60px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.menu-list .inner-menu >li:hover,
+.menu-list .inner-menu >li.active{background:#f5f5f5;}
+.menu-list .inner-menu a:before{position:absolute;top:20px;left:45px;line-height:1;color:#c7c7c7;font-size:12px;font-family:"iconfont" !important;font-weight:bold;content:"\e610";}
+/* 分割线 */
+.menu-nav-list{position:relative;border-bottom:1px solid #e1e1df;background:#fff;white-space:nowrap;text-align:center;font-size:14px;color:#0190d4;}
+.menu-nav-list dt,
+.menu-nav-list dd{float:left;border-right:1px solid #e1e1df;max-width:140px;}
+.menu-nav-list dt.curr,
+.menu-nav-list dd.curr a{margin-bottom:-1px;border-bottom:1px solid #f5f5f5;background:#f5f5f5;font-weight:bold;color:#333;}
+.menu-nav-list dd a .iconfont{position:absolute;top:5px;right:-25px;line-height:1;font-size:10px;color:#9a9a9a;-webkit-transform:scale(0.83);transition:all .3s;}
+.menu-nav-list dd a:hover .iconfont{right:5px;}
+.menu-nav-list dd.more{position:relative;border-right:none;}
+.menu-nav-list dd.more .iconfont{top:12px;right:0;}
+.menu-nav-list dd.more a:hover{font-weight:bold;}
+.menu-nav-list dd.more:hover .iconfont{right:30px;transform:rotate(180deg);}
+.menu-nav-list dd.more .more-menu-list{display:none;position:absolute;left:-1px;right:-1px;max-height:260px;overflow-y:auto;border:1px solid #e6e6e6;font-weight: normal; background:#f9f9f7;z-index:2;}
+.menu-nav-list dd.more:hover{width:120px;font-weight:bold;}
+.menu-nav-list dd.more:hover .more-menu-list{display:block;}
+.menu-nav-list dd.more .more-menu-list li{border-bottom:1px solid #e6e6e6;color:#666;}
+.menu-nav-list dd.more .more-menu-list li:last-child{border-bottom:none;}
+/* 分割线 */
+.menu-nav-list .switch-left-side{display:none;float:left;min-width:14px;border-right:1px solid #e6e6e6;color:#999;}
+.menu-nav-list .btn-scale{position:absolute;right:10px;top:0;bottom:0;font-size:24px;color:#666;}
+/* 分割线 */
+.menu-tit{margin-bottom:5px;border-bottom:1px solid #e6e6e6;padding:7px 15px !important;}
+.menu-tit,
+.switch-left-side,
+.menu-nav-list dt a,
+.menu-nav-list dd a{position:relative;display:block;padding:7px 8px;min-width:43px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+/* 分割线 */
+.p-contain .frame-wrap{position:absolute;left:0;right:0;top:37px;bottom:0;}
+/**************** 公共主体 结束 */
+
+
+/* 公共底部 开始 ****************/
+.p-foot{position:relative;z-index:10;margin-top:8px;padding:13px 0;line-height:1;background:#0190d4;box-shadow:0 -3px 10px #a5a3a4;}
+.p-foot .copyright{text-align:center;font-size:14px;color:#fff;}
+.p-foot .business{margin:0 5px;}
+.p-foot .business:hover{color:#f90;}
+/**************** 公共底部 结束 */
+
+
+/* 平台切换弹窗 开始 ****************/
+.pop-switch-form{width:800px;}
+.pop-switch-form .pp-contain{padding:25px 15px;}
+.pop-switch-form .form-wrap{margin:-20px 0 0 -7px;text-align:center;}
+.pop-switch-form .form-wrap dl{float:left;margin:20px 0 0 40px;padding:35px 0 20px; width:146px;color:#fff;background:#0190d4;cursor:pointer;border-radius:6px;transition:all .2s;}
+.pop-switch-form .form-wrap dl:hover{background:#ff9900;}
+.pop-switch-form .form-wrap dt .iconfont{line-height:1;font-size:90px;}
+.pop-switch-form .form-wrap dd{margin-top:20px;font-size:14px;}
+/**************** 平台切换弹窗 结束 */
+
+
+/* 资源管理器弹窗 开始 ****************/
+.pop-resourcem-anager{width:700px;}
+.pop-resourcem-anager .pp-contain{padding:0 0 10px 0;}
+.pop-resourcem-anager .anager-list{margin-left:5px;}
+.pop-resourcem-anager .anager-list dl{float:left;margin:25px 0 0 45px;cursor:pointer;text-align:center;}
+.pop-resourcem-anager .anager-list dt{display:inline-block;width:72px;height:72px;line-height:72px;border:1px solid #ccc;border-radius:4px;}
+.pop-resourcem-anager .anager-list dl.more dt{background:url("../images/public/j-tag.png")no-repeat right bottom}
+.pop-resourcem-anager .anager-list dl:hover dt{border-color:#ff9900;}
+.pop-resourcem-anager .anager-list dl:hover .ico{color:#ff9900;}
+.pop-resourcem-anager .anager-list dl:hover dd{font-weight:bold;}
+.pop-resourcem-anager .anager-list dt .ico{line-height:1;color:#0190d4;font-size:50px;transition:all .2s;}
+.pop-resourcem-anager .anager-list dd{margin-top:7px;font-size:14px;color:#333;max-width:90px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+/**************** 资源管理器弹窗 结束 */
+
+
