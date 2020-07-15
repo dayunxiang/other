@@ -1,0 +1,236 @@
+// 价格页面
+.page-price{
+    // 图标
+    .icon-what{
+        @include inline-block;
+
+        width:20px;height:20px;
+        background:url("../images/base/what.png") no-repeat 0 0;
+        cursor:pointer;
+    }
+    .icon-gou{
+        @include inline-block;
+
+        width:23px;height:19px;
+        background:url("../images/base/gou.png") no-repeat 0 0;
+    }
+
+    // 栅格布局增加边框
+    .p-grid,
+    .grid-row{
+        & > *{
+            position:relative;
+            padding:15px 0;
+
+            &:before{
+                position: absolute;content:"";
+                left:0;top:0;bottom:0;
+                width:1px;
+                background:#e1e1e1;
+            }
+            &:first-child{
+                &:before{
+                    width:0;
+                }
+            }
+        }
+    }
+    .p-grid-list{
+        padding:25px 40px;
+        border:1px solid #e1e1e1;
+        border-radius:4px;
+    }
+
+    // 选择合适自己
+    .choice-oneself{
+        padding:40px 0;
+        text-align: center;
+
+        .icon{
+            width:60px;height:79px;
+            background:url("../images/base/bulb.png") no-repeat 0 0;
+        }
+        p{
+            margin-top:40px;
+            font-size:20px;
+            color:#666;
+        }
+    }
+
+    //免费版 和 企业版
+    .price-item{
+        text-align: center;
+        color:#333;
+
+        .title{
+            font-size:20px;
+        }
+        .unit-price{
+            margin:25px 0 30px;
+            font-size:20px;
+
+            strong{
+                margin-right:10px;
+                font-size:60px;
+            }
+            span{
+                letter-spacing:5px;
+            }
+        }
+        .btn-buy{
+            display:inline-block;
+            width:190px;height:48px;
+            line-height:48px;
+            border-radius:4px;
+            color:#fff;
+
+            &.blue{
+                background:$blue;
+            }
+            &.orange{
+                background:#ff5a02;
+            }
+        }
+    }
+
+    //banner
+    .banner-box{
+        height:725px;
+        background:url("../images/price/banner-01.jpg") no-repeat center top;
+    }
+
+    // 向上偏移
+    .to-overflow{
+        z-index:10;
+        margin-top:-455px;
+    }
+
+    // 标题
+    h1{
+        margin-bottom:105px;
+        font-size:48px;
+        text-align: center;
+        color:#fff;
+    }
+    h2{
+        margin-bottom:30px;
+        font-size:20px;
+        color:$blue;
+        text-align:center;
+    }
+
+    // 第一个大块 方案选择
+    .choice-box{
+        position:relative;
+        background:#fff;
+
+        .choice-type{
+            .grid-row{
+                & > *{
+                    padding:0;
+                }
+            }
+        }
+        .matching-type{
+            margin:15px 0 25px;padding:15px 0;
+            text-align:center;
+            color:#666;
+            border-top:1px solid #e1e1e1;
+            border-bottom:1px solid #e1e1e1;
+
+            & > *{
+                padding:0;
+            }
+        }
+        .info-list{
+            margin-top:20px;
+            font-size:16px;
+            color:#333;
+
+            .col-2,
+            .col-3{
+                text-align:right;
+            }
+            .col-2{
+                padding-right:40px;
+            }
+        }
+    }
+
+    // 第二个大块 增值服务
+    .add-service-box{
+        margin-top:60px;
+
+        .p-grid-list{
+            font-size:16px;
+            color:#333;
+
+            .col-2{
+                text-align:right;
+            }
+        }
+    }
+
+    // 第三个大块 私有云服务
+    .private-box{
+        margin-top:65px;
+        font-size:16px;
+
+        .private-title{
+            margin-bottom:20px;
+            padding-bottom:15px;
+            border-bottom:1px solid #e1e1e1;
+            text-align:center;
+
+            // 重置掉栅格的 padding
+            &.grid-row,
+            .grid-row{
+                & > *{
+                    padding:0;
+                }
+            }
+
+            .col-2{
+                $paddingLeft:30px;
+
+                padding-left:$paddingLeft;
+
+                .grid-row{
+                    &:last-child{
+                        margin-left:-$paddingLeft;
+                    }
+                }
+            }
+
+            .grid-100{
+                margin-bottom:10px;
+                padding-bottom:10px;
+                border-bottom:1px solid #e1e1e1;
+            }
+        }
+        .private-services{
+            .col-2,
+            .col-3{
+                text-align:center;
+            }
+        }
+        .other-title{
+            margin:15px 0;
+            padding:15px 0;
+            border-top:1px solid #e1e1e1;
+            border-bottom:1px solid #e1e1e1;
+        }
+        .other-services{
+            .col-2,
+            .col-3{
+                text-align:center;
+            }
+        }
+    }
+
+    // 设备列表
+    .p-icon-list{
+        margin-top:65px;
+        margin-bottom:100px;
+    }
+}

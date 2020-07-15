@@ -1,0 +1,551 @@
+// 首页
+.page-index{
+    // fullpage 导航图标修改
+    .fp-controlArrow{
+        width: 41px !important;
+        height: 69px !important;
+        border:none;
+        background:url("../images/base/icon-slides.png") no-repeat 0 0;
+
+        &.fp-prev{
+            display:none;
+            z-index:50;
+            background-position:-84px 50%;
+
+            &:hover{
+                background-position:0 50%;
+            }
+        }
+        &.fp-next{
+            display:none;
+            z-index:50;
+            background-position:-125px 50%;
+            &:hover{
+                background-position: -42px 50%;
+            }
+        }
+    }
+    #fp-nav ul li a span,
+    .fp-slidesNav ul li a span{
+        background:$blue;
+    }
+    // 文字排版
+    .text-item{
+        dt{
+            margin-bottom:20px;
+            font-size:36px;
+            color:$blue;
+        }
+        dd{
+            line-height:2;
+            font-size:16px;
+            color:#666;
+        }
+
+        &.tr{
+            text-align:right;
+        }
+    }
+    // 六边形
+    .hexagon{
+        width:66px;
+        height:74px;
+        line-height:74px;
+        text-align:center;
+        font-size:16px;
+        vertical-align:middle;
+        background:url("../images/base/icon-03.png") no-repeat 0 0;
+
+        &.active,
+        &:hover{
+            color:#fff;
+            background-position:-66px 0 !important;
+        }
+        &.empty{
+            background:none;
+        }
+        &.multi-line{
+            span{
+                line-height: 1.5;
+                margin-top: 17px;
+            }
+        }
+    }
+    // 轮播插件
+    .lx-wrapper{
+        position:absolute;
+
+        .bxslider-wrapper{
+            overflow:hidden;
+            li{
+                position:relative;
+                height:100%;
+            }
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+
+        &.pc{
+            z-index:20;
+            right:82px;top:54px;
+
+            .bxslider-wrapper{
+                height:268px;
+            }
+        }
+        &.mobile{
+            z-index:30;
+            right:3px;top:-7px;
+
+            .bxslider-wrapper{
+                height:361px;
+            }
+        }
+    }
+
+    .row-1{
+        padding-top:0 !important;
+        color:#fff;
+
+        // 避免图片跨屏
+        .fp-tableCell{
+            position: relative;
+        }
+        .col-1{
+            background-image:url("../images/index/banner-01.jpg");
+            background-size:cover;
+        }
+        .col-2{
+            background-image:url("../images/index/banner-02.jpg");
+            background-size:cover;
+        }
+        .col-3{
+            background-image:url("../images/index/banner-03.jpg");
+            background-size:cover;
+        }
+        .col-4{
+            background-image:url("../images/index/banner-04.jpg");
+            background-size:cover;
+        }
+
+        .p-icon-list{
+            margin-bottom:100px;
+        }
+        .text-wrap{
+            text-align: center;
+            p{
+                font-size:40px;
+            }
+            small{
+                display:block;
+                margin-top:10px;
+                font-size:24px;
+            }
+            .btn-taste{
+                margin-top:100px;
+                width:190px;height:48px;
+                line-height:48px;
+                font-size:18px;
+                text-align: center;
+                background:$blue;
+            }
+        }
+        .table-wrap{
+            z-index:10;
+            position:absolute;
+            display:table;
+            width:100%;
+            height:100%;
+
+            .middle-wrap{
+                display:table-cell;
+                vertical-align:middle;
+            }
+        }
+    }
+    .row-2{
+        .p-tab-card{
+            margin-top:90px;
+        }
+        .tab-nav{
+            margin-left:55px;
+
+            &:first-child{
+                margin-left:0;
+            }
+        }
+        .con-wrap{
+            margin-top:40px;
+            width:340px;
+            height:84px;
+            line-height:2;
+        }
+        .right-wrap{
+            img{
+                position:absolute;
+                top:50%;
+                margin-top:-280px;
+            }
+            .img-1{
+                position:absolute;
+                right:15px;
+            }
+            .img-2{
+                z-index:22;
+                position:absolute;
+                right:-50px;
+            }
+        }
+    }
+    .row-3{
+        text-align:center;
+            p{
+                margin-bottom:10px;
+                font-size:36px;
+                color:$blue;
+            }
+            small{
+                margin-bottom:30px;
+                display:block;
+                font-size:16px;
+                color:#666;
+            }
+            img{
+                width:auto;
+                &.img-1{
+                    z-index:2;
+                    position:relative;
+                    height: 385px;
+                    display: block;
+                    margin: 0 auto;
+                }
+                &.img-2{
+                    margin-top:-50px;
+                }
+            }
+
+        // 小屏幕的时候
+        @media only screen and (min-width:1500px){
+            p{
+                margin-bottom:35px;
+            }
+            small{
+                margin-bottom:55px;
+            }
+            img{
+                &.img-1{
+                    height:auto;
+                }
+            }
+        }
+    }
+    .row-4{
+        .left-wrap{
+            position:absolute;
+            width:1037px;
+            left:0;top:50%;
+            margin-top:-310px;
+            height:720px;
+            img{
+                position:absolute;
+                left:0;top:0;
+                height:720px;
+            }
+        }
+        .right-wrap{
+            text-align:right;
+            dd{
+                color:#fff;
+            }
+        }
+        .hexagon-row{
+            font-size:0;
+            margin-top:80px;
+            .hexagon{
+                margin-left:10px;
+                font-size:14px;
+                color:#fff;
+                background-position:-132px 0;
+            }
+            .row{
+                margin-top:10px;
+
+                &.last{
+                    padding-right:38px;
+                    margin-top:-10px;
+                }
+            }
+        }
+
+        .img-2,
+        .img-4{
+            opacity:0;
+        }
+
+        // 适配小屏幕
+        @media only screen and (min-width:1500px){
+            .left-wrap{
+                width:1383px;
+                margin-top:-450px;
+                height:960px;
+                img{
+                    height:960px;
+                }
+            }
+        }
+    }
+    .row-5{
+        .fp-tableCell{
+            vertical-align:top;
+        }
+        .text-wrap{
+            margin-top:30px;
+            margin-bottom:65px;
+            text-align:center;
+
+            p{
+                margin-bottom:30px;
+                font-size:36px;
+                color:$blue;
+            }
+            small{
+                display:block;
+                line-height:2;
+                font-size:16px;
+                color:#666;
+            }
+        }
+        .p-icon-list{
+            display:none;
+        }
+        .p-footer{
+            position:absolute;
+            left:0;right:0;
+            bottom:0;
+
+            .copyright{
+                margin-top:20px;
+            }
+        }
+        @media only screen and (min-width:1600px){
+            .p-icon-list{
+                display:block;
+            }
+        }
+    }
+
+    // 写动画
+    .row-1.curr{
+        .icon-item{
+            animation-duration:0.5s;
+            animation-name: fadeInDown;
+            animation-fill-mode:backwards;
+
+            &.zz{
+                animation-delay:0.8s;
+            }
+            &.sz{
+                animation-delay:0.9s;
+            }
+            &.aq1{
+                animation-delay:1s;
+            }
+            &.hb{
+                animation-delay:1.1s;
+            }
+        }
+        .table-wrap{
+            p{
+                animation-duration:0.6s;
+                animation-name: fadeInDown;
+                animation-delay:1.2s;
+                animation-fill-mode :backwards;
+            }
+            small{
+                animation-duration:0.6s;
+                animation-name: fadeInUp;
+                animation-delay:1.3s;
+                animation-fill-mode :backwards;
+            }
+            .btn-taste{
+                animation-duration:0.6s;
+                animation-delay:1.3s;
+                animation-name: fadeInUp;
+                animation-fill-mode :backwards;
+            }
+        }
+    }
+    .row-2.curr{
+        .text-item{
+            animation-duration:0.5s;
+            animation-name: fadeInDown;
+            animation-delay:0.8s;
+            animation-fill-mode:backwards;
+        }
+        .p-tab-card{
+            animation-duration:0.5s;
+            animation-name: fadeInUp;
+            animation-delay:0.8s;
+            animation-fill-mode:backwards;
+        }
+        .bxslider-wrapper.pc,
+        .img-1{
+            animation-duration:1s;
+            animation-name: transparency;
+            animation-delay:0.8s;
+            animation-fill-mode:backwards;
+        }
+        .bxslider-wrapper.mobile,
+        .img-2{
+            animation-duration:1s;
+            animation-name: transparency;
+            animation-delay:0.8s;
+            animation-fill-mode:backwards;
+        }
+    }
+    .row-3.curr{
+        p{
+            animation-duration:0.5s;
+            animation-name:fadeInDown;
+            animation-delay:0.8s;
+            animation-fill-mode:backwards;
+        }
+        small{
+            animation-duration:0.5s;
+            animation-name:fadeInDown;
+            animation-delay:0.8s;
+            animation-fill-mode:backwards;
+        }
+        .img-1{
+            animation-duration:1s;
+            animation-name:bubble;
+            animation-delay:1.5s;
+            animation-fill-mode:backwards;
+            transform-origin:center bottom;
+        }
+        .img-2{
+            animation-duration:0.5s;
+            animation-name: fadeInUp;
+            animation-delay:0.8s;
+            animation-fill-mode:backwards;
+        }
+    }
+    .row-4.curr{
+        .text-item{
+            animation-duration:1s;
+            animation-name: flipInX;
+            animation-delay:0.8s;
+            animation-fill-mode:backwards;
+        }
+        .hexagon-row{
+            animation-duration:1s;
+            animation-name: flipInX;
+            animation-delay:0.8s;
+            animation-fill-mode:backwards;
+        }
+        .img-2.active,
+        .img-4.active{
+            opacity:1;
+        }
+
+        // 淡出
+        .img-2.active,
+        .img-3,
+        .img-4.active,
+        .img-5{
+            animation-duration:1s;
+            animation-name: ljFadeOut;
+            animation-delay:0s;
+            animation-fill-mode:backwards;
+        }
+
+        // 淡入
+        .img-2.leave,
+        .img-3.leave,
+        .img-4.leave,
+        .img-5.leave{
+            animation-duration:1s;
+            animation-name: ljFadeIn;
+            animation-delay:0s;
+            animation-fill-mode:backwards;
+        }
+    }
+    .row-5.curr{
+        .text-wrap{
+            p,
+            small{
+                animation-duration:1s;
+                animation-delay:0.8s;
+                animation-fill-mode:backwards;
+            }
+            p{
+                animation-name:fadeInDown;
+            }
+            small{
+                animation-name:fadeInUp;
+            }
+        }
+        .icon-item{
+            animation-duration:0.3s;
+            animation-name: bounceIn;
+            animation-fill-mode:backwards;
+            &.gk{
+                animation-delay:1.5s;
+            }
+            &.aq{
+                animation-delay:1.7s;
+            }
+            &.zy{
+                animation-delay:2.1s;
+            }
+            &.dz{
+                animation-delay:2.3s;
+            }
+        }
+    }
+
+    @keyframes bubble
+    {
+        0%{
+            transform:scale(0,0);
+        }
+        100%{
+            transform:scale(1,1);
+        }
+    }
+
+    @keyframes transparency
+    {
+        0%{
+            opacity:0;
+        }
+        100%{
+            opacity:1;
+        }
+    }
+    @keyframes ljFadeOut
+    {
+        0%{
+            left:-50px;
+            opacity:0;
+        }
+        100%{
+            left:0;
+            opacity:1;
+        }
+    }
+    @keyframes ljFadeIn
+    {
+        0%{
+            left:0;
+            opacity:1;
+        }
+        100%{
+            left:-50px;
+            opacity:0;
+
+        }
+    }
+}
