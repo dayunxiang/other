@@ -103,6 +103,9 @@
     &:active {
         opacity: .8;
     }
+    &:disabled {
+        background: #ddd;
+    }
     input[type="file"] {
         z-index: 5;
         opacity: 0;
@@ -1030,5 +1033,129 @@ html .layui-layer-btn .layui-layer-btn0 {
                 padding: 10px 0;
             }
         }
+    }
+}
+.page-9 {
+    padding: 20px;
+    min-height: 100vh;
+    background: #f4f4f4;
+
+    .title-item {
+        position: relative;
+        margin-bottom: 20px;
+        padding: 15px 0;
+        overflow: hidden;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0; right: 0;
+            bottom: 0;
+            height: 1px;
+            background: #dce8fa;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 18px;
+            bottom: 18px;
+            width: 3px;
+            background: #2e7ae6;
+        }
+        .title-text {
+            float: left;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+    }
+    .tool-wrap {
+        float: right;
+
+        button {
+            padding: 4px 10px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            background: #2e7ae6;
+            transition: all .2s;
+
+            & + button {
+                margin-left: 10px;
+            }
+            &:active {
+                opacity: .7;
+            }
+        }
+    }
+    .main-wrap {
+        padding: 0 20px 20px;
+        min-height: 100vh;
+        background: #fff;
+    }
+    .form-list {
+        width: 500px;
+    }
+    .tips {
+        margin-top: 5px;
+        font-size: 12px;
+        color: #f36a63;
+    }
+    .row {
+        display: block;
+        padding: 8px 0;
+
+        &.tools {
+            margin-top: 20px;
+
+            button {
+                margin-right: 20px;
+                width: 80px;
+            }
+        }
+        .file-list {
+            margin-top: 20px;
+        }
+        .file-item {
+            position: relative;
+            margin-right: 15px;
+            color: #2e7ae6;
+
+            span {
+                color: #2e7ae6;
+                text-decoration: underline;
+            }
+            .btn-close {
+                @include iconfont;
+                position: absolute;
+                right: -15px; top: -5px;
+                border: none;
+                color: #f36a63;
+                transition: all .2s;
+
+                &:before {
+                    content: "\e6b8";
+                }
+                &:hover {
+                    font-size: 16px;
+                }
+            }
+        }
+        .attr {
+            min-width: 7em;
+            padding: 8px 0;
+        }
+        .content input[type="text"] {
+            width: 100%;
+            height: 35px;
+        }
+    }
+    .filter {
+        margin-top: 15px;
+    }
+    .btn-cancel {
+        border: 1px solid #2e7ae6;
+        color: #2e7ae6;
+        background: #fff;
     }
 }
