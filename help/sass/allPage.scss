@@ -160,6 +160,24 @@
             border: 1px solid #ddd;
         }
     }
+    input[type="text"] {
+        padding: 0 6px;
+        width: 100%;
+        height: 26px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        font-size: 12px;
+        vertical-align: middle;
+        transition: all .2s;
+
+        &:disabled {
+            background: #f4f4f4;
+            cursor: not-allowed;
+        }
+        &:focus {
+            border-color: #2e7ae6;
+        }
+    }
 }
 
 html {
@@ -1157,5 +1175,143 @@ html .layui-layer-btn .layui-layer-btn0 {
         border: 1px solid #2e7ae6;
         color: #2e7ae6;
         background: #fff;
+    }
+}
+.edit-dialog {
+    padding: 15px;
+    background: #fff;
+    overflow-x: auto;
+
+    .tool-wrap {
+        float: right;
+
+        button {
+            padding: 4px 10px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            background: #2e7ae6;
+            transition: all .2s;
+
+            & + button {
+                margin-left: 10px;
+            }
+            &:active {
+                opacity: .7;
+            }
+        }
+    }
+    .input-item {
+        select,
+        textarea,
+        input[type="text"] {
+            display: inline-block;
+            padding: 0 10px;
+            width: 100%;
+            height: 30px;
+            border: none;
+            background: transparent;
+
+            &::-webkit-input-placeholder {
+                color: #c6d0db;
+            }
+        }
+        input[type="text"] {
+            padding-right: 35px;
+        }
+    }
+    .form-list {
+        width: 500px;
+
+        &.horizontal {
+            @include clearFix;
+            width: 100%;
+
+            .form-item {
+                float: left;
+                margin-right: 30px;
+            }
+        }
+        .tool-wrap {
+            float: left;
+            padding: 10px 0;
+        }
+    }
+    .form-item {
+        @include clearFix;
+        padding: 10px 0;
+
+        .attr {
+            float: left;
+            margin-right: 10px;
+
+            .attr-text {
+                line-height: 30px;
+                text-align: left;
+            }
+        }
+        .content {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #eee;
+            border-radius: 4px;
+
+            i {
+                @include iconfont;
+                position: absolute;
+                top: 50%; right: 5px;
+                font-size: 18px;
+                transform: translate(0,-50%);
+            }
+        }
+        select {
+            width: 200px;
+        }
+    }
+    .search-result {
+        margin-top: 20px;
+        overflow-x: scroll;
+
+        table {
+            font-size: 12px;
+            white-space: nowrap;
+
+            .btn-look {
+                padding: 4px 10px;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                background: #2e7ae6;
+                transition: all .2s;
+
+                &:active {
+                    opacity: .7;
+                }
+            }
+            .state-end {
+                padding: 5px 10px;
+                border-radius: 4px;
+                background: #e8ebef;
+            }
+            .state-ing {
+                padding: 5px 10px;
+                border-radius: 4px;
+                background: #f90;
+                color: #fff;
+            }
+            .state-finish {
+                padding: 5px 10px;
+                border-radius: 4px;
+                background: #19be6b;
+                color: #fff;
+            }
+            .liucheng-name {
+                max-width: 20em;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                color: #2e7ae6;
+            }
+        }
     }
 }
