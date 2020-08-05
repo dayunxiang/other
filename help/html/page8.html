@@ -240,10 +240,12 @@
                 // 弹窗
                 layer.open({
                     type: 1,
-                    area: ['1200px', '600px'],
+                    area: ['1200px', ''],
                     shadeClose: true, //点击遮罩关闭
                     title: '年度工业企业用水计划查看',
                     content: $('#xjgd').html(),
+                    btn: ['按钮一', '按钮二'],
+                    btnAlign: 'c',
                     success: function (layero, index) {
 
                     }
