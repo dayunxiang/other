@@ -491,8 +491,16 @@ html .layui-layer-btn .layui-layer-btn0 {
         &:first-child {
             height: 26%;
         }
+        &:last-of-type {
+            padding-bottom: 15px;
+        }
         & + .module-row {
             padding-top: 15px;
+        }
+        & + .project-item {
+            height: auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
         .col-item {
             float: left;
