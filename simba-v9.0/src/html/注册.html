@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+    <html class="fuck-ie" lang="zh-CN">
+<![endif]-->
+
+<!--[if IE 8]>
+    <html class="ie-8" lang="zh-CN">
+<![endif]-->
+
+<!--[if IE 9]>
+    <html class="ie-9" lang="zh-CN">
+<![endif]-->
+
+<!--[if !IE]><!-->
+    <html lang="zh-CN">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <title>注册</title>
+        <link href="../css/all.min.css" rel="stylesheet">
+    </head>
+    <body class="page-register">
+        <!-- 注册框 开始 -->
+        <div class="register-box">
+            <!-- 标题 开始 -->
+            <h1>
+                <p>用户注册</p>
+                <small>注册成功后登入客户端可免费试用</small>
+            </h1>
+            <!-- 标题 结束 -->
+
+            <!-- 注册信息 开始 -->
+            <div class="row">
+                <i class="icon user"></i>
+                <input type="text" placeholder="姓名" maxlength="15">
+            </div>
+            <div class="row error">
+                <i class="icon lock"></i>
+                <input type="password" placeholder="密码" maxlength="16">
+            </div>
+            <div class="row done">
+                <i class="icon mobile"></i>
+                <input type="text" placeholder="手机号码" maxlength="11">
+            </div>
+            <div class="row">
+                <i class="icon safety"></i>
+                <input type="text" placeholder="短信验证码" maxlength="8">
+                <button class="btn-code send">获取验证码</button>
+                <!-- <button class="btn-code send">不可点击时的状态</button> -->
+            </div>
+            <!-- 注册信息 结束 -->
+
+            <!-- 注册操作 开始 -->
+            <div class="btn-wrap">
+                <a class="btn-register" href="javascript">注册</a>
+                <small>
+                    点击注册表示阅读并同意
+                    <a href="">《Simba使用服务条款》</a>
+                </small>
+            </div>
+            <!-- 注册操作 结束 -->
+        </div>
+        <!-- 注册框 结束 -->
+
+        <!-- simba logo 开始 -->
+        <div class="logo-wrap">
+            <i class="logo"></i>
+            <p>Simba Pro</p>
+        </div>
+        <!-- simba logo 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../widget/jquery-v1.11.3/jquery.js"></script>
+        <script src="../widget/nicescroll-v3.7.6/jquery.nicescroll.js"></script>
+        <script src="../widget/layer-v3.0.3/layer.js"></script>
+        <script src="../scripts/all.min.js"></script>
+        <script>
+            $(function(){
+                // 提示信息
+                layer.msg('注册成功！', {
+                    icon: 6,
+                    time: 3000,
+                    area: '180px',
+                });
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>

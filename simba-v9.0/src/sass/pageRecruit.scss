@@ -1,0 +1,126 @@
+// 招聘页面
+.page-recruit{
+    // banner
+    .banner{
+        display:table;
+        width:100%;
+        height:700px;
+        background:url("../images/recruit/banner-01.jpg") no-repeat center top;
+
+        .text-warp{
+            display:table-cell;
+            vertical-align:middle;
+            text-align:center;
+            color:#fff;
+
+            p{
+                @include line-title;
+
+                font-size:48px;
+            }
+            small{
+                margin-top:25px;
+                font-size:24px;
+            }
+        }
+    }
+
+    .recruit-list{
+        z-index: 10;
+        margin-top: -150px;
+        padding-bottom:80px;
+        min-height:600px;
+    }
+
+    //招聘岗位元素
+    .recruit-item{
+        margin-top:30px;
+        padding:45px 27px 55px 85px;
+        border:1px solid #f3f3f3;
+        border-radius:4px;
+        font-size:16px;
+        background:#fff;
+        overflow: hidden;
+        transition:all 0.2s;
+
+        &:first-child{
+            margin-top:0;
+        }
+        &:hover{
+            background:#f8f8f8;
+        }
+
+        .recruit-survey{
+            margin-right:90px;
+            float: left;
+            text-align: center;
+
+            .img-wrap{
+                padding-top:15px;
+
+                img{
+                    border:1px solid #f3f3f3;
+                    border-radius:50%;
+                    width:180px;
+                    height:180px;
+                }
+            }
+            .recruit-name{
+                @include text-ellipsis;
+
+                margin-top:20px;
+                max-width:12em;
+                font-size:20px;
+                color:$blue;
+            }
+            address{
+                display: block;
+                margin-top:20px;
+                span,
+                b{
+                    vertical-align: middle;
+                }
+                span{
+                    color:#999;
+                }
+                b{
+                    @include text-ellipsis;
+
+                    max-width:8em;
+                    font-weight:normal;
+                    color:#333;
+                }
+            }
+            .btn{
+                margin-top:35px;
+                width:180px;
+                height:48px;
+                line-height:48px;
+                color:#fff;
+                font-size:18px;
+                border-radius:4px;
+                background:$blue;
+            }
+        }
+        .text-list{
+            overflow:hidden;
+
+            dl{
+                margin-top:25px;
+
+                &:first-child{
+                    margin-top:0;
+                }
+            }
+            dt{
+                margin-bottom:10px;
+                font-size:18px;
+                color:#333;
+            }
+            dd{
+                line-height:1.8;
+                color:#666;
+            }
+        }
+    }
+}

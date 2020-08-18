@@ -1,0 +1,158 @@
+@charset "utf-8";
+/*
+    参考：http://www.zhangxinxu.com/wordpress/?p=758
+    参考：https://github.com/necolas/normalize.css
+    参考：http://g.alicdn.com/msui/sm/0.6.2/css/sm.css
+    参考：玉伯的那份css,貌似国内大部分用的都是这份css
+    参考：http://www.cnblogs.com/yizuierguo/archive/2009/07/15/1524106.html
+    参考：https://ant.design/
+    兼容性：IE8+（包括IE8）
+    Email:674059309@qq.com
+*/
+
+
+/* 盒子模型 开始 ****************/
+*,
+*:before,
+*:after{-ms-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+/**************** 盒子模型 结束 */
+
+
+/* html body标签 开始 ****************/
+html {
+    height: 100%;
+    font:14px/1.5 "Microsoft YaHei",sans-serif;
+    -ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;
+}
+body{position:relative;margin:0;color:#333;}
+/**************** html body标签 结束 */
+
+
+/* 行内元素统一行块 开始 ****************/
+a,
+b,
+i,
+em,
+abbr,
+span,
+time,
+label,
+audio,
+small,
+video,
+canvas,
+strong,
+address,
+progress{display:inline-block;vertical-align:baseline;}
+/**************** 行内元素统一行块 结束 */
+
+
+/* html5标签 开始 ****************/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary{display:block;}
+/**************** html5标签 结束 */
+
+
+/* 标题标签 开始 ****************/
+h1,h2,h3,h4,h5,h6,p{margin:0;font-weight:normal;}
+/**************** 标题标签 结束 */
+
+
+/* 文本框标签 开始 ****************/
+pre{margin:0;}
+/**************** 文本框标签 结束 */
+
+
+/* 强调标签 开始 ****************/
+i,
+em,
+cite,
+dfn,
+address{font-style:normal;}
+b,
+strong{font-weight:bold;}
+small{font-size:12px;}
+/**************** 强调标签 结束 */
+
+
+/* 缩写标签 开始 ****************/
+abbr[title]{border-bottom:1px dotted;text-decoration:none;cursor:pointer;}
+/**************** 缩写标签 结束 */
+
+
+/* 上标、下标标签 开始 ****************/
+sub,sup{position:relative;font-size:12px;line-height:1;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.5em;}
+/**************** 上标、下标标签 结束 */
+
+
+/* 水平线标签 开始 ****************/
+hr{margin:0;border:none;height:0;box-sizing:content-box;overflow:visible;}
+/**************** 水平线标签 结束 */
+
+
+/* 图像标签 开始 ****************/
+img{max-width:100%;border:none;vertical-align:top;}
+/**************** 图像标签 结束 */
+
+
+/* 表格标签 开始 ****************/
+table{border-collapse:collapse;border-spacing:0;}
+th,td{padding:0;font-weight:normal;}
+/**************** 表格标签 结束 */
+
+
+/* 列表标签 开始 ****************/
+dl,dd{margin:0;}
+ol,ul{margin:0;padding:0;list-style:none;}
+/**************** 列表标签 结束 */
+
+
+/* 重置a标签 开始 ****************/
+a{text-decoration:none;color:inherit;outline:none;}
+/**************** 重置a标签 结束 */
+
+
+/* 表单标签 开始 ****************/
+input[type="text"],
+input[type="password"]{padding:1px 10px;height:30px;line-height:26px;border:1px solid #ddd;vertical-align:middle;outline:none;font:inherit;}
+textarea{padding:2px 10px;border:1px solid #ddd;vertical-align:top;outline:none;font:inherit;}
+/* 分割线 */
+input[type="radio"],
+input[type="checkbox"]{margin:0 2px 0 0;vertical-align:middle;outline:none;cursor:pointer;}
+/* 分割线 */
+button,
+input[type="file"],
+input[type="reset"],
+input[type="submit"],
+input[type="button"]{vertical-align:middle;outline:none;font:inherit;cursor:pointer;}
+select{vertical-align:middle;outline:none;font:inherit;cursor:pointer;}
+/* 分割线 */
+fieldset{margin:0;padding:0;border:1px solid #ddd;}
+legend{padding:0;}
+/**************** 表单标签 结束 */
+
+
+/* 框架标签 开始 ****************/
+iframe{display:block;border:none;}
+/**************** 框架标签 结束 */
+
+
+/* 浮动、清除浮动 */
+.clearfix:after{display:block;height:0;clear:both;visibility:hidden;font-size:0;content:"";}
+.clearfix{zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+/**************** 常用自定义样式 结束 */

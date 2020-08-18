@@ -1,0 +1,194 @@
+// 产品-SasS
+.page-SaaS{
+    // banner
+    .p-banner{
+        background:url("../images/product/SaaS/banner-01.jpg") no-repeat center center;
+    }
+
+    // 隔行换色
+    .p-row{
+        &:nth-child(even){
+            background-color:#f8f8f8 !important;
+        }
+    }
+
+    // 统一组织
+    .unified-organiz{
+        .row-1{
+            padding-top:60px;
+            background:url("../images/product/SaaS/01-01.png") no-repeat center bottom;
+        }
+        .row-2{
+            background:url("../images/product/SaaS/01-02.png") no-repeat 0 center;
+            .p-text-item{
+                width:456px;
+            }
+        }
+        .row-3{
+            .p-main-width{
+                background:url("../images/product/SaaS/01-03.png") no-repeat right 160px;
+            }
+            .p-text-item{
+                dd{
+                    width:420px;
+                }
+            }
+        }
+    }
+
+    // 统一消息
+    .unified-message{
+        .row-1{
+            .p-main-width{
+                background:url("../images/product/SaaS/02-01.png") no-repeat right center;
+            }
+            .p-text-item{
+                dd{
+                    width:423px;
+                }
+            }
+        }
+        .row-2{
+            .p-main-width{
+                background:url("../images/product/SaaS/02-02.png") no-repeat left center;
+            }
+        }
+        .row-3{
+            .p-main-width{
+                background:url("../images/product/SaaS/02-03.png") no-repeat right center;
+            }
+            .p-text-item{
+                dd{
+                    width:319px;
+                }
+
+            }
+        }
+        .row-4{
+            .p-main-width{
+                background:url("../images/product/SaaS/02-04.png") no-repeat left center;
+            }
+            .p-text-item{
+                width:365px;
+            }
+        }
+    }
+
+    // 统一通信
+    .unified-communic{
+        .row-1{
+            .p-main-width{
+                background:url("../images/product/SaaS/03-01.png") no-repeat right bottom;
+            }
+            .p-text-item{
+                position: absolute;
+                top: 115px;
+                left: 0;
+                width: 340px;
+            }
+        }
+        .row-2{
+            .p-main-width{
+                background:url("../images/product/SaaS/03-02.png") no-repeat left center;
+            }
+        }
+        .row-3{
+            .p-main-width{
+                background:url("../images/product/SaaS/03-03.png") no-repeat right center;
+            }
+        }
+        .row-4{
+            .p-main-width{
+                background:url("../images/product/SaaS/03-04.png") no-repeat left bottom;
+            }
+        }
+        .row-5{
+            padding-top:60px;
+            background:url("../images/product/SaaS/03-05.png") no-repeat center 280px;
+        }
+    }
+
+    // 移动办公
+    .mobile-office{
+        .row-1{
+            .p-main-width{
+                background:url("../images/product/SaaS/04-01.png") no-repeat right center;
+            }
+            .p-text-item{
+                dd{
+                    width:376px;
+                }
+            }
+        }
+        .row-2{
+            .p-main-width{
+                background:url("../images/product/SaaS/04-02.png") no-repeat left center;
+            }
+            .p-text-item{
+                width:375px;
+            }
+        }
+        .row-3{
+            .p-main-width{
+                background:url("../images/product/SaaS/04-03.png") no-repeat right center;
+            }
+            .p-text-item{
+                width:376px;
+            }
+        }
+        .row-4{
+            .p-main-width{
+                background:url("../images/product/SaaS/04-04.png") no-repeat left center;
+            }
+            .p-text-item{
+                width:328px;
+            }
+        }
+        .row-5{
+            .p-main-width{
+                background:url("../images/product/SaaS/04-05.png") no-repeat right center;
+            }
+            .p-text-item{
+                width:470px;
+            }
+            strong{
+                font-size:60px;
+                font-weight:normal;
+            }
+        }
+    }
+
+    // 同事圈
+    .circle-colleagues{
+        .row-1{
+            padding-top:60px;
+            background:url("../images/product/SaaS/05-01.png") no-repeat center bottom;
+        }
+        .row-2{
+            .p-main-width{
+                background:url("../images/product/SaaS/05-02.png") no-repeat right center;
+            }
+        }
+    }
+
+    // 更多
+    .more{
+        .row-1{
+            .p-main-width{
+                background:url("../images/product/SaaS/06-01.png") no-repeat right center;
+            }
+            .p-text-item{
+                position:absolute;
+                left:0;top:135px;
+            }
+        }
+        .row-2{
+            .p-main-width{
+                background:url("../images/product/SaaS/06-02.png") no-repeat left center;
+            }
+            .p-text-item{
+                width:420px;
+            }
+        }
+    }
+}
