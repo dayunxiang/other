@@ -484,6 +484,26 @@ html .layui-layer-btn .layui-layer-btn0 {
     height: 100%;
     background: #ecf1fa;
 
+    .gonggao {
+        padding: 15px;
+        height: 100%;
+        background: #fff;
+    }
+    .label-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+
+        .label-attr {
+            text-align-last:justify;
+            text-align:justify;
+            text-justify:distribute-all-lines;
+            min-width: 5em;
+        }
+        .label-content {
+
+        }
+    }
     .module-row {
         @include clearFix;
         height: 37%;
